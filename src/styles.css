@@ -1,0 +1,140 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+
+
+@keyframes zoomOut {
+ 0% { transform: scale(1.05); }
+ 100% { transform: scale(1); }
+}
+
+/* tailwind.css - Tailwind v4 Configuration */
+@import "tailwindcss";
+
+/* Nour Holdings Design System */
+@theme {
+  /* Color Palette */
+  --color-sand: #CAAB79;
+  --color-midnight: #1E2859;
+  --color-skyline: #323E48;
+  --color-heritage: #7F3E2D;
+  --color-gulf: #074859;
+  --color-sky: #ABC7E6;
+  --color-kandura: #D9D8D6;
+  --color-sun: #E38632;
+  --color-sea: #92B7BB;
+  --color-white: #f5f4f3;
+  --color-black: #16171c;
+  --color-error: #e92b0e;
+
+  /* Executive Theme Colors (for the specific section) */
+  --color-executive-navy: #1f2937; /* 222 47% 11% converted to hex */
+  --color-executive-gold: #f59e0b; /* 43 96% 56% converted to hex */
+  --color-executive-light: #f3f4f6; /* 220 14% 96% converted to hex */
+  --color-executive-muted: #6b7280; /* 215 16% 47% converted to hex */
+
+  /* Semantic Color Tokens */
+  --color-surface: var(--color-white);
+  --color-primary: var(--color-midnight);
+  --color-secondary: var(--color-skyline);
+  --color-accent: var(--color-sand);
+
+  /* Typography */
+  --font-family-sans: "system-ui","DM Serif Text", "Segoe UI", "Roboto", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji";
+
+  /* Custom Easing */
+  --ease-out: cubic-bezier(0.3, 0.4, 0, 1);
+
+  /* Animation Duration */
+  --animate-duration-smooth: 300ms;
+  --animate-duration-slow: 500ms;
+
+  /* Extend default Tailwind colors */
+  --color-nour: {
+    sand: var(--color-sand);
+    midnight: var(--color-midnight);
+    skyline: var(--color-skyline);
+    heritage: var(--color-heritage);
+    gulf: var(--color-gulf);
+    sky: var(--color-sky);
+    kandura: var(--color-kandura);
+    sun: var(--color-sun);
+    sea: var(--color-sea);
+    white: var(--color-white);
+    black: var(--color-black);
+  };
+
+  /* Executive Theme Colors for Tailwind v4 */
+  --color-executive: {
+    navy: var(--color-executive-navy);
+    gold: var(--color-executive-gold);
+    light: var(--color-executive-light);
+    muted: var(--color-executive-muted);
+  };
+
+  /* Custom transition timing functions */
+  --transition-timing-function-nour: var(--ease-out);
+}
+
+@layer utilities {
+  .hero-bg-gradient-overlay {
+    background-image: linear-gradient(
+      to bottom,
+      rgba(22, 23, 28, 0.85) 0%, /* Dark at top */
+      rgba(22, 23, 28, 0.6) 30%, /* Slightly lighter */
+      rgba(202, 171, 121, 0.6) 100% /* Sand tone at bottom */
+    );
+  }
+
+
+  /* Executive Section Specific Utilities */
+  .executive-desert-gradient {
+    background: linear-gradient(135deg, #ffffff 0%, var(--color-executive-light) 100%);
+  }
+  
+  .executive-frame-gradient {
+    background: linear-gradient(135deg, var(--color-executive-gold) 0%, var(--color-executive-light) 50%, var(--color-executive-navy) 100%);
+  }
+  
+  .executive-decorative-gradient {
+    background: linear-gradient(135deg, var(--color-executive-navy) 0%, var(--color-executive-gold) 100%);
+  }
+  
+  .executive-shadow-frame {
+    box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25), 0 0 0 1px rgba(255, 255, 255, 0.1);
+  }
+
+  /* Executive Theme Background Colors */
+  .bg-executive-navy { background-color: var(--color-executive-navy); }
+  .bg-executive-gold { background-color: var(--color-executive-gold); }
+  .bg-executive-light { background-color: var(--color-executive-light); }
+  .bg-executive-muted { background-color: var(--color-executive-muted); }
+
+  /* Executive Theme Text Colors */
+  .text-executive-navy { color: var(--color-executive-navy); }
+  .text-executive-gold { color: var(--color-executive-gold); }
+  .text-executive-light { color: var(--color-executive-light); }
+  .text-executive-muted { color: var(--color-executive-muted); }
+
+  /* Executive Theme Border Colors */
+  .border-executive-navy { border-color: var(--color-executive-navy); }
+  .border-executive-gold { border-color: var(--color-executive-gold); }
+  .border-executive-light { border-color: var(--color-executive-light); }
+  .border-executive-muted { border-color: var(--color-executive-muted); }
+
+  /* Executive Theme Gradients */
+  .from-executive-navy { --tw-gradient-from: var(--color-executive-navy); }
+  .from-executive-gold { --tw-gradient-from: var(--color-executive-gold); }
+  .from-executive-light { --tw-gradient-from: var(--color-executive-light); }
+  .to-executive-navy { --tw-gradient-to: var(--color-executive-navy); }
+  .to-executive-gold { --tw-gradient-to: var(--color-executive-gold); }
+  .to-executive-light { --tw-gradient-to: var(--color-executive-light); }
+  .via-executive-light { --tw-gradient-via: var(--color-executive-light); }
+}
+
+
+@layer base {
+  .font-dm-serif {
+    font-family: 'DM Serif Text', serif;
+  }
+}
