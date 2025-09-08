@@ -56,12 +56,23 @@
     .indicators button:hover:not(.active) {
       background: rgba(255, 255, 255, 0.7);
     }
+    @media (max-width: 767px) {
+    .indicators {
+        position: relative;
+        bottom: auto;
+        left: auto;
+        transform: none;
+        justify-content: center;
+        margin-top: 0rem;
+        margin-bottom: 1rem;
+    }
+}
   </style>
 </head>
 <body>
   
   <!-- Hero section -->
-  <section class="relative md:h-[80vh] h-[65vh]  pt-0 overflow-hidden">
+  <section class="relative md:h-[80vh] min-h-[75vh]  pt-0 overflow-hidden">
         <!-- Slides -->
         <div class="hero-slide active" style="background-image: url('./assets/ab20250519-kinross-exploitation-or-senisa-mauritanie-1.jpg');"></div>
         <div class="hero-slide" style="background-image: url('./assets/noadhibou-port.jpg');"></div>
@@ -92,15 +103,15 @@
         </nav>
         
         <!-- Content Overlay -->
-        <div class="relative flex flex-col items-center justify-center h-full z-20 px-4 md:px-6">
+        <div class="relative flex flex-col items-center justify-start pt-24 md:justify-center md:pt-0 h-full z-20 px-4 md:px-6">
             <!-- Mobile Layout -->
-            <div class="block md:hidden w-full text-center text-nour-white max-w-sm mx-auto ">
+            <div class="block md:hidden w-full text-center text-nour-white max-w-sm mx-auto  ">
                 <!-- Title - Smaller on mobile -->
                 
                 
                 <!-- Spider Web Image - Mobile Only -->
-                <div class="flex justify-center mb-0">
-                    <img src="./assets/noor_holding_spider_web_TRANSPARENT.png" alt="Noor Holding Network" class="max-w-[350px] h-auto opacity-80"/>
+                <div class="flex justify-center mt-6">
+                    <img src="./assets/noor_holding_spider_web_TRANSPARENT.png" alt="Noor Holding Network" class="max-w-[350px] h-auto opacity-80 "/>
                 </div>
 
                 <div class="mb-0 text-sand ">
@@ -129,6 +140,8 @@
                         <div class="text-xs text-kandura/80 uppercase tracking-wide text-nowrap">Market Leader</div>
                     </div>
                 </div>
+
+                
             </div>
             
             <!-- Desktop Layout -->
