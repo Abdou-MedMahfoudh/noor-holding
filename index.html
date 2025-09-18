@@ -93,15 +93,23 @@
                 <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#">Subsidiaries</a></li>
                 <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#">Contact us</a></li>
             </ul>
-            
-            <!-- Mobile menu button -->
-            <button class="md:hidden text-white/80 hover:text-white">
-                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                </svg>
-            </button>
+          
+         <!-- Mobile menu button -->
+<button id="mobile-menu-btn" class="md:hidden text-white hover:text-gray-300 z-50 relative">
+  <!-- Hamburger -->
+  <svg id="hamburger-icon" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+          d="M4 6h16M4 12h16M4 18h16"/>
+  </svg>
+  <!-- Close -->
+  <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
+          d="M6 18L18 6M6 6l12 12"/>
+  </svg>
+</button>
         </nav>
-        
+
+     
         <!-- Content Overlay -->
         <div class="relative flex flex-col items-center justify-start pt-24 md:justify-center md:pt-0 h-full z-20 px-4 md:px-6">
             <!-- Mobile Layout -->
@@ -419,6 +427,27 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
             </div>
         </div>
 </section>
+<script>
+  const btn = document.getElementById('mobile-menu-btn');
+  const menu = document.getElementById('mobile-menu');
+  const overlay = document.getElementById('mobile-menu-overlay');
+  const hamburger = document.getElementById('hamburger-icon');
+  const closeIcon = document.getElementById('close-icon');
+
+  btn.addEventListener('click', () => {
+    menu.classList.toggle('translate-x-full');
+    overlay.classList.toggle('hidden');
+    hamburger.classList.toggle('hidden');
+    closeIcon.classList.toggle('hidden');
+  });
+
+  overlay.addEventListener('click', () => {
+    menu.classList.add('translate-x-full');
+    overlay.classList.add('hidden');
+    hamburger.classList.remove('hidden');
+    closeIcon.classList.add('hidden');
+  });
+</script>
 
 <section class="relative  py-20 px-4 bg-secondary/35  overflow-hidden">
         <!-- Desert Energy SVG Background -->
@@ -1106,6 +1135,30 @@ Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation f
             </div>
         </div>
     </section>
+    <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+    <!-- Title -->
+    <h2 class="text-4xl lg:text-5xl font-dm-serif text-sand mb-10 text-center">
+        Latest News 
+    </h2>
+    
+    <!-- News Grid -->
+    <div id="news-container" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+    </div>
+
+    <!-- Read More Button -->
+    <div class="flex justify-center">
+        <a href="/Allnews.html" class="inline-flex items-center px-8 py-4 bg-sand text-midnight font-semibold rounded-lg transition-all duration-300 hover:bg-skyline hover:text-white hover:shadow-lg">
+            <span class="flex items-center">
+                View All News
+                <svg class="w-3 h-3 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
+                </svg>
+            </span>
+        </a>
+    </div>
+   
+</section>
+    <hr class="my-8 border-t border-gray-300">
   <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
         <div class="grid lg:grid-cols-2 gap-12 lg:gap-16">
             <!-- Contact Information -->
@@ -1453,6 +1506,7 @@ class="w-full h-full">
         });
     </script>
 
+  <script src="./js/news.js" defer></script>
   
 
   <script>
@@ -1485,5 +1539,7 @@ class="w-full h-full">
     // Auto-advance slides every 5 seconds
     setInterval(nextHeroSlide, 5000);
   </script>
+
+  
 </body>
 </html>

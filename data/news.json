@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "date": "2025-09-15",
+    "title": "Nour Holding Expands Operations Across West Africa",
+    "description": "We are excited to announce our strategic expansion into three new markets across West Africa, strengthening our commitment to regional growth and development.",
+    "picture": "./assets/13442741_web1_180810-UWN-UHS-front.jpg;w=960.jpeg",
+    "content": "Full article..."
+  },
+  {
+    "id": 2,
+    "date": "2025-09-10",
+    "title": " Sustainable Investment Initiative Launched",
+    "description": " Our new sustainability program focuses on environmentally responsible investments and supporting local communities across Mauritania and beyond.",
+    "picture": "./assets/news2.jpg",
+    "content": "Full article..."
+  },
+  {
+    "id": 3,
+    "date": "2025-09-10",
+    "title": " Partnership Agreement with Regional Development Bank",
+    "description": " We've signed a landmark partnership agreement to support infrastructure development and economic growth throughout the region.",
+    "picture": "./assets/news2.jpg",
+    "content": "Full article..."
+  }
+]

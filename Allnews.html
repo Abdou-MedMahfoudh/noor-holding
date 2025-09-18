@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News - Nour Holdings</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+        
+        .font-dm-serif {
+            font-family: 'DM Serif Text', serif;
+        }
+        
+        /* Nour Holdings Design System Colors */
+        .text-sand { color: #CAAB79; }
+        .text-skyline { color: #323E48; }
+        .text-gulf { color: #074859; }
+        .text-midnight { color: #1E2859; }
+        .text-heritage { color: #7F3E2D; }
+        .text-sun { color: #E38632; }
+        .text-sea { color: #92B7BB; }
+        .text-executive-navy { color: #1f2937; }
+        .text-executive-gold { color: #f59e0b; }
+        .text-executive-light { color: #f3f4f6; }
+        .text-executive-muted { color: #6b7280; }
+        .bg-sand { background-color: #CAAB79; }
+        .bg-skyline { background-color: #323E48; }
+        .bg-gulf { background-color: #074859; }
+        .bg-midnight { background-color: #1E2859; }
+        .bg-executive-navy { background-color: #1f2937; }
+        .bg-executive-gold { background-color: #f59e0b; }
+        .bg-executive-light { background-color: #f3f4f6; }
+        .bg-executive-muted { background-color: #6b7280; }
+        .from-midnight { --tw-gradient-from: #1E2859; }
+        .from-sand { --tw-gradient-from: #CAAB79; }
+        .to-skyline { --tw-gradient-to: #323E48; }
+        .to-sand { --tw-gradient-to: #CAAB79; }
+        .hover\:text-midnight:hover { color: #1E2859; }
+        .hover\:bg-gulf:hover { background-color: #074859; }
+        
+        /* Hero gradient overlay */
+        .hero-overlay {
+            background: linear-gradient(
+                to bottom,
+                rgba(30, 40, 89, 0.7) 0%,
+                rgba(30, 40, 89, 0.5) 50%,
+                rgba(202, 171, 121, 0.3) 100%
+            );
+        }
+
+        /* Loading animation */
+        .loading-card {
+            background: linear-gradient(-90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
+            background-size: 400% 400%;
+            animation: shimmer 1.5s ease-in-out infinite;
+        }
+
+        @keyframes shimmer {
+            0% { background-position: -400% 0%; }
+            100% { background-position: 400% 0%; }
+        }
+
+        /* Smooth transitions */
+        .news-card {
+            transform: translateY(0);
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .news-card:hover {
+            transform: translateY(-8px);
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900">
+
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-0 bg-executive-navy z-30 shadow-lg mt-0 transition-transform duration-300">
+        <!-- Logo -->
+        <img class="w-20 h-20 md:w-22 md:h-25 text-amber-50" src="./assets/noor_holding_vector_whiteText.svg" alt="Nour Holding Logo">
+        
+        <!-- Links - Hidden on mobile, shown on desktop -->
+        <ul class="hidden md:flex space-x-6 text-md font-medium text-white/80">
+            <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="/">Home</a></li>
+            <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#subsidiaries">Subsidiaries</a></li>
+            <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="/news" class="text-sand">News</a></li>
+            <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#contact">Contact us</a></li>
+        </ul>
+        
+        <!-- Mobile menu button -->
+        <button id="mobile-menu-btn" class="md:hidden text-white hover:text-gray-300 z-50 relative">
+            <!-- Hamburger -->
+            <svg id="hamburger-icon" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+            </svg>
+            <!-- Close -->
+            <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"/>
+            </svg>
+        </button>
+    </nav>
+
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu" class="fixed top-0 left-0 h-full w-80 bg-executive-navy z-40 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="flex flex-col pt-24 px-6 space-y-6 text-white text-lg">
+            <a href="/" class="hover:text-sand transition-colors border-b border-gray-700 pb-4">Home</a>
+            <a href="#subsidiaries" class="hover:text-sand transition-colors border-b border-gray-700 pb-4">Subsidiaries</a>
+            <a href="/news" class="text-sand border-b border-gray-700 pb-4">News</a>
+            <a href="#contact" class="hover:text-sand transition-colors">Contact us</a>
+        </div>
+    </div>
+
+    <!-- Mobile menu backdrop -->
+    <div id="mobile-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden"></div>
+
+    <!-- Header Section -->
+    <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-executive-navy via-midnight to-skyline">
+        <div class="max-w-7xl mx-auto text-center">
+            <div class="inline-flex items-center px-4 py-2 rounded-full bg-sand/20 text-sand text-sm font-medium mb-8">
+                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3v6m0 0v6m0-6h6m-6 0H9"></path>
+                </svg>
+                Stay Updated
+            </div>
+            <h1 class="text-4xl md:text-5xl lg:text-6xl font-dm-serif text-white mb-6 leading-tight">
+                News & Insights
+            </h1>
+            <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed">
+                Discover the latest developments, strategic initiatives, and industry insights from Nour Holdings as we continue to shape the future of West African business
+            </p>
+        </div>
+    </section>
+
+    <!-- Breadcrumb -->
+    <section class="py-6 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-200">
+        <div class="max-w-7xl mx-auto">
+            <nav>
+                <ol class="flex items-center space-x-2 text-gray-500 text-sm">
+                    <li><a href="/" class="hover:text-midnight transition-colors">Home</a></li>
+                    <li><span class="mx-2">/</span></li>
+                    <li class="text-sand font-medium">News</li>
+                </ol>
+            </nav>
+        </div>
+    </section>
+
+    <!-- News Filter and Search -->
+    <section class="py-8 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                <!-- Search -->
+                <div class="relative w-full md:w-96">
+                    <input 
+                        type="text" 
+                        id="search-input"
+                        placeholder="Search news articles..." 
+                        class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand focus:border-transparent outline-none transition-all"
+                    >
+                    <svg class="absolute left-3 top-3.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                </div>
+
+                <!-- Results counter -->
+                <div class="flex items-center space-x-4">
+                    <span id="results-counter" class="text-gray-600 text-sm">
+                        Loading articles...
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- News Grid -->
+    <main class="py-16 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <!-- Loading State -->
+            <div id="loading-state" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Loading cards -->
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="loading-card h-48 w-full"></div>
+                    <div class="p-6">
+                        <div class="loading-card h-4 w-24 rounded mb-3"></div>
+                        <div class="loading-card h-6 w-full rounded mb-3"></div>
+                        <div class="loading-card h-4 w-full rounded mb-2"></div>
+                        <div class="loading-card h-4 w-3/4 rounded mb-4"></div>
+                        <div class="loading-card h-4 w-20 rounded"></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="loading-card h-48 w-full"></div>
+                    <div class="p-6">
+                        <div class="loading-card h-4 w-24 rounded mb-3"></div>
+                        <div class="loading-card h-6 w-full rounded mb-3"></div>
+                        <div class="loading-card h-4 w-full rounded mb-2"></div>
+                        <div class="loading-card h-4 w-3/4 rounded mb-4"></div>
+                        <div class="loading-card h-4 w-20 rounded"></div>
+                    </div>
+                </div>
+                <div class="bg-white rounded-lg shadow-lg overflow-hidden">
+                    <div class="loading-card h-48 w-full"></div>
+                    <div class="p-6">
+                        <div class="loading-card h-4 w-24 rounded mb-3"></div>
+                        <div class="loading-card h-6 w-full rounded mb-3"></div>
+                        <div class="loading-card h-4 w-full rounded mb-2"></div>
+                        <div class="loading-card h-4 w-3/4 rounded mb-4"></div>
+                        <div class="loading-card h-4 w-20 rounded"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- News Grid Container -->
+            <div id="news-grid" class="hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- News articles will be dynamically inserted here -->
+            </div>
+
+            <!-- No Results Message -->
+            <div id="no-results" class="hidden text-center py-16">
+                <div class="max-w-md mx-auto">
+                    <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                    </svg>
+                    <h3 class="text-xl font-medium text-gray-600 mb-2">No articles found</h3>
+                    <p class="text-gray-500">Try adjusting your search terms or check back later for new updates.</p>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div id="pagination" class="hidden mt-16 flex justify-center">
+                <nav class="flex items-center space-x-2">
+                    <!-- Pagination will be dynamically generated -->
+                </nav>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-executive-navy text-white py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <!-- Company Info -->
+                <div>
+                     <img class="w-20 h-30 text-amber-50" src="./assets/noor_holding_vector_whiteText.svg" alt="">
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-medium text-sand text-lg mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-gray-300">
+                        <li><a href="#" class="hover:text-white transition-colors">About Us</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Word from president</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Subsidiaries</a></li>
+                        <li><a href="#" class="hover:text-white transition-colors">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-medium text-lg text-sand mb-4">Contact</h4>
+                   <div class="space-y-2 text-gray-300">
+                      <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-sand mt- flex-shrink-0 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                        </svg>
+                        <p class="ml-0.5">Nouakchott, Mauritania</p>
+                      </div>
+                      <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-sand mt- flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
+                        </svg>
+                        <p>
+                            <a href="mailto:info@nourholding.mr" class="hover:text-white transition-colors">
+                                info@noorholding.com
+                            </a>
+                        </p>
+                      </div>
+                      <div class="flex items-center space-x-2">
+                        <svg class="w-5 h-5 text-sand mt-0  flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        <p>
+                            <a href="tel:+22232343234" class="hover:text-white transition-colors">
+                                +222 32342332
+                            </a>
+                        </p>
+                      </div>
+                   </div>
+                </div>
+            </div>
+
+            <!-- Copyright -->
+            <div class="border-t border-gray-700 pt-8">
+                <div class="flex flex-col md:flex-row justify-between items-center">
+                    <p class="text-gray-400 text-sm">
+                        &copy; 2025 Noor Holding. All rights reserved.
+                    </p>
+                    <div class="flex space-x-6 mt-4 md:mt-0">
+                        <a class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
+                        <a class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // News management class
+        class NewsManager {
+            constructor() {
+                this.allNews = [];
+                this.filteredNews = [];
+                this.currentPage = 1;
+                this.itemsPerPage = 9;
+                this.searchTerm = '';
+                
+                this.init();
+            }
+
+            async init() {
+                await this.loadNews();
+                this.setupEventListeners();
+                this.renderNews();
+                this.updateResultsCounter();
+            }
+
+            // Mock news data - replace with actual JSON loading
+            async loadNews() {
+                // Simulate loading delay
+                await new Promise(resolve => setTimeout(resolve, 1000));
+
+                // Mock data with more articles to demonstrate pagination
+                this.allNews = [
+                    {
+                        id: 1,
+                        date: "2025-09-15",
+                        title: "Nour Holding Expands Operations Across West Africa",
+                        description: "We are excited to announce our strategic expansion into three new markets across West Africa, strengthening our commitment to regional growth and sustainable development.",
+                        picture: "https://images.unsplash.com/photo-1577962917302-cd874c4e31d2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    },
+                    {
+                        id: 2,
+                        date: "2025-09-10", 
+                        title: "New Partnership with Regional Development Bank",
+                        description: "Strategic partnership to enhance financial services and support small-to-medium enterprises across Mauritania and the Sahel region.",
+                        picture: "https://images.unsplash.com/photo-1560472354-b33ff0c44a43?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    },
+                    {
+                        id: 3,
+                        date: "2025-09-05",
+                        title: "Sustainable Energy Initiative Launched",
+                        description: "Nour Holdings announces major investment in renewable energy infrastructure to power communities across West Africa.",
+                        picture: "https://images.unsplash.com/photo-1466611653911-95081537e5b7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    },
+                    {
+                        id: 4,
+                        date: "2025-08-28",
+                        title: "Agricultural Innovation Program Success",
+                        description: "Our agricultural development program has helped over 1,000 farmers increase their productivity by 40% through modern techniques.",
+                        picture: "https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    },
+                    {
+                        id: 5,
+                        date: "2025-08-20",
+                        title: "Youth Entrepreneurship Initiative",
+                        description: "Launch of comprehensive program to support young entrepreneurs with funding, mentorship, and business development resources.",
+                        picture: "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    },
+                    {
+                        id: 6,
+                        date: "2025-08-15",
+                        title: "Technology Hub Opens in Nouakchott",
+                        description: "State-of-the-art technology center to foster innovation and digital transformation in Mauritania's business ecosystem.",
+                        picture: "https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    },
+                    {
+                        id: 7,
+                        date: "2025-08-10",
+                        title: "Women's Economic Empowerment Program",
+                        description: "New initiative providing microfinance, training, and mentorship to support women entrepreneurs across the region.",
+                        picture: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    },
+                    {
+                        id: 8,
+                        date: "2025-08-05",
+                        title: "Infrastructure Development Milestone",
+                        description: "Completion of major road construction project connecting rural communities to urban centers, improving trade and access.",
+                        picture: "https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    },
+                    {
+                        id: 9,
+                        date: "2025-07-28",
+                        title: "Educational Excellence Awards",
+                        description: "Recognizing outstanding achievements in our scholarship program that has supported over 500 students in higher education.",
+                        picture: "https://images.unsplash.com/photo-1523240795612-9a054b0db644?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    },
+                    {
+                        id: 10,
+                        date: "2025-07-20",
+                        title: "Digital Banking Revolution",
+                        description: "Launch of innovative mobile banking platform to increase financial inclusion in underserved communities.",
+                        picture: "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    },
+                    {
+                        id: 11,
+                        date: "2025-07-15",
+                        title: "Healthcare Access Initiative",
+                        description: "Opening of three new medical clinics in rural areas, providing essential healthcare services to remote communities.",
+                        picture: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    },
+                    {
+                        id: 12,
+                        date: "2025-07-10",
+                        title: "Clean Water Project Success",
+                        description: "Completion of water infrastructure project bringing clean, safe drinking water to 10,000 residents in affected areas.",
+                        picture: "https://images.unsplash.com/photo-1544551763-46a013bb70d5?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80"
+                    }
+                ];
+
+                this.filteredNews = [...this.allNews];
+            }
+
+            setupEventListeners() {
+                // Mobile menu toggle
+                const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+                const mobileMenu = document.getElementById('mobile-menu');
+                const mobileBackdrop = document.getElementById('mobile-backdrop');
+                const hamburgerIcon = document.getElementById('hamburger-icon');
+                const closeIcon = document.getElementById('close-icon');
+
+                mobileMenuBtn.addEventListener('click', () => {
+                    const isOpen = !mobileMenu.classList.contains('-translate-x-full');
+                    
+                    if (isOpen) {
+                        // Close menu
+                        mobileMenu.classList.add('-translate-x-full');
+                        mobileBackdrop.classList.add('hidden');
+                        hamburgerIcon.classList.remove('hidden');
+                        hamburgerIcon.classList.add('block');
+                        closeIcon.classList.add('hidden');
+                        closeIcon.classList.remove('block');
+                        document.body.classList.remove('overflow-hidden');
+                    } else {
+                        // Open menu
+                        mobileMenu.classList.remove('-translate-x-full');
+                        mobileBackdrop.classList.remove('hidden');
+                        hamburgerIcon.classList.add('hidden');
+                        hamburgerIcon.classList.remove('block');
+                        closeIcon.classList.remove('hidden');
+                        closeIcon.classList.add('block');
+                        document.body.classList.add('overflow-hidden');
+                    }
+                });
+
+                // Close menu when clicking backdrop
+                mobileBackdrop.addEventListener('click', () => {
+                    mobileMenu.classList.add('-translate-x-full');
+                    mobileBackdrop.classList.add('hidden');
+                    hamburgerIcon.classList.remove('hidden');
+                    hamburgerIcon.classList.add('block');
+                    closeIcon.classList.add('hidden');
+                    closeIcon.classList.remove('block');
+                    document.body.classList.remove('overflow-hidden');
+                });
+
+                // Search functionality
+                const searchInput = document.getElementById('search-input');
+                searchInput.addEventListener('input', (e) => {
+                    this.searchTerm = e.target.value.toLowerCase();
+                    this.filterNews();
+                    this.currentPage = 1;
+                    this.renderNews();
+                    this.updateResultsCounter();
+                });
+
+                // Navbar scroll behavior
+                this.setupNavbarScroll();
+            }
+
+            setupNavbarScroll() {
+                const navbar = document.querySelector('nav');
+                const showThreshold = 120;
+
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY < showThreshold) {
+                        navbar.classList.remove('-translate-y-full');
+                        navbar.classList.add('translate-y-0');
+                    } else {
+                        navbar.classList.add('-translate-y-full');
+                        navbar.classList.remove('translate-y-0');
+                    }
+                });
+            }
+
+            filterNews() {
+                if (!this.searchTerm) {
+                    this.filteredNews = [...this.allNews];
+                } else {
+                    this.filteredNews = this.allNews.filter(item => 
+                        item.title.toLowerCase().includes(this.searchTerm) ||
+                        item.description.toLowerCase().includes(this.searchTerm)
+                    );
+                }
+            }
+
+            formatDate(dateString) {
+                const options = { year: 'numeric', month: 'long', day: 'numeric' };
+                return new Date(dateString).toLocaleDateString('en-US', options);
+            }
+
+            createNewsCard(item) {
+                const imagePart = item.picture ? 
+                    `<div class="relative h-48 overflow-hidden">
+                        <img src="${item.picture}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+                    </div>` : 
+                    `<div class="h-48 bg-gradient-to-br from-sand/20 to-skyline/20 flex items-center justify-center">
+                        <svg class="w-16 h-16 text-sand/40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
+                        </svg>
+                    </div>`;
+
+                return `
+                    <article class="news-card bg-white rounded-lg shadow-lg overflow-hidden group cursor-pointer" onclick="window.location.href='/news.html?id=${item.id}'">
+                        ${imagePart}
+                        <div class="p-6">
+                            <div class="flex items-center space-x-2 mb-3">
+                                <svg class="w-3 h-3 text-skyline flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                                </svg>
+                                <span class="text-sm text-gray-500">${this.formatDate(item.date)}</span>
+                            </div>
+                            <h3 class="text-xl font-dm-serif text-midnight mb-3 group-hover:text-gulf transition-colors duration-300 line-clamp-2">
+                                ${item.title}
+                            </h3>
+                            <p class="text-gray-600 leading-relaxed mb-4 line-clamp-3">
+                                ${item.description || ''}
+                            </p>
+                            <div class="flex items-center space-x-2 text-gulf group-hover:text-midnight transition-colors duration-300">
+                                <span class="text-sm font-medium">Read More</span>
+                                <svg class="w-3 h-3 transform group-hover:translate-x-1 transition-transform duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                </svg>
+                            </div>
+                        </div>
+                    </article>
+                `;
+            }
+
+            renderNews() {
+                const loadingState = document.getElementById('loading-state');
+                const newsGrid = document.getElementById('news-grid');
+                const noResults = document.getElementById('no-results');
+                const pagination = document.getElementById('pagination');
+
+                // Hide loading state
+                loadingState.classList.add('hidden');
+
+                if (this.filteredNews.length === 0) {
+                    newsGrid.classList.add('hidden');
+                    pagination.classList.add('hidden');
+                    noResults.classList.remove('hidden');
+                    return;
+                }
+
+                // Show results
+                noResults.classList.add('hidden');
+                newsGrid.classList.remove('hidden');
+
+                // Calculate pagination
+                const totalPages = Math.ceil(this.filteredNews.length / this.itemsPerPage);
+                const startIndex = (this.currentPage - 1) * this.itemsPerPage;
+                const endIndex = startIndex + this.itemsPerPage;
+                const currentItems = this.filteredNews.slice(startIndex, endIndex);
+
+                // Render news cards
+                newsGrid.innerHTML = currentItems.map(item => this.createNewsCard(item)).join('');
+
+                // Render pagination if needed
+                if (totalPages > 1) {
+                    this.renderPagination(totalPages);
+                    pagination.classList.remove('hidden');
+                } else {
+                    pagination.classList.add('hidden');
+                }
+
+                // Scroll to top of results
+                if (this.currentPage > 1) {
+                    document.getElementById('news-grid').scrollIntoView({ 
+                        behavior: 'smooth', 
+                        block: 'start' 
+                    });
+                }
+            }
+
+            renderPagination(totalPages) {
+                const pagination = document.getElementById('pagination');
+                const maxVisiblePages = 5;
+                
+                let startPage = Math.max(1, this.currentPage - Math.floor(maxVisiblePages / 2));
+                let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+                
+                if (endPage - startPage + 1 < maxVisiblePages) {
+                    startPage = Math.max(1, endPage - maxVisiblePages + 1);
+                }
+
+                let paginationHTML = '';
+
+                // Previous button
+                if (this.currentPage > 1) {
+                    paginationHTML += `
+                        <button onclick="newsManager.goToPage(${this.currentPage - 1})" 
+                                class="px-3 py-2 text-sm font-medium text-gulf bg-white border border-gray-300 rounded-l-lg hover:bg-gray-50 hover:text-midnight transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                            </svg>
+                        </button>
+                    `;
+                }
+
+                // Page numbers
+                for (let i = startPage; i <= endPage; i++) {
+                    const isActive = i === this.currentPage;
+                    paginationHTML += `
+                        <button onclick="newsManager.goToPage(${i})" 
+                                class="px-4 py-2 text-sm font-medium transition-colors ${
+                                    isActive 
+                                        ? 'text-white bg-midnight border-midnight' 
+                                        : 'text-gulf bg-white border-gray-300 hover:bg-gray-50 hover:text-midnight'
+                                } border ${i === startPage && this.currentPage === 1 ? 'rounded-l-lg' : ''} ${i === endPage && this.currentPage === totalPages ? 'rounded-r-lg' : ''}">
+                            ${i}
+                        </button>
+                    `;
+                }
+
+                // Next button
+                if (this.currentPage < totalPages) {
+                    paginationHTML += `
+                        <button onclick="newsManager.goToPage(${this.currentPage + 1})" 
+                                class="px-3 py-2 text-sm font-medium text-gulf bg-white border border-gray-300 rounded-r-lg hover:bg-gray-50 hover:text-midnight transition-colors">
+                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                            </svg>
+                        </button>
+                    `;
+                }
+
+                pagination.innerHTML = `<nav class="flex items-center">${paginationHTML}</nav>`;
+            }
+
+            goToPage(page) {
+                this.currentPage = page;
+                this.renderNews();
+                this.updateResultsCounter();
+            }
+
+            updateResultsCounter() {
+                const counter = document.getElementById('results-counter');
+                const total = this.filteredNews.length;
+                
+                if (total === 0) {
+                    counter.textContent = 'No articles found';
+                } else if (total === this.allNews.length) {
+                    counter.textContent = `Showing ${total} article${total !== 1 ? 's' : ''}`;
+                } else {
+                    counter.textContent = `Showing ${total} of ${this.allNews.length} articles`;
+                }
+            }
+        }
+
+        // Initialize the news manager when the page loads
+        let newsManager;
+        document.addEventListener('DOMContentLoaded', () => {
+            newsManager = new NewsManager();
+        });
+    </script>
+
+    <!-- Additional styles for better visual effects -->
+    <style>
+        /* Text truncation utilities */
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Smooth image hover effect */
+        .group:hover .group-hover\:scale-105 {
+            transform: scale(1.05);
+        }
+
+        /* Enhanced focus states for accessibility */
+        input:focus {
+            box-shadow: 0 0 0 3px rgba(202, 171, 121, 0.1);
+        }
+
+        button:focus {
+            box-shadow: 0 0 0 3px rgba(202, 171, 121, 0.1);
+            outline: none;
+        }
+
+        /* Pagination button styling refinements */
+        .pagination button:first-child {
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+        }
+
+        .pagination button:last-child {
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+        }
+    </style>
