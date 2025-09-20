@@ -68,22 +68,13 @@
         margin-bottom: 1rem;
     }
 }
+
+
   </style>
 </head>
 <body>
-  
-  <!-- Hero section -->
-  <section class="relative md:h-[90vh] min-h-[75vh]  pt-0 overflow-hidden">
-        <!-- Slides -->
-        <div class="hero-slide active" style="background-image: url('./assets/ab20250519-kinross-exploitation-or-senisa-mauritanie-1.jpg');"></div>
-        <div class="hero-slide" style="background-image: url('./assets/noadhibou-port.jpg');"></div>
-        <div class="hero-slide" style="background-image: url('./assets/08-extraction-header.jpg');"></div>
-        
-        <!-- Gradient overlay -->
-        <div class="absolute inset-0 hero-bg-gradient-overlay z-10"></div>
-        
-        <!-- Navbar -->
-        <nav class="absolute top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-0 bg-transparent z-30 shadow-overlay mt-0">
+   <!-- Navbar -->
+       <nav class="absolute top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-0 bg-transparent z-30 shadow-overlay mt-0 transform translate-y-0 transition-transform duration-300 ease-in-out">
             <!-- Logo -->
             <img class="w-20 h-20 md:w-22 md:h-25 text-amber-50" src="./assets/noor_holding_vector_whiteText.svg" alt="Noor Holding Logo">
             
@@ -95,20 +86,28 @@
                 <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#">Contact us</a></li>
             </ul>
           
-         <!-- Mobile menu button -->
-<button id="mobile-menu-btn" class="md:hidden text-white hover:text-gray-300 z-50 relative">
-  <!-- Hamburger -->
-  <svg id="hamburger-icon" class="w-6 h-6 block" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-          d="M4 6h16M4 12h16M4 18h16"/>
-  </svg>
-  <!-- Close -->
-  <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-          d="M6 18L18 6M6 6l12 12"/>
-  </svg>
-</button>
-        </nav>
+    
+  </nav>
+
+  
+
+
+  <!-- Hero section -->
+  <section class="relative md:h-[80vh] min-h-[75vh]  pt-0 overflow-hidden">
+        <!-- Slides -->
+        <div class="hero-slide active" style="background-image: url('./assets/ab20250519-kinross-exploitation-or-senisa-mauritanie-1.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('./assets/noadhibou-port.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('./assets/08-extraction-header.jpg');"></div>
+        
+        <!-- Gradient overlay -->
+     <!-- Gradient overlay -->
+<div class="absolute inset-0 hero-bg-gradient-overlay z-10" 
+     style="background: linear-gradient(to bottom, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0) 30%);">
+</div>
+        
+       
+
+    
 
      
         <!-- Content Overlay -->
@@ -120,7 +119,7 @@
                 
                 <!-- Spider Web Image - Mobile Only -->
                 <div class="flex justify-center mt-6">
-                    <img src="./assets/noor_holding_spider_web_TRANSPARENT.png" alt="Noor Holding Network" class="max-w-[350px] h-auto opacity-80 "/>
+                    <img src="./assets/noor_holding_spider_web_TRANSPARENT.png" alt="Noor Holding Network" class="max-w-[400px] h-auto opacity-80 "/>
                 </div>
 
                 <div class="mb-0 text-sand ">
@@ -207,6 +206,8 @@
             <button onclick="currentSlide(3)"></button>
         </div>
     </section>
+
+   
 
   <section class="relative py-20 px-4 bg-executive-light overflow-hidden">
   <!-- Intense Desert Energy SVG Background -->
@@ -427,27 +428,7 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
             </div>
         </div>
 </section>
-<script>
-  const btn = document.getElementById('mobile-menu-btn');
-  const menu = document.getElementById('mobile-menu');
-  const overlay = document.getElementById('mobile-menu-overlay');
-  const hamburger = document.getElementById('hamburger-icon');
-  const closeIcon = document.getElementById('close-icon');
 
-  btn.addEventListener('click', () => {
-    menu.classList.toggle('translate-x-full');
-    overlay.classList.toggle('hidden');
-    hamburger.classList.toggle('hidden');
-    closeIcon.classList.toggle('hidden');
-  });
-
-  overlay.addEventListener('click', () => {
-    menu.classList.add('translate-x-full');
-    overlay.classList.add('hidden');
-    hamburger.classList.remove('hidden');
-    closeIcon.classList.add('hidden');
-  });
-</script>
   <hr class="my-8 border-t border-gray-300">
 <section class="relative  py-20 px-4 bg-sand/20 overflow-hidden">
         <!-- Desert Energy SVG Background -->
@@ -570,7 +551,7 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
         <div class="container mx-auto max-w-7xl">
             <!-- Section Header -->
             <div class="text-center mb-5">
-               <p class="text-lg text-sand font-light max-w-2xl mx-auto "> Featured Operating Companies
+               <p class="text-lg text-sand font-light max-w-2xl mx-auto ml-2"> Featured Operating Companies
                 </p>
 <div class="flex items-center justify-center w-full space-x-4 flex-nowrap overflow-x-auto">
     <div class=" hidden md: h-0.5 w-32 sm:w-80 bg-gradient-to-r from-sand to-executive-navy rounded-full flex-shrink-0"></div>
@@ -1532,8 +1513,14 @@ class="w-full h-full">
 
     // Auto-advance slides every 5 seconds
     setInterval(nextHeroSlide, 5000);
-  </script>
+    </script>
+   
 
-  
+
 </body>
+
+
+
+
+
 </html>

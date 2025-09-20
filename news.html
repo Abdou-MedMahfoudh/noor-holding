@@ -54,6 +54,7 @@
 <body class="bg-white text-gray-900">
 
     
+   
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-0 bg-executive-navy z-30 shadow-lg mt-0 transition-transform duration-300">
         <!-- Logo -->
@@ -92,6 +93,7 @@
 
     <!-- Mobile menu backdrop -->
     <div id="mobile-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden"></div>
+
 
     <!-- Hero Section with Article Image -->
     <section class="relative h-[50vh] md:h-[50vh] overflow-hidden mt-20">
@@ -325,6 +327,49 @@
         </div>
     </footer>
 
-   <script src="./js/Allnews.js" defer></script>
+   <script src="./js/navbar.js" defer></script>
+   
 </body>
+ <style>
+        /* Text truncation utilities */
+        .line-clamp-2 {
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+        
+        .line-clamp-3 {
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        /* Smooth image hover effect */
+        .group:hover .group-hover\:scale-105 {
+            transform: scale(1.05);
+        }
+
+        /* Enhanced focus states for accessibility */
+        input:focus {
+            box-shadow: 0 0 0 3px rgba(202, 171, 121, 0.1);
+        }
+
+        button:focus {
+            box-shadow: 0 0 0 3px rgba(202, 171, 121, 0.1);
+            outline: none;
+        }
+
+        /* Pagination button styling refinements */
+        .pagination button:first-child {
+            border-top-left-radius: 0.5rem;
+            border-bottom-left-radius: 0.5rem;
+        }
+
+        .pagination button:last-child {
+            border-top-right-radius: 0.5rem;
+            border-bottom-right-radius: 0.5rem;
+        }
+    </style>
 </html>

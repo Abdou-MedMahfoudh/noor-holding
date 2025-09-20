@@ -367,4 +367,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             newsManager = new NewsManager();
         });
+
+        
     
