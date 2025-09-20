@@ -53,6 +53,7 @@
 </head>
 <body class="bg-white text-gray-900">
 
+    
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-0 bg-executive-navy z-30 shadow-lg mt-0 transition-transform duration-300">
         <!-- Logo -->
@@ -78,6 +79,19 @@
             </svg>
         </button>
     </nav>
+
+    <!-- Mobile menu overlay -->
+    <div id="mobile-menu" class="fixed top-0 left-0 h-full w-80 bg-executive-navy z-40 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
+        <div class="flex flex-col pt-24 px-6 space-y-6 text-white text-lg">
+            <a href="/" class="hover:text-sand transition-colors border-b border-gray-700 pb-4">Home</a>
+            <a href="#subsidiaries" class="hover:text-sand transition-colors border-b border-gray-700 pb-4">Subsidiaries</a>
+            <a href="/news" class="text-sand border-b border-gray-700 pb-4">News</a>
+            <a href="#contact" class="hover:text-sand transition-colors">Contact us</a>
+        </div>
+    </div>
+
+    <!-- Mobile menu backdrop -->
+    <div id="mobile-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden"></div>
 
     <!-- Hero Section with Article Image -->
     <section class="relative h-[50vh] md:h-[50vh] overflow-hidden mt-20">
@@ -311,35 +325,6 @@
         </div>
     </footer>
 
-    <script>
-        // Mobile menu toggle
-        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-        const hamburgerIcon = document.getElementById('hamburger-icon');
-        const closeIcon = document.getElementById('close-icon');
-
-        mobileMenuBtn.addEventListener('click', () => {
-            hamburgerIcon.classList.toggle('hidden');
-            hamburgerIcon.classList.toggle('block');
-            closeIcon.classList.toggle('hidden');
-            closeIcon.classList.toggle('block');
-        });
-    </script>
-
-   <script>
-const navbar = document.querySelector('nav');
-const showThreshold = 120; // distance from top to start showing navbar
-
-window.addEventListener('scroll', () => {
-  if (window.scrollY < showThreshold) {
-    // Near the top, show navbar
-    navbar.classList.remove('-translate-y-full');
-    navbar.classList.add('translate-y-0');
-  } else {
-    // Farther down, hide navbar
-    navbar.classList.add('-translate-y-full');
-    navbar.classList.remove('translate-y-0');
-  }
-});
-</script>
+   <script src="./js/Allnews.js" defer></script>
 </body>
 </html>
