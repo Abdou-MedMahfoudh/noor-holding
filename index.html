@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
+
   <title>Noor Holding</title>
     <link rel="icon" href="./assets/0ea8716a-725f-4072-8ee9-aed3df86b0a9.JPG" type="image/jpeg">
   <style>
@@ -69,6 +70,17 @@
     }
 }
 
+ .visible {
+    opacity: 1 !important;
+    transform: none !important;
+  }
+
+  .fade-item {
+  opacity: 0;
+  transform: translateY(1.5rem) scale(1.1); /* slide down + zoomed in */
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
 
   </style>
 </head>
@@ -118,23 +130,23 @@
                 
                 
                 <!-- Spider Web Image - Mobile Only -->
-                <div class="flex justify-center mt-6">
+                <div class="flex justify-center mt-6 transition duration-1000 ease-out opacity-0 scale-110 fade-item">
                     <img src="./assets/noor_holding_spider_web_TRANSPARENT.png" alt="Noor Holding Network" class="max-w-[400px] h-auto opacity-80 "/>
                 </div>
 
                 <div class="mb-0 text-sand ">
-                    <h1 class="text-3xl font-dm-serif font-extrabold text-kandura mb-0 tracking-tight">
+                    <h1 class="text-3xl font-dm-serif font-extrabold text-kandura mb-0 tracking-tight transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
                         NOOR HOLDING
                     </h1>
                 </div>
                 
                 <!-- Short description for mobile -->
-                <p class="text-md text-kandura font-family-sans pb-5 leading-relaxed">
+                <p class="text-md text-kandura font-family-sans pb-5 leading-relaxed transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
                     Leading Mauritanian corporation across key sectors.
                 </p>
                 
                 <!-- Key Stats - Mobile -->
-                <div class="grid grid-cols-3 gap-4 max-w-xs mx-auto ">
+                <div class="grid grid-cols-3 gap-4 max-w-xs mx-auto transition duration-1000 ease-out opacity-0 translate-y-6 fade-item ">
                     <div class="text-center">
                         <div class="text-lg font-bold text-sand">10</div>
                         <div class="text-xs text-kandura/80 uppercase tracking-wide">Subsidiaries</div>
@@ -158,27 +170,27 @@
             <div class="hidden md:flex flex-col md:flex-row items-center justify-between w-full">
                 <div class="w-full md:w-1/2 text-center text-nour-white max-w-4xl px-6 mb-8 md:mb-0">
                     <!-- Title -->
-                    <div class="mb-8 text-sand">
-                        <h1 class="text-5xl md:text-7xl font-dm-serif text-executive leading-tight text-kandura mb-4 tracking-tight">
+                    <div class="mb-8 text-kandura">
+                        <h1 class="text-5xl md:text-7xl font-dm-serif text-executive leading-tight  mb-4 tracking-tight transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
                             NOOR HOLDING
                         </h1>
                     </div>
                     
-                    <p class="text-lg md:text-xl text-kandura font-medium mb-8 max-w-2xl mx-auto leading-relaxed">
+                    <p class="text-lg md:text-xl text-kandura font-medium mb-8 max-w-2xl mx-auto leading-relaxed transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
                        l'innovation, la rigueur et l'engagement 
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                        <button class="bg-sand hover:bg-sand/50 text-black font-semibold py-4 px-8 rounded-lg transition-all duration-300 ease-nour transform hover:scale-105 shadow-lg">
+                        <button class="bg-sand hover:bg-sand/50 text-black font-semibold py-4 px-8 rounded-lg  transition duration-1000 ease-out opacity-0 translate-y-6 fade-item transform hover:scale-105 shadow-lg">
                             Discover us
                         </button>
-                        <button class="border-2 border-kandura/50 hover:border-sand text-white hover:text-nour-sand font-semibold py-4 px-8 rounded-lg transition-all duration-300 ease-nour">
+                        <button class="border-2 border-kandura/50 hover:border-sand text-white hover:text-nour-sand font-semibold py-4 px-8 rounded-lg  transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
                             Our Subsidiaries
                         </button>
                     </div>
                     
                     <!-- Key Stats -->
-                    <div class="grid grid-cols-3 gap-8 mt-12 max-w-lg mx-auto">
+                    <div class="grid grid-cols-3 gap-8 mt-12 max-w-lg mx-auto transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
                         <div class="text-center">
                             <div class="text-3xl font-bold text-sand">10</div>
                             <div class="text-sm text-kandura/80 uppercase tracking-wide">Subsidiaries</div>
@@ -195,7 +207,7 @@
                 </div>
                 
                 <!-- Spider Web Image - Desktop Only -->
-                <div class="w-full md:w-1/2 flex justify-center mb-3">
+                <div  id="spider-web" class="w-full md:w-1/2 flex justify-center mb-3 transition duration-1000 ease-out opacity-0 scale-110 fade-item">
                     <img src="./assets/noor_holding_spider_web_TRANSPARENT.png" alt="Noor Holding Network" class="max-w-full h-auto"/>
                 </div>
             </div>
@@ -1517,6 +1529,39 @@ class="w-full h-full">
     // Auto-advance slides every 5 seconds
     setInterval(nextHeroSlide, 5000);
     </script>
+
+   <script>
+  window.addEventListener("load", () => {
+    const spider = document.getElementById("spider-web");
+    const texts = document.querySelectorAll("h1.fade-item, p.fade-item");
+    const stats = document.querySelectorAll(".grid.fade-item");
+    const buttons = document.querySelectorAll("button.fade-item");
+
+    // Step 1: Spider web image first
+    spider.classList.add("visible");
+
+    // Step 2: Then text
+    setTimeout(() => {
+      texts.forEach((el, i) => {
+        setTimeout(() => el.classList.add("visible"), i * 300);
+      });
+    }, 500);
+
+    // Step 3: Then stats
+    setTimeout(() => {
+      stats.forEach((el, i) => {
+        setTimeout(() => el.classList.add("visible"), i * 200);
+      });
+    }, 1000 + texts.length * 300);
+
+    // Step 4: Then buttons (short delay after stats)
+    setTimeout(() => {
+      buttons.forEach((el, i) => {
+        setTimeout(() => el.classList.add("visible"), i * 200);
+      });
+    }, 1000 + texts.length * 300 + stats.length * 200 + 400);
+  });
+</script>
    
 
 
