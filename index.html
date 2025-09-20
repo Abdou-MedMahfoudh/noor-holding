@@ -81,10 +81,27 @@
   transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
+#preloader {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
 
   </style>
 </head>
+
 <body>
+      <!-- Preloader Overlay -->
+  <div id="preloader" class="fixed inset-0 bg-white flex items-center justify-center" style="z-index: 9999;">
+    <div class="animate-spin rounded-full h-16 w-16 border-t-4 border-executive-gold border-b-4 border-gray-300"></div>
+  </div>
    <!-- Navbar -->
        <nav class="absolute top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-0 bg-transparent z-30 shadow-overlay mt-0 transform translate-y-0 transition-transform duration-300 ease-in-out">
             <!-- Logo -->
@@ -1529,40 +1546,62 @@ class="w-full h-full">
     // Auto-advance slides every 5 seconds
     setInterval(nextHeroSlide, 5000);
     </script>
+<script>
+window.addEventListener("load", () => {
+  const preloader = document.getElementById("preloader");
+  const spider = document.getElementById("spider-web");
+  const texts = document.querySelectorAll("h1.fade-item, p.fade-item");
+  const stats = document.querySelectorAll(".grid.fade-item");
+  const buttons = document.querySelectorAll("button.fade-item");
 
-   <script>
-  window.addEventListener("load", () => {
-    const spider = document.getElementById("spider-web");
-    const texts = document.querySelectorAll("h1.fade-item, p.fade-item");
-    const stats = document.querySelectorAll(".grid.fade-item");
-    const buttons = document.querySelectorAll("button.fade-item");
+  // List all images to preload (hero + carousel + key images)
+  const imagesToPreload = Array.from(document.images).map(img => img.src);
 
-    // Step 1: Spider web image first
+  let loadedCount = 0;
+
+  imagesToPreload.forEach(src => {
+    const img = new Image();
+    img.src = src;
+    img.onload = img.onerror = () => {
+      loadedCount++;
+      if (loadedCount === imagesToPreload.length) {
+        startAnimations();
+      }
+    };
+  });
+
+  function startAnimations() {
+    // Remove preloader
+    preloader.style.opacity = "0";
+    setTimeout(() => preloader.style.display = "none", 500);
+    document.body.classList.add("loaded");
+
+    // Step 1: Spider web image
     spider.classList.add("visible");
 
-    // Step 2: Then text
+    // Step 2: Texts (faster)
     setTimeout(() => {
       texts.forEach((el, i) => {
-        setTimeout(() => el.classList.add("visible"), i * 300);
+        setTimeout(() => el.classList.add("visible"), i * 150);
       });
     }, 500);
 
-    // Step 3: Then stats
+    // Step 3: Stats
     setTimeout(() => {
       stats.forEach((el, i) => {
         setTimeout(() => el.classList.add("visible"), i * 200);
       });
-    }, 1000 + texts.length * 300);
+    }, 500 + texts.length * 150);
 
-    // Step 4: Then buttons (short delay after stats)
+    // Step 4: Buttons
     setTimeout(() => {
       buttons.forEach((el, i) => {
         setTimeout(() => el.classList.add("visible"), i * 200);
       });
-    }, 1000 + texts.length * 300 + stats.length * 200 + 400);
-  });
+    }, 500 + texts.length * 150 + stats.length * 200 + 400);
+  }
+});
 </script>
-   
 
 
 </body>
