@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
-
-  <title>Noor Holding</title>
+<meta name="description" content="" data-i18n="meta.description">
+  <title data-i18n="meta.title" >Noor Holding</title>
     <link rel="icon" href="./assets/0ea8716a-725f-4072-8ee9-aed3df86b0a9.JPG" type="image/jpeg">
   <style>
     /* Carousel core - Fixed CSS without @apply */
@@ -125,6 +125,11 @@
 .dot:nth-child(3) {
   animation-delay: 0s;
 }
+
+/* Force LTR for carousel even in Arabic pages */
+html[dir="rtl"] .ltr-carousel {
+    direction: ltr;
+}
   </style>
 </head>
 
@@ -141,13 +146,17 @@
        <nav class="absolute top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-0 bg-transparent z-30 shadow-overlay mt-0 transform translate-y-0 transition-transform duration-300 ease-in-out">
             <!-- Logo -->
             <img class="w-20 h-20 md:w-22 md:h-25 text-amber-50" src="./assets/noor_holding_vector_whiteText.svg" alt="Noor Holding Logo">
+              
+           
+    
             
             <!-- Links - Hidden on mobile, shown on desktop -->
             <ul class="hidden md:flex space-x-6 text-md font-medium text-white/80">
-                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#about">About us</a></li>
-                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="./Allnews.html">News</a></li>
-                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#subsidiaries">Subsidiaries</a></li>
-                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#contact">Contact us</a></li>
+                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#about" data-i18n="nav.about">About us</a></li>
+                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="./Allnews.html" data-i18n="nav.news">News</a></li>
+                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#subsidiaries" data-i18n="nav.subsidiaries">Subsidiaries</a></li>
+                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="#contact" data-i18n="nav.contact">Contact us</a></li>
+                <!-- Language switcher will be inserted here automatically -->
             </ul>
           
     
@@ -157,7 +166,7 @@
 
 
   <!-- Hero section -->
-  <section class="relative md:h-[80vh] min-h-[75vh]  pt-0 overflow-hidden">
+  <section id="hero" class="relative md:h-[80vh] min-h-[75vh]  pt-0 overflow-hidden">
         <!-- Slides -->
         <div class="hero-slide active" style="background-image: url('./assets/ab20250519-kinross-exploitation-or-senisa-mauritanie-1.jpg');"></div>
         <div class="hero-slide" style="background-image: url('./assets/noadhibou-port.jpg');"></div>
@@ -187,13 +196,13 @@
                 </div>
 
                 <div class="mb-0 text-sand ">
-                    <h1 class="text-3xl font-dm-serif font-extrabold text-kandura mb-0 tracking-tight transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
+                    <h1  data-i18n="hero.title"  class="text-3xl font-dm-serif font-extrabold text-kandura mb-0 tracking-tight transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
                         NOOR HOLDING
                     </h1>
                 </div>
                 
                 <!-- Short description for mobile -->
-                <p class="text-md text-kandura font-family-sans pb-5 leading-relaxed transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
+               <p class="text-md text-kandura font-family-sans pb-5 leading-relaxed transition duration-1000 ease-out opacity-0 translate-y-6 fade-item" data-i18n="hero.description">
                     Leading Mauritanian corporation across key sectors.
                 </p>
                 
@@ -201,17 +210,18 @@
                 <div class="grid grid-cols-3 gap-4 max-w-xs mx-auto transition duration-1000 ease-out opacity-0 translate-y-6 fade-item ">
                     <div class="text-center">
                         <div class="text-lg font-bold text-sand">10</div>
-                        <div class="text-xs text-kandura/80 uppercase tracking-wide">Subsidiaries</div>
+                        <div class="text-xs text-kandura/80 uppercase tracking-wide" data-i18n="hero.stats.subsidiaries">Subsidiaries</div>
                     </div>
                     <div class="text-center">
                         <div class="text-lg font-bold text-sand">5</div>
-                        <div class="text-xs text-kandura/80 uppercase tracking-wide">Key Sectors</div>
+                        <div class="text-xs text-kandura/80 uppercase tracking-wide" data-i18n="hero.stats.sectors">Key Sectors</div>
                     </div>
                     <div class="text-center">
                         <div class="text-lg font-bold text-sand">Mauritania</div>
-                        <div class="text-xs text-kandura/80 uppercase tracking-wide text-nowrap">Market Leader</div>
+                        <div class="text-xs text-kandura/80 uppercase tracking-wide text-nowrap" data-i18n="hero.stats.leader">Market Leader</div>
                     </div>
                 </div>
+
 
                 
             </div>
@@ -223,25 +233,25 @@
                 <div class="w-full md:w-1/2 text-center text-nour-white max-w-4xl px-6 mb-8 md:mb-0">
                     <!-- Title -->
                     <div class="mb-8 text-kandura">
-                        <h1 class="text-5xl md:text-7xl font-dm-serif text-executive leading-tight  mb-4 tracking-tight transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
+                        <h1 class="text-5xl md:text-7xl font-dm-serif text-executive leading-tight  mb-4 tracking-tight transition duration-1000 ease-out opacity-0 translate-y-6 fade-item" data-i18n="hero.title">
                             NOOR HOLDING
                         </h1>
                     </div>
                     
-                    <p class="text-lg md:text-xl text-kandura font-medium mb-8 max-w-2xl mx-auto leading-relaxed transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
+                    <p class="text-lg md:text-xl text-kandura font-medium mb-8 max-w-2xl mx-auto leading-relaxed transition duration-1000 ease-out opacity-0 translate-y-6 fade-item" data-i18n="hero.subtitle">
                        l'innovation, la rigueur et l'engagement 
                     </p>
                     
                     <div class="flex flex-col sm:flex-row gap-4 justify-center">
                           <a href="#news"> 
 
-                              <button class="bg-sand hover:bg-sand/50 text-black font-semibold py-4 px-8 rounded-lg  transition duration-1000 ease-out opacity-0 translate-y-6 fade-item transform hover:scale-105 shadow-lg">
+                              <button class="bg-sand hover:bg-sand/50 text-black font-semibold py-4 px-8 rounded-lg  transition duration-1000 ease-out opacity-0 translate-y-6 fade-item transform hover:scale-105 shadow-lg" data-i18n="hero.btn.news">
                                   Latest News
                                 </button>
                             </a>
 
                                <a href="#subsidiaries"> 
-                        <button class="border-2 border-kandura/50 hover:border-sand text-white hover:text-nour-sand font-semibold py-4 px-8 rounded-lg  transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
+                        <button class="border-2 border-kandura/50 hover:border-sand text-white hover:text-nour-sand font-semibold py-4 px-8 rounded-lg  transition duration-1000 ease-out opacity-0 translate-y-6 fade-item" data-i18n="hero.btn.subsidiaries">
                             Our Subsidiaries
                         </button>
                          </a>
@@ -251,15 +261,15 @@
                     <div class="grid grid-cols-3 gap-8 mt-12 max-w-lg mx-auto transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
                         <div class="text-center">
                             <div class="text-3xl font-bold text-sand">10</div>
-                            <div class="text-sm text-kandura/80 uppercase tracking-wide">Subsidiaries</div>
+                            <div class="text-sm text-kandura/80 uppercase tracking-wide" data-i18n="hero.stats.subsidiaries">Subsidiaries</div>
                         </div>
                         <div class="text-center">
                             <div class="text-3xl font-bold text-sand">5</div>
-                            <div class="text-sm text-kandura/80 uppercase tracking-wide">Key Sectors</div>
+                            <div class="text-sm text-kandura/80 uppercase tracking-wide" data-i18n="hero.stats.sectors">Key Sectors</div>
                         </div>
                         <div class="text-center">
                             <div class="text-3xl font-bold text-sand">Mauritania</div>
-                            <div class="text-sm text-kandura/80 uppercase tracking-wide">Based in </div>
+                            <div class="text-sm text-kandura/80 uppercase tracking-wide" data-i18n="hero.stats.based">Based in </div>
                         </div>
                     </div>
                 </div>
@@ -374,12 +384,11 @@
    <div class="container mx-auto max-w-6xl relative z-10">
             <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 items-start">
                 
-                <!-- Content Section - Takes 2/3 of the width -->
-                <div class="lg:col-span-2 space-y-6 md:space-y-8 font--serif">
+               <div class="lg:col-span-2 space-y-6 md:space-y-8 font--serif">
                     <div class="space-y-4">
                         <div class="flex items-center justify-center space-x-3 w-full">
                             <div class="h-1 w-16 md:w-24 lg:w-35 bg-gradient-to-r from-sand to-executive-navy rounded-full"></div> 
-                            <h2 class="text-sm sm:text-sm md:text-lg font-dm-serif  text-executive leading-tight tracking-wider uppercase  whitespace-nowrap text-center">
+                            <h2 class="text-sm sm:text-sm md:text-lg font-dm-serif  text-executive leading-tight tracking-wider uppercase  whitespace-nowrap text-center" data-i18n="ceo.title">
                                 Mot du Président Directeur Général
                             </h2>
                             <div class="h-1 w-16 md:w-20 lg:w-30 bg-gradient-to-r from-sand to-executive-navy rounded-full"></div>
@@ -387,74 +396,75 @@
                     </div>
 
                     <div class="space-y-4 md:space-y-6 text-base md:text-lg text-gray-700 leading-relaxed">
-                         <p class="text-xl md:text-2xl text-skyline leading-relaxed font-light">
+                         <p class="text-xl md:text-2xl text-skyline leading-relaxed font-light" data-i18n="ceo.greeting">
                             Chers visiteurs,
                         </p>
                         
-                         <p class="text-md md:text-xl text-skyline leading-relaxed font-light">
+                         <p class="text-md md:text-xl text-skyline leading-relaxed font-light" data-i18n="ceo.intro">
                             C'est avec un grand honneur et un immense plaisir que je vous souhaite la bienvenue sur le site officiel de <strong class="text-executive-navy">NOOR HOLDING</strong>, un groupe mauritanien dynamique et ambitieux, engagé dans le développement économique de la Mauritanie et de la sous-région à travers des secteurs stratégiques et complémentaires.
                         </p>
                         
-                         <p class="text-md md:text-xl text-skyline leading-relaxed font-light">
+                         <p class="text-md md:text-xl text-skyline leading-relaxed font-light" data-i18n="ceo.ambition">
                             Depuis sa création, notre ambition a toujours été claire : bâtir un groupe solide, structuré et résolument tourné vers l'avenir. Aujourd'hui, NOOR HOLDING fédère plusieurs filiales spécialisées dans des domaines clés, allant de l'énergie et des mines à la logistique, en passant par la pêche, le commerce général, le transport et les services.
                         </p>
 
-                           <p class="text-md md:text-xl text-skyline leading-relaxed font-light">
+                           <p class="text-md md:text-xl text-skyline leading-relaxed font-light" data-i18n="ceo.entities.title">
                             <strong class="text-executive-navy">Nos entités phares :</strong>
                         </p>
                         
-                        <p class="text-base md:text-base lg:text-lg">
+                        <p class="text-base md:text-base lg:text-lg" data-i18n="ceo.entities.slmp">
                             <strong class="text-executive-navy">SLMP SA :</strong> Société de Logistique et de Manutention Portuaire, dotée de stations-service et active dans l'importation et la distribution des hydrocarbures.
                         </p>
                         
-                        <p class="text-base md:text-base lg:text-lg">
+                        <p class="text-base md:text-base lg:text-lg" data-i18n="ceo.entities.afh">
                             <strong class="text-executive-navy">AFH – Africaine des Hydrocarbures :</strong> Titulaire d'autorisations officielles pour l'importation, la distribution et le stockage des hydrocarbures raffinés.
                         </p>
                         
-                        <p class="text-base md:text-base lg:text-lg">
+                        <p class="text-base md:text-base lg:text-lg" data-i18n="ceo.entities.mines">
                             <strong class="text-executive-navy">MINES DE MAURITANIE :</strong> Acteur du secteur minier, engagé dans la recherche aurifère avec trois permis couvrant une superficie de plus de 1 000 km².
                         </p>
                         
-                        <p class="text-base md:text-base lg:text-lg">
+                        <p class="text-base md:text-base lg:text-lg" data-i18n="ceo.entities.itb">
+                            
                             <strong class="text-executive-navy">ITB – International Trade Brokerage :</strong> Spécialisée dans l'import-export, la distribution et la représentation commerciale.
                         </p>
                         
-                        <p class="text-base md:text-base lg:text-lg">
+                        <p class="text-base md:text-base lg:text-lg" data-i18n="ceo.entities.tbs1">
                             <strong class="text-executive-navy">TBS – Transport Business and Shipping :</strong> Opère dans le transport, le transit et les services logistiques internationaux.
                         </p>
                         
-                        <p class="text-base md:text-base lg:text-lg">
-                            <strong class="text-executive-navy">TBS – Trade Brokerage and Services :</strong> Acteur majeur dans l'intermédiation financière.
+                        <p class="text-base md:text-base lg:text-lg " data-i18n="ceo.entities.tbs2">
+                            <strong class="text-executive-navy font-bold ">TBS – Trade Brokerage and Services :</strong> Acteur majeur dans l'intermédiation financière.
                         </p>
                         
-                        <p class="text-base md:text-base lg:text-lg">
+                        <p class="text-base md:text-base lg:text-lg" data-i18n="ceo.entities.acg">
                             <strong class="text-executive-navy">ACG – Établissement Arrachad pour le Commerce Général :</strong> Intervient dans le négoce multiforme.
                         </p>
                         
-                        <p class="text-base md:text-base lg:text-lg">
+                        <p class="text-base md:text-base lg:text-lg" data-i18n="ceo.entities.fishing">
                             <strong class="text-executive-navy">SEMAK SA, SMMCS SA et Valor Fish Frigo (VFF) :</strong> Trois sociétés dédiées au secteur stratégique de la pêche, de la transformation et de la conservation.
                         </p>
                         
-                          <p class="text-md md:text-xl text-skyline leading-relaxed font-light">
+                          <p class="text-md md:text-xl text-skyline leading-relaxed font-light" data-i18n="ceo.vision.title">
                             <strong class="text-executive-navy">Notre vision et nos valeurs :</strong>
                         </p>
                         
-                         <p class="text-md md:text-xl text-skyline leading-relaxed font-light">
+                         <p class="text-md md:text-xl text-skyline leading-relaxed font-light" data-i18n="ceo.vision.text">
                             À travers l'ensemble de ces filiales, <strong class="text-executive-navy">NOOR HOLDING</strong> œuvre à créer de la valeur, anticiper les besoins du marché et contribuer activement à l'essor de la Mauritanie et de la sous-région. Notre vision repose sur trois piliers : <strong class="text-executive-navy">l'innovation</strong>, <strong class="text-executive-navy">la rigueur</strong> et <strong class="text-executive-navy">l'engagement</strong> en faveur de la durabilité et de la responsabilité sociale.
                         </p>
 
-                       <p class="text-md md:text-xl text-skyline leading-relaxed font-light">
+                       <p class="text-md md:text-xl text-skyline leading-relaxed font-light" data-i18n="ceo.gratitude">
                             Je tiens à exprimer ma profonde gratitude à nos partenaires, collaborateurs et clients pour la confiance qu'ils nous accordent. Ensemble, nous continuerons à bâtir un avenir prospère et durable.
                         </p>
 
                         <!-- Signature Section -->
                         <div class="pt-4 md:pt-6 mt-6 md:mt-8">
-                            <p class="text-executive-muted italic text-sm md:text-base mb-3">
+                            <p class="text-executive-muted italic text-sm md:text-base mb-3" data-i18n="ceo.regards">
                                 Avec toute ma considération,
                             </p>
                             <div class="text-executive-muted/70">
-                                <p class="text-lg md:text-xl font-dm-serif font-medium">Ahmed Salem ELY</p>
-                                <p class="text-sm md:text-base font-medium uppercase tracking-wider">
+                                <p class="text-lg md:text-xl font-dm-serif font-medium" data-i18n="ceo.name">Ahmed Salem ELY</p>
+                                <p class="text-sm md:text-base font-medium uppercase tracking-wider" data-i18n="ceo.title.sig">
                                     Président Directeur Général, NOOR HOLDING
                                 </p>
                             </div>
@@ -486,10 +496,10 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
 <!-- Leader Info -->
 <div class="mt-6 md:mt-8 text-center hidden lg:block">
 <div class="space-y-2 md:space-y-3">
-<h4 class="text-xl md:text-2xl font-dm-serif font-bold text-executive-navy">Ahmed Salem ELY</h4>
+<h4 class="text-xl md:text-2xl font-dm-serif font-bold text-executive-navy" data-i18n="ceo.name">Ahmed Salem ELY</h4>
 <div class="flex items-center justify-center space-x-2 md:space-x-4 pt-1 md:pt-2">
 <div class="h-px w-8 md:w-12 bg-executive-gold"></div>
-<p class="font-dm-serif  text-executive uppercase tracking-wider text-xs md:text-sm text-center leading-tight">
+<p class="font-dm-serif  text-executive uppercase tracking-wider text-xs md:text-sm text-center leading-tight" data-i18n="ceo.title.sig">
  President Of NOUR HOLDING
 </p>
 <div class="h-px w-8 md:w-12 bg-executive-gold"></div>
@@ -501,30 +511,12 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
         </div>
 </section>
 
+
   <hr class="my-8 border-t border-gray-300">
 <section id="about" class="relative  py-20 px-4 bg-sand/20 overflow-hidden">
         <!-- Desert Energy SVG Background -->
         <div class="absolute inset-0 opacity-12">
             <!--  -->
-        </div>
-
-
-                
-                <!-- Vision Geometric Elements -->
-                <g class="text-executive-gold" opacity="0.2">
-                    <polygon points="200,15 215,30 200,45 185,30" fill="#f59e0b"/>
-                    <circle cx="450" cy="25" r="6" fill="none" stroke="#f59e0b" stroke-width="0.8"/>
-                    <rect x="700" y="12" width="12" height="12" fill="none" stroke="#f59e0b" stroke-width="0.8" transform="rotate(45 706 18)"/>
-                    <polygon points="950,20 962,35 950,50 938,35" fill="none" stroke="#f59e0b" stroke-width="0.8"/>
-                </g>
-                
-                <!-- Mashrabiya Vision Pattern -->
-                <g class="text-executive-navy" opacity="0.12">
-                    <path d="M100 8 L108 16 L100 24 L92 16 Z M108 16 L116 24 L108 32 L100 24 Z" fill="#1e3a8a"/>
-                    <path d="M500 12 L508 20 L500 28 L492 20 Z M508 20 L516 28 L508 36 L500 28 Z" fill="#1e3a8a"/>
-                    <path d="M850 8 L858 16 L850 24 L842 16 Z M858 16 L866 24 L858 32 L850 24 Z" fill="#1e3a8a"/>
-                </g>
-            </svg>
         </div>
 
         <!-- Floating Geometric Elements -->
@@ -595,21 +587,17 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
                     <div class="space-y-5">
                         <div class="inline-block">
                             <div class="h-1 w-16 bg-gradient-to-r from-executive-navy to-executive-light rounded-full mb-4"></div>
-                            <h2 class="text-2xl font-dm-serif text-executive leading-tight font-bold">
+                            <h2 class="text-2xl font-dm-serif text-executive leading-tight font-bold" data-i18n="about.title">
                                 Qui Sommes Nous 
                             </h2>
                         </div>
-                        <!-- <h3 class="text-4xl lg:text-5xl font-bold text-executive-navy leading-tight">
-                            Shaping Tomorrow
-                           
-                        </h3> -->
                     </div>
 
                     <div class="space-y-6">
-                      <p class="text-xl md:text-xl text-skyline leading-relaxed font-light">
+                      <p class="text-xl md:text-xl text-skyline leading-relaxed font-light" data-i18n="about.desc1">
                         NOOR HOLDING est une entreprise basée à Nouakchott et qui compte 5 filiales spécialisées dans les services, l'import-export, la représentation, la pêche, le traitement des produits de la mer.
                         </p>
-                       <p class="text-xl md:text-xl text-skyline leading-relaxed font-light">
+                       <p class="text-xl md:text-xl text-skyline leading-relaxed font-light" data-i18n="about.desc2">
                         Noor Holding est un véritable modèle d'entreprise diversifiée en Mauritanie, avec une présence importante sur le marché. Nous sommes une entreprise fièrement mauritanienne, qui investit dans notre pays pour construire un avenir meilleur.
                         </p>
                         
@@ -623,27 +611,23 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
         <div class="container mx-auto max-w-7xl">
             <!-- Section Header -->
             <div class="text-center mb-5">
-               <p class="text-lg text-sand font-light max-w-2xl mx-auto ml-2"> Featured Operating Companies
+               <p class="text-lg text-sand font-light max-w-2xl mx-auto ml-2" data-i18n="subs.featured"> Featured Operating Companies
                 </p>
 <div class="flex items-center justify-center w-full space-x-4 flex-nowrap overflow-x-auto">
     <div class=" hidden md: h-0.5 w-32 sm:w-80 bg-gradient-to-r from-sand to-executive-navy rounded-full flex-shrink-0"></div>
-    <h3 class="text-3xl sm:text-4xl font-extralight text-executive-navy/80 leading-normal text-center flex-shrink-0">
+    <h3 class="text-3xl sm:text-4xl font-extralight text-executive-navy/80 leading-normal text-center flex-shrink-0" data-i18n="subs.title">
         Discover Our Subsidiaries
     </h3>
     <div class=" hidden md: h-0.5 w-32 sm:w-80 bg-gradient-to-l from-sand to-executive-navy rounded-full flex-shrink-0"></div>
 </div>
-
-                
-
-
             </div>
 
             <!-- Carousel Container -->
             <div class="relative w-full">
-                <div class="carousel-container overflow-hidden w-full relative h-[60vh] ">
+                <div class="carousel-container overflow-hidden w-full relative h-[60vh] ltr-carousel ">
                     <div class="carousel-track flex transition-transform duration-500 ease-in-out" id="carouselTrack">
                         
-                        <!-- Subsidiary 1: Solar Energy Corp -->
+                        <!-- Subsidiary 1: AFH -->
                         <div class="carousel-slide min-w-full  ">
                             <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 
             transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl">
@@ -656,26 +640,26 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
             </div>
             
             <div>
-                <h4 class="text-2xl font-light text-executive-navy mb-2">Africaine Des Hydrocarbures S.A</h4>
+                <h4 class="text-2xl font-light text-executive-navy mb-2" data-i18n="subsidiaries.companies.afh.name">Africaine Des Hydrocarbures S.A</h4>
                 <div class="h-1 w-12 bg-executive-gold rounded-full mb-4"></div>
             </div>
             
-            <p class="text-lg text-gray-700 leading-relaxed">
+            <p class="text-lg text-gray-700 leading-relaxed" data-i18n="subsidiaries.companies.afh.description">
                 Africaine des Hydrocarbures (AFH) est une entreprise spécialisée dans le secteur pétrolier, avec une solide réputation en matière de conformité et de fiabilité. L'entreprise détient des autorisations officielles qui lui permettent d'opérer dans l'ensemble de la chaîne de valeur des hydrocarbures raffinés, couvrant l'importation, le stockage et la distribution pour sécuriser l'approvisionnement énergétique du pays.
             </p>
             
             <div class="space-y-2">
                 <div class="flex items-center text-executive-muted">
                     <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-                    <span>Importation d'hydrocarbures raffinés</span>
+                    <span data-i18n="subsidiaries.companies.afh.services.0">Importation d'hydrocarbures raffinés</span>
                 </div>
                 <div class="flex items-center text-executive-muted">
                     <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-                    <span>Stockage et distribution sécurisés</span>
+                    <span data-i18n="subsidiaries.companies.afh.services.1">Stockage et distribution sécurisés</span>
                 </div>
                 <div class="flex items-center text-executive-muted">
                     <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-                    <span>Autorisations officielles complètes</span>
+                    <span data-i18n="subsidiaries.companies.afh.services.2">Autorisations officielles complètes</span>
                 </div>
             </div>
         </div>
@@ -704,7 +688,7 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
                             </div>
                         </div>
 
-                        <!-- Subsidiary 2: Wind Power Systems -->
+                        <!-- Subsidiary 2: SLMP -->
                         <div class="carousel-slide min-w-full p-20">
                        <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 
             transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl">
@@ -717,26 +701,26 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
             </div>
             
             <div>
-                <h4 class="text-2xl font-light text-executive-navy mb-2">SLMP S.A</h4>
+                <h4 class="text-2xl font-light text-executive-navy mb-2" data-i18n="subsidiaries.companies.slmp.name">SLMP S.A</h4>
                 <div class="h-1 w-12 bg-executive-gold rounded-full mb-4"></div>
             </div>
             
-            <p class="text-lg text-gray-700 leading-relaxed">
+            <p class="text-lg text-gray-700 leading-relaxed" data-i18n="subsidiaries.companies.slmp.description">
                 La Société de Logistique et de Manutention Portuaire (SLMP SA) est un acteur polyvalent se distinguant par son expertise dans les services de logistique et manutention portuaire. L'entreprise facilite le commerce international et étend ses activités dans l'énergie avec l'importation et la distribution des hydrocarbures, disposant de ses propres stations-service pour couvrir toute la chaîne de valeur.
             </p>
             
             <div class="space-y-2">
                 <div class="flex items-center text-executive-muted">
                     <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-                    <span>Services de logistique portuaire</span>
+                    <span data-i18n="subsidiaries.companies.slmp.services.0">Services de logistique portuaire</span>
                 </div>
                 <div class="flex items-center text-executive-muted">
                     <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-                    <span>Stations-service intégrées</span>
+                    <span data-i18n="subsidiaries.companies.slmp.services.1">Stations-service intégrées</span>
                 </div>
                 <div class="flex items-center text-executive-muted">
                     <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-                    <span>Distribution d'hydrocarbures</span>
+                    <span data-i18n="subsidiaries.companies.slmp.services.2">Distribution d'hydrocarbures</span>
                 </div>
             </div>
         </div>
@@ -766,7 +750,7 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
                             </div>
                         </div>
 
-                        <!-- Subsidiary 3: Energy Storage Solutions -->
+                        <!-- Subsidiary 3: MINES -->
                         <div class="carousel-slide min-w-full p-20">
                         <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 
             transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl">
@@ -779,26 +763,26 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
             </div>
             
             <div>
-                <h4 class="text-2xl font-light text-executive-navy mb-2">MINES DE MAURITANIE</h4>
+                <h4 class="text-2xl font-light text-executive-navy mb-2" data-i18n="subsidiaries.companies.mines.name">MINES DE MAURITANIE</h4>
                 <div class="h-1 w-12 bg-executive-gold rounded-full mb-4"></div>
             </div>
             
-            <p class="text-lg text-gray-700 leading-relaxed">
+            <p class="text-lg text-gray-700 leading-relaxed" data-i18n="subsidiaries.companies.mines.description">
                 MINES DE MAURITANIE est un acteur majeur du secteur minier, avec un focus particulier sur la recherche aurifère. L'entreprise mène des activités d'exploration intensive sur une vaste zone de plus de 1 000 km², couverte par trois permis de recherche. Grâce à son expertise géologique et aux technologies de pointe, elle découvre de nouveaux gisements d'or, contribuant directement au développement économique du pays.
             </p>
             
             <div class="space-y-2">
                 <div class="flex items-center text-executive-muted">
                     <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-                    <span><strong>+1 000 km²</strong> de superficie d'exploration</span>
+                    <span data-i18n="subsidiaries.companies.mines.services.0"><strong>+1 000 km²</strong> de superficie d'exploration</span>
                 </div>
                 <div class="flex items-center text-executive-muted">
                     <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-                    <span><strong>3 permis</strong> de recherche aurifère</span>
+                    <span data-i18n="subsidiaries.companies.mines.services.1"><strong>3 permis</strong> de recherche aurifère</span>
                 </div>
                 <div class="flex items-center text-executive-muted">
                     <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-                    <span>Technologies de pointe en géologie</span>
+                    <span data-i18n="subsidiaries.companies.mines.services.2">Technologies de pointe en géologie</span>
                 </div>
             </div>
         </div>
@@ -828,7 +812,7 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
                         </div>
                         
                         
-                        <!-- Subsidiary 3: Energy Storage Solutions -->
+                        <!-- Subsidiary 4: ITB -->
                         <div class="carousel-slide min-w-full p-20">
                        <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 
             transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl">
@@ -841,25 +825,25 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
             </div>
             
             <div>
-                <h4 class="text-2xl font-light text-executive-navy mb-2">ITB – International Trade Brokerage</h4>
+                <h4 class="text-2xl font-light text-executive-navy mb-2" data-i18n="subsidiaries.companies.itb.name">ITB – International Trade Brokerage</h4>
                 <div class="h-1 w-12 bg-executive-gold rounded-full mb-4"></div>
             </div>
             
-           <p class="text-lg text-gray-700 leading-relaxed">
+           <p class="text-lg text-gray-700 leading-relaxed" data-i18n="subsidiaries.companies.itb.description">
 International Trade Brokerage (ITB) est une entreprise spécialisée dans les échanges commerciaux internationaux, agissant comme intermédiaire entre acheteurs et vendeurs. Expert en import-export, ITB facilite les transactions transfrontalières et assure la distribution ainsi que la représentation de marques internationales. L'entreprise aide les entreprises étrangères à s'implanter sur les marchés locaux grâce à son expertise en logistique et réglementation, se positionnant comme un partenaire stratégique pour l'expansion commerciale internationale.
 </p>
 <div class="space-y-2">
 <div class="flex items-center text-executive-muted">
 <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-<span>Courtage en échanges internationaux</span>
+<span data-i18n="subsidiaries.companies.itb.services.0">Courtage en échanges internationaux</span>
 </div>
 <div class="flex items-center text-executive-muted">
 <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-<span>Représentation de marques internationales</span>
+<span data-i18n="subsidiaries.companies.itb.services.1">Représentation de marques internationales</span>
 </div>
 <div class="flex items-center text-executive-muted">
 <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-<span>Expertise logistique et réglementaire</span>
+<span data-i18n="subsidiaries.companies.itb.services.2">Expertise logistique et réglementaire</span>
 </div>
 </div>
         </div>
@@ -889,7 +873,7 @@ International Trade Brokerage (ITB) est une entreprise spécialisée dans les é
                         </div>
 
 
-                        <!-- Subsidiary 3: Energy Storage Solutions -->
+                        <!-- Subsidiary 5: TBS Transport -->
                         <div class="carousel-slide min-w-full p-20">
                          <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 
             transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl">
@@ -902,25 +886,25 @@ International Trade Brokerage (ITB) est une entreprise spécialisée dans les é
             </div>
             
             <div>
-                <h4 class="text-2xl font-light text-executive-navy mb-2">TBS – Transport Business and Shipping</h4>
+                <h4 class="text-2xl font-light text-executive-navy mb-2" data-i18n="subsidiaries.companies.tbs1.name">TBS – Transport Business and Shipping</h4>
                 <div class="h-1 w-12 bg-executive-gold rounded-full mb-4"></div>
             </div>
             
-           <p class="text-lg text-gray-700 leading-relaxed">
+           <p class="text-lg text-gray-700 leading-relaxed" data-i18n="subsidiaries.companies.tbs1.description">
 Transport Business and Shipping (TBS) est une entreprise de transport et de logistique offrant des solutions complètes pour les besoins en transit et services logistiques internationaux. L'entreprise gère le déplacement de marchandises par voie terrestre, maritime et aérienne. En tant que transitaire, TBS s'occupe des formalités douanières et administratives complexes, simplifiant l'importation et l'exportation pour ses clients tout en garantissant des livraisons ponctuelles et sécurisées.
 </p>
 <div class="space-y-2">
 <div class="flex items-center text-executive-muted">
 <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-<span>Transport terrestre, maritime et aérien</span>
+<span data-i18n="subsidiaries.companies.tbs1.services.0">Transport terrestre, maritime et aérien</span>
 </div>
 <div class="flex items-center text-executive-muted">
 <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-<span>Services de transit et formalités douanières</span>
+<span data-i18n="subsidiaries.companies.tbs1.services.1">Services de transit et formalités douanières</span>
 </div>
 <div class="flex items-center text-executive-muted">
 <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-<span>Solutions logistiques personnalisées</span>
+<span data-i18n="subsidiaries.companies.tbs1.services.2">Solutions logistiques personnalisées</span>
 </div>
 </div>
         </div>
@@ -964,29 +948,29 @@ Transport Business and Shipping (TBS) est une entreprise de transport et de logi
             </div>
 
             <div>
-                <h4 class="text-2xl font-light text-executive-navy mb-2">ACG – Établissement Arrachad pour le Commerce Général</h4>
+                <h4 class="text-2xl font-light text-executive-navy mb-2" data-i18n="subsidiaries.companies.acg.name">ACG – Établissement Arrachad pour le Commerce Général</h4>
                 <div class="h-1 w-12 bg-executive-gold rounded-full mb-4"></div>
             </div>
 
-           <p class="text-lg text-gray-700 leading-relaxed">
+           <p class="text-lg text-gray-700 leading-relaxed" data-i18n="subsidiaries.companies.acg.description">
 L'Établissement Arrachad pour le Commerce Général (ACG) est une entreprise de négoce multiforme opérant dans une variété de secteurs à l'échelle nationale et internationale. ACG se distingue par sa capacité d'adaptation aux demandes du marché, s'approvisionnant en produits divers des matières premières aux produits finis. Son modèle agile lui permet de répondre rapidement aux opportunités commerciales grâce à son vaste réseau de fournisseurs et d'acheteurs.
 </p>
 <div class="space-y-2">
 <div class="flex items-center text-executive-muted">
 <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-<span>Commerce national et international</span>
+<span data-i18n="subsidiaries.companies.acg.services.0">Commerce national et international</span>
 </div>
 <div class="flex items-center text-executive-muted">
 <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-<span>Matières premières et produits finis</span>
+<span data-i18n="subsidiaries.companies.acg.services.1">Matières premières et produits finis</span>
 </div>
 <div class="flex items-center text-executive-muted">
 <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-<span>Solutions de négoce agiles et personnalisées</span>
+<span data-i18n="subsidiaries.companies.acg.services.2">Solutions de négoce agiles et personnalisées</span>
 </div>
 <div class="flex items-center text-executive-muted">
 <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-<span>Vaste réseau de fournisseurs et d'acheteurs</span>
+<span data-i18n="subsidiaries.companies.acg.services.3">Vaste réseau de fournisseurs et d'acheteurs</span>
 </div>
 </div>
         </div>
@@ -1029,11 +1013,11 @@ L'Établissement Arrachad pour le Commerce Général (ACG) est une entreprise de
             </div>
             
            <div>
-    <h4 class="text-2xl font-light text-executive-navy mb-2">TBS – Trade Brokerage and Services</h4>
+    <h4 class="text-2xl font-light text-executive-navy mb-2" data-i18n="subsidiaries.companies.tbs2.name">TBS – Trade Brokerage and Services</h4>
     <div class="h-1 w-12 bg-executive-gold rounded-full mb-4"></div>
 </div>
             
-           <p class="text-lg text-gray-700 leading-relaxed">
+           <p class="text-lg text-gray-700 leading-relaxed" data-i18n="subsidiaries.companies.tbs1.description">
 Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation financière, facilitant les transactions en actions, obligations et autres instruments financiers. L'entreprise agit comme intermédiaire entre investisseurs et marchés financiers, permettant aux clients de placer leurs capitaux de manière stratégique. TBS fournit également des services de conseil financier et se distingue par sa connaissance approfondie des marchés ainsi que sa capacité à identifier des opportunités de croissance.
 </p>
 
@@ -1041,15 +1025,15 @@ Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation f
             <div class="space-y-2">
     <div class="flex items-center text-executive-muted">
         <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-        <span>Intermédiation en instruments financiers</span>
+        <span data-i18n="subsidiaries.companies.tbs1.services.0">Intermédiation en instruments financiers</span>
     </div>
     <div class="flex items-center text-executive-muted">
         <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-        <span>Services de conseil en investissement</span>
+        <span data-i18n="subsidiaries.companies.tbs1.services.1">Services de conseil en investissement</span>
     </div>
     <div class="flex items-center text-executive-muted">
         <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-        <span>Expertise des marchés financiers</span>
+        <span data-i18n="subsidiaries.companies.tbs1.services.2">Expertise des marchés financiers</span>
     </div>
 </div>
         </div>
@@ -1101,26 +1085,26 @@ Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation f
 </div>
                 
                 <div>
-                    <h4 class="text-2xl font-light text-executive-navy mb-2">SEMAK s.a  | SMMCS s.a  |  Valor Fish Frigo (VFF) </h4>
+                    <h4 class="text-2xl font-light text-executive-navy mb-2" data-i18n="subsidiaries.companies.fishing.name "">SEMAK s.a  | SMMCS s.a  |  Valor Fish Frigo (VFF) </h4>
                     <div class="h-1 w-12 bg-executive-gold rounded-full mb-4"></div>
                 </div>
                 
-                <p class="text-lg text-gray-700 leading-relaxed">
+                <p class="text-lg text-gray-700 leading-relaxed" data-i18n="subsidiaries.companies.fishing.description">
                     SEMAK s.a, SMMCS s.a, et Valor Fish Frigo (VFF) sont des entreprises du secteur stratégique de la pêche opérant de manière intégrée pour optimiser la transformation et conservation des produits de la mer. SEMAK s.a possède une usine de pointe avec tunnel de congélation, SMMCS s.a assure la capture via sa flotte de chalutiers, et VFF se dédie à la conservation. Ensemble, elles forment une chaîne de valeur complète garantissant fraîcheur et qualité des produits halieutiques.
                 </p>
                 
                 <div class="space-y-2">
                     <div class="flex items-center text-executive-muted">
                         <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-                        <span>Chaîne de valeur intégrée capture-conservation</span>
+                        <span data-i18n="subsidiaries.companies.fishing.services.0">Chaîne de valeur intégrée capture-conservation</span>
                     </div>
                     <div class="flex items-center text-executive-muted">
                         <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-                        <span>Technologies de pointe de transformation</span>
+                        <span data-i18n="subsidiaries.companies.fishing.services.1">Technologies de pointe de transformation</span>
                     </div>
                     <div class="flex items-center text-executive-muted">
                         <span class="w-2 h-2 bg-executive-gold rounded-full mr-3"></span>
-                        <span>Flotte moderne de chalutiers</span>
+                        <span data-i18n="subsidiaries.companies.fishing.services.2">Flotte moderne de chalutiers</span>
                     </div>
                 </div>
             </div>
@@ -1185,7 +1169,7 @@ Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation f
     <hr class="my-8 border-t border-gray-300">
     <section id="news" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
     <!-- Title -->
-    <h2 class="text-4xl lg:text-5xl font-dm-serif text-sand mb-10 text-center">
+    <h2 class="text-4xl lg:text-5xl font-dm-serif text-sand mb-10 text-center " data-i18n="news.title">
         Latest News 
     </h2>
     
@@ -1196,7 +1180,7 @@ Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation f
     <!-- Read More Button -->
     <div class="flex justify-center">
         <a href="./Allnews.html" class="inline-flex items-center px-8 py-4 bg-sand text-midnight font-semibold rounded-lg transition-all duration-300 hover:bg-skyline hover:text-white hover:shadow-lg">
-            <span class="flex items-center">
+            <span class="flex items-center" data-i18n="news.viewall">
                 View All News
                 <svg class="w-3 h-3 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6"></path>
@@ -1213,7 +1197,7 @@ Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation f
             <div class="space-y-6">
               
                 <!-- Title -->
-                <h2 class="text-4xl lg:text-5xl font-dm-serif text-sand mb-10">
+                <h2 class="text-4xl lg:text-5xl font-dm-serif text-sand mb-10 " data-i18n="contact.title">
                     Contact Us 
                 </h2>
                 
@@ -1224,10 +1208,10 @@ Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation f
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
                         </svg>
-                        <h3 class="text-xl font-medium text-skyline">Our Location</h3>
+                        <h3 class="text-xl font-medium text-skyline" data-i18n="contact.location.title">Our Location</h3>
                     </div>
                     <div class="ml-8">
-                        <p class="text-gray-600 leading-relaxed">
+                        <p class="text-gray-600 leading-relaxed" data-i18n="contact.location.address">
                             4th Floor, Lot 402 ,Sidi Mohamed Cheikh Lemine Street<br>
                             Tevragh Zeina Opposite The Mosque<br>
                             Nouakchott, Mauritania
@@ -1243,12 +1227,12 @@ Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation f
                         <svg class="w-5 h-5 text-skyline mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
                         </svg>
-                        <h3 class="text-xl font-medium text-skyline">Office Hours</h3>
+                        <h3 class="text-xl font-medium text-skyline" data-i18n="contact.hours.title">Office Hours</h3>
                     </div>
                     <div class="ml-8 space-y-2">
-                        <p class="text-gray-600">Monday - Thursday (8 AM - 5 PM)</p>
-                        <p class="text-gray-600">Friday (8 AM - 12 PM)</p>
-                        <p class="text-gray-600">Saturday & Sunday - Closed</p>
+                        <p class="text-gray-600" data-i18n="contact.hours.weekdays">Monday - Thursday (8 AM - 5 PM)</p>
+                        <p class="text-gray-600" data-i18n="contact.hours.friday">Friday (8 AM - 12 PM)</p>
+                        <p class="text-gray-600" data-i18n="contact.hours.weekend" >Saturday & Sunday - Closed</p>
                     </div>
                 </div>
 
@@ -1258,7 +1242,7 @@ Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation f
                         <svg class="w-5 h-5 text-skyline mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z"></path>
                         </svg>
-                        <h3 class="text-xl font-medium text-skyline">Landline</h3>
+                        <h3 class="text-xl font-medium text-skyline" data-i18n="contact.phone.title">Landline</h3>
                     </div>
                     <div class="ml-8">
                         <a href="tel:+22224222423" class="text-gulf hover:text-midnight transition-colors font-medium">
@@ -1273,7 +1257,7 @@ Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation f
                         <svg class="w-5 h-5 text-skyline mt-1 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
-                        <h3 class="text-xl font-medium text-skyline">Email</h3>
+                        <h3 class="text-xl font-medium text-skyline" data-i18n="contact.email.title" >Email</h3>
                     </div>
                     <div class="ml-8">
                         <a href="mailto:info@dasholding.ae" class="text-gulf hover:text-midnight transition-colors font-medium">
@@ -1289,7 +1273,7 @@ Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation f
                     <svg class="w-5 h-5 text-skyline flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 011.447-.894L9 7m0 13l6-3m-6 3V7m6 10l4.553 2.276A1 1 0 0021 18.382V7.618a1 1 0 00-1.447-.894L15 4m0 13V4m-6 3l6-3"></path>
                     </svg>
-                    <h3 class="text-xl font-medium text-skyline">Location Map</h3>
+                    <h3 class="text-xl font-medium text-skyline" data-i18n="contact.map.title" >Location Map</h3>
                 </div>
                 
                 <!-- Map Container -->
@@ -1308,7 +1292,7 @@ class="w-full h-full">
                     <!-- Custom Overlay for "View larger map" link -->
                      <div class="absolute top-4 left-4 bg-white px-3 py-2 rounded-md shadow-md">
         <div class="text-sm font-semibold text-midnight">Nour Holding</div>
-        <a href="https://maps.app.goo.gl/7Zn6712bJKpUnNVs5" target="_blank" class="text-xs text-blue-600 hover:text-blue-800">
+        <a href="https://maps.app.goo.gl/7Zn6712bJKpUnNVs5" target="_blank" class="text-xs text-blue-600 hover:text-blue-800" >
             Get Directions
         </a>
     </div>
@@ -1321,10 +1305,10 @@ class="w-full h-full">
     <section class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-gray-200">
         <div class="max-w-3xl mx-auto">
             <div class="text-center mb-12">
-                <h2 class="text-4xl lg:text-5xl font-dm-serif text-sand mb-4">
+                <h2 class="text-4xl lg:text-5xl font-dm-serif text-sand mb-4 " data-i18n="contact.touch.title">
                     Get In Touch
                 </h2>
-                <p class="text-gray-600 text-lg">
+                <p class="text-gray-600 text-lg" data-i18n="contact.touch.subtitle">
                     Send us a message and we'll get back to you as soon as possible.
                 </p>
             </div>
@@ -1333,7 +1317,7 @@ class="w-full h-full">
                 <div class="grid md:grid-cols-2 gap-6">
                     <!-- Name Field -->
                     <div>
-                        <label for="name" class="block text-sm font-medium text-skyline mb-2">
+                        <label for="name" class="block text-sm font-medium text-skyline mb-2" data-i18n="form.name" >
                             Full Name *
                         </label>
                         <input 
@@ -1343,12 +1327,13 @@ class="w-full h-full">
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                             placeholder="Enter your full name"
+                             data-i18n-placeholder="form.name"
                         >
                     </div>
 
                     <!-- Email Field -->
                     <div>
-                        <label for="email" class="block text-sm font-medium text-skyline mb-2">
+                        <label for="email" class="block text-sm font-medium text-skyline mb-2" data-i18n="form.email" >
                             Email Address *
                         </label>
                         <input 
@@ -1358,13 +1343,15 @@ class="w-full h-full">
                             required
                             class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                             placeholder="Enter your email address"
+                          
+                             data-i18n-placeholder="form.email"
                         >
                     </div>
                 </div>
 
                 <!-- Phone Field -->
                 <div>
-                    <label for="phone" class="block text-sm font-medium text-skyline mb-2">
+                    <label for="phone" class="block text-sm font-medium text-skyline mb-2" data-i18n="form.phone" >
                         Phone Number
                     </label>
                     <input 
@@ -1373,12 +1360,13 @@ class="w-full h-full">
                         name="phone"
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                         placeholder="Enter your phone number"
+                        data-i18n-placeholder="form.phone"
                     >
                 </div>
 
                 <!-- Subject Field -->
                 <div>
-                    <label for="subject" class="block text-sm font-medium text-skyline mb-2">
+                    <label for="subject" class="block text-sm font-medium text-skyline mb-2" data-i18n="form.subject">
                         Subject *
                     </label>
                     <input 
@@ -1388,12 +1376,13 @@ class="w-full h-full">
                         required
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                         placeholder="Brief description of your inquiry"
+                        data-i18n-placeholder="form.subject"
                     >
                 </div>
 
                 <!-- Message Field -->
                 <div>
-                    <label for="message" class="block text-sm font-medium text-skyline mb-2">
+                    <label for="message" class="block text-sm font-medium text-skyline mb-2" data-i18n="form.message">
                         Message *
                     </label>
                     <textarea 
@@ -1403,6 +1392,7 @@ class="w-full h-full">
                         rows="6"
                         class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-vertical"
                         placeholder="Tell us more about your inquiry..."
+                        data-i18n-placeholder="form.message"
                     ></textarea>
                 </div>
 
@@ -1410,7 +1400,7 @@ class="w-full h-full">
                 <div class="text-center">
                     <button 
                         type="submit"
-                        class="bg-sand hover:bg-sand/30 text-executive-navy px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                        class="bg-sand hover:bg-sand/30 text-executive-navy px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl" data-i18n="form.submit"
                     >
                         Send Message
                     </button>
@@ -1431,18 +1421,18 @@ class="w-full h-full">
 
                 <!-- Quick Links -->
                  <div>
-                    <h4 class="font-medium text-sand text-lg mb-4">Quick Links</h4>
+                    <h4 class="font-medium text-sand text-lg mb-4" data-i18n="footer.links">Quick Links </h4>
                     <ul class="space-y-2 text-gray-300">
-                        <li><a href="/" class="hover:text-white transition-colors">Home</a></li>
-                        <li><a href="./Allnews.html" class="hover:text-white transition-colors">News</a></li>
-                        <li><a href="./index.html#subsidiaries" class="hover:text-white transition-colors">Subsidiaries</li>
-                        <li><a href="./index.html#contact" class="hover:text-white transition-colors">Contact</a></li>
+                      <li><a href="/" class="hover:text-white transition-colors" data-i18n="footer.home">Home</a></li>
+                        <li><a href="./Allnews.html" class="hover:text-white transition-colors" data-i18n="nav.news">News</a></li>
+                        <li><a href="./index.html#subsidiaries" class="hover:text-white transition-colors" data-i18n="footer.subs"  >Subsidiaries </a> </li>
+                        <li><a href="./index.html#contact" class="hover:text-white transition-colors" data-i18n="nav.contact">Contact</a></li>
                     </ul>
                 </div>
 
                 <!-- Contact Info -->
                 <div>
-                    <h4 class="font-medium text-lg text-sand mb-4">Contact</h4>
+                    <h4 class="font-medium text-lg text-sand mb-4" data-i18n="footer.contact" >Contact</h4>
                    <div class="space-y-2 text-gray-300">
                       <div class="flex items-center space-x-2">
                         <svg class="w-5 h-5 text-sand mt- flex-shrink-0 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -1480,12 +1470,12 @@ class="w-full h-full">
             <!-- Copyright -->
             <div class="border-t border-gray-700 pt-8">
                 <div class="flex flex-col md:flex-row justify-between items-center">
-                    <p class="text-gray-400 text-sm">
+                    <p class="text-gray-400 text-sm" data-i18n="footer.copyright">
                         &copy; 2025 Noor Holding. All rights reserved.
                     </p>
                     <div class="flex space-x-6 mt-4 md:mt-0">
-                        <a  class="text-gray-400 hover:text-white transition-colors text-sm">Privacy Policy</a>
-                        <a  class="text-gray-400 hover:text-white transition-colors text-sm">Terms of Service</a>
+                        <a  class="text-gray-400 hover:text-white transition-colors text-sm" data-i18n="footer.privacy" >Privacy Policy</a>
+                        <a  class="text-gray-400 hover:text-white transition-colors text-sm" data-i18n="footer.terms">Terms of Service</a>
                     </div>
                 </div>
             </div>
@@ -1651,6 +1641,7 @@ window.addEventListener("load", () => {
 });
 </script>
 
+ <script src="js/i18n.js"></script>
 
 </body>
 

@@ -1,0 +1,579 @@
+{
+  "en": {
+    "meta": {
+      "title": "Noor Holding",
+      "description": "Leading Mauritanian corporation across key sectors"
+    },
+    "navigation": {
+      "about": "About Us",
+      "news": "News",
+      "subsidiaries": "Subsidiaries",
+      "contact": "Contact Us"
+    },
+    "hero": {
+      "title": "NOOR HOLDING",
+      "subtitle": "Innovation, rigor and commitment",
+      "shortDescription": "Leading Mauritanian corporation across key sectors.",
+      "buttons": {
+        "latestNews": "Latest News",
+        "ourSubsidiaries": "Our Subsidiaries"
+      },
+      "stats": {
+        "subsidiaries": "Subsidiaries",
+        "keysectors": "Key Sectors",
+        "marketLeader": "Market Leader",
+        "basedIn": "Based in"
+      }
+    },
+    "ceoMessage": {
+      "sectionTitle": "Message from the Chief Executive Officer",
+      "greeting": "Dear visitors,",
+      "intro": "It is with great honor and immense pleasure that I welcome you to the official website of NOOR HOLDING, a dynamic and ambitious Mauritanian group, committed to the economic development of Mauritania and the sub-region through strategic and complementary sectors.",
+      "ambition": "Since its creation, our ambition has always been clear: to build a solid, structured group resolutely focused on the future. Today, NOOR HOLDING brings together several subsidiaries specializing in key areas, ranging from energy and mining to logistics, including fishing, general trade, transport and services.",
+      "entitiesTitle": "Our flagship entities:",
+      "entities": {
+        "slmp": "SLMP SA: Port Logistics and Handling Company, equipped with service stations and active in the import and distribution of hydrocarbons.",
+        "afh": "AFH – Africaine des Hydrocarbures: Holder of official authorizations for the import, distribution and storage of refined hydrocarbons.",
+        "mines": "MINES DE MAURITANIE: Mining sector player, engaged in gold exploration with three permits covering an area of more than 1,000 km².",
+        "itb": "ITB – International Trade Brokerage: Specialized in import-export, distribution and commercial representation.",
+        "tbs1": "TBS – Transport Business and Shipping: Operates in transport, transit and international logistics services.",
+        "tbs2": "TBS – Trade Brokerage and Services: Major player in financial intermediation.",
+        "acg": "ACG – Arrachad Establishment for General Trade: Intervenes in multiform trading.",
+        "fishing": "SEMAK SA, SMMCS SA and Valor Fish Frigo (VFF): Three companies dedicated to the strategic sector of fishing, processing and conservation."
+      },
+      "visionTitle": "Our vision and values:",
+      "vision": "Through all of these subsidiaries, NOOR HOLDING works to create value, anticipate market needs and actively contribute to the development of Mauritania and the sub-region. Our vision is based on three pillars: innovation, rigor and commitment to sustainability and social responsibility.",
+      "gratitude": "I want to express my deep gratitude to our partners, collaborators and clients for the trust they place in us. Together, we will continue to build a prosperous and sustainable future.",
+      "signature": {
+        "regards": "With all my consideration,",
+        "name": "Ahmed Salem ELY",
+        "title": "Chief Executive Officer, NOOR HOLDING"
+      }
+    },
+    "about": {
+      "title": "Who We Are",
+      "description1": "NOOR HOLDING is a company based in Nouakchott with 5 subsidiaries specializing in services, import-export, representation, fishing, and seafood processing.",
+      "description2": "Noor Holding is a true model of a diversified company in Mauritania, with a significant presence in the market. We are a proudly Mauritanian company that invests in our country to build a better future."
+    },
+    "subsidiaries": {
+      "featuredTitle": "Featured Operating Companies",
+      "sectionTitle": "Discover Our Subsidiaries",
+      "companies": {
+        "afh": {
+          "name": "Africaine Des Hydrocarbures S.A",
+          "description": "Africaine des Hydrocarbures (AFH) is a company specialized in the oil sector, with a solid reputation for compliance and reliability. The company holds official authorizations that allow it to operate throughout the refined hydrocarbon value chain, covering import, storage and distribution to secure the country's energy supply.",
+          "services": [
+            "Import of refined hydrocarbons",
+            "Secure storage and distribution",
+            "Complete official authorizations"
+          ]
+        },
+        "slmp": {
+          "name": "SLMP S.A",
+          "description": "The Port Logistics and Handling Company (SLMP SA) is a versatile player distinguished by its expertise in port logistics and handling services. The company facilitates international trade and extends its activities into energy with the import and distribution of hydrocarbons, having its own service stations to cover the entire value chain.",
+          "services": [
+            "Port logistics services",
+            "Integrated service stations",
+            "Hydrocarbon distribution"
+          ]
+        },
+        "mines": {
+          "name": "MINES DE MAURITANIE",
+          "description": "MINES DE MAURITANIE is a major player in the mining sector, with a particular focus on gold exploration. The company conducts intensive exploration activities over a vast area of more than 1,000 km², covered by three research permits. Thanks to its geological expertise and cutting-edge technologies, it discovers new gold deposits, directly contributing to the country's economic development.",
+          "services": [
+            "+1,000 km² exploration area",
+            "3 gold research permits",
+            "Cutting-edge geological technologies"
+          ]
+        },
+        "itb": {
+          "name": "ITB – International Trade Brokerage",
+          "description": "International Trade Brokerage (ITB) is a company specialized in international commercial exchanges, acting as an intermediary between buyers and sellers. Expert in import-export, ITB facilitates cross-border transactions and ensures distribution as well as representation of international brands. The company helps foreign companies establish themselves in local markets through its expertise in logistics and regulations, positioning itself as a strategic partner for international commercial expansion.",
+          "services": [
+            "International exchange brokerage",
+            "International brand representation",
+            "Logistics and regulatory expertise"
+          ]
+        },
+        "tbs1": {
+          "name": "TBS – Transport Business and Shipping",
+          "description": "Transport Business and Shipping (TBS) is a transport and logistics company offering comprehensive solutions for international transit and logistics service needs. The company manages the movement of goods by land, sea and air. As a freight forwarder, TBS handles complex customs and administrative formalities, simplifying import and export for its clients while guaranteeing timely and secure deliveries.",
+          "services": [
+            "Land, sea and air transport",
+            "Transit services and customs formalities",
+            "Customized logistics solutions"
+          ]
+        },
+        "acg": {
+          "name": "ACG – Arrachad Establishment for General Trade",
+          "description": "The Arrachad Establishment for General Trade (ACG) is a multiform trading company operating in a variety of sectors on a national and international scale. ACG is distinguished by its ability to adapt to market demands, sourcing various products from raw materials to finished products. Its agile model allows it to respond quickly to commercial opportunities through its vast network of suppliers and buyers.",
+          "services": [
+            "National and international commerce",
+            "Raw materials and finished products",
+            "Agile and personalized trading solutions",
+            "Vast network of suppliers and buyers"
+          ]
+        },
+        "tbs2": {
+          "name": "TBS – Trade Brokerage and Services",
+          "description": "Trade Brokerage and Services (TBS) is a major player in financial intermediation, facilitating transactions in stocks, bonds and other financial instruments. The company acts as an intermediary between investors and financial markets, allowing clients to strategically place their capital. TBS also provides financial advisory services and is distinguished by its deep knowledge of markets and its ability to identify growth opportunities.",
+          "services": [
+            "Financial instrument intermediation",
+            "Investment advisory services",
+            "Financial market expertise"
+          ]
+        },
+        "fishing": {
+          "name": "SEMAK s.a | SMMCS s.a | Valor Fish Frigo (VFF)",
+          "description": "SEMAK s.a, SMMCS s.a, and Valor Fish Frigo (VFF) are companies in the strategic fishing sector operating in an integrated manner to optimize the transformation and conservation of seafood products. SEMAK s.a has a cutting-edge factory with a freezing tunnel, SMMCS s.a ensures capture through its trawler fleet, and VFF is dedicated to conservation. Together, they form a complete value chain guaranteeing freshness and quality of fishery products.",
+          "services": [
+            "Integrated capture-conservation value chain",
+            "Cutting-edge transformation technologies",
+            "Modern trawler fleet"
+          ]
+        }
+      }
+    },
+    "news": {
+      "title": "Latest News",
+      "viewAll": "View All News"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "getInTouch": "Get In Touch",
+      "getInTouchSubtitle": "Send us a message and we'll get back to you as soon as possible.",
+      "location": {
+        "title": "Our Location",
+        "address": "4th Floor, Lot 402, Sidi Mohamed Cheikh Lemine Street\nTevragh Zeina Opposite The Mosque\nNouakchott, Mauritania"
+      },
+      "hours": {
+        "title": "Office Hours",
+        "weekdays": "Monday - Thursday (8 AM - 5 PM)",
+        "friday": "Friday (8 AM - 12 PM)",
+        "weekend": "Saturday & Sunday - Closed"
+      },
+      "phone": {
+        "title": "Landline",
+        "number": "+222 22 21 21 23"
+      },
+      "email": {
+        "title": "Email",
+        "address": "info@noorholding.mr"
+      },
+      "map": {
+        "title": "Location Map",
+        "directions": "Get Directions"
+      },
+      "form": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "subject": "Subject",
+        "message": "Message",
+        "placeholders": {
+          "name": "Enter your full name",
+          "email": "Enter your email address",
+          "phone": "Enter your phone number",
+          "subject": "Brief description of your inquiry",
+          "message": "Tell us more about your inquiry..."
+        },
+        "submit": "Send Message",
+        "required": "*"
+      }
+    },
+    "footer": {
+      "quickLinks": "Quick Links",
+      "home": "Home",
+      "subs": "Subsidiaries",
+      "contact": "Contact",
+      "copyright": "© 2025 Noor Holding. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "Noor Holding",
+      "description": "Groupe mauritanien leader dans les secteurs clés"
+    },
+    "navigation": {
+      "about": "Qui Sommes Nous",
+      "news": "Actualités",
+      "subsidiaries": "Filiales",
+      "contact": " Contacter Nous"
+    },
+    "hero": {
+      "title": "NOOR HOLDING",
+      "subtitle": "L'innovation, la rigueur et l'engagement",
+      "shortDescription": "Groupe mauritanien leader dans les secteurs clés.",
+      "buttons": {
+        "latestNews": "Dernières Actualités",
+        "ourSubsidiaries": "Nos Filiales"
+      },
+      "stats": {
+        "subsidiaries": "Filiales",
+        "keysectors": "Secteurs",
+        "marketLeader": "Basé en",
+        "basedIn": "Basé en"
+      }
+    },
+    "ceoMessage": {
+      "sectionTitle": "Mot du Président Directeur Général",
+      "greeting": "Chers visiteurs,",
+      "intro": "C'est avec un grand honneur et un immense plaisir que je vous souhaite la bienvenue sur le site officiel de NOOR HOLDING, un groupe mauritanien dynamique et ambitieux, engagé dans le développement économique de la Mauritanie et de la sous-région à travers des secteurs stratégiques et complémentaires.",
+      "ambition": "Depuis sa création, notre ambition a toujours été claire : bâtir un groupe solide, structuré et résolument tourné vers l'avenir. Aujourd'hui, NOOR HOLDING fédère plusieurs filiales spécialisées dans des domaines clés, allant de l'énergie et des mines à la logistique, en passant par la pêche, le commerce général, le transport et les services.",
+      "entitiesTitle": "Nos entités phares :",
+      "entities": {
+        "slmp": "SLMP SA : Société de Logistique et de Manutention Portuaire, dotée de stations-service et active dans l'importation et la distribution des hydrocarbures.",
+        "afh": "AFH – Africaine des Hydrocarbures : Titulaire d'autorisations officielles pour l'importation, la distribution et le stockage des hydrocarbures raffinés.",
+        "mines": "MINES DE MAURITANIE : Acteur du secteur minier, engagé dans la recherche aurifère avec trois permis couvrant une superficie de plus de 1 000 km².",
+        "itb": "ITB – International Trade Brokerage : Spécialisée dans l'import-export, la distribution et la représentation commerciale.",
+        "tbs1": "TBS – Transport Business and Shipping : Opère dans le transport, le transit et les services logistiques internationaux.",
+        "tbs2": "TBS – Trade Brokerage and Services : Acteur majeur dans l'intermédiation financière.",
+        "acg": "ACG – Établissement Arrachad pour le Commerce Général : Intervient dans le négoce multiforme.",
+        "fishing": "SEMAK SA, SMMCS SA et Valor Fish Frigo (VFF) : Trois sociétés dédiées au secteur stratégique de la pêche, de la transformation et de la conservation."
+      },
+      "visionTitle": "Notre vision et nos valeurs :",
+      "vision": "À travers l'ensemble de ces filiales, NOOR HOLDING œuvre à créer de la valeur, anticiper les besoins du marché et contribuer activement à l'essor de la Mauritanie et de la sous-région. Notre vision repose sur trois piliers : l'innovation, la rigueur et l'engagement en faveur de la durabilité et de la responsabilité sociale.",
+      "gratitude": "Je tiens à exprimer ma profonde gratitude à nos partenaires, collaborateurs et clients pour la confiance qu'ils nous accordent. Ensemble, nous continuerons à bâtir un avenir prospère et durable.",
+      "signature": {
+        "regards": "Avec toute ma considération,",
+        "name": "Ahmed Salem ELY",
+        "title": "Président Directeur Général, NOOR HOLDING"
+      }
+    },
+    "about": {
+      "title": "Qui Sommes Nous",
+      "description1": "NOOR HOLDING est une entreprise basée à Nouakchott et qui compte 5 filiales spécialisées dans les services, l'import-export, la représentation, la pêche, le traitement des produits de la mer.",
+      "description2": "Noor Holding est un véritable modèle d'entreprise diversifiée en Mauritanie, avec une présence importante sur le marché. Nous sommes une entreprise fièrement mauritanienne, qui investit dans notre pays pour construire un avenir meilleur."
+    },
+    "subsidiaries": {
+      "featuredTitle": "Sociétés Opérationnelles ",
+      "sectionTitle": "Découvrez Nos Filiales",
+      "companies": {
+        "afh": {
+          "name": "Africaine Des Hydrocarbures S.A",
+          "description": "Africaine des Hydrocarbures (AFH) est une entreprise spécialisée dans le secteur pétrolier, avec une solide réputation en matière de conformité et de fiabilité. L'entreprise détient des autorisations officielles qui lui permettent d'opérer dans l'ensemble de la chaîne de valeur des hydrocarbures raffinés, couvrant l'importation, le stockage et la distribution pour sécuriser l'approvisionnement énergétique du pays.",
+          "services": [
+            "Importation d'hydrocarbures raffinés",
+            "Stockage et distribution sécurisés",
+            "Autorisations officielles complètes"
+          ]
+        },
+        "slmp": {
+          "name": "SLMP S.A",
+          "description": "La Société de Logistique et de Manutention Portuaire (SLMP SA) est un acteur polyvalent se distinguant par son expertise dans les services de logistique et manutention portuaire. L'entreprise facilite le commerce international et étend ses activités dans l'énergie avec l'importation et la distribution des hydrocarbures, disposant de ses propres stations-service pour couvrir toute la chaîne de valeur.",
+          "services": [
+            "Services de logistique portuaire",
+            "Stations-service intégrées",
+            "Distribution d'hydrocarbures"
+          ]
+        },
+        "mines": {
+          "name": "MINES DE MAURITANIE",
+          "description": "MINES DE MAURITANIE est un acteur majeur du secteur minier, avec un focus particulier sur la recherche aurifère. L'entreprise mène des activités d'exploration intensive sur une vaste zone de plus de 1 000 km², couverte par trois permis de recherche. Grâce à son expertise géologique et aux technologies de pointe, elle découvre de nouveaux gisements d'or, contribuant directement au développement économique du pays.",
+          "services": [
+            "+1 000 km² de superficie d'exploration",
+            "3 permis de recherche aurifère",
+            "Technologies de pointe en géologie"
+          ]
+        },
+        "itb": {
+          "name": "ITB – International Trade Brokerage",
+          "description": "International Trade Brokerage (ITB) est une entreprise spécialisée dans les échanges commerciaux internationaux, agissant comme intermédiaire entre acheteurs et vendeurs. Expert en import-export, ITB facilite les transactions transfrontalières et assure la distribution ainsi que la représentation de marques internationales. L'entreprise aide les entreprises étrangères à s'implanter sur les marchés locaux grâce à son expertise en logistique et réglementation, se positionnant comme un partenaire stratégique pour l'expansion commerciale internationale.",
+          "services": [
+            "Courtage en échanges internationaux",
+            "Représentation de marques internationales",
+            "Expertise logistique et réglementaire"
+          ]
+        },
+        "tbs1": {
+          "name": "TBS – Transport Business and Shipping",
+          "description": "Transport Business and Shipping (TBS) est une entreprise de transport et de logistique offrant des solutions complètes pour les besoins en transit et services logistiques internationaux. L'entreprise gère le déplacement de marchandises par voie terrestre, maritime et aérienne. En tant que transitaire, TBS s'occupe des formalités douanières et administratives complexes, simplifiant l'importation et l'exportation pour ses clients tout en garantissant des livraisons ponctuelles et sécurisées.",
+          "services": [
+            "Transport terrestre, maritime et aérien",
+            "Services de transit et formalités douanières",
+            "Solutions logistiques personnalisées"
+          ]
+        },
+        "acg": {
+          "name": "ACG – Établissement Arrachad pour le Commerce Général",
+          "description": "L'Établissement Arrachad pour le Commerce Général (ACG) est une entreprise de négoce multiforme opérant dans une variété de secteurs à l'échelle nationale et internationale. ACG se distingue par sa capacité d'adaptation aux demandes du marché, s'approvisionnant en produits divers des matières premières aux produits finis. Son modèle agile lui permet de répondre rapidement aux opportunités commerciales grâce à son vaste réseau de fournisseurs et d'acheteurs.",
+          "services": [
+            "Commerce national et international",
+            "Matières premières et produits finis",
+            "Solutions de négoce agiles et personnalisées",
+            "Vaste réseau de fournisseurs et d'acheteurs"
+          ]
+        },
+        "tbs2": {
+          "name": "TBS – Trade Brokerage and Services",
+          "description": "Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation financière, facilitant les transactions en actions, obligations et autres instruments financiers. L'entreprise agit comme intermédiaire entre investisseurs et marchés financiers, permettant aux clients de placer leurs capitaux de manière stratégique. TBS fournit également des services de conseil financier et se distingue par sa connaissance approfondie des marchés ainsi que sa capacité à identifier des opportunités de croissance.",
+          "services": [
+            "Intermédiation en instruments financiers",
+            "Services de conseil en investissement",
+            "Expertise des marchés financiers"
+          ]
+        },
+        "fishing": {
+          "name": "SEMAK s.a | SMMCS s.a | Valor Fish Frigo (VFF)",
+          "description": "SEMAK s.a, SMMCS s.a, et Valor Fish Frigo (VFF) sont des entreprises du secteur stratégique de la pêche opérant de manière intégrée pour optimiser la transformation et conservation des produits de la mer. SEMAK s.a possède une usine de pointe avec tunnel de congélation, SMMCS s.a assure la capture via sa flotte de chalutiers, et VFF se dédie à la conservation. Ensemble, elles forment une chaîne de valeur complète garantissant fraîcheur et qualité des produits halieutiques.",
+          "services": [
+            "Chaîne de valeur intégrée capture-conservation",
+            "Technologies de pointe de transformation",
+            "Flotte moderne de chalutiers"
+          ]
+        }
+      }
+    },
+    "news": {
+      "title": "Dernières Actualités",
+      "viewAll": "Voir Toutes les Actualités"
+    },
+    "contact": {
+      "title": " Contacter Nous",
+      "getInTouch": "Entrez en Contact",
+      "getInTouchSubtitle": "Envoyez-nous un message et nous vous répondrons dans les plus brefs délais.",
+      "location": {
+        "title": "Notre Localisation",
+        "address": "4ème Étage, Lot 402, Rue Sidi Mohamed Cheikh Lemine\nTevragh Zeina En Face de la Mosquée\nNouakchott, Mauritanie"
+      },
+      "hours": {
+        "title": "Heures d'Ouverture",
+        "weekdays": "Lundi - Jeudi (8h - 17h)",
+        "friday": "Vendredi (8h - 12h)",
+        "weekend": "Samedi et Dimanche - Fermé"
+      },
+      "phone": {
+        "title": "Téléphone Fixe",
+        "number": "+222 22 21 21 23"
+      },
+      "email": {
+        "title": "Email",
+        "address": "info@noorholding.mr"
+      },
+      "map": {
+        "title": "Plan de Localisation",
+        "directions": "Obtenir l'Itinéraire"
+      },
+      "form": {
+        "name": "Nom Complet",
+        "email": "Adresse Email",
+        "phone": "Numéro de Téléphone",
+        "subject": "Sujet",
+        "message": "Message",
+        "placeholders": {
+          "name": "Entrez votre nom complet",
+          "email": "Entrez votre adresse email",
+          "phone": "Entrez votre numéro de téléphone",
+          "subject": "Brève description de votre demande",
+          "message": "Parlez-nous davantage de votre demande..."
+        },
+        "submit": "Envoyer le Message",
+        "required": "*"
+      }
+    },
+    "footer": {
+      "quickLinks": "Liens Rapides",
+      "home": "Accueil",
+      "subs": "Filiales",
+      "contact": "Contact",
+      "copyright": "© 2025 Noor Holding. Tous droits réservés.",
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions d'Utilisation"
+    }
+  },
+  "ar": {
+    "meta": {
+      "title": "نور القابضة",
+      "description": "الشركة الموريتانية الرائدة في القطاعات الأساسية"
+    },
+    "navigation": {
+      "about": "من نحن",
+      "news": "الأخبار",
+      "subsidiaries": "الشركات التابعة",
+      "contact": "اتصل بنا"
+    },
+    "hero": {
+      "title": "نور القابضة",
+      "subtitle": "الابتكار والدقة والالتزام",
+      "shortDescription": "الشركة الموريتانية الرائدة في القطاعات الأساسية.",
+      "buttons": {
+        "latestNews": "آخر الأخبار",
+        "ourSubsidiaries": "شركاتنا التابعة"
+      },
+      "stats": {
+        "subsidiaries": "شركة تابعة",
+        "keysectors": "قطاعات أساسية",
+        "marketLeader": "رائد السوق",
+        "basedIn": "مقرها في"
+      }
+    },
+    "ceoMessage": {
+      "sectionTitle": "كلمة الرئيس المدير العام",
+      "greeting": "الزوار الأعزاء،",
+      "intro": "بشرف عظيم وسرور بالغ أرحب بكم في الموقع الرسمي لنور القابضة، وهي مجموعة موريتانية ديناميكية وطموحة، ملتزمة بالتنمية الاقتصادية لموريتانيا والمنطقة الفرعية من خلال قطاعات استراتيجية ومتكاملة.",
+      "ambition": "منذ إنشائها، كان طموحنا واضحاً دائماً: بناء مجموعة قوية ومنظمة وموجهة بحزم نحو المستقبل. اليوم، تضم نور القابضة عدة شركات تابعة متخصصة في مجالات أساسية، تتراوح من الطاقة والمناجم إلى اللوجستيات، مروراً بالصيد والتجارة العامة والنقل والخدمات.",
+      "entitiesTitle": "كياناتنا الرائدة:",
+      "entities": {
+        "slmp": "SLMP SA: شركة اللوجستيات والمناولة المينائية، المجهزة بمحطات الخدمة والنشطة في استيراد وتوزيع المحروقات.",
+        "afh": "AFH - الأفريقية للمحروقات: حاملة التراخيص الرسمية لاستيراد وتوزيع وتخزين المحروقات المكررة.",
+        "mines": "مناجم موريتانيا: فاعل في القطاع المنجمي، منخرط في البحث عن الذهب بثلاث تراخيص تغطي مساحة تزيد عن 1000 كم².",
+        "itb": "ITB - الوساطة التجارية الدولية: متخصصة في الاستيراد والتصدير والتوزيع والتمثيل التجاري.",
+        "tbs1": "TBS - أعمال النقل والشحن: تعمل في النقل والعبور وخدمات اللوجستيات الدولية.",
+        "tbs2": "TBS - الوساطة التجارية والخدمات: فاعل رئيسي في الوساطة المالية.",
+        "acg": "ACG - مؤسسة الرشاد للتجارة العامة: تتدخل في التجارة متعددة الأشكال.",
+        "fishing": "SEMAK SA وSMMCS SA وValor Fish Frigo (VFF): ثلاث شركات مخصصة للقطاع الاستراتيجي للصيد والتحويل والحفظ."
+      },
+      "visionTitle": "رؤيتنا وقيمنا:",
+      "vision": "من خلال جميع هذه الشركات التابعة، تعمل نور القابضة على خلق القيمة وتوقع احتياجات السوق والمساهمة بفعالية في ازدهار موريتانيا والمنطقة الفرعية. تقوم رؤيتنا على ثلاث ركائز: الابتكار والدقة والالتزام بالاستدامة والمسؤولية الاجتماعية.",
+      "gratitude": "أود أن أعبر عن امتناني العميق لشركائنا ومتعاونينا وعملائنا للثقة التي يضعونها فينا. معاً، سنواصل بناء مستقبل مزدهر ومستدام.",
+      "signature": {
+        "regards": "مع كل الاعتبار،",
+        "name": "أحمد سالم علي",
+        "title": "الرئيس المدير العام، نور القابضة"
+      }
+    },
+    "about": {
+      "title": "من نحن",
+      "description1": "نور القابضة هي شركة مقرها في نواكشوط وتضم 10 شركات تابعة متخصصة في الخدمات والاستيراد والتصدير والتمثيل والصيد ومعالجة المنتجات البحرية.",
+      "description2": "نور القابضة هي نموذج حقيقي لشركة متنوعة في موريتانيا، مع حضور مهم في السوق. نحن شركة موريتانية بفخر، تستثمر في بلدنا لبناء مستقبل أفضل."
+    },
+    "subsidiaries": {
+      "featuredTitle": "الشركات التشغيلية المميزة",
+      "sectionTitle": "اكتشف شركاتنا التابعة",
+      "companies": {
+        "afh": {
+          "name": "الأفريقية للمحروقات ش.م",
+          "description": "الأفريقية للمحروقات  هي شركة متخصصة في قطاع البترول، مع سمعة قوية في مجال الامتثال والموثوقية. تحمل الشركة تراخيص رسمية تسمح لها بالعمل في جميع أنحاء سلسلة القيمة للمحروقات المكررة، وتغطي الاستيراد والتخزين والتوزيع لضمان إمداد الطاقة للبلاد.",
+          "services": [
+            "استيراد المحروقات المكررة",
+            "التخزين والتوزيع الآمن",
+            "التراخيص الرسمية الكاملة"
+          ]
+        },
+        "slmp": {
+          "name": "SLMP ش.م",
+          "description": "شركة اللوجستيات والمناولة المينائية  هي فاعل متعدد الجوانب يتميز بخبرته في خدمات اللوجستيات والمناولة المينائية. تسهل الشركة التجارة الدولية وتوسع أنشطتها في مجال الطاقة مع استيراد وتوزيع المحروقات، مع امتلاك محطات الخدمة الخاصة بها لتغطية سلسلة القيمة بأكملها.",
+          "services": [
+            "خدمات اللوجستيات المينائية",
+            "محطات خدمة متكاملة",
+            "توزيع المحروقات"
+          ]
+        },
+        "mines": {
+          "name": "مناجم موريتانيا",
+          "description": "مناجم موريتانيا هي فاعل رئيسي في القطاع المنجمي، مع تركيز خاص على استكشاف الذهب. تقوم الشركة بأنشطة استكشاف مكثفة على منطقة واسعة تزيد عن 1000 كم²، مغطاة بثلاث تراخيص بحث. بفضل خبرتها الجيولوجية والتقنيات المتطورة، تكتشف رواسب ذهبية جديدة، مما يساهم مباشرة في التنمية الاقتصادية للبلاد.",
+          "services": [
+            "+1000 كم² مساحة استكشاف",
+            "3 تراخيص بحث ذهبي",
+            "تقنيات جيولوجية متطورة"
+          ]
+        },
+        "itb": {
+          "name": "ITB - الوساطة التجارية الدولية",
+          "description": "الوساطة التجارية الدولية  هي شركة متخصصة في التبادلات التجارية الدولية، تعمل كوسيط بين المشترين والبائعين. خبيرة في الاستيراد والتصدير،  تسهل المعاملات عبر الحدود وتضمن التوزيع وكذلك تمثيل العلامات التجارية الدولية. تساعد الشركة الشركات الأجنبية على الاستقرار في الأسواق المحلية من خلال خبرتها في اللوجستيات واللوائح، وتضع نفسها كشريك استراتيجي للتوسع التجاري الدولي.",
+          "services": [
+            "وساطة في التبادلات الدولية",
+            "تمثيل العلامات التجارية الدولية",
+            "خبرة لوجستية وتنظيمية"
+          ]
+        },
+        "tbs1": {
+          "name": "TBS - أعمال النقل والشحن",
+          "description": "  هي شركة نقل ولوجستيات تقدم حلولاً شاملة لاحتياجات العبور وخدمات اللوجستيات الدولية. تدير الشركة حركة البضائع براً وبحراً وجواً. كوكيل شحن،  تتولى الإجراءات الجمركية والإدارية المعقدة، مما يبسط الاستيراد والتصدير لعملائها مع ضمان التسليم في الوقت المحدد والآمن "   ,
+           "services": [
+            "النقل البري والبحري والجوي",
+            "خدمات العبور والإجراءات الجمركية",
+            "حلول لوجستية مخصصة"
+          ]
+        },
+        "acg": {
+          "name": "ACG - مؤسسة الرشاد للتجارة العامة",
+          "description": "مؤسسة الرشاد للتجارة العامة  هي شركة تجارة متعددة الأشكال تعمل في مجموعة متنوعة من القطاعات على المستوى الوطني والدولي. تتميز  بقدرتها على التكيف مع متطلبات السوق، وتحصل على منتجات متنوعة من المواد الخام إلى المنتجات النهائية. يسمح لها نموذجها الرشيق بالاستجابة بسرعة للفرص التجارية من خلال شبكتها الواسعة من الموردين والمشترين ", 
+          "services": [
+            "التجارة الوطنية والدولية",
+            "المواد الخام والمنتجات النهائية",
+            "حلول تجارية رشيقة ومخصصة",
+            "شبكة واسعة من الموردين والمشترين"
+          ]
+        },
+        "tbs2": {
+          "name": "TBS - الوساطة التجارية والخدمات",
+          "description": "الوساطة التجارية والخدمات  هي فاعل رئيسي في الوساطة المالية، تسهل المعاملات في الأسهم والسندات والأدوات المالية الأخرى. تعمل الشركة كوسيط بين المستثمرين والأسواق المالية، مما يسمح للعملاء بوضع رؤوس أموالهم بشكل استراتيجي. تقدم أيضاً خدمات الاستشارة المالية وتتميز بمعرفتها العميقة للأسواق وقدرتها على تحديد فرص النمو", 
+          "services": [
+            "وساطة في الأدوات المالية",
+            "خدمات الاستشارة الاستثمارية",
+            "خبرة في الأسواق المالية"
+          ]
+        },
+        "fishing": {
+          "name": "SEMAK ش.م | SMMCS ش.م | Valor Fish Frigo (VFF)",
+          "description": " شركات في القطاع الاستراتيجي للصيد تعمل بطريقة متكاملة لتحسين تحويل وحفظ المنتجات البحرية. تمتلك  مصنعاً متطوراً بنفق تجميد ، تشكل سلسلة قيمة كاملة تضمن نضارة وجودة المنتجات السمكية   ", 
+           "services": [
+            "سلسلة قيمة متكاملة للصيد والحفظ",
+            "تقنيات تحويل متطورة",
+            "أسطول حديث من سفن الجر"
+          ]
+        }
+      }
+    },
+    "news": {
+      "title": "آخر الأخبار",
+      "viewAll": "عرض جميع الأخبار"
+    },
+    "contact": {
+      "title": "اتصل بنا",
+      "getInTouch": "تواصل معنا",
+      "getInTouchSubtitle": "أرسل لنا رسالة وسنرد عليك في أقرب وقت ممكن.",
+      "location": {
+        "title": "موقعنا",
+        "address": "الطابق الرابع، القطعة 402، شارع سيدي محمد الشيخ لمين\nتفرغ زينة مقابل المسجد\nنواكشوط، موريتانيا"
+      },
+      "hours": {
+        "title": "ساعات العمل",
+        "weekdays": "الاثنين - الخميس (8 صباحاً - 5 مساءً)",
+        "friday": "الجمعة (8 صباحاً - 12 ظهراً)",
+        "weekend": "السبت والأحد - مغلق"
+      },
+      "phone": {
+        "title": "الهاتف الأرضي",
+        "number": "+222 22 21 21 23"
+      },
+      "email": {
+        "title": "البريد الإلكتروني",
+        "address": "info@noorholding.mr"
+      },
+      "map": {
+        "title": "خريطة الموقع",
+        "directions": "احصل على الاتجاهات"
+      },
+      "form": {
+        "name": "الاسم الكامل",
+        "email": "عنوان البريد الإلكتروني",
+        "phone": "رقم الهاتف",
+        "subject": "الموضوع",
+        "message": "الرسالة",
+        "placeholders": {
+          "name": "أدخل اسمك الكامل",
+          "email": "أدخل عنوان بريدك الإلكتروني",
+          "phone": "أدخل رقم هاتفك",
+          "subject": "وصف موجز لاستفسارك",
+          "message": "أخبرنا المزيد عن استفسارك..."
+        },
+        "submit": "إرسال الرسالة",
+        "required": "*"
+      }
+    },
+    "footer": {
+        
+     "home": "الرئيسية",
+     "subs": "الشركات التابعة",
+      "quickLinks": "روابط سريعة",
+      "contact": "اتصل بنا",
+      "copyright": "© 2025 نور القابضة. جميع الحقوق محفوظة.",
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الخدمة"
+    }
+  }
+}
