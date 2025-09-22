@@ -4,6 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="./src/output.css" rel="stylesheet">
+  <!-- Arabic fonts preload -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Mada:wght@400;700&family=El+Messiri:wght@400;700&display=swap" rel="stylesheet">
 <meta name="description" content="" data-i18n="meta.description">
   <title data-i18n="meta.title" >Noor Holding</title>
     <link rel="icon" href="./assets/0ea8716a-725f-4072-8ee9-aed3df86b0a9.JPG" type="image/jpeg">
@@ -23,6 +30,9 @@
       opacity: 1;
       z-index: 10;
     }
+    
+
+    
     .hero-slide::before {
       content: "";
       position: absolute;
@@ -231,14 +241,15 @@ html[dir="rtl"] .ltr-carousel {
             <!-- Desktop Layout -->
             <div class="hidden md:flex flex-col md:flex-row items-center justify-between w-full">
                 <div class="w-full md:w-1/2 text-center text-nour-white max-w-4xl px-6 mb-8 md:mb-0">
+                   
                     <!-- Title -->
                     <div class="mb-8 text-kandura">
-                        <h1 class="text-5xl md:text-7xl font-dm-serif text-executive leading-tight  mb-4 tracking-tight transition duration-1000 ease-out opacity-0 translate-y-6 fade-item" data-i18n="hero.title">
+                        <h1  id="hero-title" class="text-5xl md:text-7xl font-dm-serif text-executive leading-tight  mb-4 tracking-tight transition duration-1000 ease-out opacity-0 translate-y-6 fade-item" data-i18n="hero.title">
                             NOOR HOLDING
                         </h1>
                     </div>
                     
-                    <p class="text-lg md:text-xl text-kandura font-medium mb-8 max-w-2xl mx-auto leading-relaxed transition duration-1000 ease-out opacity-0 translate-y-6 fade-item" data-i18n="hero.subtitle">
+                    <p id="desc" class="text-lg md:text-xl text-kandura font-medium mb-8 max-w-2xl mx-auto leading-relaxed transition duration-1000 ease-out opacity-0 translate-y-6 fade-item" data-i18n="hero.subtitle">
                        l'innovation, la rigueur et l'engagement 
                     </p>
                     
@@ -268,7 +279,7 @@ html[dir="rtl"] .ltr-carousel {
                             <div class="text-sm text-kandura/80 uppercase tracking-wide" data-i18n="hero.stats.sectors">Key Sectors</div>
                         </div>
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-sand">Mauritania</div>
+                            <div class="text-3xl font-bold text-sand" data-i18n="hero.country" >Mauritania</div>
                             <div class="text-sm text-kandura/80 uppercase tracking-wide" data-i18n="hero.stats.based">Based in </div>
                         </div>
                     </div>
@@ -276,7 +287,7 @@ html[dir="rtl"] .ltr-carousel {
                 
                 <!-- Spider Web Image - Desktop Only -->
                 <div  id="spider-web" class="w-full md:w-1/2 flex justify-center mb-3 transition duration-1000 ease-out opacity-0 scale-110 fade-item">
-                    <img src="./assets/noor_holding_spider_web_TRANSPARENT.png" alt="Noor Holding Network" class="max-w-full h-auto"/>
+                    <img src="./assets/noor_holding_spider_web_TRANSPARENT.png" alt="Noor Holding Network" class=" mt-5 max-w-full h-auto max-h-[75vh] object-contain"/>
                 </div>
             </div>
         </div>
@@ -512,8 +523,8 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
 </section>
 
 
-  <hr class="my-8 border-t border-gray-300">
-<section id="about" class="relative  py-20 px-4 bg-sand/20 overflow-hidden">
+  <hr class=" border-t border-gray-300">
+<section id="about" class="relative  py-20 px-4  overflow-hidden">
         <!-- Desert Energy SVG Background -->
         <div class="absolute inset-0 opacity-12">
             <!--  -->
@@ -607,11 +618,11 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
         </div>
     </section>
 
-     <section id="subsidiaries" class="relative py-20 px-5 bg-sea from-white to-executive-light overflow-hidden">
+     <section id="subsidiaries" class="relative py-20 px-5 bg from-white to-executive-light overflow-hidden">
         <div class="container mx-auto max-w-7xl">
             <!-- Section Header -->
             <div class="text-center mb-5">
-               <p class="text-lg text-sand font-light max-w-2xl mx-auto ml-2" data-i18n="subs.featured"> Featured Operating Companies
+               <p class="text-lg text-sand font-light max-w-2xl mx-auto " data-i18n="subs.featured"> Featured Operating Companies
                 </p>
 <div class="flex items-center justify-center w-full space-x-4 flex-nowrap overflow-x-auto">
     <div class=" hidden md: h-0.5 w-32 sm:w-80 bg-gradient-to-r from-sand to-executive-navy rounded-full flex-shrink-0"></div>
@@ -624,11 +635,11 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
 
             <!-- Carousel Container -->
             <div class="relative w-full">
-                <div class="carousel-container overflow-hidden w-full relative h-[60vh] ltr-carousel ">
+                <div class="carousel-container overflow-hidden w-full relative  ltr-carousel ">
                     <div class="carousel-track flex transition-transform duration-500 ease-in-out" id="carouselTrack">
                         
                         <!-- Subsidiary 1: AFH -->
-                        <div class="carousel-slide min-w-full  ">
+                        <div class="carousel-slide min-w-full   ">
                             <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 
             transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl">
                                 <div class="grid lg:grid-cols-2 gap-0 items-center">
@@ -689,7 +700,7 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
                         </div>
 
                         <!-- Subsidiary 2: SLMP -->
-                        <div class="carousel-slide min-w-full p-20">
+                        <div class="carousel-slide min-w-full ">
                        <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 
             transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl">
                                 <div class="grid lg:grid-cols-2 gap-8 items-center">
@@ -751,7 +762,7 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
                         </div>
 
                         <!-- Subsidiary 3: MINES -->
-                        <div class="carousel-slide min-w-full p-20">
+                        <div class="carousel-slide min-w-full ">
                         <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 
             transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl">
                                 <div class="grid lg:grid-cols-2 gap-8 items-center">
@@ -813,7 +824,7 @@ class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transfo
                         
                         
                         <!-- Subsidiary 4: ITB -->
-                        <div class="carousel-slide min-w-full p-20">
+                        <div class="carousel-slide min-w-full ">
                        <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 
             transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl">
                                 <div class="grid lg:grid-cols-2 gap-8 items-center">
@@ -874,7 +885,7 @@ International Trade Brokerage (ITB) est une entreprise spécialisée dans les é
 
 
                         <!-- Subsidiary 5: TBS Transport -->
-                        <div class="carousel-slide min-w-full p-20">
+                        <div class="carousel-slide min-w-full ">
                          <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 
             transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl">
                                 <div class="grid lg:grid-cols-2 gap-8 items-center">
@@ -934,7 +945,7 @@ Transport Business and Shipping (TBS) est une entreprise de transport et de logi
                         </div>
 
                         <!-- Subsidiary 3: Energy Storage Solutions -->
-                        <div class="carousel-slide min-w-full p-20">
+                        <div class="carousel-slide min-w-full ">
                          <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 
             transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl">
                                 <div class="grid lg:grid-cols-2 gap-8 items-center">
@@ -1001,7 +1012,7 @@ L'Établissement Arrachad pour le Commerce Général (ACG) est une entreprise de
 
 
                         <!-- Subsidiary 2: Wind Power Systems -->
-                        <div class="carousel-slide min-w-full p-20">
+                        <div class="carousel-slide min-w-full ">
                      <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 
             transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl">
                                 <div class="grid lg:grid-cols-2 gap-8 items-center">
@@ -1065,7 +1076,7 @@ Trade Brokerage and Services (TBS) est un acteur majeur dans l'intermédiation f
 
 
                         <!-- Subsidiary: Fishing Group -->
-<div class="carousel-slide min-w-full p-20">
+<div class="carousel-slide min-w-full ">
     <div class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 
             transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl">
         <div class="grid lg:grid-cols-2 gap-8 items-center">

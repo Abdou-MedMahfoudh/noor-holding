@@ -144,6 +144,11 @@ class I18nManager {
       this.t("hero.stats.basedIn")
     );
 
+    this.updateElement(
+      '[data-i18n="hero.country"]',
+      this.t("hero.country")
+    );
+
     // CEO Message
     this.updateElement(
       '[data-i18n="ceo.title"]',
@@ -700,10 +705,8 @@ class I18nManager {
     button.className =
       "group flex items-center space-x-2 px-2 py-1 text-white/90 hover:text-sand transition-all duration-300 bg-transparent rounded-md";
     button.innerHTML = `
-    <img id="mobile-current-flag" src="${
-      languageLogos[this.currentLanguage]
-    }" class="w-5 h-3 rounded-sm" alt="${this.currentLanguage}">
-    <span id="mobile-current-lang" class="font-medium text-xs tracking-wide text-white/90 group-hover:text-sand transition-all duration-300">
+    
+    <span id="mobile-current-lang" class="font-medium text-sm tracking-wide text-kandura group-hover:text-sand transition-all duration-300">
       ${languageNames[this.currentLanguage]}
     </span>
     <svg class="w-3 h-3 transition-transform duration-300 group-hover:rotate-180 opacity-80 group-hover:opacity-100" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -722,7 +725,7 @@ class I18nManager {
         index === 0 ? "rounded-t-lg" : ""
       } ${index === this.supportedLanguages.length - 1 ? "rounded-b-lg" : ""}`;
       item.innerHTML = `
-      <img src="${languageLogos[lang]}" class="w-4 h-3 rounded-sm" alt="${lang}">
+      
       <span class="font-medium tracking-wide group-hover:text-sand transition-colors duration-300">
         ${languageNames[lang]}
       </span>
@@ -768,7 +771,7 @@ class I18nManager {
       fr: "https://flagcdn.com/fr.svg",
       ar: "https://flagcdn.com/mr.svg",
     };
-
+    
     // Update desktop switcher
     // Find the desktop switcher button (containing #current-lang and <img>)
     const navSwitcher = document.getElementById("language-switcher");
@@ -798,12 +801,12 @@ class I18nManager {
     if (mobileLangSpan) {
       mobileLangSpan.textContent = mobileLanguageNames[this.currentLanguage];
     }
-    if (mobileFlag) {
-      mobileFlag.src = languageLogos[this.currentLanguage];
-      mobileFlag.alt = this.currentLanguage.toUpperCase();
-      // Responsive sizing for mobile
-      mobileFlag.className = "w-5 h-3 rounded-sm";
-    }
+    // if (mobileFlag) {
+    //   mobileFlag.src = languageLogos[this.currentLanguage];
+    //   mobileFlag.alt = this.currentLanguage.toUpperCase();
+    //   // Responsive sizing for mobile
+    //   mobileFlag.className = "w-5 h-3 rounded-sm";
+    // }
   }
 
 
@@ -840,60 +843,20 @@ const rtlStyles = `
     text-align: right;
 }
 
-.rtl .flex {
-    flex-direction: row-reverse;
-}
 
-.rtl .space-x-2 > * + * {
-    margin-left: 0;
-    margin-right: 0.5rem;
-}
 
-.rtl .space-x-3 > * + * {
-    margin-left: 0;
-    margin-right: 0.75rem;
-}
-
-.rtl .space-x-4 > * + * {
-    margin-left: 0;
-    margin-right: 1rem;
-}
-
-.rtl .grid {
-    direction: rtl;
-}
-
-.rtl .text-left {
-    text-align: right;
-}
-
-.rtl .text-right {
-    text-align: left;
-}
-
-.rtl .ml-2 { margin-left: 0; margin-right: 0.5rem; }
-.rtl .ml-3 { margin-left: 0; margin-right: 0.75rem; }
-.rtl .ml-4 { margin-left: 0; margin-right: 1rem; }
-.rtl .mr-2 { margin-right: 0; margin-left: 0.5rem; }
-.rtl .mr-3 { margin-right: 0; margin-left: 0.75rem; }
-.rtl .mr-4 { margin-right: 0; margin-left: 1rem; }
-
-.rtl .pl-4 { padding-left: 0; padding-right: 1rem; }
-.rtl .pr-4 { padding-right: 0; padding-left: 1rem; }
-
-.rtl .left-0 { left: auto; right: 0; }
-.rtl .right-0 { right: auto; left: 0; }
 
 /* Arabic font improvements */
-.rtl * {
-    font-family: 'Noto Sans Arabic', 'Cairo', 'Tajawal', Arial, sans-serif;
+.rtl #hero-title , .rtl  #desc  {
+    font-family:  'Tajawal', Arial, sans-serif !important;
 }
+    
 `;
 
-// // Inject RTL styles
-// const styleSheet = document.createElement("style");
-// styleSheet.textContent = rtlStyles;
-// document.head.appendChild(styleSheet);
+// Inject RTL styles
+const styleSheet = document.createElement("style");
+styleSheet.textContent = rtlStyles;
+document.head.appendChild(styleSheet);
 
 // Initialize i18n when DOM is loaded
 document.addEventListener("DOMContentLoaded", () => {

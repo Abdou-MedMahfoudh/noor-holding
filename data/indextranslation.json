@@ -14,9 +14,12 @@
       "title": "NOOR HOLDING",
       "subtitle": "Innovation, rigor and commitment",
       "shortDescription": "Leading Mauritanian corporation across key sectors.",
+      "country" : "Mauritania",
+
       "buttons": {
         "latestNews": "Latest News",
         "ourSubsidiaries": "Our Subsidiaries"
+        
       },
       "stats": {
         "subsidiaries": "Subsidiaries",
@@ -206,9 +209,11 @@
       "title": "NOOR HOLDING",
       "subtitle": "L'innovation, la rigueur et l'engagement",
       "shortDescription": "Groupe mauritanien leader dans les secteurs clés.",
+      "country" : "Mauritania",
       "buttons": {
         "latestNews": "Dernières Actualités",
-        "ourSubsidiaries": "Nos Filiales"
+        "ourSubsidiaries": "Nos Filiales",
+        "country": "Mauritania"
       },
       "stats": {
         "subsidiaries": "Filiales",
@@ -398,9 +403,11 @@
       "title": "نور القابضة",
       "subtitle": "الابتكار والدقة والالتزام",
       "shortDescription": "الشركة الموريتانية الرائدة في القطاعات الأساسية.",
+      "country" : "موريتانيا",
       "buttons": {
         "latestNews": "آخر الأخبار",
         "ourSubsidiaries": "شركاتنا التابعة"
+        
       },
       "stats": {
         "subsidiaries": "شركة تابعة",
@@ -465,8 +472,8 @@
           "name": "مناجم موريتانيا",
           "description": "مناجم موريتانيا هي فاعل رئيسي في القطاع المنجمي، مع تركيز خاص على استكشاف الذهب. تقوم الشركة بأنشطة استكشاف مكثفة على منطقة واسعة تزيد عن 1000 كم²، مغطاة بثلاث تراخيص بحث. بفضل خبرتها الجيولوجية والتقنيات المتطورة، تكتشف رواسب ذهبية جديدة، مما يساهم مباشرة في التنمية الاقتصادية للبلاد.",
           "services": [
-            "+1000 كم² مساحة استكشاف",
-            "3 تراخيص بحث ذهبي",
+            "مساحة استكشاف تزيد عن 1000 كم²",
+            "ثلاثة تراخيص للبحث عن الذهب",
             "تقنيات جيولوجية متطورة"
           ]
         },
