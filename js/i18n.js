@@ -838,11 +838,6 @@ class I18nManager {
 
 // CSS for RTL support
 const rtlStyles = `
-.rtl {
-    direction: rtl;
-    text-align: right;
-}
-
 
 
 
