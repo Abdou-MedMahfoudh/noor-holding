@@ -227,6 +227,11 @@ class I18nManager {
       this.t("ceoMessage.signature.title")
     );
 
+    this.updateElement(
+      '[data-i18n="ceo.title.sig2"]',
+      this.t("ceoMessage.signature.subtitle")
+    );
+
     // About Section
     this.updateElement('[data-i18n="about.title"]', this.t("about.title"));
     this.updateElement(

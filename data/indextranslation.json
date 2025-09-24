@@ -14,12 +14,11 @@
       "title": "NOOR HOLDING",
       "subtitle": "Innovation, rigor and commitment",
       "shortDescription": "Leading Mauritanian corporation across key sectors.",
-      "country" : "Mauritania",
+      "country": "Mauritania",
 
       "buttons": {
         "latestNews": "Latest News",
         "ourSubsidiaries": "Our Subsidiaries"
-        
       },
       "stats": {
         "subsidiaries": "Subsidiaries",
@@ -42,7 +41,7 @@
         "tbs1": "TBS – Transport Business and Shipping: Operates in transport, transit and international logistics services.",
         "tbs2": "TBS – Trade Brokerage and Services: Major player in financial intermediation.",
         "acg": "ACG – Arrachad Establishment for General Trade: Intervenes in multiform trading.",
-        "fishing": "SEMAK SA, SMMCS SA and Valor Fish Frigo (VFF): Three companies dedicated to the strategic sector of fishing, processing and conservation."
+        "fishing": "SEMAK SA, SMMCS SA and Valor Fish Frigo : Three companies dedicated to the strategic sector of fishing, processing and conservation."
       },
       "visionTitle": "Our vision and values:",
       "vision": "Through all of these subsidiaries, NOOR HOLDING works to create value, anticipate market needs and actively contribute to the development of Mauritania and the sub-region. Our vision is based on three pillars: innovation, rigor and commitment to sustainability and social responsibility.",
@@ -50,12 +49,13 @@
       "signature": {
         "regards": "With all my consideration,",
         "name": "Ahmed Salem ELY",
-        "title": "Chief Executive Officer, NOOR HOLDING"
+        "title": "Chief Executive Officer",
+        "subtitle": "Noor Holding"
       }
     },
     "about": {
       "title": "Who We Are",
-      "description1": "NOOR HOLDING is a company based in Nouakchott with 5 subsidiaries specializing in services, import-export, representation, fishing, and seafood processing.",
+      "description1": "NOOR HOLDING is a company based in Nouakchott with 10 subsidiaries specializing in hydrocarbons , mining , import-export, representation, fishing and seafood processing.",
       "description2": "Noor Holding is a true model of a diversified company in Mauritania, with a significant presence in the market. We are a proudly Mauritanian company that invests in our country to build a better future."
     },
     "subsidiaries": {
@@ -68,7 +68,7 @@
           "services": [
             "Import of refined hydrocarbons",
             "Secure storage and distribution",
-            "Complete official authorizations"
+            "the first private license issued by the Mauritanian State"
           ]
         },
         "slmp": {
@@ -127,8 +127,8 @@
           ]
         },
         "fishing": {
-          "name": "SEMAK s.a | SMMCS s.a | Valor Fish Frigo (VFF)",
-          "description": "SEMAK s.a, SMMCS s.a, and Valor Fish Frigo (VFF) are companies in the strategic fishing sector operating in an integrated manner to optimize the transformation and conservation of seafood products. SEMAK s.a has a cutting-edge factory with a freezing tunnel, SMMCS s.a ensures capture through its trawler fleet, and VFF is dedicated to conservation. Together, they form a complete value chain guaranteeing freshness and quality of fishery products.",
+          "name": "SEMAK s.a | SMMCS s.a | Valor Fish Frigo ",
+          "description": "SEMAK s.a, SMMCS s.a, and Valor Fish Frigo  are companies in the strategic fishing sector operating in an integrated manner to optimize the transformation and conservation of seafood products. SEMAK s.a has a cutting-edge factory with a freezing tunnel, SMMCS s.a ensures capture through its trawler fleet, and VFF is dedicated to conservation. Together, they form a complete value chain guaranteeing freshness and quality of fishery products.",
           "services": [
             "Integrated capture-conservation value chain",
             "Cutting-edge transformation technologies",
@@ -147,7 +147,7 @@
       "getInTouchSubtitle": "Send us a message and we'll get back to you as soon as possible.",
       "location": {
         "title": "Our Location",
-        "address": "4th Floor, Lot 402, Sidi Mohamed Cheikh Lemine Street\nTevragh Zeina Opposite The Mosque\nNouakchott, Mauritania"
+        "address": "No. 384 Atoit - Tevragh Zeina, Nouakchott, Mauritania"
       },
       "hours": {
         "title": "Office Hours",
@@ -157,7 +157,7 @@
       },
       "phone": {
         "title": "Landline",
-        "number": "+222 22 21 21 23"
+        "number": "+222 22 00 95 00"
       },
       "email": {
         "title": "Email",
@@ -209,7 +209,7 @@
       "title": "NOOR HOLDING",
       "subtitle": "L'innovation, la rigueur et l'engagement",
       "shortDescription": "Groupe mauritanien leader dans les secteurs clés.",
-      "country" : "Mauritania",
+      "country": "Mauritania",
       "buttons": {
         "latestNews": "Dernières Actualités",
         "ourSubsidiaries": "Nos Filiales",
@@ -218,8 +218,8 @@
       "stats": {
         "subsidiaries": "Filiales",
         "keysectors": "Secteurs",
-        "marketLeader": "Basé en",
-        "basedIn": "Basé en"
+        "marketLeader": "Lieu",
+        "basedIn": "Lieu"
       }
     },
     "ceoMessage": {
@@ -236,7 +236,7 @@
         "tbs1": "TBS – Transport Business and Shipping : Opère dans le transport, le transit et les services logistiques internationaux.",
         "tbs2": "TBS – Trade Brokerage and Services : Acteur majeur dans l'intermédiation financière.",
         "acg": "ACG – Établissement Arrachad pour le Commerce Général : Intervient dans le négoce multiforme.",
-        "fishing": "SEMAK SA, SMMCS SA et Valor Fish Frigo (VFF) : Trois sociétés dédiées au secteur stratégique de la pêche, de la transformation et de la conservation."
+        "fishing": "SEMAK SA, SMMCS SA et Valor Fish Frigo : Trois sociétés dédiées au secteur stratégique de la pêche, de la transformation et de la conservation."
       },
       "visionTitle": "Notre vision et nos valeurs :",
       "vision": "À travers l'ensemble de ces filiales, NOOR HOLDING œuvre à créer de la valeur, anticiper les besoins du marché et contribuer activement à l'essor de la Mauritanie et de la sous-région. Notre vision repose sur trois piliers : l'innovation, la rigueur et l'engagement en faveur de la durabilité et de la responsabilité sociale.",
@@ -244,12 +244,13 @@
       "signature": {
         "regards": "Avec toute ma considération,",
         "name": "Ahmed Salem ELY",
-        "title": "Président Directeur Général, NOOR HOLDING"
+        "title": "Président Directeur Général",
+        "subtitle": "Noor Holding"
       }
     },
     "about": {
       "title": "Qui Sommes Nous",
-      "description1": "NOOR HOLDING est une entreprise basée à Nouakchott et qui compte 5 filiales spécialisées dans les services, l'import-export, la représentation, la pêche, le traitement des produits de la mer.",
+      "description1": "NOOR HOLDING est une entreprise basée à Nouakchott et qui compte 10 filiales spécialisées dans les hydrocarbures , les mines , l'import-export, la représentation, la pêche, le traitement des produits de la mer.",
       "description2": "Noor Holding est un véritable modèle d'entreprise diversifiée en Mauritanie, avec une présence importante sur le marché. Nous sommes une entreprise fièrement mauritanienne, qui investit dans notre pays pour construire un avenir meilleur."
     },
     "subsidiaries": {
@@ -321,8 +322,8 @@
           ]
         },
         "fishing": {
-          "name": "SEMAK s.a | SMMCS s.a | Valor Fish Frigo (VFF)",
-          "description": "SEMAK s.a, SMMCS s.a, et Valor Fish Frigo (VFF) sont des entreprises du secteur stratégique de la pêche opérant de manière intégrée pour optimiser la transformation et conservation des produits de la mer. SEMAK s.a possède une usine de pointe avec tunnel de congélation, SMMCS s.a assure la capture via sa flotte de chalutiers, et VFF se dédie à la conservation. Ensemble, elles forment une chaîne de valeur complète garantissant fraîcheur et qualité des produits halieutiques.",
+          "name": "SEMAK s.a | SMMCS s.a | Valor Fish Frigo ",
+          "description": "SEMAK s.a, SMMCS s.a, et Valor Fish Frigo sont des entreprises du secteur stratégique de la pêche opérant de manière intégrée pour optimiser la transformation et conservation des produits de la mer. SEMAK s.a possède une usine de pointe avec tunnel de congélation, SMMCS s.a assure la capture via sa flotte de chalutiers, et VFF se dédie à la conservation. Ensemble, elles forment une chaîne de valeur complète garantissant fraîcheur et qualité des produits halieutiques.",
           "services": [
             "Chaîne de valeur intégrée capture-conservation",
             "Technologies de pointe de transformation",
@@ -341,7 +342,7 @@
       "getInTouchSubtitle": "Envoyez-nous un message et nous vous répondrons dans les plus brefs délais.",
       "location": {
         "title": "Notre Localisation",
-        "address": "4ème Étage, Lot 402, Rue Sidi Mohamed Cheikh Lemine\nTevragh Zeina En Face de la Mosquée\nNouakchott, Mauritanie"
+        "address": " numéro 384 Atoit - Tevragh Zeina Nouakchott Mauritanie"
       },
       "hours": {
         "title": "Heures d'Ouverture",
@@ -351,7 +352,7 @@
       },
       "phone": {
         "title": "Téléphone Fixe",
-        "number": "+222 22 21 21 23"
+        "number": "+222 22 00 95 00"
       },
       "email": {
         "title": "Email",
@@ -403,11 +404,10 @@
       "title": "نور القابضة",
       "subtitle": "الابتكار والدقة والالتزام",
       "shortDescription": "الشركة الموريتانية الرائدة في القطاعات الأساسية.",
-      "country" : "موريتانيا",
+      "country": "موريتانيا",
       "buttons": {
         "latestNews": "آخر الأخبار",
         "ourSubsidiaries": "شركاتنا التابعة"
-        
       },
       "stats": {
         "subsidiaries": "شركة تابعة",
@@ -430,7 +430,7 @@
         "tbs1": "TBS - أعمال النقل والشحن: تعمل في النقل والعبور وخدمات اللوجستيات الدولية.",
         "tbs2": "TBS - الوساطة التجارية والخدمات: فاعل رئيسي في الوساطة المالية.",
         "acg": "ACG - مؤسسة الرشاد للتجارة العامة: تتدخل في التجارة متعددة الأشكال.",
-        "fishing": "SEMAK SA وSMMCS SA وValor Fish Frigo (VFF): ثلاث شركات مخصصة للقطاع الاستراتيجي للصيد والتحويل والحفظ."
+        "fishing": "SEMAK SA وSMMCS SA وValor Fish Frigo : ثلاث شركات مخصصة للقطاع الاستراتيجي للصيد والتحويل والحفظ."
       },
       "visionTitle": "رؤيتنا وقيمنا:",
       "vision": "من خلال جميع هذه الشركات التابعة، تعمل نور القابضة على خلق القيمة وتوقع احتياجات السوق والمساهمة بفعالية في ازدهار موريتانيا والمنطقة الفرعية. تقوم رؤيتنا على ثلاث ركائز: الابتكار والدقة والالتزام بالاستدامة والمسؤولية الاجتماعية.",
@@ -438,12 +438,13 @@
       "signature": {
         "regards": "مع كل الاعتبار،",
         "name": "أحمد سالم علي",
-        "title": "الرئيس المدير العام، نور القابضة"
+        "title": "الرئيس المدير العام ",
+        "subtitle": "نور القابضة"
       }
     },
     "about": {
       "title": "من نحن",
-      "description1": "نور القابضة هي شركة مقرها في نواكشوط وتضم 10 شركات تابعة متخصصة في الخدمات والاستيراد والتصدير والتمثيل والصيد ومعالجة المنتجات البحرية.",
+      "description1": "نور القابضة هي شركة مقرها في نواكشوط وتضم 10 شركات تابعة متخصصة في المحروقات والمناجم و الخدمات والاستيراد والتصدير والتمثيل والصيد ومعالجة المنتجات البحرية.",
       "description2": "نور القابضة هي نموذج حقيقي لشركة متنوعة في موريتانيا، مع حضور مهم في السوق. نحن شركة موريتانية بفخر، تستثمر في بلدنا لبناء مستقبل أفضل."
     },
     "subsidiaries": {
@@ -456,7 +457,7 @@
           "services": [
             "استيراد المحروقات المكررة",
             "التخزين والتوزيع الآمن",
-            "التراخيص الرسمية الكاملة"
+            "أول رخصة خاصة تصدرها الدولة الموريتانية"
           ]
         },
         "slmp": {
@@ -488,8 +489,8 @@
         },
         "tbs1": {
           "name": "TBS - أعمال النقل والشحن",
-          "description": "  هي شركة نقل ولوجستيات تقدم حلولاً شاملة لاحتياجات العبور وخدمات اللوجستيات الدولية. تدير الشركة حركة البضائع براً وبحراً وجواً. كوكيل شحن،  تتولى الإجراءات الجمركية والإدارية المعقدة، مما يبسط الاستيراد والتصدير لعملائها مع ضمان التسليم في الوقت المحدد والآمن "   ,
-           "services": [
+          "description": "  هي شركة نقل ولوجستيات تقدم حلولاً شاملة لاحتياجات العبور وخدمات اللوجستيات الدولية. تدير الشركة حركة البضائع براً وبحراً وجواً. كوكيل شحن،  تتولى الإجراءات الجمركية والإدارية المعقدة، مما يبسط الاستيراد والتصدير لعملائها مع ضمان التسليم في الوقت المحدد والآمن ",
+          "services": [
             "النقل البري والبحري والجوي",
             "خدمات العبور والإجراءات الجمركية",
             "حلول لوجستية مخصصة"
@@ -497,7 +498,7 @@
         },
         "acg": {
           "name": "ACG - مؤسسة الرشاد للتجارة العامة",
-          "description": "مؤسسة الرشاد للتجارة العامة  هي شركة تجارة متعددة الأشكال تعمل في مجموعة متنوعة من القطاعات على المستوى الوطني والدولي. تتميز  بقدرتها على التكيف مع متطلبات السوق، وتحصل على منتجات متنوعة من المواد الخام إلى المنتجات النهائية. يسمح لها نموذجها الرشيق بالاستجابة بسرعة للفرص التجارية من خلال شبكتها الواسعة من الموردين والمشترين ", 
+          "description": "مؤسسة الرشاد للتجارة العامة  هي شركة تجارة متعددة الأشكال تعمل في مجموعة متنوعة من القطاعات على المستوى الوطني والدولي. تتميز  بقدرتها على التكيف مع متطلبات السوق، وتحصل على منتجات متنوعة من المواد الخام إلى المنتجات النهائية. يسمح لها نموذجها الرشيق بالاستجابة بسرعة للفرص التجارية من خلال شبكتها الواسعة من الموردين والمشترين ",
           "services": [
             "التجارة الوطنية والدولية",
             "المواد الخام والمنتجات النهائية",
@@ -507,7 +508,7 @@
         },
         "tbs2": {
           "name": "TBS - الوساطة التجارية والخدمات",
-          "description": "الوساطة التجارية والخدمات  هي فاعل رئيسي في الوساطة المالية، تسهل المعاملات في الأسهم والسندات والأدوات المالية الأخرى. تعمل الشركة كوسيط بين المستثمرين والأسواق المالية، مما يسمح للعملاء بوضع رؤوس أموالهم بشكل استراتيجي. تقدم أيضاً خدمات الاستشارة المالية وتتميز بمعرفتها العميقة للأسواق وقدرتها على تحديد فرص النمو", 
+          "description": "الوساطة التجارية والخدمات  هي فاعل رئيسي في الوساطة المالية، تسهل المعاملات في الأسهم والسندات والأدوات المالية الأخرى. تعمل الشركة كوسيط بين المستثمرين والأسواق المالية، مما يسمح للعملاء بوضع رؤوس أموالهم بشكل استراتيجي. تقدم أيضاً خدمات الاستشارة المالية وتتميز بمعرفتها العميقة للأسواق وقدرتها على تحديد فرص النمو",
           "services": [
             "وساطة في الأدوات المالية",
             "خدمات الاستشارة الاستثمارية",
@@ -515,9 +516,9 @@
           ]
         },
         "fishing": {
-          "name": "SEMAK ش.م | SMMCS ش.م | Valor Fish Frigo (VFF)",
-          "description": " شركات في القطاع الاستراتيجي للصيد تعمل بطريقة متكاملة لتحسين تحويل وحفظ المنتجات البحرية. تمتلك  مصنعاً متطوراً بنفق تجميد ، تشكل سلسلة قيمة كاملة تضمن نضارة وجودة المنتجات السمكية   ", 
-           "services": [
+          "name": "SEMAK ش.م | SMMCS ش.م | Valor Fish Frigo ",
+          "description": " شركات في القطاع الاستراتيجي للصيد تعمل بطريقة متكاملة لتحسين تحويل وحفظ المنتجات البحرية. تمتلك  مصنعاً متطوراً بنفق تجميد ، تشكل سلسلة قيمة كاملة تضمن نضارة وجودة المنتجات السمكية   ",
+          "services": [
             "سلسلة قيمة متكاملة للصيد والحفظ",
             "تقنيات تحويل متطورة",
             "أسطول حديث من سفن الجر"
@@ -535,7 +536,7 @@
       "getInTouchSubtitle": "أرسل لنا رسالة وسنرد عليك في أقرب وقت ممكن.",
       "location": {
         "title": "موقعنا",
-        "address": "الطابق الرابع، القطعة 402، شارع سيدي محمد الشيخ لمين\nتفرغ زينة مقابل المسجد\nنواكشوط، موريتانيا"
+        "address": "384 Atoit - تفرغ زينة، نواكشوط، موريتانيا"
       },
       "hours": {
         "title": "ساعات العمل",
@@ -545,7 +546,7 @@
       },
       "phone": {
         "title": "الهاتف الأرضي",
-        "number": "+222 22 21 21 23"
+        "number": "+222 22 00 95 00"
       },
       "email": {
         "title": "البريد الإلكتروني",
@@ -573,9 +574,8 @@
       }
     },
     "footer": {
-        
-     "home": "الرئيسية",
-     "subs": "الشركات التابعة",
+      "home": "الرئيسية",
+      "subs": "الشركات التابعة",
       "quickLinks": "روابط سريعة",
       "contact": "اتصل بنا",
       "copyright": "© 2025 نور القابضة. جميع الحقوق محفوظة.",
