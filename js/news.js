@@ -42,11 +42,13 @@ function newsCardTemplate(item) {
       <h3 class="text-xl font-medium text-midnight mb-3 hover:text-skyline transition-colors cursor-pointer">
         ${item.title}
       </h3>
-      <p class="text-gray-600 leading-relaxed mb-4">
-        ${item.description || ''}
+      <p class="text-gray-600 leading-relaxed mb-4 line-clamp-3 ">
+        ${item.description || ""}
       </p>
       <div class="flex items-center space-x-2">
-        <a href="./news.html?id=${item.id}" class="text-sm text-gulf font-medium hover:text-midnight transition-colors">
+        <a href="./news.html?id=${
+          item.id
+        }" class="text-sm text-gulf font-medium hover:text-midnight transition-colors">
           Read More
         </a>
         <svg class="w-3 h-3 text-gulf" fill="none" stroke="currentColor" viewBox="0 0 24 24">

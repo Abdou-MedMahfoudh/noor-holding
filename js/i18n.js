@@ -16,6 +16,10 @@ class I18nManager {
       const response = await fetch("./data/indextranslation.json");
       this.translations = await response.json();
 
+      // Load news translations
+      const newsResponse = await fetch("./data/news-translations.json");
+      this.newsTranslations = await newsResponse.json();
+
       //   Detect browser language or use stored preference
       this.currentLanguage = this.detectLanguage();
 
@@ -88,6 +92,54 @@ class I18nManager {
     return value || key;
   }
 
+  tn(key) {
+    const keys = key.split(".");
+    let value = this.newsTranslations[this.currentLanguage];
+
+    for (const k of keys) {
+      if (value && typeof value === "object" && k in value) {
+        value = value[k];
+      } else {
+        console.warn(
+          `News translation key not found: ${key} for language: ${this.currentLanguage}`
+        );
+        return key; // Return key as fallback
+      }
+    }
+
+    return value || key;
+  }
+
+  // Get translated article by ID
+  getTranslatedArticle(articleId) {
+    const article =
+      this.newsTranslations[this.currentLanguage]?.articles?.[articleId];
+    if (!article) {
+      console.warn(
+        `Article ${articleId} not found for language ${this.currentLanguage}`
+      );
+      return null;
+    }
+    return {
+      id: articleId,
+      ...article,
+      date: this.getOriginalArticleData(articleId)?.date || "",
+      picture: this.getOriginalArticleData(articleId)?.picture || "",
+      featured: this.getOriginalArticleData(articleId)?.featured || false,
+    };
+  }
+
+  // Get all translated articles
+  getAllTranslatedArticles() {
+    const articles = this.newsTranslations[this.currentLanguage]?.articles;
+    if (!articles) return [];
+
+    return Object.keys(articles)
+      .map((id) => this.getTranslatedArticle(id))
+      .filter(Boolean);
+  }
+
+  
   applyTranslations() {
     // Update page title
     document.title = this.t("meta.title");
@@ -144,10 +196,7 @@ class I18nManager {
       this.t("hero.stats.basedIn")
     );
 
-    this.updateElement(
-      '[data-i18n="hero.country"]',
-      this.t("hero.country")
-    );
+    this.updateElement('[data-i18n="hero.country"]', this.t("hero.country"));
 
     // CEO Message
     this.updateElement(
@@ -561,6 +610,99 @@ class I18nManager {
     this.applyDirectionStyles();
   }
 
+  // Method to render news in current language
+  renderNewsSection(newsContainer) {
+    const articles = this.getAllTranslatedArticles();
+
+    if (!articles.length) {
+      newsContainer.innerHTML = `<p data-i18n="news.no-news">${this.tn(
+        "newsSection.noNews"
+      )}</p>`;
+      return;
+    }
+
+    let newsHTML = "";
+    articles.forEach((article) => {
+      newsHTML += `
+        <article class="news-item" data-article-id="${article.id}">
+          <img src="${article.picture}" alt="${
+        article.title
+      }" class="news-image">
+          <div class="news-content">
+            <span class="news-category">${article.category}</span>
+            <h3 class="news-title">${article.title}</h3>
+            <p class="news-description">${article.description}</p>
+            <div class="news-meta">
+              <span class="news-author">${this.tn("newsSection.by")} ${
+        article.author
+      }</span>
+              <span class="news-date">${article.date}</span>
+            </div>
+            <button class="read-more-btn" onclick="window.i18n.openArticle(${
+              article.id
+            })">
+              ${this.tn("newsSection.readMore")}
+            </button>
+          </div>
+        </article>
+      `;
+    });
+
+    newsContainer.innerHTML = newsHTML;
+  }
+
+  // Method to render single article page
+  renderSingleArticle(articleId, articleContainer) {
+    const article = this.getTranslatedArticle(articleId);
+
+    if (!article) {
+      articleContainer.innerHTML = `<p>Article not found</p>`;
+      return;
+    }
+
+    articleContainer.innerHTML = `
+      <article class="single-article">
+        <header class="article-header">
+          <button class="back-btn" onclick="window.i18n.goBackToNews()">
+            ← ${this.tn("newsSection.backToNews")}
+          </button>
+          <span class="article-category">${article.category}</span>
+          <h1 class="article-title">${article.title}</h1>
+          <div class="article-meta">
+            <span class="article-author">${this.tn("newsSection.by")} ${
+      article.author
+    }</span>
+            <span class="article-date">${this.tn("newsSection.publishedOn")} ${
+      article.date
+    }</span>
+          </div>
+          <img src="${article.picture}" alt="${
+      article.title
+    }" class="article-featured-image">
+        </header>
+        <div class="article-content">
+          ${article.content}
+        </div>
+        <footer class="article-footer">
+          <button class="share-btn">
+            ${this.tn("newsSection.shareArticle")}
+          </button>
+        </footer>
+      </article>
+    `;
+  }
+
+  // Utility methods for navigation
+  openArticle(articleId) {
+    // Implementation depends on your routing system
+    console.log(`Opening article ${articleId}`);
+  }
+
+  goBackToNews() {
+    // Implementation depends on your routing system
+    console.log("Going back to news list");
+  }
+
   updateElement(selector, text) {
     const elements = document.querySelectorAll(selector);
     elements.forEach((el) => {
@@ -776,7 +918,7 @@ class I18nManager {
       fr: "https://flagcdn.com/fr.svg",
       ar: "https://flagcdn.com/mr.svg",
     };
-    
+
     // Update desktop switcher
     // Find the desktop switcher button (containing #current-lang and <img>)
     const navSwitcher = document.getElementById("language-switcher");
@@ -813,8 +955,6 @@ class I18nManager {
     //   mobileFlag.className = "w-5 h-3 rounded-sm";
     // }
   }
-
-
 
   // Method to update specific subsidiary content dynamically
   updateSubsidiaryContent(companyKey) {
@@ -867,3 +1007,25 @@ document.addEventListener("DOMContentLoaded", () => {
 if (typeof module !== "undefined" && module.exports) {
   module.exports = I18nManager;
 }
+
+
+// Initialize news on page load
+document.addEventListener("DOMContentLoaded", () => {
+  const newsContainer = document.getElementById("news-container");
+  if (newsContainer) {
+    window.i18n.renderNewsSection(newsContainer);
+  }
+});
+
+// For single article page
+function loadArticle(articleId) {
+  const articleContainer = document.getElementById("article-content");
+  window.i18n.renderSingleArticle(articleId, articleContainer);
+}
+
+// Get translated article data
+const article = window.i18n.getTranslatedArticle("1");
+console.log(article.title); // Will show title in current language
+
+// Get all articles in current language
+const allArticles = window.i18n.getAllTranslatedArticles();
