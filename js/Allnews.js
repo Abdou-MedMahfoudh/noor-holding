@@ -1,4 +1,6 @@
 
+        import { i18n } from "./i18n.js";
+
         // News management class
         class NewsManager {
           constructor() {
@@ -173,10 +175,14 @@
                                 )}</span>
                             </div>
                             <h3 class="text-xl font-dm-serif text-midnight mb-3 group-hover:text-gulf transition-colors duration-300 line-clamp-2">
-                                ${item.title}
+                                ${i18n.tn(`articles.${item.id}.title`)}
                             </h3>
                             <p class="text-gray-600 leading-relaxed mb-4 line-clamp-3">
-                                ${item.description || ""}
+                                  ${
+                                    i18n.tn(
+                                      `articles.${item.id}.description`
+                                    ) || ""
+                                  }
                             </p>
                             <div class="flex items-center space-x-2 text-gulf group-hover:text-midnight transition-colors duration-300">
                                 <span class="text-sm font-medium">Read More</span>
@@ -331,9 +337,22 @@
 
         // Initialize the news manager when the page loads
         let newsManager;
-        document.addEventListener('DOMContentLoaded', () => {
-            newsManager = new NewsManager();
-        });
+       
 
         
+        document.addEventListener("DOMContentLoaded", async () => {
+          await i18n.init(); // wait for translations to load
+        
+          newsManager = new NewsManager();
+        
+          const languageButtons = document.querySelectorAll(
+            "#language-switcher button, #mobile-language-switcher button"
+          );
+          languageButtons.forEach((btn) => {
+            btn.addEventListener("click", async () => {
+              await newsManager.renderNews(); // re-render news in new language
+            });
+          });
+         
+        });
     

@@ -41,7 +41,9 @@
         "tbs1": "TBS – Transport Business and Shipping: Operates in transport, transit and international logistics services.",
         "tbs2": "TBS – Trade Brokerage and Services: Major player in financial intermediation.",
         "acg": "ACG – Arrachad Establishment for General Trade: Intervenes in multiform trading.",
-        "fishing": "SEMAK SA, SMMCS SA and Valor Fish Frigo : Three companies dedicated to the strategic sector of fishing, processing and conservation."
+        "fishing": "SEMAK SA, SMMCS SA and Valor Fish Frigo – Three companies dedicated to the strategic sector of fishing, processing and conservation.",
+        "ecocharge": "EcoCharge Africa  – Specialized in electric charging solutions and sustainable energy infrastructure.",
+        "agro": "Compagnie Agricole du Sahel (CASA)– An innovative Mauritanian company committed to developing modern and sustainable agriculture."
       },
       "visionTitle": "Our vision and values:",
       "vision": "Through all of these subsidiaries, NOOR HOLDING works to create value, anticipate market needs and actively contribute to the development of Mauritania and the sub-region. Our vision is based on three pillars: innovation, rigor and commitment to sustainability and social responsibility.",
@@ -55,7 +57,7 @@
     },
     "about": {
       "title": "Who We Are",
-      "description1": "NOOR HOLDING is a company based in Nouakchott with 10 subsidiaries specializing in hydrocarbons , mining , import-export, representation, fishing and seafood processing.",
+      "description1": "NOOR HOLDING is a company based in Nouakchott with 12 subsidiaries specialized in hydrocarbons, mining, import-export, representation, fishing, seafood processing, agriculture, and sustainable energy.",
       "description2": "Noor Holding is a true model of a diversified company in Mauritania, with a significant presence in the market. We are a proudly Mauritanian company that invests in our country to build a better future."
     },
     "subsidiaries": {
@@ -98,6 +100,16 @@
             "Logistics and regulatory expertise"
           ]
         },
+        "agro": {
+  "name": "Compagnie Agricole du Sahel (CASA)",
+  "description": "The Compagnie Agricole du Sahel (CASA) is an innovative young Mauritanian company dedicated to developing a modern, sustainable, and competitive agriculture sector by leveraging local resources. Its main activities include developing farmland and cultivating crops adapted to the Sahel region, processing agricultural products for local and international markets, implementing eco-friendly practices such as efficient irrigation and by-product recovery, and creating jobs for youth and women while partnering with rural communities to strengthen the local economy.",
+  "services": [
+    "Agricultural production",
+    "Agro-industry & processing",
+    "Sustainability & eco-practices",
+    "Local development & jobs"
+  ]
+},
         "tbs1": {
           "name": "TBS – Transport Business and Shipping",
           "description": "Transport Business and Shipping (TBS) is a transport and logistics company offering comprehensive solutions for international transit and logistics service needs. The company manages the movement of goods by land, sea and air. As a freight forwarder, TBS handles complex customs and administrative formalities, simplifying import and export for its clients while guaranteeing timely and secure deliveries.",
@@ -107,6 +119,17 @@
             "Customized logistics solutions"
           ]
         },
+        "ecocharge": {
+  "name": "EcoCharge Africa",
+  "description": "EcoCharge Africa is a company specialized in electric charging solutions and sustainable energy infrastructure, dedicated to advancing sustainable mobility across Africa. Its work spans the supply and installation of fast charging stations in key locations such as parking lots and gas stations, the use of intelligent platforms to monitor and optimize energy consumption, and the provision of maintenance and technical support. The company also conducts feasibility studies, energy audits, and collaborates with local stakeholders to design modern charging networks. By continuously innovating through mobile applications, payment systems, and the integration of renewable energy, EcoCharge Africa builds autonomous and eco-friendly charging stations.",
+  "services": [
+    "Fast charging station installation",
+    "Smart energy monitoring",
+    "Maintenance & technical support",
+    "Consulting and energy audits",
+    "Renewable integration & innovation"
+  ]
+},
         "acg": {
           "name": "ACG – Arrachad Establishment for General Trade",
           "description": "The Arrachad Establishment for General Trade (ACG) is a multiform trading company operating in a variety of sectors on a national and international scale. ACG is distinguished by its ability to adapt to market demands, sourcing various products from raw materials to finished products. Its agile model allows it to respond quickly to commercial opportunities through its vast network of suppliers and buyers.",
@@ -138,8 +161,25 @@
       }
     },
     "news": {
+      "hero":{
+        "main":"News & Insights",
+         "desc":"Discover the latest developments, strategic initiatives, and industry insights from Nour Holdings .",
+         "uptitle":"Stay Updated"
+      },
+
       "title": "Latest News",
-      "viewAll": "View All News"
+      "viewAll": "View All News",
+       "readMore": "Read More",
+      "backToNews": "Back to News",
+      "shareArticle": "Share this article",
+      "noArticles": "No articles found",
+      "loadingArticles": "Loading articles...",
+      "searchPlaceholder": "Search news articles...",
+      "showingResults": "Showing {count} articles",
+      "showingFiltered": "Showing {filtered} of {total} articles",
+      "articleNotFound": "Article not found",
+      "unableToLoad": "Unable to load news at the moment",
+      "article":"article"
     },
     "contact": {
       "title": "Contact Us",
@@ -236,7 +276,9 @@
         "tbs1": "TBS – Transport Business and Shipping : Opère dans le transport, le transit et les services logistiques internationaux.",
         "tbs2": "TBS – Trade Brokerage and Services : Acteur majeur dans l'intermédiation financière.",
         "acg": "ACG – Établissement Arrachad pour le Commerce Général : Intervient dans le négoce multiforme.",
-        "fishing": "SEMAK SA, SMMCS SA et Valor Fish Frigo : Trois sociétés dédiées au secteur stratégique de la pêche, de la transformation et de la conservation."
+        "fishing": "SEMAK SA, SMMCS SA et Valor Fish Frigo : Trois sociétés dédiées au secteur stratégique de la pêche, de la transformation et de la conservation.",
+        "agro": "La Compagnie Agricole du Sahel (CASA) – entreprise mauritanienne innovante engagée dans le développement d’une agriculture moderne et durable.",
+        "ecocharge": "EcoCharge Africa : spécialisée dans les solutions de recharge électrique et d’infrastructures énergétiques durables."
       },
       "visionTitle": "Notre vision et nos valeurs :",
       "vision": "À travers l'ensemble de ces filiales, NOOR HOLDING œuvre à créer de la valeur, anticiper les besoins du marché et contribuer activement à l'essor de la Mauritanie et de la sous-région. Notre vision repose sur trois piliers : l'innovation, la rigueur et l'engagement en faveur de la durabilité et de la responsabilité sociale.",
@@ -250,7 +292,7 @@
     },
     "about": {
       "title": "Qui Sommes Nous",
-      "description1": "NOOR HOLDING est une entreprise basée à Nouakchott et qui compte 10 filiales spécialisées dans les hydrocarbures , les mines , l'import-export, la représentation, la pêche, le traitement des produits de la mer.",
+      "description1": "NOOR HOLDING est une entreprise basée à Nouakchott et qui compte 12 filiales spécialisées dans les hydrocarbures, les mines, l’import-export, la représentation, la pêche, le traitement des produits de la mer, l’agriculture et les énergies durables.",
       "description2": "Noor Holding est un véritable modèle d'entreprise diversifiée en Mauritanie, avec une présence importante sur le marché. Nous sommes une entreprise fièrement mauritanienne, qui investit dans notre pays pour construire un avenir meilleur."
     },
     "subsidiaries": {
@@ -275,6 +317,16 @@
             "Distribution d'hydrocarbures"
           ]
         },
+        "agro": {
+  "name": "Compagnie Agricole du Sahel (CASA)",
+  "description": "La Compagnie Agricole du Sahel (CASA) est une jeune entreprise mauritanienne innovante, dédiée au développement d’un secteur agricole moderne, durable et compétitif en valorisant les ressources locales. Ses principales activités incluent l’aménagement des terres et la culture de produits adaptés à la région du Sahel, la transformation agro-industrielle destinée aux marchés locaux et internationaux, la mise en œuvre de pratiques respectueuses de l’environnement comme l’irrigation efficiente et la valorisation des sous-produits, ainsi que la création d’emplois pour les jeunes et les femmes en partenariat avec les communautés rurales pour dynamiser l’économie locale.",
+  "services": [
+    "Production agricole",
+    "Agro-industrie & transformation",
+    "Durabilité & pratiques éco",
+    "Développement local & emplois"
+  ]
+},
         "mines": {
           "name": "MINES DE MAURITANIE",
           "description": "MINES DE MAURITANIE est un acteur majeur du secteur minier, avec un focus particulier sur la recherche aurifère. L'entreprise mène des activités d'exploration intensive sur une vaste zone de plus de 1 000 km², couverte par trois permis de recherche. Grâce à son expertise géologique et aux technologies de pointe, elle découvre de nouveaux gisements d'or, contribuant directement au développement économique du pays.",
@@ -293,6 +345,17 @@
             "Expertise logistique et réglementaire"
           ]
         },
+        "ecocharge": {
+  "name": "EcoCharge Africa",
+  "description": "EcoCharge Africa est une entreprise spécialisée dans les solutions de recharge électrique et les infrastructures énergétiques durables, dédiée à faire progresser la mobilité durable à travers l’Afrique. Ses activités couvrent la fourniture et l’installation de stations de recharge rapide dans des emplacements stratégiques tels que les parkings et les stations-service, l’utilisation de plateformes intelligentes pour surveiller et optimiser la consommation d’énergie, ainsi que la fourniture de services de maintenance et d’assistance technique. L’entreprise réalise également des études de faisabilité, des audits énergétiques et collabore avec les parties prenantes locales pour concevoir des réseaux de recharge modernes. En innovant continuellement à travers des applications mobiles, des systèmes de paiement et l’intégration des énergies renouvelables, EcoCharge Africa crée des stations de recharge autonomes et respectueuses de l’environnement.",
+  "services": [
+    "Stations de recharge rapide",
+    "Gestion intelligente de l’énergie",
+    "Maintenance et assistance",
+    "Conseil et audits énergétiques",
+    "Innovation et énergies renouvelables"
+  ]
+},
         "tbs1": {
           "name": "TBS – Transport Business and Shipping",
           "description": "Transport Business and Shipping (TBS) est une entreprise de transport et de logistique offrant des solutions complètes pour les besoins en transit et services logistiques internationaux. L'entreprise gère le déplacement de marchandises par voie terrestre, maritime et aérienne. En tant que transitaire, TBS s'occupe des formalités douanières et administratives complexes, simplifiant l'importation et l'exportation pour ses clients tout en garantissant des livraisons ponctuelles et sécurisées.",
@@ -332,10 +395,26 @@
         }
       }
     },
-    "news": {
-      "title": "Dernières Actualités",
-      "viewAll": "Voir Toutes les Actualités"
-    },
+   "news": {
+     "hero": {
+       "main": " Derniers Actualités ",
+       "desc": "Découvrez les derniers développements, initiatives stratégiques et analyses sectorielles de Noor Holding.",
+       "uptitle": "Restez Informés"
+     },
+     "title": "Dernières Actualités",
+     "viewAll": "Voir Toutes les Actualités",
+     "readMore": "Lire la suite",
+     "backToNews": "Retour aux Actualités",
+     "shareArticle": "Partager cet article",
+     "noArticles": "Aucun article trouvé",
+     "loadingArticles": "Chargement des articles...",
+     "searchPlaceholder": "Rechercher des articles...",
+     "showingResults": "Affichage de {count} articles",
+     "showingFiltered": "Affichage de {filtered} sur {total} articles",
+     "articleNotFound": "Article non trouvé",
+     "unableToLoad": "Impossible de charger les actualités pour le moment",
+     "article": "article"
+   },
     "contact": {
       "title": " Contacter Nous",
       "getInTouch": "Entrez en Contact",
@@ -430,7 +509,9 @@
         "tbs1": "TBS - أعمال النقل والشحن: تعمل في النقل والعبور وخدمات اللوجستيات الدولية.",
         "tbs2": "TBS - الوساطة التجارية والخدمات: فاعل رئيسي في الوساطة المالية.",
         "acg": "ACG - مؤسسة الرشاد للتجارة العامة: تتدخل في التجارة متعددة الأشكال.",
-        "fishing": "SEMAK SA وSMMCS SA وValor Fish Frigo : ثلاث شركات مخصصة للقطاع الاستراتيجي للصيد والتحويل والحفظ."
+        "fishing": "SEMAK SA وSMMCS SA وValor Fish Frigo : ثلاث شركات مخصصة للقطاع الاستراتيجي للصيد والتحويل والحفظ.",
+        "ecocharge": "EcoCharge Africa - إيكو تشارج أفريقيا متخصصة في حلول الشحن الكهربائي والبُنى التحتية للطاقة المستدامة.",
+        "agro": " CASA - شركة الساحل الزراعية  شركة موريتانية مبتكرة تعمل على تطوير زراعة حديثة ومستدامة."
       },
       "visionTitle": "رؤيتنا وقيمنا:",
       "vision": "من خلال جميع هذه الشركات التابعة، تعمل نور القابضة على خلق القيمة وتوقع احتياجات السوق والمساهمة بفعالية في ازدهار موريتانيا والمنطقة الفرعية. تقوم رؤيتنا على ثلاث ركائز: الابتكار والدقة والالتزام بالاستدامة والمسؤولية الاجتماعية.",
@@ -444,7 +525,7 @@
     },
     "about": {
       "title": "من نحن",
-      "description1": "نور القابضة هي شركة مقرها في نواكشوط وتضم 10 شركات تابعة متخصصة في المحروقات والمناجم و الخدمات والاستيراد والتصدير والتمثيل والصيد ومعالجة المنتجات البحرية.",
+      "description1": "نور القابضة هي شركة مقرها في نواكشوط تضم 12 شركة تابعة متخصصة في المحروقات والمناجم والخدمات والاستيراد والتصدير والتمثيل والصيد ومعالجة المنتجات البحرية والزراعة والطاقة المستدامة.",
       "description2": "نور القابضة هي نموذج حقيقي لشركة متنوعة في موريتانيا، مع حضور مهم في السوق. نحن شركة موريتانية بفخر، تستثمر في بلدنا لبناء مستقبل أفضل."
     },
     "subsidiaries": {
@@ -478,6 +559,16 @@
             "تقنيات جيولوجية متطورة"
           ]
         },
+        "agro": {
+             "name": "الشركة الزراعية في الساحل (CASA)",
+               "description": "الشركة الزراعية في الساحل  هي شركة موريتانية شابة ومبتكرة، مكرسة لتطوير قطاع زراعي حديث، مستدام وتنافسي من خلال الاستفادة من الموارد المحلية. تشمل أنشطتها الرئيسية تطوير الأراضي الزراعية وزراعة محاصيل مناسبة لمنطقة الساحل باستخدام تقنيات حديثة، ومعالجة المنتجات الزراعية للأسواق المحلية والدولية، واعتماد ممارسات صديقة للبيئة مثل الري الفعّال وإعادة استخدام المنتجات الثانوية، بالإضافة إلى خلق فرص عمل للشباب والنساء وبناء شراكات مع المجتمعات الريفية لدعم الاقتصاد المحلي.",
+               "services": [
+                       "الإنتاج الزراعي",
+                      "الصناعات الزراعية والتحويل",
+                          "الاستدامة والممارسات البيئية",
+    "التنمية المحلية وفرص العمل"
+  ]
+},
         "itb": {
           "name": "ITB - الوساطة التجارية الدولية",
           "description": "الوساطة التجارية الدولية  هي شركة متخصصة في التبادلات التجارية الدولية، تعمل كوسيط بين المشترين والبائعين. خبيرة في الاستيراد والتصدير،  تسهل المعاملات عبر الحدود وتضمن التوزيع وكذلك تمثيل العلامات التجارية الدولية. تساعد الشركة الشركات الأجنبية على الاستقرار في الأسواق المحلية من خلال خبرتها في اللوجستيات واللوائح، وتضع نفسها كشريك استراتيجي للتوسع التجاري الدولي.",
@@ -487,6 +578,17 @@
             "خبرة لوجستية وتنظيمية"
           ]
         },
+        "ecocharge": {
+  "name": "إيكو تشارج أفريقيا",
+  "description": "إيكو تشارج أفريقيا هي شركة متخصصة في حلول الشحن الكهربائي والبُنى التحتية للطاقة المستدامة، مكرسة لتعزيز التنقل المستدام في جميع أنحاء أفريقيا. تشمل أنشطتها توريد وتركيب محطات الشحن السريع في مواقع استراتيجية مثل مواقف السيارات ومحطات الوقود، واستخدام منصات ذكية لمراقبة استهلاك الطاقة وتحسينه، بالإضافة إلى تقديم خدمات الصيانة والدعم الفني. كما تقوم الشركة بإجراء دراسات الجدوى والتدقيقات الطاقية، وتتعاون مع الجهات المحلية لتصميم شبكات شحن حديثة. ومن خلال الابتكار المستمر عبر التطبيقات المحمولة، وأنظمة الدفع، ودمج مصادر الطاقة المتجددة، تبني إيكو تشارج أفريقيا محطات شحن مستقلة وصديقة للبيئة.",
+  "services": [
+    "محطات شحن سريع",
+    "إدارة ذكية للطاقة",
+    "صيانة ودعم فني",
+    "استشارات وتدقيقات طاقية",
+    "ابتكار وطاقات متجددة"
+  ]
+},
         "tbs1": {
           "name": "TBS - أعمال النقل والشحن",
           "description": "  هي شركة نقل ولوجستيات تقدم حلولاً شاملة لاحتياجات العبور وخدمات اللوجستيات الدولية. تدير الشركة حركة البضائع براً وبحراً وجواً. كوكيل شحن،  تتولى الإجراءات الجمركية والإدارية المعقدة، مما يبسط الاستيراد والتصدير لعملائها مع ضمان التسليم في الوقت المحدد والآمن ",
@@ -526,10 +628,26 @@
         }
       }
     },
-    "news": {
-      "title": "آخر الأخبار",
-      "viewAll": "عرض جميع الأخبار"
-    },
+   "news": {
+     "hero": {
+       "main": "الأخبار والتحليلات",
+       "desc": "اكتشف أحدث التطورات والمبادرات الاستراتيجية والرؤى القطاعية من نور القابضة.",
+       "uptitle": "ابقَ على اطلاع"
+     },
+     "title": "آخر الأخبار",
+     "viewAll": "عرض جميع الأخبار",
+     "readMore": "اقرأ المزيد",
+     "backToNews": "العودة إلى الأخبار",
+     "shareArticle": "شارك هذا المقال",
+     "noArticles": "لم يتم العثور على مقالات",
+     "loadingArticles": "جاري تحميل المقالات...",
+     "searchPlaceholder": "ابحث في المقالات...",
+     "showingResults": "عرض {count} مقالات",
+     "showingFiltered": "عرض {filtered} من أصل {total} مقالات",
+     "articleNotFound": "المقال غير موجود",
+     "unableToLoad": "تعذر تحميل الأخبار في الوقت الحالي",
+     "article": "المقال"
+   },
     "contact": {
       "title": "اتصل بنا",
       "getInTouch": "تواصل معنا",
@@ -546,7 +664,7 @@
       },
       "phone": {
         "title": "الهاتف الأرضي",
-        "number": "+222 22 00 95 00"
+        "number": "00 95 00 22 222+ "
       },
       "email": {
         "title": "البريد الإلكتروني",

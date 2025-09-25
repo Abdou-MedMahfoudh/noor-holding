@@ -1,3 +1,5 @@
+import { i18n } from "./i18n.js";
+
 // Enhanced Single News Page Handler
 // Add this to your existing news.js or create a separate file
 
@@ -47,16 +49,21 @@ class SingleNewsHandler {
     }
   }
 
-  // Update page elements with article data
+  // Update page elements with article data using i18n.tn for translations
   updatePageContent(article) {
+    // Use i18n.tn to get translated fields
+  const translatedTitle = i18n.tn(`articles.${article.id}.title`);
+  const translatedDescription = i18n.tn(`articles.${article.id}.description`);
+  const translatedAuthor = i18n.tn(`articles.${article.id}.author`) || "Nour Holdings Team";
+  const translatedContent = i18n.tn(`articles.${article.id}.content`);
     // Update page title
-    document.title = `${article.title} - Nour Holdings`;
+    document.title = `${translatedTitle} - Nour Holdings`;
 
     // Update hero image
     const heroImage = document.getElementById("hero-image");
     if (heroImage && article.picture) {
       heroImage.src = article.picture;
-      heroImage.alt = article.title;
+      heroImage.alt = translatedTitle;
     }
 
     // Update meta information
@@ -67,25 +74,25 @@ class SingleNewsHandler {
 
     const authorElement = document.getElementById("article-author");
     if (authorElement) {
-      authorElement.textContent = article.author || "Nour Holdings Team";
+      authorElement.textContent = translatedAuthor;
     }
 
     // Update article title
     const titleElement = document.getElementById("article-title");
     if (titleElement) {
-      titleElement.textContent = article.title;
+      titleElement.textContent = translatedTitle;
     }
 
     // Update article description
     const descriptionElement = document.getElementById("article-description");
     if (descriptionElement) {
-      descriptionElement.textContent = article.description;
+      descriptionElement.textContent = translatedDescription;
     }
 
     // Update article content
     const bodyElement = document.getElementById("article-body");
     if (bodyElement && article.content) {
-      bodyElement.innerHTML = article.content;
+      bodyElement.innerHTML = translatedContent;
     }
 
     // Store current article for sharing
@@ -176,13 +183,27 @@ class SingleNewsHandler {
 }
 
 // Initialize when DOM is loaded
-document.addEventListener("DOMContentLoaded", () => {
-  // Check if we're on the single news page
+document.addEventListener("DOMContentLoaded", async () => {
   if (
     window.location.pathname.includes("news.html") &&
     window.location.search.includes("id=")
   ) {
+    await i18n.init();
+
     const singleNewsHandler = new SingleNewsHandler();
-    singleNewsHandler.init();
+    await singleNewsHandler.init(); // wait for article to load
+
+    const languageButtons = document.querySelectorAll(
+      "#language-switcher button, #mobile-language-switcher button"
+    );
+
+    languageButtons.forEach((btn) => {
+      btn.addEventListener("click", () => {
+        if (singleNewsHandler.currentArticle) {
+          // re-render in the new language
+          singleNewsHandler.updatePageContent(singleNewsHandler.currentArticle);
+        }
+      });
+    });
   }
 });
