@@ -33,6 +33,8 @@
               }
 
               const newsData = await response.json();
+              // Sort news by date (newest first)
+              newsData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
               // Validate that we received an array
               if (!Array.isArray(newsData)) {
