@@ -161,12 +161,12 @@
         },
         "ila": {
           "name": "ILA DISTRIBUTION SARL",
-          "description": "ILA DISTRIBUTION SARL, a strategic subsidiary of Noor Holding, is the group’s commercial engine. Operating in Mauritania and the wider region across four integrated pillars – import-export, distribution, commercial representation and seafood valorization – the company creates added value, secures supply chains, and supports the sustainable growth of the national economy.",
+          "description": "ILA DISTRIBUTION SARL is a strategic subsidiary of Noor Holding and the commercial engine of the group. Positioned between international markets and Mauritania’s local economy, the company creates value and strengthens supply chains through four integrated pillars: import-export, advanced distribution, commercial representation, and seafood valorization. With a blend of global sourcing expertise, reliable logistics, brand development capabilities, and responsible engagement in the fishing sector, ILA DISTRIBUTION supports sustainable growth and contributes to the country’s economic development.",
           "services": [
-            "International sourcing and import-export operations",
-            "Advanced distribution and nationwide logistics",
+            "Strategic sourcing and import-export operations",
+            "Distribution and nationwide logistics",
             "Commercial representation and brand development",
-            "Responsible fishing and seafood value enhancement"
+            "Seafood valorization and responsible fishing"
           ]
         }
       }
@@ -330,15 +330,15 @@
           ]
         },
         "agro": {
-  "name": "Compagnie Agricole du Sahel (CASA)",
-  "description": "La Compagnie Agricole du Sahel (CASA) est une jeune entreprise mauritanienne innovante, dédiée au développement d’un secteur agricole moderne, durable et compétitif en valorisant les ressources locales. Ses principales activités incluent l’aménagement des terres et la culture de produits adaptés à la région du Sahel, la transformation agro-industrielle destinée aux marchés locaux et internationaux, la mise en œuvre de pratiques respectueuses de l’environnement comme l’irrigation efficiente et la valorisation des sous-produits, ainsi que la création d’emplois pour les jeunes et les femmes en partenariat avec les communautés rurales pour dynamiser l’économie locale.",
-  "services": [
-    "Production agricole",
-    "Agro-industrie & transformation",
-    "Durabilité & pratiques éco",
-    "Développement local & emplois"
-  ]
-},
+          "name": "Compagnie Agricole du Sahel (CASA)",
+          "description": "La Compagnie Agricole du Sahel (CASA) est une jeune entreprise mauritanienne innovante, dédiée au développement d’un secteur agricole moderne, durable et compétitif en valorisant les ressources locales. Ses principales activités incluent l’aménagement des terres et la culture de produits adaptés à la région du Sahel, la transformation agro-industrielle destinée aux marchés locaux et internationaux, la mise en œuvre de pratiques respectueuses de l’environnement comme l’irrigation efficiente et la valorisation des sous-produits, ainsi que la création d’emplois pour les jeunes et les femmes en partenariat avec les communautés rurales pour dynamiser l’économie locale.",
+          "services": [
+            "Production agricole",
+            "Agro-industrie & transformation",
+            "Durabilité & pratiques éco",
+            "Développement local & emplois"
+          ]
+        },
         "mines": {
           "name": "MINES DE MAURITANIE",
           "description": "MINES DE MAURITANIE est un acteur majeur du secteur minier, avec un focus particulier sur la recherche aurifère. L'entreprise mène des activités d'exploration intensive sur une vaste zone de plus de 1 000 km², couverte par trois permis de recherche. Grâce à son expertise géologique et aux technologies de pointe, elle découvre de nouveaux gisements d'or, contribuant directement au développement économique du pays.",
@@ -358,16 +358,16 @@
           ]
         },
         "ecocharge": {
-  "name": "EcoCharge Africa",
-  "description": "EcoCharge Africa est une entreprise spécialisée dans les solutions de recharge électrique et les infrastructures énergétiques durables, dédiée à faire progresser la mobilité durable à travers l’Afrique. Ses activités couvrent la fourniture et l’installation de stations de recharge rapide dans des emplacements stratégiques tels que les parkings et les stations-service, l’utilisation de plateformes intelligentes pour surveiller et optimiser la consommation d’énergie, ainsi que la fourniture de services de maintenance et d’assistance technique. L’entreprise réalise également des études de faisabilité, des audits énergétiques et collabore avec les parties prenantes locales pour concevoir des réseaux de recharge modernes. En innovant continuellement à travers des applications mobiles, des systèmes de paiement et l’intégration des énergies renouvelables, EcoCharge Africa crée des stations de recharge autonomes et respectueuses de l’environnement.",
-  "services": [
-    "Stations de recharge rapide",
-    "Gestion intelligente de l’énergie",
-    "Maintenance et assistance",
-    "Conseil et audits énergétiques",
-    "Innovation et énergies renouvelables"
-  ]
-},
+          "name": "EcoCharge Africa",
+          "description": "EcoCharge Africa est une entreprise spécialisée dans les solutions de recharge électrique et les infrastructures énergétiques durables, dédiée à faire progresser la mobilité durable à travers l’Afrique. Ses activités couvrent la fourniture et l’installation de stations de recharge rapide dans des emplacements stratégiques tels que les parkings et les stations-service, l’utilisation de plateformes intelligentes pour surveiller et optimiser la consommation d’énergie, ainsi que la fourniture de services de maintenance et d’assistance technique. L’entreprise réalise également des études de faisabilité, des audits énergétiques et collabore avec les parties prenantes locales pour concevoir des réseaux de recharge modernes. En innovant continuellement à travers des applications mobiles, des systèmes de paiement et l’intégration des énergies renouvelables, EcoCharge Africa crée des stations de recharge autonomes et respectueuses de l’environnement.",
+          "services": [
+            "Stations de recharge rapide",
+            "Gestion intelligente de l’énergie",
+            "Maintenance et assistance",
+            "Conseil et audits énergétiques",
+            "Innovation et énergies renouvelables"
+          ]
+        },
         "tbs1": {
           "name": "TBS – Transport Business and Shipping",
           "description": "Transport Business and Shipping (TBS) est une entreprise de transport et de logistique offrant des solutions complètes pour les besoins en transit et services logistiques internationaux. L'entreprise gère le déplacement de marchandises par voie terrestre, maritime et aérienne. En tant que transitaire, TBS s'occupe des formalités douanières et administratives complexes, simplifiant l'importation et l'exportation pour ses clients tout en garantissant des livraisons ponctuelles et sécurisées.",
@@ -397,15 +397,15 @@
           ]
         },
         "ila": {
-  "name": "ILA DISTRIBUTION SARL",
-  "description": "ILA DISTRIBUTION SARL, filiale stratégique de Noor Holding, est le moteur commercial du groupe. Opérant en Mauritanie et dans la région élargie à travers quatre piliers intégrés – import-export, distribution, représentation commerciale et valorisation des produits de la mer – l'entreprise crée de la valeur ajoutée, sécurise les chaînes d'approvisionnement et soutient la croissance durable de l'économie nationale.",
-  "services": [
-    "Sourcing stratégique et import-export",
-    "Distribution avancée et logistique territoriale",
-    "Représentation commerciale et développement de marques",
-    "Valorisation des produits de la mer"
-  ]
-},
+          "name": "ILA DISTRIBUTION SARL",
+          "description": "ILA DISTRIBUTION SARL est une filiale stratégique de Noor Holding et le moteur commercial du groupe. À la croisée des échanges internationaux et de l’économie mauritanienne, l’entreprise crée de la valeur et renforce les chaînes d’approvisionnement grâce à quatre pôles intégrés : import-export, distribution avancée, représentation commerciale et valorisation des produits de la mer. Forte d’un sourcing mondial maîtrisé, d’une logistique fiable, d’un développement de marques performant et d’un engagement responsable dans le secteur halieutique, ILA DISTRIBUTION contribue au développement durable de l’économie nationale.",
+          "services": [
+            "Sourcing stratégique et import-export",
+            "Distribution et logistique nationale",
+            "Représentation commerciale et développement de marques",
+            "Valorisation des produits de la mer et pêche responsable"
+          ]
+        },
         "fishing": {
           "name": "SEMAK s.a | SMMCS s.a | Valor Fish Frigo ",
           "description": "SEMAK s.a, SMMCS s.a, et Valor Fish Frigo sont des entreprises du secteur stratégique de la pêche opérant de manière intégrée pour optimiser la transformation et conservation des produits de la mer. SEMAK s.a possède une usine de pointe avec tunnel de congélation, SMMCS s.a assure la capture via sa flotte de chalutiers, et VFF se dédie à la conservation. Ensemble, elles forment une chaîne de valeur complète garantissant fraîcheur et qualité des produits halieutiques.",
@@ -583,15 +583,15 @@
           ]
         },
         "agro": {
-             "name": "الشركة الزراعية في الساحل (CASA)",
-               "description": "الشركة الزراعية في الساحل  هي شركة موريتانية شابة ومبتكرة، مكرسة لتطوير قطاع زراعي حديث، مستدام وتنافسي من خلال الاستفادة من الموارد المحلية. تشمل أنشطتها الرئيسية تطوير الأراضي الزراعية وزراعة محاصيل مناسبة لمنطقة الساحل باستخدام تقنيات حديثة، ومعالجة المنتجات الزراعية للأسواق المحلية والدولية، واعتماد ممارسات صديقة للبيئة مثل الري الفعّال وإعادة استخدام المنتجات الثانوية، بالإضافة إلى خلق فرص عمل للشباب والنساء وبناء شراكات مع المجتمعات الريفية لدعم الاقتصاد المحلي.",
-               "services": [
-                       "الإنتاج الزراعي",
-                      "الصناعات الزراعية والتحويل",
-                          "الاستدامة والممارسات البيئية",
-    "التنمية المحلية وفرص العمل"
-  ]
-},
+          "name": "الشركة الزراعية في الساحل (CASA)",
+          "description": "الشركة الزراعية في الساحل  هي شركة موريتانية شابة ومبتكرة، مكرسة لتطوير قطاع زراعي حديث، مستدام وتنافسي من خلال الاستفادة من الموارد المحلية. تشمل أنشطتها الرئيسية تطوير الأراضي الزراعية وزراعة محاصيل مناسبة لمنطقة الساحل باستخدام تقنيات حديثة، ومعالجة المنتجات الزراعية للأسواق المحلية والدولية، واعتماد ممارسات صديقة للبيئة مثل الري الفعّال وإعادة استخدام المنتجات الثانوية، بالإضافة إلى خلق فرص عمل للشباب والنساء وبناء شراكات مع المجتمعات الريفية لدعم الاقتصاد المحلي.",
+          "services": [
+            "الإنتاج الزراعي",
+            "الصناعات الزراعية والتحويل",
+            "الاستدامة والممارسات البيئية",
+            "التنمية المحلية وفرص العمل"
+          ]
+        },
         "itb": {
           "name": "ITB - الوساطة التجارية الدولية",
           "description": "الوساطة التجارية الدولية  هي شركة متخصصة في التبادلات التجارية الدولية، تعمل كوسيط بين المشترين والبائعين. خبيرة في الاستيراد والتصدير،  تسهل المعاملات عبر الحدود وتضمن التوزيع وكذلك تمثيل العلامات التجارية الدولية. تساعد الشركة الشركات الأجنبية على الاستقرار في الأسواق المحلية من خلال خبرتها في اللوجستيات واللوائح، وتضع نفسها كشريك استراتيجي للتوسع التجاري الدولي.",
@@ -602,16 +602,16 @@
           ]
         },
         "ecocharge": {
-  "name": "إيكو تشارج أفريقيا",
-  "description": "إيكو تشارج أفريقيا هي شركة متخصصة في حلول الشحن الكهربائي والبُنى التحتية للطاقة المستدامة، مكرسة لتعزيز التنقل المستدام في جميع أنحاء أفريقيا. تشمل أنشطتها توريد وتركيب محطات الشحن السريع في مواقع استراتيجية مثل مواقف السيارات ومحطات الوقود، واستخدام منصات ذكية لمراقبة استهلاك الطاقة وتحسينه، بالإضافة إلى تقديم خدمات الصيانة والدعم الفني. كما تقوم الشركة بإجراء دراسات الجدوى والتدقيقات الطاقية، وتتعاون مع الجهات المحلية لتصميم شبكات شحن حديثة. ومن خلال الابتكار المستمر عبر التطبيقات المحمولة، وأنظمة الدفع، ودمج مصادر الطاقة المتجددة، تبني إيكو تشارج أفريقيا محطات شحن مستقلة وصديقة للبيئة.",
-  "services": [
-    "محطات شحن سريع",
-    "إدارة ذكية للطاقة",
-    "صيانة ودعم فني",
-    "استشارات وتدقيقات طاقية",
-    "ابتكار وطاقات متجددة"
-  ]
-},
+          "name": "إيكو تشارج أفريقيا",
+          "description": "إيكو تشارج أفريقيا هي شركة متخصصة في حلول الشحن الكهربائي والبُنى التحتية للطاقة المستدامة، مكرسة لتعزيز التنقل المستدام في جميع أنحاء أفريقيا. تشمل أنشطتها توريد وتركيب محطات الشحن السريع في مواقع استراتيجية مثل مواقف السيارات ومحطات الوقود، واستخدام منصات ذكية لمراقبة استهلاك الطاقة وتحسينه، بالإضافة إلى تقديم خدمات الصيانة والدعم الفني. كما تقوم الشركة بإجراء دراسات الجدوى والتدقيقات الطاقية، وتتعاون مع الجهات المحلية لتصميم شبكات شحن حديثة. ومن خلال الابتكار المستمر عبر التطبيقات المحمولة، وأنظمة الدفع، ودمج مصادر الطاقة المتجددة، تبني إيكو تشارج أفريقيا محطات شحن مستقلة وصديقة للبيئة.",
+          "services": [
+            "محطات شحن سريع",
+            "إدارة ذكية للطاقة",
+            "صيانة ودعم فني",
+            "استشارات وتدقيقات طاقية",
+            "ابتكار وطاقات متجددة"
+          ]
+        },
         "tbs1": {
           "name": "TBS - أعمال النقل والشحن",
           "description": "  هي شركة نقل ولوجستيات تقدم حلولاً شاملة لاحتياجات العبور وخدمات اللوجستيات الدولية. تدير الشركة حركة البضائع براً وبحراً وجواً. كوكيل شحن،  تتولى الإجراءات الجمركية والإدارية المعقدة، مما يبسط الاستيراد والتصدير لعملائها مع ضمان التسليم في الوقت المحدد والآمن ",
@@ -632,15 +632,15 @@
           ]
         },
         "ila": {
-            "name": "ILA DISTRIBUTION SARL",
-           "description": "تُعد ILA DISTRIBUTION SARL فرعاً استراتيجياً لمجموعة نور القابضة، وهي المحرك التجاري للمجموعة. تعمل في موريتانيا والمنطقة الأوسع عبر أربعة محاور متكاملة – الاستيراد والتصدير، التوزيع، التمثيل التجاري، وتثمين المنتجات البحرية – حيث تخلق الشركة قيمة مضافة، وتؤمن سلاسل التوريد، وتدعم النمو المستدام للاقتصاد الوطني.",
-            "services": [
-               "توريد دولي وعمليات الاستيراد والتصدير",
-               "توزيع متقدم وخدمات لوجستية على المستوى الوطني",
-               "تمثيل تجاري وتطوير العلامات التجارية",
-               "تثمين المنتجات البحرية"
-                        ]
-},
+          "name": "ILA DISTRIBUTION SARL",
+          "description": "تُعد ILA DISTRIBUTION SARL فرعاً استراتيجياً لنور القابضة ومحركها التجاري. تعمل عند تقاطع التجارة الدولية والاقتصاد الموريتاني، وتخلق قيمة من خلال أربعة محاور متكاملة: الاستيراد والتصدير، التوزيع، التمثيل التجاري، وتثمين المنتجات البحرية. وبفضل خبرتها في التوريد العالمي، واللوجستيات الوطنية، وتطوير العلامات التجارية، وممارساتها المسؤولة في القطاع البحري، تساهم الشركة في دعم النمو المستدام وتعزيز الاقتصاد الوطني.",
+          "services": [
+            "التوريد الاستراتيجي وعمليات الاستيراد والتصدير",
+            "التوزيع والخدمات اللوجستية الوطنية",
+            "التمثيل التجاري وتطوير العلامات التجارية",
+            "تثمين المنتجات البحرية والصيد المسؤول"
+          ]
+        },
         "tbs2": {
           "name": "TBS - الوساطة التجارية والخدمات",
           "description": "الوساطة التجارية والخدمات  هي فاعل رئيسي في الوساطة المالية، تسهل المعاملات في الأسهم والسندات والأدوات المالية الأخرى. تعمل الشركة كوسيط بين المستثمرين والأسواق المالية، مما يسمح للعملاء بوضع رؤوس أموالهم بشكل استراتيجي. تقدم أيضاً خدمات الاستشارة المالية وتتميز بمعرفتها العميقة للأسواق وقدرتها على تحديد فرص النمو",
