@@ -43,7 +43,8 @@
         "acg": "ACG – Arrachad Establishment for General Trade: Intervenes in multiform trading.",
         "fishing": "SEMAK SA, SMMCS SA and Valor Fish Frigo – Three companies dedicated to the strategic sector of fishing, processing and conservation.",
         "ecocharge": "EcoCharge Africa  – Specialized in electric charging solutions and sustainable energy infrastructure.",
-        "agro": "Compagnie Agricole du Sahel (CASA)– An innovative Mauritanian company committed to developing modern and sustainable agriculture."
+        "agro": "Compagnie Agricole du Sahel (CASA)– An innovative Mauritanian company committed to developing modern and sustainable agriculture.",
+        "ila": "ILA DISTRIBUTION SARL – Strategic commercial subsidiary specializing in import-export, distribution, commercial representation and seafood valorization."
       },
       "visionTitle": "Our vision and values:",
       "vision": "Through all of these subsidiaries, NOOR HOLDING works to create value, anticipate market needs and actively contribute to the development of Mauritania and the sub-region. Our vision is based on three pillars: innovation, rigor and commitment to sustainability and social responsibility.",
@@ -101,15 +102,15 @@
           ]
         },
         "agro": {
-  "name": "Compagnie Agricole du Sahel (CASA)",
-  "description": "The Compagnie Agricole du Sahel (CASA) is an innovative young Mauritanian company dedicated to developing a modern, sustainable, and competitive agriculture sector by leveraging local resources. Its main activities include developing farmland and cultivating crops adapted to the Sahel region, processing agricultural products for local and international markets, implementing eco-friendly practices such as efficient irrigation and by-product recovery, and creating jobs for youth and women while partnering with rural communities to strengthen the local economy.",
-  "services": [
-    "Agricultural production",
-    "Agro-industry & processing",
-    "Sustainability & eco-practices",
-    "Local development & jobs"
-  ]
-},
+          "name": "Compagnie Agricole du Sahel (CASA)",
+          "description": "The Compagnie Agricole du Sahel (CASA) is an innovative young Mauritanian company dedicated to developing a modern, sustainable, and competitive agriculture sector by leveraging local resources. Its main activities include developing farmland and cultivating crops adapted to the Sahel region, processing agricultural products for local and international markets, implementing eco-friendly practices such as efficient irrigation and by-product recovery, and creating jobs for youth and women while partnering with rural communities to strengthen the local economy.",
+          "services": [
+            "Agricultural production",
+            "Agro-industry & processing",
+            "Sustainability & eco-practices",
+            "Local development & jobs"
+          ]
+        },
         "tbs1": {
           "name": "TBS – Transport Business and Shipping",
           "description": "Transport Business and Shipping (TBS) is a transport and logistics company offering comprehensive solutions for international transit and logistics service needs. The company manages the movement of goods by land, sea and air. As a freight forwarder, TBS handles complex customs and administrative formalities, simplifying import and export for its clients while guaranteeing timely and secure deliveries.",
@@ -120,16 +121,16 @@
           ]
         },
         "ecocharge": {
-  "name": "EcoCharge Africa",
-  "description": "EcoCharge Africa is a company specialized in electric charging solutions and sustainable energy infrastructure, dedicated to advancing sustainable mobility across Africa. Its work spans the supply and installation of fast charging stations in key locations such as parking lots and gas stations, the use of intelligent platforms to monitor and optimize energy consumption, and the provision of maintenance and technical support. The company also conducts feasibility studies, energy audits, and collaborates with local stakeholders to design modern charging networks. By continuously innovating through mobile applications, payment systems, and the integration of renewable energy, EcoCharge Africa builds autonomous and eco-friendly charging stations.",
-  "services": [
-    "Fast charging station installation",
-    "Smart energy monitoring",
-    "Maintenance & technical support",
-    "Consulting and energy audits",
-    "Renewable integration & innovation"
-  ]
-},
+          "name": "EcoCharge Africa",
+          "description": "EcoCharge Africa is a company specialized in electric charging solutions and sustainable energy infrastructure, dedicated to advancing sustainable mobility across Africa. Its work spans the supply and installation of fast charging stations in key locations such as parking lots and gas stations, the use of intelligent platforms to monitor and optimize energy consumption, and the provision of maintenance and technical support. The company also conducts feasibility studies, energy audits, and collaborates with local stakeholders to design modern charging networks. By continuously innovating through mobile applications, payment systems, and the integration of renewable energy, EcoCharge Africa builds autonomous and eco-friendly charging stations.",
+          "services": [
+            "Fast charging station installation",
+            "Smart energy monitoring",
+            "Maintenance & technical support",
+            "Consulting and energy audits",
+            "Renewable integration & innovation"
+          ]
+        },
         "acg": {
           "name": "ACG – Arrachad Establishment for General Trade",
           "description": "The Arrachad Establishment for General Trade (ACG) is a multiform trading company operating in a variety of sectors on a national and international scale. ACG is distinguished by its ability to adapt to market demands, sourcing various products from raw materials to finished products. Its agile model allows it to respond quickly to commercial opportunities through its vast network of suppliers and buyers.",
@@ -156,6 +157,16 @@
             "Integrated capture-conservation value chain",
             "Cutting-edge transformation technologies",
             "Modern trawler fleet"
+          ]
+        },
+        "ila": {
+          "name": "ILA DISTRIBUTION SARL",
+          "description": "ILA DISTRIBUTION SARL, a strategic subsidiary of Noor Holding, is the group’s commercial engine. Operating in Mauritania and the wider region across four integrated pillars – import-export, distribution, commercial representation and seafood valorization – the company creates added value, secures supply chains, and supports the sustainable growth of the national economy.",
+          "services": [
+            "International sourcing and import-export operations",
+            "Advanced distribution and nationwide logistics",
+            "Commercial representation and brand development",
+            "Responsible fishing and seafood value enhancement"
           ]
         }
       }
@@ -277,8 +288,9 @@
         "tbs2": "TBS – Trade Brokerage and Services : Acteur majeur dans l'intermédiation financière.",
         "acg": "ACG – Établissement Arrachad pour le Commerce Général : Intervient dans le négoce multiforme.",
         "fishing": "SEMAK SA, SMMCS SA et Valor Fish Frigo - Trois sociétés dédiées au secteur stratégique de la pêche, de la transformation et de la conservation.",
-        "agro": "La Compagnie Agricole du Sahel (CASA) – entreprise mauritanienne innovante engagée dans le développement d’une agriculture moderne et durable.",
-        "ecocharge": "EcoCharge Africa - spécialisée dans les solutions de recharge électrique et d’infrastructures énergétiques durables."
+        "agro": "La Compagnie Agricole du Sahel (CASA) – entreprise mauritanienne innovante engagée dans le développement d'une agriculture moderne et durable.",
+        "ecocharge": "EcoCharge Africa - spécialisée dans les solutions de recharge électrique et d'infrastructures énergétiques durables.",
+        "ila": "ILA DISTRIBUTION SARL – Filiale commerciale stratégique spécialisée dans l'import-export, la distribution, la représentation commerciale et la valorisation des produits de la mer."
       },
       "visionTitle": "Notre vision et nos valeurs :",
       "vision": "À travers l'ensemble de ces filiales, NOOR HOLDING œuvre à créer de la valeur, anticiper les besoins du marché et contribuer activement à l'essor de la Mauritanie et de la sous-région. Notre vision repose sur trois piliers : l'innovation, la rigueur et l'engagement en faveur de la durabilité et de la responsabilité sociale.",
@@ -384,6 +396,16 @@
             "Expertise des marchés financiers"
           ]
         },
+        "ila": {
+  "name": "ILA DISTRIBUTION SARL",
+  "description": "ILA DISTRIBUTION SARL, filiale stratégique de Noor Holding, est le moteur commercial du groupe. Opérant en Mauritanie et dans la région élargie à travers quatre piliers intégrés – import-export, distribution, représentation commerciale et valorisation des produits de la mer – l'entreprise crée de la valeur ajoutée, sécurise les chaînes d'approvisionnement et soutient la croissance durable de l'économie nationale.",
+  "services": [
+    "Sourcing stratégique et import-export",
+    "Distribution avancée et logistique territoriale",
+    "Représentation commerciale et développement de marques",
+    "Valorisation des produits de la mer"
+  ]
+},
         "fishing": {
           "name": "SEMAK s.a | SMMCS s.a | Valor Fish Frigo ",
           "description": "SEMAK s.a, SMMCS s.a, et Valor Fish Frigo sont des entreprises du secteur stratégique de la pêche opérant de manière intégrée pour optimiser la transformation et conservation des produits de la mer. SEMAK s.a possède une usine de pointe avec tunnel de congélation, SMMCS s.a assure la capture via sa flotte de chalutiers, et VFF se dédie à la conservation. Ensemble, elles forment une chaîne de valeur complète garantissant fraîcheur et qualité des produits halieutiques.",
@@ -511,7 +533,8 @@
         "acg": "ACG - مؤسسة الرشاد للتجارة العامة: تتدخل في التجارة متعددة الأشكال.",
         "fishing": "SEMAK SA وSMMCS SA وValor Fish Frigo : ثلاث شركات مخصصة للقطاع الاستراتيجي للصيد والتحويل والحفظ.",
         "ecocharge": "EcoCharge Africa - إيكو تشارج أفريقيا متخصصة في حلول الشحن الكهربائي والبُنى التحتية للطاقة المستدامة.",
-        "agro": " CASA - شركة الساحل الزراعية  شركة موريتانية مبتكرة تعمل على تطوير زراعة حديثة ومستدامة."
+        "agro": " CASA - شركة الساحل الزراعية  شركة موريتانية مبتكرة تعمل على تطوير زراعة حديثة ومستدامة.",
+        "ila": "ILA DISTRIBUTION SARL – فرع تجاري استراتيجي متخصص في الاستيراد والتصدير، التوزيع، التمثيل التجاري وتثمين المنتجات البحرية."
       },
       "visionTitle": "رؤيتنا وقيمنا:",
       "vision": "من خلال جميع هذه الشركات التابعة، تعمل نور القابضة على خلق القيمة وتوقع احتياجات السوق والمساهمة بفعالية في ازدهار موريتانيا والمنطقة الفرعية. تقوم رؤيتنا على ثلاث ركائز: الابتكار والدقة والالتزام بالاستدامة والمسؤولية الاجتماعية.",
@@ -608,6 +631,16 @@
             "شبكة واسعة من الموردين والمشترين"
           ]
         },
+        "ila": {
+            "name": "ILA DISTRIBUTION SARL",
+           "description": "تُعد ILA DISTRIBUTION SARL فرعاً استراتيجياً لمجموعة نور القابضة، وهي المحرك التجاري للمجموعة. تعمل في موريتانيا والمنطقة الأوسع عبر أربعة محاور متكاملة – الاستيراد والتصدير، التوزيع، التمثيل التجاري، وتثمين المنتجات البحرية – حيث تخلق الشركة قيمة مضافة، وتؤمن سلاسل التوريد، وتدعم النمو المستدام للاقتصاد الوطني.",
+            "services": [
+               "توريد دولي وعمليات الاستيراد والتصدير",
+               "توزيع متقدم وخدمات لوجستية على المستوى الوطني",
+               "تمثيل تجاري وتطوير العلامات التجارية",
+               "تثمين المنتجات البحرية"
+                        ]
+},
         "tbs2": {
           "name": "TBS - الوساطة التجارية والخدمات",
           "description": "الوساطة التجارية والخدمات  هي فاعل رئيسي في الوساطة المالية، تسهل المعاملات في الأسهم والسندات والأدوات المالية الأخرى. تعمل الشركة كوسيط بين المستثمرين والأسواق المالية، مما يسمح للعملاء بوضع رؤوس أموالهم بشكل استراتيجي. تقدم أيضاً خدمات الاستشارة المالية وتتميز بمعرفتها العميقة للأسواق وقدرتها على تحديد فرص النمو",

@@ -272,6 +272,10 @@
        '[data-i18n="ceo.entities.fishing"]',
        this.t("ceoMessage.entities.fishing")
      );
+     this.updateElement(
+       '[data-i18n="ceo.entities.ila"]',
+       this.t("ceoMessage.entities.ila")
+     );
 
      this.updateElement(
        '[data-i18n="ceo.vision.title"]',
@@ -742,6 +746,28 @@
      this.updateElement(
        '[data-i18n="subsidiaries.companies.agro.services.3"]',
        this.t("subsidiaries.companies.agro.services.3")
+     );
+
+     // ILA
+     this.updateElement(
+       '[data-i18n="subsidiaries.companies.ila.name"]',
+       this.t("subsidiaries.companies.ila.name")
+     );
+     this.updateElement(
+       '[data-i18n="subsidiaries.companies.ila.description"]',
+       this.t("subsidiaries.companies.ila.description")
+     );
+     this.updateElement(
+       '[data-i18n="subsidiaries.companies.ila.services.0"]',
+       this.t("subsidiaries.companies.ila.services.0")
+     );
+     this.updateElement(
+       '[data-i18n="subsidiaries.companies.ila.services.1"]',
+       this.t("subsidiaries.companies.ila.services.1")
+     );
+     this.updateElement(
+       '[data-i18n="subsidiaries.companies.ila.services.2"]',
+       this.t("subsidiaries.companies.ila.services.2")
      );
      // Apply RTL/LTR specific styles
      this.applyDirectionStyles();
