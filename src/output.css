@@ -577,6 +577,9 @@
   .h-px {
     height: 1px;
   }
+  .max-h-500 {
+    max-height: calc(var(--spacing) * 500);
+  }
   .max-h-\[100vh\] {
     max-height: 100vh;
   }
