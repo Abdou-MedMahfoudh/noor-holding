@@ -272,7 +272,7 @@ html[dir="rtl"] .ltr-carousel {
                     <!-- Key Stats -->
                     <div class="grid grid-cols-3 gap-8 mt-12 max-w-lg mx-auto transition duration-1000 ease-out opacity-0 translate-y-6 fade-item">
                         <div class="text-center">
-                            <div class="text-3xl font-bold text-sand">12</div>
+                            <div class="text-3xl font-bold text-sand">13</div>
                             <div class="text-sm text-kandura/80 uppercase tracking-wide" data-i18n="hero.stats.subsidiaries">Subsidiaries</div>
                         </div>
                         <div class="text-center">
@@ -288,7 +288,7 @@ html[dir="rtl"] .ltr-carousel {
                 
                 <!-- Spider Web Image - Desktop Only -->
                 <div  id="spider-web" class="w-full md:w-1/2 flex justify-center mb-3 transition duration-1000 ease-out opacity-0 scale-110 mt-2 fade-item">
-                    <img src="./assets/Noor_Holding_30_Nov_25.png" alt="Noor Holding Network" class="mt-5 max-w-[90%] h-auto object-contain "/>
+                    <img src="./assets/Noor_Holding_30_Nov_25.png" alt="Noor Holding Network" class="mt-5 max-w-[85%] h-auto object-contain "/>
                 </div>
             </div>
         </div>
@@ -1805,39 +1805,33 @@ class="w-full h-full">
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
   const spider = document.getElementById("spider-web");
-   const spiderMobile = document.getElementById("spider-web-mobile");
+  const spiderMobile = document.getElementById("spider-web-mobile");
   const texts = document.querySelectorAll("h1.fade-item, p.fade-item");
   const stats = document.querySelectorAll(".grid.fade-item");
   const buttons = document.querySelectorAll("button.fade-item");
 
-  // List all images to preload (hero + carousel + key images)
-  const imagesToPreload = Array.from(document.images).map(img => img.src);
+  // Collect all image URLs on the page
+  const imagesToPreload = Array.from(document.images).map((img) => img.src);
 
   let loadedCount = 0;
+  let animationsStarted = false;
 
-  imagesToPreload.forEach(src => {
-    const img = new Image();
-    img.src = src;
-    img.onload = img.onerror = () => {
-      loadedCount++;
-      if (loadedCount === imagesToPreload.length) {
-        startAnimations();
-      }
-    };
-  });
+  function startAnimationsOnce() {
+    if (animationsStarted) return;
+    animationsStarted = true;
 
-  function startAnimations() {
-   // Smooth fade-out of preloader
-        preloader.style.transition = "opacity 0.8s ease";
-        preloader.style.opacity = "0";
-        setTimeout(() => {
-            preloader.style.display = "none";
-        }, 800); // match the transition duration
-
+    if (preloader) {
+      // Smooth fade-out of preloader
+      preloader.style.transition = "opacity 0.8s ease";
+      preloader.style.opacity = "0";
+      setTimeout(() => {
+        preloader.style.display = "none";
+      }, 800); // match the transition duration
+    }
 
     // Step 1: Spider web image
-    spider.classList.add("visible");
-    spiderMobile.classList.add("visible");
+    if (spider) spider.classList.add("visible");
+    if (spiderMobile) spiderMobile.classList.add("visible");
 
     // Step 2: Texts (faster)
     setTimeout(() => {
@@ -1860,6 +1854,28 @@ window.addEventListener("load", () => {
       });
     }, 500 + texts.length * 150 + stats.length * 200 + 400);
   }
+
+  // If there are no images, start immediately
+  if (!imagesToPreload.length) {
+    startAnimationsOnce();
+    return;
+  }
+
+  // Safety timeout: don't wait forever for slow or broken images
+  const MAX_PRELOAD_TIME = 3000; // 3 seconds fallback
+  const timeoutId = setTimeout(startAnimationsOnce, MAX_PRELOAD_TIME);
+
+  imagesToPreload.forEach((src) => {
+    const img = new Image();
+    img.src = src;
+    img.onload = img.onerror = () => {
+      loadedCount++;
+      if (loadedCount === imagesToPreload.length) {
+        clearTimeout(timeoutId);
+        startAnimationsOnce();
+      }
+    };
+  });
 });
 </script>
 
