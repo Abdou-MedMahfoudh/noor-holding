@@ -1,0 +1,23 @@
+[build]
+  publish = "."
+  functions = "netlify/functions"
+
+# Map /api/posts, /api/login, /api/upload-image to the matching functions
+# so the existing frontend code (js/admin.js) doesn't need to change at all.
+[[redirects]]
+  from = "/api/posts"
+  to = "/.netlify/functions/posts"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/login"
+  to = "/.netlify/functions/login"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/api/upload-image"
+  to = "/.netlify/functions/upload-image"
+  status = 200
+  force = true

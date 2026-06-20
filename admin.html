@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Admin - Noor Holding</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="icon" href="assets/0ea8716a-725f-4072-8ee9-aed3df86b0a9.JPG" type="image/jpeg">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
+    .font-dm-serif { font-family: 'DM Serif Text', serif; }
+    .text-sand { color: #CAAB79; } .text-skyline { color: #323E48; }
+    .text-gulf { color: #074859; } .text-midnight { color: #1E2859; }
+    .bg-sand { background-color: #CAAB79; } .bg-skyline { background-color: #323E48; }
+    .bg-gulf { background-color: #074859; } .bg-midnight { background-color: #1E2859; }
+    [dir="rtl"] textarea, [dir="rtl"] input { text-align: right; }
+  </style>
+</head>
+<body class="bg-gray-50 min-h-screen">
+
+  <!-- ===================== LOGIN SCREEN ===================== -->
+  <div id="login-screen" class="min-h-screen flex items-center justify-center px-4">
+    <div class="bg-white rounded-lg shadow-lg p-8 w-full max-w-sm">
+      <h1 class="text-2xl font-dm-serif justify-center text-midnight mb-1">Espace Admin</h1>
+      <p class="text-gray-500 justify-center text-sm mb-6">Noor Holding — Gestion des actualités</p>
+      <form id="login-form" class="space-y-4">
+        <div>
+          <label class="block text-sm text-gray-600 mb-1">Mot de passe</label>
+          <input type="password" id="login-password" required
+            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gulf">
+        </div>
+        <p id="login-error" class="text-red-600 text-sm hidden">Mot de passe incorrect.</p>
+        <button type="submit"
+          class="w-full bg-midnight text-white rounded-md py-2 font-medium hover:bg-gulf transition-colors">
+          Se connecter
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===================== ADMIN APP (hidden until logged in) ===================== -->
+  <div id="admin-app" class="hidden">
+    <header class="bg-midnight text-white">
+      <div class="max-w-5xl mx-auto px-4 py-4 flex items-center justify-between">
+        <h1 class="text-xl font-dm-serif">Gestion des actualités</h1>
+        <button id="logout-btn" class="text-sm text-sand hover:text-white">Déconnexion</button>
+      </div>
+    </header>
+
+    <main class="max-w-5xl mx-auto px-4 py-8">
+
+      <!-- ----- LIST VIEW ----- -->
+      <div id="list-view">
+        <div class="flex items-center justify-between mb-6">
+          <h2 class="text-lg font-medium text-skyline">Articles</h2>
+          <button id="new-post-btn"
+            class="bg-gulf text-white px-4 py-2 rounded-md text-sm font-medium hover:bg-midnight transition-colors">
+            + Nouvel article
+          </button>
+        </div>
+        <div id="posts-loading" class="text-gray-500 text-sm">Chargement…</div>
+        <div id="posts-error" class="text-red-600 text-sm hidden"></div>
+        <div id="posts-list" class="space-y-3"></div>
+      </div>
+
+      <!-- ----- FORM VIEW (create / edit) ----- -->
+      <div id="form-view" class="hidden">
+        <div class="flex items-center justify-between mb-6">
+          <h2 id="form-title" class="text-lg font-medium text-skyline">Nouvel article</h2>
+          <button id="back-to-list-btn" class="text-sm text-gulf hover:text-midnight">&larr; Retour à la liste</button>
+        </div>
+
+        <form id="post-form" class="space-y-8">
+
+          <!-- Shared / non-translatable fields -->
+          <div class="bg-white rounded-lg shadow p-5 space-y-4">
+            <h3 class="font-medium text-midnight">Informations générales</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              <div>
+                <label class="block text-sm text-gray-600 mb-1">Date</label>
+                <input type="date" id="field-date" required
+                  class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gulf">
+              </div>
+              <div class="flex items-center gap-2 mt-6">
+                <input type="checkbox" id="field-featured" class="h-4 w-4">
+                <label for="field-featured" class="text-sm text-gray-600">Article à la une</label>
+              </div>
+            </div>
+
+            <div>
+              <label class="block text-sm text-gray-600 mb-1">Image</label>
+              <div class="flex items-center gap-4">
+                <img id="image-preview" class="h-20 w-32 object-cover rounded-md bg-gray-100 hidden">
+                <input type="file" id="field-image-file" accept="image/*"
+                  class="text-sm">
+              </div>
+              <input type="hidden" id="field-picture-path">
+              <p id="image-upload-status" class="text-xs text-gray-500 mt-1"></p>
+            </div>
+          </div>
+
+          <!-- Language tabs -->
+          <div class="bg-white rounded-lg shadow p-5">
+            <div class="flex gap-2 mb-5 border-b border-gray-200">
+              <button type="button" data-lang-tab="fr"
+                class="lang-tab px-4 py-2 text-sm font-medium border-b-2 border-gulf text-gulf">Français</button>
+              <button type="button" data-lang-tab="en"
+                class="lang-tab px-4 py-2 text-sm font-medium border-b-2 border-transparent text-gray-500">English</button>
+              <button type="button" data-lang-tab="ar"
+                class="lang-tab px-4 py-2 text-sm font-medium border-b-2 border-transparent text-gray-500">العربية</button>
+            </div>
+
+            <div id="lang-panels"></div>
+          </div>
+
+          <p id="form-error" class="text-red-600 text-sm hidden"></p>
+
+          <div class="flex items-center gap-3">
+            <button type="submit" id="save-btn"
+              class="bg-midnight text-white px-6 py-2.5 rounded-md font-medium hover:bg-gulf transition-colors">
+              Enregistrer
+            </button>
+            <span id="save-status" class="text-sm text-gray-500"></span>
+          </div>
+        </form>
+      </div>
+
+    </main>
+  </div>
+
+  <script src="js/admin.js"></script>
+</body>
+</html>

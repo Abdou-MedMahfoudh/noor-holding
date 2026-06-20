@@ -137,11 +137,16 @@
             if (!this.searchTerm) {
               this.filteredNews = [...this.allNews];
             } else {
-              this.filteredNews = this.allNews.filter(
-                (item) =>
-                  item.title.toLowerCase().includes(this.searchTerm) ||
-                  item.description.toLowerCase().includes(this.searchTerm)
-              );
+              this.filteredNews = this.allNews.filter((item) => {
+                const title = i18n.tn(`articles.${item.id}.title`).toLowerCase();
+                const description = (
+                  i18n.tn(`articles.${item.id}.description`) || ""
+                ).toLowerCase();
+                return (
+                  title.includes(this.searchTerm) ||
+                  description.includes(this.searchTerm)
+                );
+              });
             }
           }
 
@@ -151,9 +156,10 @@
           }
 
           createNewsCard(item) {
+            const translatedTitle = i18n.tn(`articles.${item.id}.title`);
             const imagePart = item.picture
               ? `<div class="relative h-48 overflow-hidden">
-                        <img src="${item.picture}" alt="${item.title}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
+                        <img src="${item.picture}" alt="${translatedTitle}" class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105">
                         <div class="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
                     </div>`
               : `<div class="h-48 bg-gradient-to-br from-sand/20 to-skyline/20 flex items-center justify-center">

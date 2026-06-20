@@ -91,7 +91,7 @@ class SingleNewsHandler {
 
     // Update article content
     const bodyElement = document.getElementById("article-body");
-    if (bodyElement && article.content) {
+    if (bodyElement && translatedContent) {
       bodyElement.innerHTML = translatedContent;
     }
 
