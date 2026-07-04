@@ -276,6 +276,10 @@
        '[data-i18n="ceo.entities.ila"]',
        this.t("ceoMessage.entities.ila")
      );
+     this.updateElement(
+       '[data-i18n="ceo.entities.medservices"]',
+       this.t("ceoMessage.entities.medservices")
+     );
 
      this.updateElement(
        '[data-i18n="ceo.vision.title"]',
@@ -769,6 +773,33 @@
        '[data-i18n="subsidiaries.companies.ila.services.2"]',
        this.t("subsidiaries.companies.ila.services.2")
      );
+
+     // MEDSERVICES
+     this.updateElement(
+       '[data-i18n="subsidiaries.companies.medservices.name"]',
+       this.t("subsidiaries.companies.medservices.name")
+     );
+     this.updateElement(
+       '[data-i18n="subsidiaries.companies.medservices.description"]',
+       this.t("subsidiaries.companies.medservices.description")
+     );
+     this.updateElement(
+       '[data-i18n="subsidiaries.companies.medservices.services.0"]',
+       this.t("subsidiaries.companies.medservices.services.0")
+     );
+     this.updateElement(
+       '[data-i18n="subsidiaries.companies.medservices.services.1"]',
+       this.t("subsidiaries.companies.medservices.services.1")
+     );
+     this.updateElement(
+       '[data-i18n="subsidiaries.companies.medservices.services.2"]',
+       this.t("subsidiaries.companies.medservices.services.2")
+     );
+     this.updateElement(
+       '[data-i18n="subsidiaries.companies.medservices.services.3"]',
+       this.t("subsidiaries.companies.medservices.services.3")
+     );
+
      // Apply RTL/LTR specific styles
      this.applyDirectionStyles();
    }
