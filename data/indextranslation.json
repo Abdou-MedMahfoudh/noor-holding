@@ -15,7 +15,6 @@
       "subtitle": "Innovation, rigor and commitment",
       "shortDescription": "Leading Mauritanian corporation across key sectors.",
       "country": "Mauritania",
-
       "buttons": {
         "latestNews": "Latest News",
         "ourSubsidiaries": "Our Subsidiaries"
@@ -31,7 +30,7 @@
       "sectionTitle": "Message from the Chief Executive Officer",
       "greeting": "Dear visitors,",
       "intro": "It is with great honor and immense pleasure that I welcome you to the official website of NOOR HOLDING, a dynamic and ambitious Mauritanian group, committed to the economic development of Mauritania and the sub-region through strategic and complementary sectors.",
-      "ambition": "Since its creation, our ambition has always been clear: to build a solid, structured group resolutely focused on the future. Today, NOOR HOLDING brings together several subsidiaries specializing in key areas, ranging from energy and mining to logistics, including fishing, general trade, transport , agriculture and services.",
+      "ambition": "Since its creation, our ambition has always been clear: to build a solid, structured group resolutely focused on the future. Today, NOOR HOLDING brings together several subsidiaries specializing in key areas, ranging from energy and mining to logistics, including fishing, general trade, agriculture, transport, healthcare and services.",
       "entitiesTitle": "Our flagship entities:",
       "entities": {
         "slmp": "SLMP SA: Port Logistics and Handling Company, equipped with service stations and active in the import and distribution of hydrocarbons.",
@@ -44,7 +43,8 @@
         "fishing": "SEMAK SA, SMMCS SA and Valor Fish Frigo – Three companies dedicated to the strategic sector of fishing, processing and conservation.",
         "ecocharge": "EcoCharge Africa  – Specialized in electric charging solutions and sustainable energy infrastructure.",
         "agro": "Compagnie Agricole du Sahel (CASA)– An innovative Mauritanian company committed to developing modern and sustainable agriculture.",
-        "ila": "ILA DISTRIBUTION SARL – Strategic commercial subsidiary specializing in import-export, distribution, commercial representation and seafood valorization."
+        "ila": "ILA DISTRIBUTION SARL – Strategic commercial subsidiary specializing in import-export, distribution, commercial representation and seafood valorization.",
+        "medservices": "MEDSERVICES: The group's medical center of excellence, specialized in turnkey hospital construction, state-of-the-art medical equipment and integrated health solutions across Mauritania."
       },
       "visionTitle": "Our vision and values:",
       "vision": "Through all of these subsidiaries, NOOR HOLDING works to create value, anticipate market needs and actively contribute to the development of Mauritania and the sub-region. Our vision is based on three pillars: innovation, rigor and commitment to sustainability and social responsibility.",
@@ -58,7 +58,7 @@
     },
     "about": {
       "title": "Who We Are",
-      "description1": "NOOR HOLDING is a company based in Nouakchott with 13 subsidiaries specialized in hydrocarbons, mining, import-export, representation, fishing, seafood processing, agriculture, and sustainable energy.",
+      "description1": "NOOR HOLDING is a company based in Nouakchott with 14 subsidiaries specialized in hydrocarbons, mining, import-export, representation, fishing, seafood processing, agriculture, sustainable energy, and healthcare.",
       "description2": "Noor Holding is a true model of a diversified company in Mauritania, with a significant presence in the market. We are a proudly Mauritanian company that invests in our country to build a better future."
     },
     "subsidiaries": {
@@ -168,19 +168,28 @@
             "Commercial representation and brand development",
             "Seafood valorization and responsible fishing"
           ]
+        },
+        "medservices": {
+          "name": "MEDSERVICES",
+          "description": "Founded in 2022 in Nouakchott, MEDSERVICES is Noor Holding's medical center of excellence, established as a leading provider of integrated, end-to-end health solutions across Mauritania. Led by a certified biomedical engineer, the company deploys unique expertise ranging from turnkey hospital construction to the supply and technical maintenance of state-of-the-art equipment (diagnostics, surgery, laboratories and dialysis units), as well as medical gas distribution and the integration of next-generation digital health technologies. With a nationwide presence, rigorous after-sales support available 24/7, and exclusive partnerships with major international brands, MEDSERVICES is sustainably modernizing Mauritania's healthcare infrastructure, combining strict compliance with technological innovation to deliver tangible health improvements for the population.",
+          "services": [
+            "Turnkey hospital construction",
+            "State-of-the-art equipment: diagnostics, surgery, labs, dialysis",
+            "Medical gas distribution and digital health technologies",
+            "24/7 after-sales support and nationwide presence"
+          ]
         }
       }
     },
     "news": {
-      "hero":{
-        "main":"News & Insights",
-         "desc":"Discover the latest developments, strategic initiatives, and industry insights from Nour Holdings .",
-         "uptitle":"Stay Updated"
+      "hero": {
+        "main": "News & Insights",
+        "desc": "Discover the latest developments, strategic initiatives, and industry insights from Nour Holdings .",
+        "uptitle": "Stay Updated"
       },
-
       "title": "Latest News",
       "viewAll": "View All News",
-       "readMore": "Read More",
+      "readMore": "Read More",
       "backToNews": "Back to News",
       "shareArticle": "Share this article",
       "noArticles": "No articles found",
@@ -190,7 +199,7 @@
       "showingFiltered": "Showing {filtered} of {total} articles",
       "articleNotFound": "Article not found",
       "unableToLoad": "Unable to load news at the moment",
-      "article":"article"
+      "article": "article"
     },
     "contact": {
       "title": "Contact Us",
@@ -277,7 +286,7 @@
       "sectionTitle": "Mot du Président Directeur Général",
       "greeting": "Chers visiteurs,",
       "intro": "C'est avec un grand honneur et un immense plaisir que je vous souhaite la bienvenue sur le site officiel de NOOR HOLDING, un groupe mauritanien dynamique et ambitieux, engagé dans le développement économique de la Mauritanie et de la sous-région à travers des secteurs stratégiques et complémentaires.",
-      "ambition": "Depuis sa création, notre ambition a toujours été claire : bâtir un groupe solide, structuré et résolument tourné vers l'avenir. Aujourd'hui, NOOR HOLDING fédère plusieurs filiales spécialisées dans des domaines clés, allant de l'énergie et des mines à la logistique, en passant par la pêche, le commerce général, l’agriculture , le transport et les services.",
+      "ambition": "Depuis sa création, notre ambition a toujours été claire : bâtir un groupe solide, structuré et résolument tourné vers l'avenir. Aujourd'hui, NOOR HOLDING fédère plusieurs filiales spécialisées dans des domaines clés, allant de l'énergie et des mines à la logistique, en passant par la pêche, le commerce général, l'agriculture, le transport, la santé et les services.",
       "entitiesTitle": "Nos entités phares :",
       "entities": {
         "slmp": "SLMP SA : Société de Logistique et de Manutention Portuaire, dotée de stations-service et active dans l'importation et la distribution des hydrocarbures.",
@@ -290,7 +299,8 @@
         "fishing": "SEMAK SA, SMMCS SA et Valor Fish Frigo - Trois sociétés dédiées au secteur stratégique de la pêche, de la transformation et de la conservation.",
         "agro": "La Compagnie Agricole du Sahel (CASA) – entreprise mauritanienne innovante engagée dans le développement d'une agriculture moderne et durable.",
         "ecocharge": "EcoCharge Africa - spécialisée dans les solutions de recharge électrique et d'infrastructures énergétiques durables.",
-        "ila": "ILA DISTRIBUTION SARL – Filiale commerciale stratégique spécialisée dans l'import-export, la distribution, la représentation commerciale et la valorisation des produits de la mer."
+        "ila": "ILA DISTRIBUTION SARL – Filiale commerciale stratégique spécialisée dans l'import-export, la distribution, la représentation commerciale et la valorisation des produits de la mer.",
+        "medservices": "MEDSERVICES : Pôle d'excellence médicale du groupe, spécialisé dans la construction hospitalière clé en main, les équipements médicaux de pointe et les solutions de santé intégrées à travers la Mauritanie."
       },
       "visionTitle": "Notre vision et nos valeurs :",
       "vision": "À travers l'ensemble de ces filiales, NOOR HOLDING œuvre à créer de la valeur, anticiper les besoins du marché et contribuer activement à l'essor de la Mauritanie et de la sous-région. Notre vision repose sur trois piliers : l'innovation, la rigueur et l'engagement en faveur de la durabilité et de la responsabilité sociale.",
@@ -304,7 +314,7 @@
     },
     "about": {
       "title": "Qui Sommes Nous",
-      "description1": "NOOR HOLDING est une entreprise basée à Nouakchott et qui compte 13 filiales spécialisées dans les hydrocarbures, les mines, l’import-export, la représentation, la pêche, le traitement des produits de la mer, l’agriculture et les énergies durables.",
+      "description1": "NOOR HOLDING est une entreprise basée à Nouakchott et qui compte 14 filiales spécialisées dans les hydrocarbures, les mines, l'import-export, la représentation, la pêche, le traitement des produits de la mer, l'agriculture, les énergies durables et la santé.",
       "description2": "Noor Holding est un véritable modèle d'entreprise diversifiée en Mauritanie, avec une présence importante sur le marché. Nous sommes une entreprise fièrement mauritanienne, qui investit dans notre pays pour construire un avenir meilleur."
     },
     "subsidiaries": {
@@ -414,29 +424,39 @@
             "Technologies de pointe de transformation",
             "Flotte moderne de chalutiers"
           ]
+        },
+        "medservices": {
+          "name": "MEDSERVICES",
+          "description": "Fondée en 2022 à Nouakchott, MEDSERVICES est le pôle d'excellence médicale de Noor Holding, s'imposant comme un prestataire de premier plan en solutions de santé intégrées et de bout en bout à travers toute la Mauritanie. Dirigée par une ingénieure biomédicale certifiée, l'entreprise déploie une expertise unique allant de la construction hospitalière clé en main à la fourniture et la maintenance technique d'équipements de pointe (diagnostic, chirurgie, laboratoires et unités de dialyse), en passant par la distribution de gaz médicaux et l'intégration de technologies de santé numérique de dernière génération. Fort d'une présence nationale, d'un support après-vente rigoureux disponible 24h/7j et de partenariats exclusifs avec des marques internationales majeures, MEDSERVICES modernise durablement l'infrastructure sanitaire mauritanienne, alliant conformité rigoureuse et innovation technologique pour améliorer concrètement les résultats de santé au bénéfice des populations.",
+          "services": [
+            "Construction hospitalière clé en main",
+            "Équipements de pointe : diagnostic, chirurgie, laboratoires, dialyse",
+            "Distribution de gaz médicaux et santé numérique",
+            "Support après-vente 24h/7j et présence nationale"
+          ]
         }
       }
     },
-   "news": {
-     "hero": {
-       "main": " Derniers Actualités ",
-       "desc": "Découvrez les derniers développements, initiatives stratégiques et analyses sectorielles de Noor Holding.",
-       "uptitle": "Restez Informés"
-     },
-     "title": "Dernières Actualités",
-     "viewAll": "Voir Toutes les Actualités",
-     "readMore": "Lire la suite",
-     "backToNews": "Retour aux Actualités",
-     "shareArticle": "Partager cet article",
-     "noArticles": "Aucun article trouvé",
-     "loadingArticles": "Chargement des articles...",
-     "searchPlaceholder": "Rechercher des articles...",
-     "showingResults": "Affichage de {count} articles",
-     "showingFiltered": "Affichage de {filtered} sur {total} articles",
-     "articleNotFound": "Article non trouvé",
-     "unableToLoad": "Impossible de charger les actualités pour le moment",
-     "article": "article"
-   },
+    "news": {
+      "hero": {
+        "main": " Derniers Actualités ",
+        "desc": "Découvrez les derniers développements, initiatives stratégiques et analyses sectorielles de Noor Holding.",
+        "uptitle": "Restez Informés"
+      },
+      "title": "Dernières Actualités",
+      "viewAll": "Voir Toutes les Actualités",
+      "readMore": "Lire la suite",
+      "backToNews": "Retour aux Actualités",
+      "shareArticle": "Partager cet article",
+      "noArticles": "Aucun article trouvé",
+      "loadingArticles": "Chargement des articles...",
+      "searchPlaceholder": "Rechercher des articles...",
+      "showingResults": "Affichage de {count} articles",
+      "showingFiltered": "Affichage de {filtered} sur {total} articles",
+      "articleNotFound": "Article non trouvé",
+      "unableToLoad": "Impossible de charger les actualités pour le moment",
+      "article": "article"
+    },
     "contact": {
       "title": " Contacter Nous",
       "getInTouch": "Entrez en Contact",
@@ -521,7 +541,7 @@
       "sectionTitle": "كلمة الرئيس المدير العام",
       "greeting": "الزوار الأعزاء،",
       "intro": "بشرف عظيم وسرور بالغ أرحب بكم في الموقع الرسمي لنور القابضة، وهي مجموعة موريتانية ديناميكية وطموحة، ملتزمة بالتنمية الاقتصادية لموريتانيا والمنطقة الفرعية من خلال قطاعات استراتيجية ومتكاملة.",
-      "ambition": "منذ إنشائها، كان طموحنا واضحاً دائماً: بناء مجموعة قوية ومنظمة وموجهة بحزم نحو المستقبل. اليوم، تضم نور القابضة عدة شركات تابعة متخصصة في مجالات أساسية، تتراوح من الطاقة والمناجم إلى اللوجستيات، مروراً بالصيد والتجارة العامة والنقل والخدمات.",
+      "ambition": "منذ إنشائها، كان طموحنا واضحاً دائماً: بناء مجموعة قوية ومنظمة وموجهة بحزم نحو المستقبل. اليوم، تضم نور القابضة عدة شركات تابعة متخصصة في مجالات أساسية، تتراوح من الطاقة والمناجم إلى اللوجستيات، مروراً بالصيد والتجارة العامة والزراعة والنقل والصحة والخدمات.",
       "entitiesTitle": "كياناتنا الرائدة:",
       "entities": {
         "slmp": "SLMP SA: شركة اللوجستيات والمناولة المينائية، المجهزة بمحطات الخدمة والنشطة في استيراد وتوزيع المحروقات.",
@@ -534,7 +554,8 @@
         "fishing": "SEMAK SA وSMMCS SA وValor Fish Frigo : ثلاث شركات مخصصة للقطاع الاستراتيجي للصيد والتحويل والحفظ.",
         "ecocharge": "EcoCharge Africa - إيكو تشارج أفريقيا متخصصة في حلول الشحن الكهربائي والبُنى التحتية للطاقة المستدامة.",
         "agro": " CASA - شركة الساحل الزراعية  شركة موريتانية مبتكرة تعمل على تطوير زراعة حديثة ومستدامة.",
-        "ila": "ILA DISTRIBUTION SARL – فرع تجاري استراتيجي متخصص في الاستيراد والتصدير، التوزيع، التمثيل التجاري وتثمين المنتجات البحرية."
+        "ila": "ILA DISTRIBUTION SARL – فرع تجاري استراتيجي متخصص في الاستيراد والتصدير، التوزيع، التمثيل التجاري وتثمين المنتجات البحرية.",
+        "medservices": "ميدسرفيسز: قطب التميز الطبي للمجموعة، متخصص في بناء المستشفيات بنظام تسليم المفتاح والمعدات الطبية المتطورة والحلول الصحية المتكاملة في جميع أنحاء موريتانيا."
       },
       "visionTitle": "رؤيتنا وقيمنا:",
       "vision": "من خلال جميع هذه الشركات التابعة، تعمل نور القابضة على خلق القيمة وتوقع احتياجات السوق والمساهمة بفعالية في ازدهار موريتانيا والمنطقة الفرعية. تقوم رؤيتنا على ثلاث ركائز: الابتكار والدقة والالتزام بالاستدامة والمسؤولية الاجتماعية.",
@@ -548,7 +569,7 @@
     },
     "about": {
       "title": "من نحن",
-      "description1": "نور القابضة هي شركة مقرها في نواكشوط تضم 13 شركة تابعة متخصصة في المحروقات والمناجم والخدمات والاستيراد والتصدير والتمثيل والصيد ومعالجة المنتجات البحرية والزراعة والطاقة المستدامة.",
+      "description1": "نور القابضة هي شركة مقرها في نواكشوط تضم 14 شركة تابعة متخصصة في المحروقات والمناجم والاستيراد والتصدير والتمثيل والصيد ومعالجة المنتجات البحرية والزراعة والطاقة المستدامة والخدمات الصحية.",
       "description2": "نور القابضة هي نموذج حقيقي لشركة متنوعة في موريتانيا، مع حضور مهم في السوق. نحن شركة موريتانية بفخر، تستثمر في بلدنا لبناء مستقبل أفضل."
     },
     "subsidiaries": {
@@ -658,29 +679,39 @@
             "تقنيات تحويل متطورة",
             "أسطول حديث من سفن الجر"
           ]
+        },
+        "medservices": {
+          "name": "MEDSERVICES",
+          "description": "تأسست ميدسرفيسز عام 2022 في نواكشوط، وهي قطب التميز الطبي لمجموعة نور القابضة، وتُعد من أبرز مزودي الحلول الصحية المتكاملة والشاملة في جميع أنحاء موريتانيا. بقيادة مهندسة طبية حيوية معتمدة، تمتلك الشركة خبرة فريدة تمتد من بناء المستشفيات بنظام تسليم المفتاح إلى توريد وصيانة المعدات المتطورة (التشخيص، الجراحة، المختبرات ووحدات غسيل الكلى)، مروراً بتوزيع الغازات الطبية ودمج أحدث تقنيات الصحة الرقمية. وبفضل حضورها الوطني الواسع، ودعمها الفني الصارم على مدار الساعة طوال أيام الأسبوع، وشراكاتها الحصرية مع علامات دولية كبرى، تعمل ميدسرفيسز على تحديث البنية التحتية الصحية الموريتانية بشكل مستدام، جامعة بين الامتثال الصارم والابتكار التكنولوجي لتحسين النتائج الصحية بشكل ملموس لفائدة السكان.",
+          "services": [
+            "بناء المستشفيات بنظام تسليم المفتاح",
+            "معدات متطورة: التشخيص، الجراحة، المختبرات، غسيل الكلى",
+            "توزيع الغازات الطبية وتقنيات الصحة الرقمية",
+            "دعم فني على مدار الساعة وحضور وطني واسع"
+          ]
         }
       }
     },
-   "news": {
-     "hero": {
-       "main": "آخر الأخبار",
-       "desc": "اكتشف أحدث التطورات والمبادرات الاستراتيجية والرؤى القطاعية من نور القابضة.",
-       "uptitle": "ابقَ على اطلاع"
-     },
-     "title": "آخر الأخبار",
-     "viewAll": "عرض جميع الأخبار",
-     "readMore": "اقرأ المزيد",
-     "backToNews": "العودة إلى الأخبار",
-     "shareArticle": "شارك هذا المقال",
-     "noArticles": "لم يتم العثور على مقالات",
-     "loadingArticles": "جاري تحميل المقالات...",
-     "searchPlaceholder": "ابحث في المقالات...",
-     "showingResults": "عرض {count} مقالات",
-     "showingFiltered": "عرض {filtered} من أصل {total} مقالات",
-     "articleNotFound": "المقال غير موجود",
-     "unableToLoad": "تعذر تحميل الأخبار في الوقت الحالي",
-     "article": "المقال"
-   },
+    "news": {
+      "hero": {
+        "main": "آخر الأخبار",
+        "desc": "اكتشف أحدث التطورات والمبادرات الاستراتيجية والرؤى القطاعية من نور القابضة.",
+        "uptitle": "ابقَ على اطلاع"
+      },
+      "title": "آخر الأخبار",
+      "viewAll": "عرض جميع الأخبار",
+      "readMore": "اقرأ المزيد",
+      "backToNews": "العودة إلى الأخبار",
+      "shareArticle": "شارك هذا المقال",
+      "noArticles": "لم يتم العثور على مقالات",
+      "loadingArticles": "جاري تحميل المقالات...",
+      "searchPlaceholder": "ابحث في المقالات...",
+      "showingResults": "عرض {count} مقالات",
+      "showingFiltered": "عرض {filtered} من أصل {total} مقالات",
+      "articleNotFound": "المقال غير موجود",
+      "unableToLoad": "تعذر تحميل الأخبار في الوقت الحالي",
+      "article": "المقال"
+    },
     "contact": {
       "title": "اتصل بنا",
       "getInTouch": "تواصل معنا",
