@@ -563,6 +563,29 @@
        '[data-i18n="contact.email.title"]',
        this.t("contact.email.title")
      );
+
+     // MEDSERVICES Contact
+     this.updateElement(
+       '[data-i18n="contact.medservices.sectionTitle"]',
+       this.t("contact.medservices.sectionTitle")
+     );
+     this.updateElement(
+       '[data-i18n="contact.medservices.location.title"]',
+       this.t("contact.medservices.location.title")
+     );
+     this.updateElement(
+       '[data-i18n="contact.medservices.location.address"]',
+       this.t("contact.medservices.location.address")
+     );
+     this.updateElement(
+       '[data-i18n="contact.medservices.phone.title"]',
+       this.t("contact.medservices.phone.title")
+     );
+     this.updateElement(
+       '[data-i18n="contact.medservices.phone.number"]',
+       this.t("contact.medservices.phone.number")
+     );
+
      this.updateElement(
        '[data-i18n="contact.map.title"]',
        this.t("contact.map.title")

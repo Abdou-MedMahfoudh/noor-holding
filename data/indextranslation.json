@@ -242,6 +242,17 @@
         },
         "submit": "Send Message",
         "required": "*"
+      },
+      "medservices": {
+        "sectionTitle": "MEDSERVICES",
+        "location": {
+          "title": "Our Location",
+          "address": "Address coming soon"
+        },
+        "phone": {
+          "title": "Landline",
+          "number": "Number coming soon"
+        }
       }
     },
     "footer": {
@@ -498,6 +509,17 @@
         },
         "submit": "Envoyer le Message",
         "required": "*"
+      },
+      "medservices": {
+        "sectionTitle": "MEDSERVICES",
+        "location": {
+          "title": "Notre Localisation",
+          "address": "Adresse à venir"
+        },
+        "phone": {
+          "title": "Téléphone Fixe",
+          "number": "Numéro à venir"
+        }
       }
     },
     "footer": {
@@ -753,6 +775,17 @@
         },
         "submit": "إرسال الرسالة",
         "required": "*"
+      },
+      "medservices": {
+        "sectionTitle": "ميدسرفيسز",
+        "location": {
+          "title": "موقعنا",
+          "address": "العنوان قريباً"
+        },
+        "phone": {
+          "title": "الهاتف الثابت",
+          "number": "الرقم قريباً"
+        }
       }
     },
     "footer": {
