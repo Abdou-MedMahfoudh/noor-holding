@@ -1039,6 +1039,12 @@
   .border-executive-gold {
     border-color: var(--color-executive-gold);
   }
+  .border-executive-gold\/20 {
+    border-color: color-mix(in srgb, #f59e0b 20%, transparent);
+    @supports (color: color-mix(in lab, red, red)) {
+      border-color: color-mix(in oklab, var(--color-executive-gold) 20%, transparent);
+    }
+  }
   .border-executive-navy {
     border-color: var(--color-executive-navy);
   }
@@ -1107,6 +1113,9 @@
   }
   .bg-gray-100 {
     background-color: var(--color-gray-100);
+  }
+  .bg-gray-200 {
+    background-color: var(--color-gray-200);
   }
   .bg-gray-300 {
     background-color: var(--color-gray-300);
@@ -1346,6 +1355,9 @@
   }
   .pt-4 {
     padding-top: calc(var(--spacing) * 4);
+  }
+  .pt-6 {
+    padding-top: calc(var(--spacing) * 6);
   }
   .pt-8 {
     padding-top: calc(var(--spacing) * 8);
@@ -2279,9 +2291,34 @@
       display: block;
     }
   }
+  .lg\:h-\[3px\] {
+    @media (width >= 64rem) {
+      height: 3px;
+    }
+  }
+  .lg\:h-\[300px\] {
+    @media (width >= 64rem) {
+      height: 300px;
+    }
+  }
+  .lg\:h-\[350px\] {
+    @media (width >= 64rem) {
+      height: 350px;
+    }
+  }
+  .lg\:h-\[400px\] {
+    @media (width >= 64rem) {
+      height: 400px;
+    }
+  }
   .lg\:h-\[500px\] {
     @media (width >= 64rem) {
       height: 500px;
+    }
+  }
+  .lg\:h-\[px\] {
+    @media (width >= 64rem) {
+      height: px;
     }
   }
   .lg\:h-auto {
