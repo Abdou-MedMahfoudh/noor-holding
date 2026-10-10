@@ -210,21 +210,21 @@
     <!-- Article Content (Initially hidden) -->
     <div id="article-content" class="hidden">
         <!-- Hero Section with Article Image -->
-        <section class="relative h-[50vh] md:h-[50vh] overflow-hidden mt-20">
+        <section class="relative h-auto min-h-0 md:h-[50vh] overflow-hidden mt-20 bg-white md:bg-transparent">
             <!-- Background Image -->
             <img 
                 id="hero-image"
                 src="./assets/13442741_web1_180810-UWN-UHS-front.jpg;w=960.jpeg" 
                 alt="News Article" 
-                class="absolute inset-0 w-full h-full object-cover"
+                class="relative block w-full h-auto max-h-none object-contain md:absolute md:inset-0 md:h-full md:object-cover bg-white md:bg-transparent"
             />
             
-            <!-- Overlay for better text readability -->
-            <div class="absolute inset-0 bg-black/20"></div>
+            <!-- Overlay for better text readability on desktop only -->
+            <!-- <div class="hidden md:block absolute inset-0 bg-black/20"></div> -->
         </section>
 
         <!-- Article Meta Information -->
-        <section class="py-8 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-200">
+        <section class="py-6 sm:py-8 px-4 sm:px-6 lg:px-8 bg-white border-b border-gray-200">
             <div class="max-w-4xl mx-auto">
                 <!-- Breadcrumb -->
                 <nav class="mb-6">
@@ -237,7 +237,7 @@
                     </ol>
                 </nav>
                 
-                <div class="flex items-center space-x-4 mb-6">
+                <div class="flex flex-wrap items-center gap-x-4 gap-y-2 mb-5 sm:mb-6">
                     <div class="flex items-center space-x-2">
                         <svg class="w-4 h-4 text-sand" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
@@ -253,25 +253,25 @@
                 </div>
                 
                 <!-- Article Title -->
-                <h1 id="article-title" class="text-3xl md:text-4xl lg:text-4xl font-dm-serif text-executive leading-tight max-w-full">
+                <h1 id="article-title" class="text-2xl sm:text-3xl md:text-4xl lg:text-4xl font-dm-serif text-executive leading-tight max-w-full break-words">
                     Loading Article...
                 </h1>
             </div>
         </section>
 
         <!-- Article Content -->
-        <main class="py-16 px-4 sm:px-6 lg:px-8">
+        <main class="py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto">
                 <!-- Article Description/Lead -->
-                <div class="mb-12">
-                    <!-- <p id="article-description" class="text-xl md:text-2xl text-skyline leading-relaxed font-light">
+                <!-- <div class="mb-12">
+                    <p id="article-description" class="text-xl md:text-2xl text-skyline leading-relaxed font-light">
                         Loading article description...
-                    </p> -->
-                </div>
+                    </p>
+                </div> -->
 
                 <!-- Article Content -->
                 <div class="prose prose-lg max-w-none">
-                    <div id="article-body" class="text-xl md:text-xl text-skyline leading-relaxed font-light">
+                    <div id="article-body" class="text-base sm:text-lg md:text-xl text-skyline leading-relaxed font-light break-words">
                         <p>Loading article content...</p>
                     </div>
                 </div>
