@@ -14,7 +14,28 @@
     .text-gulf { color: #074859; } .text-midnight { color: #1E2859; }
     .bg-sand { background-color: #CAAB79; } .bg-skyline { background-color: #323E48; }
     .bg-gulf { background-color: #074859; } .bg-midnight { background-color: #1E2859; }
+    .border-sand { border-color: #CAAB79; }
     [dir="rtl"] textarea, [dir="rtl"] input { text-align: right; }
+
+    /* Article editor: renders content exactly like #article-body on news.html */
+    .article-editor b { font-weight: 700; color: #074859; }
+    .article-editor img { max-width: 100%; }
+    .article-editor:focus { outline: none; }
+    .article-editor.is-empty::before {
+      content: attr(data-placeholder);
+      color: #9ca3af;
+      pointer-events: none;
+      position: absolute;
+    }
+    .editor-btn {
+      padding: 0.25rem 0.6rem;
+      border-radius: 0.375rem;
+      font-size: 0.8rem;
+      color: #323E48;
+      background: white;
+      border: 1px solid #e5e7eb;
+    }
+    .editor-btn:hover { background: #074859; color: white; border-color: #074859; }
   </style>
 </head>
 <body class="bg-gray-50 min-h-screen">
