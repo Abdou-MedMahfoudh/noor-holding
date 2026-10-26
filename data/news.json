@@ -94,5 +94,11 @@
     "date": "2026-10-06",
     "picture": "./assets/PHOTO-2026-10-08-01-23-45.jpg",
     "featured": false
+  },
+  {
+    "id": 17,
+    "date": "2026-10-22",
+    "picture": "./assets/news/convention-cadre-2026-10-22.jpeg",
+    "featured": false
   }
 ]

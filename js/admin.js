@@ -675,12 +675,10 @@ function looksLikeHeading(text, nextText) {
   return true;
 }
 
-// Like the existing articles: the group's name and people's names in bold Gulf
-// e.g. "M. Ahmed Salem Ely", "Mr. Ayari Khaled", "Noor Holding", "نور القابضة"
+// People's names in bold Gulf, e.g. "M. Ahmed Salem Ely", "Mr. Ayari Khaled"
 const NAME_WORD = "[A-ZÀ-ÖØ-Þ][\\wÀ-ÿ'’\\-]+";
 const NAME_PATTERN = new RegExp(
-  `\\b(?:Noor|Nour) Holdings?\\b|NOOR HOLDING|نور القابضة|` +
-    `(?:\\b(?:M|Mr|Mme|Mrs|Ms|Dr|Pr)\\.|\\b(?:Monsieur|Madame|Son Excellence|His Excellency|Her Excellency)\\b)\\s+(?:${NAME_WORD}\\s+){0,3}${NAME_WORD}|` +
+  `(?:\\b(?:M|Mr|Mme|Mrs|Ms|Dr|Pr)\\.|\\b(?:Monsieur|Madame|Son Excellence|His Excellency|Her Excellency)\\b)\\s+(?:${NAME_WORD}\\s+){0,3}${NAME_WORD}|` +
     `(?:(?:ال|لل)سيدة?|معالي|سعادة)\\s+(?:[^\\s،,.<]+\\s+){0,2}[^\\s،,.<]+`,
   "g"
 );
@@ -721,7 +719,8 @@ function polishBlocks(blocks, isArticleStart, lang) {
     const text = plainOf(b);
     if (!/^<p>/.test(b) || !/^[«"“].{20,}[»"”]$/.test(text)) return [b];
     const next = result[i + 1];
-    const author = next && /^<p>\s*[—–-]\s*[^<]{2,150}<\/p>$/.test(next) ? next.slice(3, -4).trim() : null;
+    const isAuthor = next && /^<p>\s*[—–-]/.test(next) && plainOf(next).length <= 150;
+    const author = isAuthor ? next.slice(3, -4).trim() : null;
     if (author) result[i + 1] = null;
     return [`<blockquote>${b.slice(3, -4)}${author ? `<br>${author}` : ""}</blockquote>`];
   }).filter(Boolean);
@@ -750,8 +749,10 @@ langPanels.addEventListener("paste", (e) => {
   if (!editor) return;
   e.preventDefault();
   const lang = editor.dataset.editor;
-  const html = e.clipboardData.getData("text/html");
-  const text = e.clipboardData.getData("text/plain");
+  // The group's name is written "Noor Holding", not in capitals
+  const fixName = (s) => s.replace(/\b(?:NOOR|NOUR) HOLDING(S?)\b/g, "Noor Holding$1");
+  const html = fixName(e.clipboardData.getData("text/html"));
+  const text = fixName(e.clipboardData.getData("text/plain"));
 
   const richHtml = html && /<(h[1-6]|ul|ol|strong|b|p|blockquote)\b/i.test(html);
   const htmlHasStructure = html && /<(h[1-6]|ul|ol|strong|b)\b/i.test(html);
@@ -786,18 +787,18 @@ Format obligatoire (Markdown) :
 - Première ligne : le titre, précédé de "# ".
 - Le premier paragraphe commence par le lieu suivi d'un tiret long, par exemple : "NOUAKCHOTT, Mauritanie – Le 6 octobre 2026, …".
 - 2 à 4 intertitres précédés de "## ".
-- Mets en **gras** les noms de personnes, d'entreprises et d'institutions.
+- Mets en **gras** uniquement les noms de personnes (pas Noor Holding ni les noms d'entreprises).
 - Utilise des listes à puces "- " pour énumérer des points, avec un début en **gras** si utile.
 - Paragraphes courts, ton institutionnel. Pas d'emojis, pas de tableaux, pas de lignes "---".
 - Réponds uniquement avec l'article.
 
 Informations :
 `,
-  en: `Translate the following Noor Holding news article into English. Keep exactly the same Markdown structure: "# " title on the first line, the opening dateline ("NOUAKCHOTT, Mauritania – …"), "## " section headings, **bold** names and "- " bullet lists. No emojis, no tables. Reply with the article only.
+  en: `Translate the following Noor Holding news article into English. Keep exactly the same Markdown structure: "# " title on the first line, the opening dateline ("NOUAKCHOTT, Mauritania – …"), "## " section headings, **bold** only for people's names and "- " bullet lists. No emojis, no tables. Reply with the article only.
 
 Article:
 `,
-  ar: `ترجم مقال الأخبار التالي الخاص بمجموعة نور القابضة إلى اللغة العربية الفصحى. حافظ على نفس بنية Markdown تمامًا: العنوان في السطر الأول بعد "# "، ثم المكان في بداية الفقرة الأولى ("نواكشوط، موريتانيا – ...")، والعناوين الفرعية بعد "## "، والأسماء بخط **عريض**، والقوائم بعد "- ". بدون رموز تعبيرية أو جداول. أجب بالمقال فقط.
+  ar: `ترجم مقال الأخبار التالي الخاص بمجموعة نور القابضة إلى اللغة العربية الفصحى. حافظ على نفس بنية Markdown تمامًا: العنوان في السطر الأول بعد "# "، ثم المكان في بداية الفقرة الأولى ("نواكشوط، موريتانيا – ...")، والعناوين الفرعية بعد "## "، وأسماء الأشخاص فقط بخط **عريض**، والقوائم بعد "- ". بدون رموز تعبيرية أو جداول. أجب بالمقال فقط.
 
 المقال:
 `,
