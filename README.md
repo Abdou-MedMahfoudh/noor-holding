@@ -17,7 +17,7 @@ A plain static site (HTML, Tailwind CSS, vanilla JS modules) hosted on **Netlify
 │
 ├── assets/
 │   ├── css/site.css         Built stylesheet (generated — do not edit by hand)
-│   ├── fonts/               Self-hosted fonts (Plus Jakarta Sans, DM Serif Text, IBM Plex Sans Arabic)
+│   ├── fonts/               Self-hosted fonts (Plus Jakarta Sans, DM Serif Text, Marcellus, IBM Plex Sans Arabic)
 │   ├── js/
 │   │   ├── lib/
 │   │   │   ├── i18n.js          Translations + language switcher
@@ -94,6 +94,7 @@ and past ~20 companies a second, inner circle opens. The "subsidiaries" and "sec
 
 ### Typography
 - **Plus Jakarta Sans** — all text (Latin). **DM Serif Text** — headings and company names (`font-dm-serif`).
+  **Marcellus** — the "NOOR HOLDING" hero title (`--font-brand`), chosen for its flared capitals, close to the logo lettering.
   **IBM Plex Sans Arabic** — everything when the page is in Arabic.
 - The fonts are self-hosted in `assets/fonts/` (no Google Fonts request) and declared at the top of `src/input.css`.
   Licences: SIL Open Font License (files next to the fonts).

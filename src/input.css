@@ -89,6 +89,23 @@
   unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
 }
 
+@font-face {
+  font-family: "Marcellus";
+  src: url("../fonts/marcellus-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2191,U+2193,U+2212,U+2215,U+FEFF,U+FFFD;
+}
+@font-face {
+  font-family: "Marcellus";
+  src: url("../fonts/marcellus-latin-ext-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+  unicode-range: U+0100-02BA,U+02BD-02C5,U+02C7-02CC,U+02CE-02D7,U+02DD-02FF,U+0304,U+0308,U+0329,U+1D00-1DBF,U+1E00-1E9F,U+1EF2-1EFF,U+2020,U+20A0-20AB,U+20AD-20C0,U+2113,U+2C60-2C7F,U+A720-A7FF;
+}
+
 /* ============ Design tokens ============ */
 @theme {
   /* Brand palette */
@@ -114,6 +131,7 @@
   --font-sans: "Plus Jakarta Sans", ui-sans-serif, system-ui, sans-serif;
   --font-arabic: "IBM Plex Sans Arabic", "Plus Jakarta Sans", system-ui, sans-serif;
   --font-dm-serif: "DM Serif Text", Georgia, serif;
+  --font-brand: "Marcellus", "DM Serif Text", Georgia, serif; /* flared capitals, close to the logo lettering */
   --ease-nour: cubic-bezier(0.3, 0.4, 0, 1);
   /* Motion: strong ease-out for things that react/enter, ease-in-out for things moving on screen */
   --ease-out-strong: cubic-bezier(0.23, 1, 0.32, 1);
@@ -307,13 +325,15 @@
     border-radius: 0.75rem;
   }
 
-  /* ---- Hero headline: the "NOOR HOLDING" lettering of the logo, in the same grey as the subtitle (kandura) ---- */
-  .hero-wordmark img {
-    display: block;
-    width: clamp(13rem, 21vw, 21rem);
-    height: auto;
-    margin-inline: auto;
-    filter: drop-shadow(0 2px 12px rgb(0 0 0 / 0.3));
+  /* ---- Hero title: "NOOR HOLDING" in Marcellus (like the logo lettering), the grey of the subtitle ---- */
+  .hero-name {
+    font-family: var(--font-brand);
+    font-size: clamp(2.75rem, 1.5rem + 3.4vw, 4.75rem);
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.03em;
+    text-wrap: balance;
+    text-shadow: 0 2px 18px rgb(0 0 0 / 0.35);
   }
 
   /* ---- Hero network graphic (assets/js/lib/network.js) ---- */
@@ -841,4 +861,7 @@ html[dir="rtl"] .font-sans {
 }
 html[dir="rtl"] [class*="tracking-"] {
   letter-spacing: 0; /* spacing letters apart breaks connected Arabic script */
+}
+html[dir="rtl"] .hero-name {
+  font-family: var(--font-arabic); /* Marcellus has no Arabic letters */
 }
