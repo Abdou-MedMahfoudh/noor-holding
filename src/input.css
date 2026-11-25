@@ -294,6 +294,19 @@
   }
 
 
+  /* ---- CEO portrait: a single sand frame, no hover zoom ---- */
+  .ceo-portrait {
+    padding: 0.625rem;
+    border: 1px solid var(--color-sand);
+    border-radius: 1.25rem;
+    background: #fff;
+    box-shadow: 0 20px 40px -24px rgb(30 40 89 / 0.35);
+  }
+  .ceo-portrait img {
+    display: block;
+    border-radius: 0.75rem;
+  }
+
   /* ---- Hero headline: the "NOOR HOLDING" lettering of the logo, in the same grey as the subtitle (kandura) ---- */
   .hero-wordmark img {
     display: block;
@@ -810,8 +823,7 @@ html[dir="rtl"] .mobile-menu.-translate-x-full {
   top: 0.625rem;
   border-radius: 1.25rem;
   background-color: rgb(22 28 45 / 0.62);
-  backdrop-filter: blur(22px) saturate(170%);
-  -webkit-backdrop-filter: blur(22px) saturate(170%);
+  backdrop-filter: blur(22px) saturate(170%); /* the build adds the -webkit- copy for Safari */
   border-color: rgb(255 255 255 / 0.14);
   box-shadow: inset 0 1px 0 rgb(255 255 255 / 0.1), 0 14px 36px -14px rgb(0 0 0 / 0.55);
 }
@@ -823,4 +835,10 @@ html[dir="rtl"] .mobile-menu.-translate-x-full {
     background-color: rgb(31 41 55 / 0.97);
     backdrop-filter: none;
   }
+}
+html[dir="rtl"] .font-sans {
+  font-family: var(--font-arabic); /* Plus Jakarta Sans has no Arabic letters */
+}
+html[dir="rtl"] [class*="tracking-"] {
+  letter-spacing: 0; /* spacing letters apart breaks connected Arabic script */
 }

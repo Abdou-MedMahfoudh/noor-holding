@@ -475,7 +475,7 @@
                 </p>
                 <div class="text-executive-muted/70">
                   <p
-                    class="text-lg md:text-xl font-dm-serif font-medium"
+                    class="text-lg md:text-xl font-sans font-bold tracking-tight text-executive-navy"
                     data-i18n="ceoMessage.signature.name"
                   >
                     Ahmed Salem ELY
@@ -491,38 +491,21 @@
             </div>
           </div>
 
-          <!-- Smaller Image Section - Takes 1/3 of the width -->
+          <!-- Portrait + name (1/3 of the width) -->
           <div class="relative order-last lg:order-last">
-            <div class="relative group">
-              <!-- Decorative Frame Background -->
-              <div
-                class="absolute inset-0 bg-gradient-to-br from-executive-navy to-skyline p-1 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"
-              >
-                <div class="w-full h-full bg-white rounded-xl"></div>
-              </div>
-              <!-- Main Image Frame -->
-              <div
-                class="relative bg-gradient-to-br from-sand to-executive-navy p-1 rounded-2xl shadow-2xl"
-              >
-                <div class="bg-white p-2 md:p-4 rounded-xl">
-                  <div class="relative overflow-hidden rounded-lg">
-                    <img loading="lazy" decoding="async"
-                      src="./assets/images/home/ceo-ahmed-salem-ely.webp"
-                      alt="Ahmed Salem ELY - President of NOOR HOLDING"
-                      class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-executive-navy/10 via-transparent to-transparent"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <!-- Portrait: one frame, no hover effect -->
+            <figure class="ceo-portrait">
+              <img loading="lazy" decoding="async"
+                src="./assets/images/home/ceo-ahmed-salem-ely.webp"
+                alt="Ahmed Salem ELY - President of NOOR HOLDING"
+                class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover"
+              />
+            </figure>
             <!-- Leader Info -->
             <div class="mt-6 md:mt-8 text-center hidden lg:block">
               <div class="space-y-2 md:space-y-3">
                 <h4
-                  class="text-xl md:text-2xl font-dm-serif font-bold text-executive-navy"
+                  class="text-xl md:text-2xl font-sans font-bold tracking-tight text-executive-navy"
                   data-i18n="ceoMessage.signature.name"
                 >
                   Ahmed Salem ELY
@@ -535,7 +518,7 @@
                   >
                     <div class="h-px w-8 md:w-12 bg-executive-gold"></div>
                     <p
-                      class="font-dm-serif text-executive uppercase tracking-wider text-sm md:text-md text-center leading-tight text-nowrap"
+                      class="font-sans font-semibold text-executive-muted uppercase tracking-[0.12em] text-xs md:text-sm text-center leading-tight text-nowrap"
                       data-i18n="ceoMessage.signature.title"
                     >
                       President
@@ -543,10 +526,10 @@
                     <div class="h-px w-8 md:w-12 bg-executive-gold"></div>
                   </div>
                   <p
-                    class="font-dm-serif text-executive uppercase tracking-wider text-sm md:text-md text-center leading-tight text-nowrap"
+                    class="font-sans font-semibold text-executive-navy uppercase tracking-[0.12em] text-xs md:text-sm text-center leading-tight text-nowrap"
                     data-i18n="ceoMessage.signature.subtitle"
                   >
-                    NOUR HOLDING
+                    NOOR HOLDING
                   </p>
                 </div>
               </div>
