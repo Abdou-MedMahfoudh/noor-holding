@@ -2,103 +2,103 @@
   {
     "id": 1,
     "date": "2025-09-07",
-    "picture": "./assets/news/WhatsApp Image 2025-09-23 at 21.56.01 (1).jpeg",
+    "picture": "./assets/images/news/article-01-cover.webp",
     "featured": true
   },
   {
     "id": 2,
     "date": "2025-09-11",
-    "picture": "assets/news/WhatsApp Image 2025-09-23 at 22.09.35.jpeg",
+    "picture": "./assets/images/news/article-02-cover.webp",
     "featured": true
   },
   {
     "id": 3,
     "date": "2025-10-24",
-    "picture": "./assets/news/WhatsApp Image 2025-10-27 at 20.41.02.jpeg",
+    "picture": "./assets/images/news/article-03-cover.webp",
     "featured": true
   },
   {
     "id": 4,
     "date": "2025-10-28",
-    "picture": "./assets/news/INVITATION_AHMED SALEM ELY-1.png",
+    "picture": "./assets/images/news/article-04-cover.webp",
     "featured": true
   },
   {
     "id": 5,
     "date": "2025-11-06",
-    "picture": "./assets/news/WhatsApp Image 2025-11-07 at 18.01.58 (1).jpeg",
+    "picture": "./assets/images/news/article-05-cover.webp",
     "featured": true
   },
   {
     "id": 6,
     "date": "2025-11-14",
-    "picture": "./assets/news/WhatsApp Image 2025-11-14 at 19.05.57.jpeg",
+    "picture": "./assets/images/news/article-06-cover.webp",
     "featured": true
   },
   {
     "id": 7,
     "date": "2025-11-24",
-    "picture": "./assets/Screenshot 2025-11-30 at 6.37.45 PM.png",
+    "picture": "./assets/images/news/article-07-cover.webp",
     "featured": true
   },
   {
     "id": 8,
     "date": "2025-11-26",
-    "picture": "./assets/82e29747-8394-4164-bbaf-662fa838dcef.jpg",
+    "picture": "./assets/images/news/article-08-cover.webp",
     "featured": true
   },
   {
     "id": 9,
     "date": "2025-12-05",
-    "picture": "./assets/WhatsApp Image 2025-12-06 at 09.09.17.jpeg",
+    "picture": "./assets/images/news/article-09-cover.webp",
     "featured": true
   },
   {
     "id": 10,
     "date": "2025-12-24",
-    "picture": "./assets/WhatsApp Image 2025-12-28 at 00.46.55.jpeg",
+    "picture": "./assets/images/news/article-10-cover.webp",
     "featured": true
   },
   {
     "id": 11,
     "date": "2026-01-19",
-    "picture": "./assets/image copy 6.png",
+    "picture": "./assets/images/news/article-11-cover.webp",
     "featured": true
   },
   {
     "id": 12,
     "date": "2026-01-22",
-    "picture": "./assets/WhatsApp Image 2026-01-25 at 21.04.24.jpeg",
+    "picture": "./assets/images/news/article-12-cover.webp",
     "featured": true
   },
   {
     "id": 13,
     "date": "2026-03-02",
-    "picture": "./assets/news/Design sans titre.png",
+    "picture": "./assets/images/news/article-13-cover.webp",
     "featured": false
   },
   {
     "id": 14,
     "date": "2026-05-10",
-    "picture": "./assets/news/1781982943673-WhatsApp-Image-2026-05-13-at-09.08.10.jpeg",
+    "picture": "./assets/images/news/article-14-cover.webp",
     "featured": false
   },
   {
     "id": 15,
     "date": "2026-06-22",
-    "picture": "./assets/news/1782164113026-WhatsApp-Image-2026-06-22-at-15.49.40-1.jpeg",
+    "picture": "./assets/images/news/article-15-cover.webp",
     "featured": false
   },
   {
     "id": 16,
     "date": "2026-10-06",
-    "picture": "./assets/PHOTO-2026-10-08-01-23-45.jpg",
+    "picture": "./assets/images/news/article-16-cover.webp",
     "featured": false
   },
   {
     "id": 17,
     "date": "2026-10-22",
-    "picture": "./assets/news/convention-cadre-2026-10-22.jpeg",
+    "picture": "./assets/images/news/article-17-cover.webp",
     "featured": false
   }
 ]

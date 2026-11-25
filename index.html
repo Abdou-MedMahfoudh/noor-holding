@@ -1,209 +1,68 @@
 <!doctype html>
-<html lang="en">
+<html lang="fr">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link href="./src/output.css" rel="stylesheet" />
-    <!-- Arabic fonts preload -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+Arabic:wght@400;700&family=Cairo:wght@400;700&family=Tajawal:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Mada:wght@400;700&family=El+Messiri:wght@400;700&display=swap"
-      rel="stylesheet"
-    />
-    <meta name="description" content="" data-i18n="meta.description" />
     <title data-i18n="meta.title">Noor Holding</title>
-    <link
-      rel="icon"
-      href="./assets/0ea8716a-725f-4072-8ee9-aed3df86b0a9.JPG"
-      type="image/jpeg"
-    />
-    <style>
-      /* Carousel core - Fixed CSS without @apply */
-      .hero-slide {
-        position: absolute;
-        inset: 0;
-        opacity: 0;
-        transition: opacity 1000ms;
-        z-index: 0;
-        background-repeat: no-repeat;
-        background-position: center;
-        background-size: cover;
-      }
-      .hero-slide.active {
-        opacity: 1;
-        z-index: 10;
-      }
+    <meta name="description" content="Noor Holding — groupe mauritanien diversifié : hydrocarbures, mines, pêche, logistique, commerce, agriculture, énergie et santé." data-i18n-content="meta.description" />
+    <link rel="icon" href="./assets/images/brand/favicon.png" type="image/png" />
+    <link rel="apple-touch-icon" href="./assets/images/brand/apple-touch-icon.png" />
 
-      .hero-slide::before {
-        content: "";
-        position: absolute;
-        inset: 0;
-        background: linear-gradient(
-          rgba(10, 31, 68, 0.4),
-          rgba(28, 28, 28, 0.4)
-        );
-        z-index: 1;
-      }
-      .indicators {
-        position: absolute;
-        bottom: 1.5rem;
-        left: 50%;
-        transform: translateX(-50%);
-        display: flex;
-        gap: 0.75rem;
-        z-index: 20;
-      }
-      .indicators button {
-        width: 0.75rem;
-        height: 0.75rem;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.5);
-        transition: all 300ms;
-        border: none;
-        cursor: pointer;
-      }
-      .indicators button.active {
-        background: #d4af37; /* Gold */
-        transform: scale(1.3);
-      }
-      .indicators button:hover:not(.active) {
-        background: rgba(255, 255, 255, 0.7);
-      }
-      @media (max-width: 767px) {
-        .indicators {
-          position: relative;
-          bottom: auto;
-          left: auto;
-          transform: none;
-          justify-content: center;
-          margin-top: 0rem;
-          margin-bottom: 1rem;
-        }
-      }
+    <!-- Above-the-fold images: fetched immediately -->
+    <link rel="preload" as="image" href="./assets/images/hero/hero-mining.webp" fetchpriority="high" />
+    <link rel="preload" href="./assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/dm-serif-text-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/marcellus-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 
-      .visible {
-        opacity: 1 !important;
-        transform: none !important;
-      }
+    <link rel="stylesheet" href="./assets/css/site.css" />
 
-      .fade-item {
-        opacity: 0;
-        transform: translateY(1.5rem) scale(1.1); /* slide down + zoomed in */
-        transition:
-          opacity 1s ease-out,
-          transform 1s ease-out;
-      }
-
-      #preloader {
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        position: fixed;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        z-index: 9999;
-      }
-      @keyframes pulse {
-        0%,
-        100% {
-          transform: scale(0.8);
-          opacity: 0.6;
-        }
-        50% {
-          transform: scale(1.2);
-          opacity: 1;
-        }
-      }
-
-      .dot {
-        width: 12px;
-        height: 12px;
-        background-color: #d4af37; /* Your gold color */
-        border-radius: 50%;
-        display: inline-block;
-        margin: 0 4px;
-        animation: pulse 1.4s infinite ease-in-out both;
-      }
-
-      .dot:nth-child(1) {
-        animation-delay: -0.32s;
-      }
-
-      .dot:nth-child(2) {
-        animation-delay: -0.16s;
-      }
-
-      .dot:nth-child(3) {
-        animation-delay: 0s;
-      }
-
-      /* Force LTR for carousel even in Arabic pages */
-      html[dir="rtl"] .ltr-carousel {
-        direction: ltr;
-      }
-    </style>
+    <script type="module" src="./assets/js/pages/home.js"></script>
   </head>
 
   <body>
-    <!-- Preloader Overlay -->
-    <div
-      id="preloader"
-      class="fixed inset-0 bg-white flex items-center justify-center"
-      style="z-index: 9999"
-    >
-      <div class="flex space-x-2 mt-4">
-        <span class="dot"></span>
-        <span class="dot"></span>
-        <span class="dot"></span>
-      </div>
-    </div>
     <!-- Navbar -->
     <nav
-      class="absolute top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-0 bg-transparent z-30 shadow-overlay mt-0 transform translate-y-0 transition-transform duration-300 ease-in-out"
+      data-mobile-lang
+      data-solid-on-scroll
+      class="site-nav fixed top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 z-30"
     >
-      <!-- Logo -->
+      <a href="#hero" aria-label="Noor Holding">
+        <img
+          class="w-20 h-20 md:w-22 md:h-25"
+          src="./assets/images/brand/logo-white.svg"
+          alt="Noor Holding"
+        />
+      </a>
 
-      <img
-        class="w-20 h-20 md:w-22 md:h-25 text-amber-50"
-        src="./assets/noor_holding_vector_whiteText.svg"
-        alt="Noor Holding Logo"
-      />
-
-      <!-- Links - Hidden on mobile, shown on desktop -->
-      <ul class="hidden md:flex space-x-6 text-md font-medium text-white/80">
-        <li
-          class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
-        >
-          <a href="#about" data-i18n="nav.about">About us</a>
-        </li>
-        <li
-          class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
-        >
-          <a href="./Allnews.html" data-i18n="nav.news">News</a>
-        </li>
-        <li
-          class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
-        >
-          <a href="#subsidiaries" data-i18n="nav.subsidiaries">Subsidiaries</a>
-        </li>
-        <li
-          class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"
-        >
-          <a href="#contact" data-i18n="nav.contact">Contact us</a>
-        </li>
-        <!-- Language switcher will be inserted here automatically -->
+      <!-- Desktop links -->
+      <ul class="hidden md:flex items-center gap-7 text-[0.9375rem] font-medium text-white/85">
+        <li><a class="nav-link" href="#about" data-i18n="navigation.about">About us</a></li>
+        <li><a class="nav-link" href="./Allnews.html" data-i18n="navigation.news">News</a></li>
+        <li><a class="nav-link" href="#subsidiaries" data-i18n="navigation.subsidiaries">Subsidiaries</a></li>
+        <li><a class="nav-link" href="#contact" data-i18n="navigation.contact">Contact us</a></li>
       </ul>
+
+      <!-- Mobile menu button -->
+      <button id="mobile-menu-btn" type="button" class="md:hidden text-white p-2 -me-2 press" aria-label="Menu" aria-controls="mobile-menu">
+        <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        </svg>
+        <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
+        </svg>
+      </button>
     </nav>
+
+    <!-- Mobile menu -->
+    <div id="mobile-menu" class="mobile-menu fixed top-0 start-0 h-full w-80 max-w-[85vw] bg-executive-navy z-40 -translate-x-full md:hidden">
+      <div class="flex flex-col pt-24 px-6 text-white text-lg">
+        <a href="#about" class="py-4 border-b border-white/10" data-i18n="navigation.about">About us</a>
+        <a href="./Allnews.html" class="py-4 border-b border-white/10" data-i18n="navigation.news">News</a>
+        <a href="#subsidiaries" class="py-4 border-b border-white/10" data-i18n="navigation.subsidiaries">Subsidiaries</a>
+        <a href="#contact" class="py-4" data-i18n="navigation.contact">Contact us</a>
+      </div>
+    </div>
+    <div id="mobile-backdrop" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
 
     <!-- Hero section -->
     <section
@@ -211,35 +70,12 @@
       class="relative md:h-[85vh] min-h-[60vh] pt-0 overflow-hidden"
     >
       <!-- Slides -->
-      <div
-        class="hero-slide active"
-        style="
-          background-image: url(&quot;./assets/ab20250519-kinross-exploitation-or-senisa-mauritanie-1.jpg&quot;);
-        "
-      ></div>
-      <div
-        class="hero-slide"
-        style="background-image: url(&quot;./assets/noadhibou-port.jpg&quot;)"
-      ></div>
-      <div
-        class="hero-slide"
-        style="
-          background-image: url(&quot;./assets/08-extraction-header.jpg&quot;);
-        "
-      ></div>
+      <div class="hero-slide active" style="background-image: url(./assets/images/hero/hero-mining.webp)"></div>
+      <div class="hero-slide" data-bg="./assets/images/hero/hero-nouadhibou-port.webp"></div>
+      <div class="hero-slide" data-bg="./assets/images/hero/hero-extraction.webp"></div>
 
-      <!-- Gradient overlay -->
-      <!-- Gradient overlay -->
-      <div
-        class="absolute inset-0 hero-bg-gradient-overlay z-10"
-        style="
-          background: linear-gradient(
-            to bottom,
-            rgba(0, 0, 0, 0.7) 0%,
-            rgba(0, 0, 0, 0) 30%
-          );
-        "
-      ></div>
+      <!-- Top shade so the white navbar stays readable -->
+      <div class="absolute inset-0 z-10 hero-top-shade"></div>
 
       <!-- Content Overlay -->
       <div
@@ -249,41 +85,29 @@
         <div
           class="block md:hidden w-full text-center text-nour-white max-w-sm mx-auto"
         >
-          <!-- Title - Smaller on mobile -->
-
           <!-- Spider Web Image - Mobile Only -->
           <div class="flex justify-center">
-            <img
-              id="spider-web-mobile"
-              src="./assets/Noor_Holding_wheel_full_v3.png"
-              alt="Noor Holding Network"
-              class="max-w-[380px] max-h-500 transition duration-1000 ease-out opacity-80 scale-120 fade-item"
-            />
+            <div id="spider-web-mobile" class="fade-item network-box network-box--mobile" data-network data-network-mobile role="group" aria-label="Noor Holding — filiales"></div>
           </div>
 
           <div class="mb-0 text-sand">
-            <h1
-              data-i18n="hero.title"
-              class="text-3xl font-dm-serif font-extrabold text-kandura mb-0 tracking-tight transition duration-1000 ease-out opacity-0 translate-y-6 fade-item"
-            >
-              NOOR HOLDING
-            </h1>
+            <h1 class="sr-only">Noor Holding</h1>
           </div>
 
-          <!-- Short description for mobile -->
+          <!-- Tagline (mobile) -->
           <p
-            class="text-md text-kandura font-family-sans pb-5 leading-relaxed transition duration-1000 ease-out opacity-0 translate-y-6 fade-item"
-            data-i18n="hero.description"
+            class="text-lg text-kandura font-medium pb-5 leading-relaxed fade-item"
+            data-i18n="hero.subtitle"
           >
-            Leading Mauritanian corporation across key sectors.
+            L'innovation, la rigueur et l'engagement
           </p>
 
           <!-- Key Stats - Mobile -->
           <div
-            class="grid grid-cols-3 gap-4 max-w-xs mx-auto transition duration-1000 ease-out opacity-0 translate-y-6 fade-item mb-5"
+            class="grid grid-cols-3 gap-4 max-w-xs mx-auto fade-item mb-5"
           >
             <div class="text-center">
-              <div class="text-lg font-bold text-sand">14</div>
+              <div class="text-lg font-bold text-sand tabular" data-count="companies">15</div>
               <div
                 class="text-xs text-kandura/80 uppercase tracking-wide"
                 data-i18n="hero.stats.subsidiaries"
@@ -292,10 +116,10 @@
               </div>
             </div>
             <div class="text-center">
-              <div class="text-lg font-bold text-sand">8</div>
+              <div class="text-lg font-bold text-sand tabular" data-count="sectors">9</div>
               <div
                 class="text-xs text-kandura/80 uppercase tracking-wide"
-                data-i18n="hero.stats.sectors"
+                data-i18n="hero.stats.keysectors"
               >
                 Key Sectors
               </div>
@@ -306,15 +130,13 @@
               </div>
               <div
                 class="text-xs text-kandura/80 uppercase tracking-wide text-nowrap"
-                data-i18n="hero.stats.leader"
+                data-i18n="hero.stats.marketLeader"
               >
                 Market Leader
               </div>
             </div>
           </div>
         </div>
-
-        <h1 class="text-4xl md:text-5xl lg:text-6xl max-w-4xl"></h1>
 
         <!-- Desktop Layout -->
         <div
@@ -327,7 +149,7 @@
             <div class="mb-8 text-kandura">
               <h1
                 id="hero-title"
-                class="text-5xl md:text-7xl font-dm-serif text-executive leading-tight mb-4 tracking-tight transition duration-1000 ease-out opacity-0 translate-y-6 fade-item"
+                class="hero-name text-kandura mb-6 fade-item"
                 data-i18n="hero.title"
               >
                 NOOR HOLDING
@@ -336,38 +158,24 @@
 
             <p
               id="desc"
-              class="text-lg md:text-xl text-kandura font-medium mb-8 max-w-2xl mx-auto leading-relaxed transition duration-1000 ease-out opacity-0 translate-y-6 fade-item"
+              class="text-lg md:text-xl text-kandura font-medium mb-8 max-w-2xl mx-auto leading-relaxed fade-item"
               data-i18n="hero.subtitle"
             >
               l'innovation, la rigueur et l'engagement
             </p>
 
             <div class="flex flex-col sm:flex-row gap-4 justify-center">
-              <a href="#news">
-                <button
-                  class="bg-sand hover:bg-sand/50 text-black font-semibold py-4 px-8 rounded-lg transition duration-1000 ease-out opacity-0 translate-y-6 fade-item transform hover:scale-105 shadow-lg"
-                  data-i18n="hero.btn.news"
-                >
-                  Latest News
-                </button>
-              </a>
+              <a href="#news" class="bg-sand hover:bg-[#d9bf92] text-midnight font-semibold py-4 px-8 rounded-lg fade-item shadow-lg press inline-block transition-colors duration-200" data-i18n="hero.buttons.latestNews">Latest News</a>
 
-              <a href="#subsidiaries">
-                <button
-                  class="border-2 border-kandura/50 hover:border-sand text-white hover:text-nour-sand font-semibold py-4 px-8 rounded-lg transition duration-1000 ease-out opacity-0 translate-y-6 fade-item"
-                  data-i18n="hero.btn.subsidiaries"
-                >
-                  Our Subsidiaries
-                </button>
-              </a>
+              <a href="#subsidiaries" class="border-2 border-kandura/50 hover:border-sand text-white hover:text-sand font-semibold py-4 px-8 rounded-lg fade-item press inline-block transition-colors duration-200" data-i18n="hero.buttons.ourSubsidiaries">Our Subsidiaries</a>
             </div>
 
             <!-- Key Stats -->
             <div
-              class="grid grid-cols-3 gap-8 mt-12 max-w-lg mx-auto transition duration-1000 ease-out opacity-0 translate-y-6 fade-item"
+              class="grid grid-cols-3 gap-8 mt-12 max-w-lg mx-auto fade-item"
             >
               <div class="text-center">
-                <div class="text-3xl font-bold text-sand">14</div>
+                <div class="text-3xl font-bold text-sand tabular" data-count="companies">15</div>
                 <div
                   class="text-sm text-kandura/80 uppercase tracking-wide"
                   data-i18n="hero.stats.subsidiaries"
@@ -376,10 +184,10 @@
                 </div>
               </div>
               <div class="text-center">
-                <div class="text-3xl font-bold text-sand">8</div>
+                <div class="text-3xl font-bold text-sand tabular" data-count="sectors">9</div>
                 <div
                   class="text-sm text-kandura/80 uppercase tracking-wide"
-                  data-i18n="hero.stats.sectors"
+                  data-i18n="hero.stats.keysectors"
                 >
                   Key Sectors
                 </div>
@@ -393,7 +201,7 @@
                 </div>
                 <div
                   class="text-sm text-kandura/80 uppercase tracking-wide"
-                  data-i18n="hero.stats.based"
+                  data-i18n="hero.stats.basedIn"
                 >
                   Based in
                 </div>
@@ -404,269 +212,24 @@
           <!-- Spiders Web Image - Desktop Only -->
           <div
             id="spider-web"
-            class="w-full md:w-1/2 flex justify-center mb-3 transition duration-1000 ease-out opacity-0 scale-110 mt-5 fade-item"
+            class="w-full md:w-1/2 flex justify-center items-center fade-item"
           >
-            <img
-              src="./assets/Noor_Holding_wheel_full_v3.png"
-              alt="Noor Holding Network"
-              class="mt-10 max-w-[80%] h-auto object-contain"
-            />
+            <div class="network-box" data-network role="group" aria-label="Noor Holding — filiales"></div>
           </div>
         </div>
       </div>
 
       <!-- Slide Indicators -->
       <div class="indicators pt-4">
-        <button class="active" onclick="currentSlide(1)"></button>
-        <button onclick="currentSlide(2)"></button>
-        <button onclick="currentSlide(3)"></button>
+        <button class="active" aria-label="Slide 1"></button>
+        <button aria-label="Slide 2"></button>
+        <button aria-label="Slide 3"></button>
       </div>
     </section>
 
     <section class="relative py-20 px-4 bg-executive-light overflow-hidden">
-      <!-- Intense Desert Energy SVG Background -->
-      <!-- Intense Desert Energy SVG Background -->
-      <div class="absolute inset-0">
-        <svg
-          class="w-full h-full opacity-[0.15]"
-          viewBox="0 0 800 600"
-          fill="none"
-          xmlns="http://www.w3.org/2000/svg"
-        >
-          <defs>
-            <!-- Desert Sand Pattern -->
-            <pattern
-              id="desert-sand"
-              width="80"
-              height="80"
-              patternUnits="userSpaceOnUse"
-            >
-              <circle
-                cx="20"
-                cy="20"
-                r="1"
-                fill="hsl(var(--executive-gold))"
-                opacity="0.9"
-              />
-              <circle
-                cx="60"
-                cy="40"
-                r="0.5"
-                fill="hsl(var(--executive-gold))"
-                opacity="0.1"
-              />
-              <circle
-                cx="40"
-                cy="60"
-                r="1.5"
-                fill="hsl(var(--executive-gold))"
-                opacity="0.3"
-              />
-            </pattern>
-
-            <!-- Intense Sunburst Gradient -->
-            <radialGradient id="desert-sun" cx="50%" cy="50%" r="60%">
-              <stop
-                offset="%"
-                stop-color="hsl(var(--executive-gold))"
-                stop-opacity="0.3"
-              />
-              <stop
-                offset="%"
-                stop-color="hsl(45 100% 65%)"
-                stop-opacity="0.2"
-              />
-              <stop
-                offset="100%"
-                stop-color="hsl(var(--executive-gold))"
-                stop-opacity="0"
-              />
-            </radialGradient>
-
-            <!-- Energy Wave Gradient -->
-            <linearGradient id="energy-wave" x1="0%" y1="0%" x2="100%" y2="0%">
-              <stop
-                offset="100%"
-                stop-color="hsl(var(--executive-gold))"
-                stop-opacity="0.5"
-              />
-              <stop
-                offset="%"
-                stop-color="hsl(45 100% 70%)"
-                stop-opacity="0.8"
-              />
-              <stop
-                offset="100%"
-                stop-color="hsl(var(--executive-gold))"
-                stop-opacity="0.3"
-              />
-            </linearGradient>
-          </defs>
-
-          <!-- Desert Sand Texture -->
-          <rect width="100%" height="100%" fill="url(#desert-sand)" />
-
-          <!-- Massive Desert Dunes - Multiple Layers -->
-          <path
-            d="M0 150 Q100 80 200 120 Q300 160 400 100 Q500 40 600 90 Q700 130 800 110"
-            fill="none"
-            stroke="url(#energy-wave)"
-            stroke-width="4"
-            opacity="0.6"
-          />
-          <path
-            d="M0 200 Q120 140 240 170 Q360 200 480 150 Q600 100 720 140 Q740 150 800 160"
-            fill="none"
-            stroke="hsl(var(--executive-gold))"
-            stroke-width="3"
-            opacity="0.5"
-          />
-          <path
-            d="M0 280 Q80 230 160 250 Q240 270 320 240 Q400 210 480 235 Q560 260 640 245 Q720 230 800 250"
-            fill="none"
-            stroke="hsl(var(--executive-navy))"
-            stroke-width="2"
-            opacity="0.4"
-          />
-          <path
-            d="M0 350 Q150 300 300 330 Q450 360 600 320 Q700 290 800 310"
-            fill="none"
-            stroke="hsl(var(--executive-gold))"
-            stroke-width="2"
-            opacity="0.6"
-          />
-          <path
-            d="M0 420 Q100 380 200 400 Q300 420 400 390 Q500 360 600 385 Q700 410 800 395"
-            fill="none"
-            stroke="hsl(45 80% 60%)"
-            stroke-width="1.5"
-            opacity="0.4"
-          />
-
-          <!-- Intense Energy Sunbursts -->
-          <circle cx="150" cy="80" r="120" fill="url(#desert-sun)" />
-          <g class="text-executive-gold" opacity="0.4">
-            <line
-              x1="150"
-              y1="0"
-              x2="150"
-              y2="160"
-              stroke="currentColor"
-              stroke-width="2"
-            />
-            <line
-              x1="70"
-              y1="80"
-              x2="230"
-              y2="80"
-              stroke="currentColor"
-              stroke-width="2"
-            />
-            <line
-              x1="94"
-              y1="24"
-              x2="206"
-              y2="136"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <line
-              x1="206"
-              y1="24"
-              x2="94"
-              y2="136"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <line
-              x1="150"
-              y1="20"
-              x2="150"
-              y2="140"
-              stroke="currentColor"
-              stroke-width="1"
-              opacity="0.6"
-            />
-            <line
-              x1="90"
-              y1="80"
-              x2="210"
-              y2="80"
-              stroke="currentColor"
-              stroke-width="1"
-              opacity="0.6"
-            />
-          </g>
-
-          <!-- Secondary Desert Sun -->
-          <circle
-            cx="650"
-            cy="450"
-            r="100"
-            fill="url(#desert-sun)"
-            opacity="0.8"
-          />
-          <g class="text-executive-gold" opacity="0.35">
-            <line
-              x1="650"
-              y1="350"
-              x2="650"
-              y2="550"
-              stroke="currentColor"
-              stroke-width="2"
-            />
-            <line
-              x1="550"
-              y1="450"
-              x2="750"
-              y2="450"
-              stroke="currentColor"
-              stroke-width="2"
-            />
-            <line
-              x1="580"
-              y1="380"
-              x2="720"
-              y2="520"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-            <line
-              x1="720"
-              y1="380"
-              x2="580"
-              y2="520"
-              stroke="currentColor"
-              stroke-width="1.5"
-            />
-          </g>
-
-          <!-- Desert Storm Energy Spirals -->
-          <path
-            d="M400 200 Q420 180 440 200 Q460 220 440 240 Q420 260 400 240 Q380 220 400 200"
-            fill="none"
-            stroke="hsl(var(--executive-gold))"
-            stroke-width="2"
-            opacity="0.5"
-          />
-          <path
-            d="M300 400 Q315 385 330 400 Q345 415 330 430 Q315 445 300 430 Q285 415 300 400"
-            fill="none"
-            stroke="hsl(45 90% 65%)"
-            stroke-width="1.5"
-            opacity="0.6"
-          />
-
-          <!-- Floating Desert Particles -->
-          <g class="text-executive-gold" opacity="0.3">
-            <circle cx="200" cy="150" r="3" fill="currentColor" />
-            <circle cx="500" cy="250" r="2" fill="currentColor" />
-            <circle cx="700" cy="200" r="4" fill="currentColor" />
-            <circle cx="100" cy="350" r="2.5" fill="currentColor" />
-            <circle cx="600" cy="100" r="3.5" fill="currentColor" />
-          </g>
-        </svg>
-      </div>
+      <!-- Decorative background -->
+      <img src="./assets/images/decor/desert-energy.svg" alt="" aria-hidden="true" loading="lazy" class="absolute inset-0 w-full h-full opacity-[0.15] pointer-events-none" />
 
       <!-- Floating Geometric Elements -->
       <div
@@ -678,11 +241,6 @@
       <div
         class="absolute top-1/2 right-40 w-12 h-12 border border-navy opacity-15 transform rotate-12"
       ></div>
-
-      <!-- Top Decorative SVG Elements -->
-      <div class="absolute top-0 left-0 right-0 z-5">
-        <!-- top border dune pattern svg here -->
-      </div>
 
       <div class="container mx-auto max-w-6xl relative z-10">
         <div
@@ -696,7 +254,7 @@
                 ></div>
                 <h2
                   class="text-sm sm:text-sm md:text-lg font-dm-serif text-executive leading-tight tracking-wider uppercase whitespace-nowrap text-center"
-                  data-i18n="ceo.title"
+                  data-i18n="ceoMessage.sectionTitle"
                 >
                   Mot du Président Directeur Général
                 </h2>
@@ -710,15 +268,15 @@
               class="space-y-4 md:space-y-6 text-base md:text-lg text-gray-700 leading-relaxed"
             >
               <p
-                class="text-xl md:text-2xl text-skyline leading-relaxed font-light"
-                data-i18n="ceo.greeting"
+                class="text-xl md:text-2xl text-skyline leading-relaxed"
+                data-i18n="ceoMessage.greeting"
               >
                 Chers visiteurs,
               </p>
 
               <p
-                class="text-md md:text-xl text-skyline leading-relaxed font-light"
-                data-i18n="ceo.intro"
+                class="text-md md:text-xl text-skyline leading-relaxed"
+                data-i18n="ceoMessage.intro"
               >
                 C'est avec un grand honneur et un immense plaisir que je vous
                 souhaite la bienvenue sur le site officiel de
@@ -729,8 +287,8 @@
               </p>
 
               <p
-                class="text-md md:text-xl text-skyline leading-relaxed font-light"
-                data-i18n="ceo.ambition"
+                class="text-md md:text-xl text-skyline leading-relaxed"
+                data-i18n="ceoMessage.ambition"
               >
                 Depuis sa création, notre ambition a toujours été claire : bâtir
                 un groupe solide, structuré et résolument tourné vers l'avenir.
@@ -741,8 +299,8 @@
               </p>
 
               <p
-                class="text-md md:text-xl text-skyline leading-relaxed font-light"
-                data-i18n="ceo.entities.title"
+                class="text-md md:text-xl text-skyline leading-relaxed"
+                data-i18n="ceoMessage.entitiesTitle"
               >
                 <strong class="text-executive-navy"
                   >Nos entités phares :</strong
@@ -751,7 +309,7 @@
 
               <p
                 class="text-base md:text-base lg:text-lg"
-                data-i18n="ceo.entities.slmp"
+                data-i18n="ceoMessage.entities.slmp"
               >
                 <strong class="text-executive-navy">SLMP SA :</strong> Société
                 de Logistique et de Manutention Portuaire, dotée de
@@ -761,7 +319,7 @@
 
               <p
                 class="text-base md:text-base lg:text-lg"
-                data-i18n="ceo.entities.afh"
+                data-i18n="ceoMessage.entities.afh"
               >
                 <strong class="text-executive-navy"
                   >AFH – Africaine des Hydrocarbures :</strong
@@ -772,7 +330,7 @@
 
               <p
                 class="text-base md:text-base lg:text-lg"
-                data-i18n="ceo.entities.mines"
+                data-i18n="ceoMessage.entities.mines"
               >
                 <strong class="text-executive-navy"
                   >MINES DE MAURITANIE :</strong
@@ -783,7 +341,7 @@
 
               <p
                 class="text-base md:text-base lg:text-lg"
-                data-i18n="ceo.entities.itb"
+                data-i18n="ceoMessage.entities.itb"
               >
                 <strong class="text-executive-navy"
                   >ITB – International Trade Brokerage :</strong
@@ -793,28 +351,22 @@
               </p>
               <p
                 class="text-base md:text-base lg:text-lg"
-                data-i18n="ceo.entities.ecocharge"
+                data-i18n="ceoMessage.entities.ecocharge"
               >
-                <strong class="text-executive-navy"
-                  >ITB – International Trade Brokerage :</strong
-                >
-                Spécialisée dans l'import-export, la distribution et la
-                représentation commerciale.
+                <strong class="text-executive-navy">EcoCharge Africa :</strong>
+                Spécialisée dans les solutions de recharge électrique et d'infrastructures énergétiques durables.
               </p>
               <p
                 class="text-base md:text-base lg:text-lg"
-                data-i18n="ceo.entities.agro"
+                data-i18n="ceoMessage.entities.agro"
               >
-                <strong class="text-executive-navy"
-                  >ITB – International Trade Brokerage :</strong
-                >
-                Spécialisée dans l'import-export, la distribution et la
-                représentation commerciale.
+                <strong class="text-executive-navy">CASA – Compagnie Agricole du Sahel :</strong>
+                Entreprise mauritanienne innovante engagée dans le développement d'une agriculture moderne et durable.
               </p>
 
               <p
                 class="text-base md:text-base lg:text-lg"
-                data-i18n="ceo.entities.tbs1"
+                data-i18n="ceoMessage.entities.tbs1"
               >
                 <strong class="text-executive-navy"
                   >TBS – Transport Business and Shipping :</strong
@@ -825,7 +377,7 @@
 
               <p
                 class="text-base md:text-base lg:text-lg"
-                data-i18n="ceo.entities.tbs2"
+                data-i18n="ceoMessage.entities.tbs2"
               >
                 <strong class="text-executive-navy font-bold"
                   >TBS – Trade Brokerage and Services :</strong
@@ -835,7 +387,7 @@
 
               <p
                 class="text-base md:text-base lg:text-lg"
-                data-i18n="ceo.entities.acg"
+                data-i18n="ceoMessage.entities.acg"
               >
                 <strong class="text-executive-navy"
                   >ACG – Établissement Arrachad pour le Commerce Général
@@ -846,7 +398,7 @@
 
               <p
                 class="text-base md:text-base lg:text-lg"
-                data-i18n="ceo.entities.fishing"
+                data-i18n="ceoMessage.entities.fishing"
               >
                 <strong class="text-executive-navy"
                   >SEMAK SA, SMMCS SA et Valor Fish Frigo :</strong
@@ -857,7 +409,7 @@
 
               <p
                 class="text-base md:text-base lg:text-lg"
-                data-i18n="ceo.entities.ila"
+                data-i18n="ceoMessage.entities.ila"
               >
                 <strong class="text-executive-navy"
                   >ILA DISTRIBUTION SARL :</strong
@@ -869,7 +421,7 @@
 
               <p
                 class="text-base md:text-base lg:text-lg"
-                data-i18n="ceo.entities.medservices"
+                data-i18n="ceoMessage.entities.medservices"
               >
                 <strong class="text-executive-navy">MEDSERVICES :</strong> Pôle
                 d'excellence médicale du groupe, spécialisé dans la construction
@@ -878,8 +430,15 @@
               </p>
 
               <p
-                class="text-md md:text-xl text-skyline leading-relaxed font-light"
-                data-i18n="ceo.vision.title"
+                class="text-base md:text-base lg:text-lg"
+                data-i18n="ceoMessage.entities.fairsoft"
+              >
+                <strong class="text-executive-navy">FAIR-SOFT :</strong> Acteur technologique du groupe, présent en Mauritanie depuis 10 ans, qui accompagne entreprises et institutions dans leur transformation numérique : développement sur mesure, ERP, intelligence artificielle et cybersécurité.
+              </p>
+
+              <p
+                class="text-md md:text-xl text-skyline leading-relaxed"
+                data-i18n="ceoMessage.visionTitle"
               >
                 <strong class="text-executive-navy"
                   >Notre vision et nos valeurs :</strong
@@ -887,8 +446,8 @@
               </p>
 
               <p
-                class="text-md md:text-xl text-skyline leading-relaxed font-light"
-                data-i18n="ceo.vision.text"
+                class="text-md md:text-xl text-skyline leading-relaxed"
+                data-i18n="ceoMessage.vision"
               >
                 À travers l'ensemble de ces filiales,
                 <strong class="text-executive-navy">NOOR HOLDING</strong> œuvre
@@ -902,8 +461,8 @@
               </p>
 
               <p
-                class="text-md md:text-xl text-skyline leading-relaxed font-light"
-                data-i18n="ceo.gratitude"
+                class="text-md md:text-xl text-skyline leading-relaxed"
+                data-i18n="ceoMessage.gratitude"
               >
                 Je tiens à exprimer ma profonde gratitude à nos partenaires,
                 collaborateurs et clients pour la confiance qu'ils nous
@@ -915,20 +474,20 @@
               <div class="pt-4 md:pt-6 mt-6 md:mt-8">
                 <p
                   class="text-executive-muted italic text-sm md:text-base mb-3"
-                  data-i18n="ceo.regards"
+                  data-i18n="ceoMessage.signature.regards"
                 >
                   Avec toute ma considération,
                 </p>
                 <div class="text-executive-muted/70">
                   <p
-                    class="text-lg md:text-xl font-dm-serif font-medium"
-                    data-i18n="ceo.name"
+                    class="text-lg md:text-xl font-sans font-bold tracking-tight text-executive-navy"
+                    data-i18n="ceoMessage.signature.name"
                   >
                     Ahmed Salem ELY
                   </p>
                   <p
                     class="text-sm md:text-md font-medium uppercase tracking-wider"
-                    data-i18n="ceo.title.sig"
+                    data-i18n="ceoMessage.signature.title"
                   >
                     Président Directeur Général, NOOR HOLDING
                   </p>
@@ -937,39 +496,22 @@
             </div>
           </div>
 
-          <!-- Smaller Image Section - Takes 1/3 of the width -->
+          <!-- Portrait + name (1/3 of the width) -->
           <div class="relative order-last lg:order-last">
-            <div class="relative group">
-              <!-- Decorative Frame Background -->
-              <div
-                class="absolute inset-0 bg-gradient-to-br from-executive-navy to-skyline p-1 rounded-2xl transform rotate-1 group-hover:rotate-2 transition-transform duration-300"
-              >
-                <div class="w-full h-full bg-white rounded-xl"></div>
-              </div>
-              <!-- Main Image Frame -->
-              <div
-                class="relative bg-gradient-to-br from-sand to-executive-navy p-1 rounded-2xl shadow-2xl"
-              >
-                <div class="bg-white p-2 md:p-4 rounded-xl">
-                  <div class="relative overflow-hidden rounded-lg">
-                    <img
-                      src="./assets/Ahmed Salem Ely1.jpg"
-                      alt="Ahmed Salem ELY - President of NOOR HOLDING"
-                      class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover transform group-hover:scale-105 transition-transform duration-500"
-                    />
-                    <div
-                      class="absolute inset-0 bg-gradient-to-t from-executive-navy/10 via-transparent to-transparent"
-                    ></div>
-                  </div>
-                </div>
-              </div>
-            </div>
+            <!-- Portrait: one frame, no hover effect -->
+            <figure class="ceo-portrait">
+              <img loading="lazy" decoding="async"
+                src="./assets/images/home/ceo-ahmed-salem-ely.webp"
+                alt="Ahmed Salem ELY - President of NOOR HOLDING"
+                class="w-full h-[28rem] sm:h-[32rem] md:h-[36rem] lg:h-auto object-cover"
+              />
+            </figure>
             <!-- Leader Info -->
             <div class="mt-6 md:mt-8 text-center hidden lg:block">
               <div class="space-y-2 md:space-y-3">
                 <h4
-                  class="text-xl md:text-2xl font-dm-serif font-bold text-executive-navy"
-                  data-i18n="ceo.name"
+                  class="text-xl md:text-2xl font-sans font-bold tracking-tight text-executive-navy"
+                  data-i18n="ceoMessage.signature.name"
                 >
                   Ahmed Salem ELY
                 </h4>
@@ -981,18 +523,18 @@
                   >
                     <div class="h-px w-8 md:w-12 bg-executive-gold"></div>
                     <p
-                      class="font-dm-serif text-executive uppercase tracking-wider text-sm md:text-md text-center leading-tight text-nowrap"
-                      data-i18n="ceo.title.sig"
+                      class="font-sans font-semibold text-executive-muted uppercase tracking-[0.12em] text-xs md:text-sm text-center leading-tight text-nowrap"
+                      data-i18n="ceoMessage.signature.title"
                     >
                       President
                     </p>
                     <div class="h-px w-8 md:w-12 bg-executive-gold"></div>
                   </div>
                   <p
-                    class="font-dm-serif text-executive uppercase tracking-wider text-sm md:text-md text-center leading-tight text-nowrap"
-                    data-i18n="ceo.title.sig2"
+                    class="font-sans font-semibold text-executive-navy uppercase tracking-[0.12em] text-xs md:text-sm text-center leading-tight text-nowrap"
+                    data-i18n="ceoMessage.signature.subtitle"
                   >
-                    NOUR HOLDING
+                    NOOR HOLDING
                   </p>
                 </div>
               </div>
@@ -1002,13 +544,49 @@
       </div>
     </section>
 
+    <section id="news" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+      <!-- Title -->
+      <h2
+        class="text-4xl lg:text-5xl font-dm-serif text-sand mb-10 text-center"
+        data-i18n="news.title"
+      >
+        Latest News
+      </h2>
+
+      <!-- News Grid -->
+      <div
+        id="news-container"
+        class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+      ></div>
+
+      <!-- Read More Button -->
+      <div class="flex justify-center">
+        <a
+          href="./Allnews.html"
+          class="press inline-flex items-center px-8 py-4 bg-sand text-midnight font-semibold rounded-lg transition-colors duration-200 hover:bg-skyline hover:text-white"
+        >
+          <span class="flex items-center" data-i18n="news.viewAll">
+            View All News
+            <svg
+              class="w-3 h-3 ml-2"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              ></path>
+            </svg>
+          </span>
+        </a>
+      </div>
+    </section>
+
     <hr class="border-t border-gray-300" />
     <section id="about" class="relative py-20 px-4 overflow-hidden">
-      <!-- Desert Energy SVG Background -->
-      <div class="absolute inset-0 opacity-12">
-        <!--  -->
-      </div>
-
       <!-- Floating Geometric Elements -->
       <div
         class="absolute top-16 right-16 w-16 h-16 border border-executive-gold opacity-15 rotate-45"
@@ -1020,7 +598,6 @@
 
       <div class="container mx-auto max-w-6xl relative z-10">
         <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-start">
-          <!-- Images Section -->
           <div class="relative order-last lg:order-first">
             <div class="grid grid-cols-2 gap-4">
               <!-- Main large image -->
@@ -1028,8 +605,8 @@
                 <div class="relative p-1 rounded-xl shadow-executive">
                   <div class="bg-white p-3 rounded-lg">
                     <div class="relative overflow-hidden rounded-lg h-48">
-                      <img
-                        src="./assets/geogaz_port.jpg"
+                      <img loading="lazy" decoding="async"
+                        src="./assets/images/home/about-port.webp"
                         alt="Desert renewable energy installation"
                         class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                       />
@@ -1046,8 +623,8 @@
                 <div class="relative p-1 rounded-xl shadow-lg">
                   <div class="bg-white p-2 rounded-lg">
                     <div class="relative overflow-hidden rounded-lg h-32">
-                      <img
-                        src="./assets/360_F_382940101_BjuwXRaKR0tzdsDjk5VTR0c1tjyG24J4.jpg"
+                      <img loading="lazy" decoding="async"
+                        src="./assets/images/home/about-energy.webp"
                         alt="Solar energy technology"
                         class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                       />
@@ -1063,8 +640,8 @@
                 <div class="relative p-1 rounded-xl shadow-lg">
                   <div class="bg-white p-2 rounded-lg">
                     <div class="relative overflow-hidden rounded-lg h-32">
-                      <img
-                        src="./assets/13442741_web1_180810-UWN-UHS-front.jpg;w=960.jpeg"
+                      <img loading="lazy" decoding="async"
+                        src="./assets/images/home/about-fishing.webp"
                         alt="Wind energy in desert landscape"
                         class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
                       />
@@ -1077,8 +654,6 @@
               </div>
             </div>
           </div>
-
-          <!-- Content Section -->
           <div class="space-y-8 order-first lg:order-last">
             <div class="space-y-5">
               <div class="inline-block">
@@ -1096,8 +671,8 @@
 
             <div class="space-y-6">
               <p
-                class="text-xl md:text-xl text-skyline leading-relaxed font-light"
-                data-i18n="about.desc1"
+                class="text-xl md:text-xl text-skyline leading-relaxed"
+                data-i18n="about.description1"
               >
                 NOOR HOLDING est une entreprise basée à Nouakchott et qui compte
                 14 filiales spécialisées dans les hydrocarbures, les mines,
@@ -1106,8 +681,8 @@
                 santé
               </p>
               <p
-                class="text-xl md:text-xl text-skyline leading-relaxed font-light"
-                data-i18n="about.desc2"
+                class="text-xl md:text-xl text-skyline leading-relaxed"
+                data-i18n="about.description2"
               >
                 Noor Holding est un véritable modèle d'entreprise diversifiée en
                 Mauritanie, avec une présence importante sur le marché. Nous
@@ -1129,1434 +704,182 @@
         <div class="text-center mb-5">
           <p
             class="text-lg text-sand font-light max-w-2xl mx-auto"
-            data-i18n="subs.featured"
+            data-i18n="subsidiaries.featuredTitle"
           >
             Featured Operating Companies
           </p>
           <div
             class="flex items-center justify-center w-full space-x-4 flex-nowrap overflow-x-auto"
           >
-            <div
-              class="hidden md: h-0.5 w-32 sm:w-80 bg-gradient-to-r from-sand to-executive-navy rounded-full flex-shrink-0"
-            ></div>
             <h3
-              class="text-3xl sm:text-4xl font-extralight text-executive-navy/80 leading-normal text-center flex-shrink-0"
-              data-i18n="subs.title"
+              class="text-3xl sm:text-4xl font-dm-serif text-executive-navy leading-tight text-center"
+              data-i18n="subsidiaries.sectionTitle"
             >
               Discover Our Subsidiaries
             </h3>
-            <div
-              class="hidden md: h-0.5 w-32 sm:w-80 bg-gradient-to-l from-sand to-executive-navy rounded-full flex-shrink-0"
-            ></div>
           </div>
         </div>
 
         <!-- Carousel Container -->
         <div class="relative w-full">
           <div
-            class="carousel-container overflow-hidden w-full relative ltr-carousel"
+            class="carousel-container overflow-hidden w-full relative ltr-carousel" role="region" aria-roledescription="carousel" aria-label="Subsidiaries"
           >
             <div
-              class="carousel-track flex transition-transform duration-500 ease-in-out"
+              class="carousel-track flex"
               id="carouselTrack"
             >
-              <!-- Subsidiary 1: AFH -->
-              <div class="carousel-slide min-w-full">
-                <div
-                  class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="grid lg:grid-cols-2 gap-0 items-center">
-                    <!-- Content Section -->
-                    <div class="space-y-6">
-                      <!-- Logo -->
-                      <div class="w-50 h-32 flex items-center justify-center">
-                        <img
-                          class="w-full h-full object-contain"
-                          src="./assets/Picture1.jpg"
-                          alt="AFH Logo"
-                          srcset=""
-                        />
-                      </div>
-
-                      <div>
-                        <h4
-                          class="text-2xl font-light text-executive-navy mb-2"
-                          data-i18n="subsidiaries.companies.afh.name"
-                        >
-                          Africaine Des Hydrocarbures S.A
-                        </h4>
-                        <div
-                          class="h-1 w-12 bg-executive-gold rounded-full mb-4"
-                        ></div>
-                      </div>
-
-                      <p
-                        class="text-lg text-gray-700 leading-relaxed"
-                        data-i18n="subsidiaries.companies.afh.description"
-                      >
-                        Africaine des Hydrocarbures (AFH) est une entreprise
-                        spécialisée dans le secteur pétrolier, avec une solide
-                        réputation en matière de conformité et de fiabilité.
-                        L'entreprise détient des autorisations officielles qui
-                        lui permettent d'opérer dans l'ensemble de la chaîne de
-                        valeur des hydrocarbures raffinés, couvrant
-                        l'importation, le stockage et la distribution pour
-                        sécuriser l'approvisionnement énergétique du pays.
-                      </p>
-
-                      <div class="space-y-2">
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.afh.services.0"
-                            >Importation d'hydrocarbures raffinés</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.afh.services.1"
-                            >Stockage et distribution sécurisés</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.afh.services.2"
-                            >Autorisations officielles complètes</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Images Section -->
-                    <div class="grid grid-cols-2 gap-4">
-                      <div class="space-y-4">
-                        <div
-                          class="relative overflow-hidden rounded-lg h-30 group"
-                        >
-                          <img
-                            src="./assets/What-is-the-most-common-mode-of-oil-transportation-Feature.jpg.webp"
-                            alt="Solar farm installation"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <div
-                          class="relative overflow-hidden rounded-lg h-25 group"
-                        >
-                          <img
-                            src="./assets/Foto3.jpg"
-                            alt="Solar panel close-up"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="relative overflow-hidden rounded-lg h-60 group"
-                      >
-                        <img
-                          src="./assets/WhatsApp Image 2025-09-23 at 22.20.16.jpeg"
-                          alt="Desert solar installation"
-                          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Subsidiary 2: SLMP -->
-              <div class="carousel-slide min-w-full">
-                <div
-                  class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <!-- Content Section -->
-                    <div class="space-y-6">
-                      <!-- Logo -->
-                      <div class="w-50 h-32 flex items-center justify-center">
-                        <img
-                          class="w-full h-full object-contain"
-                          src="./assets/image.png"
-                          alt="SLMP SA Logo"
-                          srcset=""
-                        />
-                      </div>
-
-                      <div>
-                        <h4
-                          class="text-2xl font-light text-executive-navy mb-2"
-                          data-i18n="subsidiaries.companies.slmp.name"
-                        >
-                          SLMP S.A
-                        </h4>
-                        <div
-                          class="h-1 w-12 bg-executive-gold rounded-full mb-4"
-                        ></div>
-                      </div>
-
-                      <p
-                        class="text-lg text-gray-700 leading-relaxed"
-                        data-i18n="subsidiaries.companies.slmp.description"
-                      >
-                        La Société de Logistique et de Manutention Portuaire
-                        (SLMP SA) est un acteur polyvalent se distinguant par
-                        son expertise dans les services de logistique et
-                        manutention portuaire. L'entreprise facilite le commerce
-                        international et étend ses activités dans l'énergie avec
-                        l'importation et la distribution des hydrocarbures,
-                        disposant de ses propres stations-service pour couvrir
-                        toute la chaîne de valeur.
-                      </p>
-
-                      <div class="space-y-2">
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.slmp.services.0"
-                            >Services de logistique portuaire</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.slmp.services.1"
-                            >Stations-service intégrées</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.slmp.services.2"
-                            >Distribution d'hydrocarbures</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Images Section -->
-                    <div class="grid grid-cols-2 gap-4">
-                      <div class="space-y-4">
-                        <div
-                          class="relative overflow-hidden rounded-lg h-32 group"
-                        >
-                          <img
-                            src="./assets/istockphoto-1465927132-612x612.jpg"
-                            alt="Wind turbines"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <div
-                          class="relative overflow-hidden rounded-lg h-24 group"
-                        >
-                          <img
-                            src="./assets/big-fuel-tanker-truck-transporting-fuel-highway-against-sunset-sky-concept-transportation-fuel-industry-sunset-highway-commercial-vehicles_918839-299838.jpg"
-                            alt="Offshore wind farm"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="relative overflow-hidden rounded-lg h-60 group"
-                      >
-                        <img
-                          src="./assets/WhatsApp Image 2025-09-23 at 20.38.07.jpeg"
-                          alt="Wind farm landscape"
-                          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Subsidiary 5: ila  -->
-              <div class="carousel-slide min-w-full">
-                <div
-                  class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <!-- Content Section -->
-                    <div class="space-y-6">
-                      <!-- Logo -->
-                      <div class="w-50 h-32 flex items-center justify-center">
-                        <img
-                          class="w-full h-full object-contain"
-                          src="./assets/WhatsApp Image 2025-11-27 at 21.53.54.jpeg"
-                          alt="TBS Logo"
-                          srcset=""
-                        />
-                      </div>
-
-                      <div>
-                        <h4
-                          class="text-2xl font-light text-executive-navy mb-2"
-                          data-i18n="subsidiaries.companies.ila.name"
-                        >
-                          ILA DISTRIBUTION SARL
-                        </h4>
-                        <div
-                          class="h-1 w-12 bg-executive-gold rounded-full mb-4"
-                        ></div>
-                      </div>
-
-                      <p
-                        class="text-lg text-gray-700 leading-relaxed"
-                        data-i18n="subsidiaries.companies.ila.description"
-                      >
-                        ILA DISTRIBUTION SARL est la filiale commerciale
-                        stratégique de Noor Holding, spécialisée dans
-                        l’import-export, la distribution, la représentation
-                        commerciale et la valorisation des produits de la mer.
-                      </p>
-                      <div class="space-y-2">
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.ila.services.0"
-                            >Sourcing international et opérations
-                            d’import‑export</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.ila.services.1"
-                            >Distribution avancée et logistique
-                            territoriale</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.ila.services.2"
-                            >Représentation commerciale et développement de
-                            marques</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Images Section -->
-                    <div class="grid grid-cols-2 gap-4">
-                      <div class="space-y-4">
-                        <div
-                          class="relative overflow-hidden rounded-lg h-32 group"
-                        >
-                          <img
-                            src="./assets/product-jpeg.jpg"
-                            alt="Battery storage facility"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <div
-                          class="relative overflow-hidden rounded-lg h-24 group"
-                        >
-                          <img
-                            src="./assets/istockphoto-140005241-612x612.jpg"
-                            alt="Grid infrastructure"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="relative overflow-hidden rounded-lg h-60 group"
-                      >
-                        <img
-                          src="./assets/ila1.jpg"
-                          alt="Smart grid technology"
-                          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Subsidiary 3: MINES -->
-              <div class="carousel-slide min-w-full">
-                <div
-                  class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <!-- Content Section -->
-                    <div class="space-y-6">
-                      <!-- Logo -->
-                      <div class="w-50 h-32 flex items-center justify-center">
-                        <img
-                          class="w-full h-full object-contain"
-                          src="./assets/image copy.png"
-                          alt="MINES DE MAURITANIE Logo"
-                          srcset=""
-                        />
-                      </div>
-
-                      <div>
-                        <h4
-                          class="text-2xl font-light text-executive-navy mb-2"
-                          data-i18n="subsidiaries.companies.mines.name"
-                        >
-                          MINES DE MAURITANIE
-                        </h4>
-                        <div
-                          class="h-1 w-12 bg-executive-gold rounded-full mb-4"
-                        ></div>
-                      </div>
-
-                      <p
-                        class="text-lg text-gray-700 leading-relaxed"
-                        data-i18n="subsidiaries.companies.mines.description"
-                      >
-                        MINES DE MAURITANIE est un acteur majeur du secteur
-                        minier, avec un focus particulier sur la recherche
-                        aurifère. L'entreprise mène des activités d'exploration
-                        intensive sur une vaste zone de plus de 1 000 km²,
-                        couverte par trois permis de recherche. Grâce à son
-                        expertise géologique et aux technologies de pointe, elle
-                        découvre de nouveaux gisements d'or, contribuant
-                        directement au développement économique du pays.
-                      </p>
-
-                      <div class="space-y-2">
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.mines.services.0"
-                            ><strong>+1 000 km²</strong> de superficie
-                            d'exploration</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.mines.services.1"
-                            ><strong>3 permis</strong> de recherche
-                            aurifère</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.mines.services.2"
-                            >Technologies de pointe en géologie</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Images Section -->
-                    <div class="grid grid-cols-2 gap-4">
-                      <div class="space-y-4">
-                        <div
-                          class="relative overflow-hidden rounded-lg h-32 group"
-                        >
-                          <img
-                            src="./assets/BN-AS601_1210go_P_20131210103048.jpg"
-                            alt="Battery storage facility"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <div
-                          class="relative overflow-hidden rounded-lg h-24 group"
-                        >
-                          <img
-                            src="./assets/large-truck-carrying-sand-platinum-mining-site-africa_181624-60189-2.jpg"
-                            alt="Grid infrastructure"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="relative overflow-hidden rounded-lg h-60 group"
-                      >
-                        <img
-                          src="./assets/gold.-mining.-Bigstock.jpg"
-                          alt="Smart grid technology"
-                          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Subsidiary: ecocharge-->
-              <div class="carousel-slide min-w-full">
-                <div
-                  class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <!-- Content Section -->
-                    <div class="space-y-6">
-                      <!-- Logo -->
-                      <div class="w-50 h-32 flex items-center justify-center">
-                        <img
-                          class="w-full h-full object-contain"
-                          src="./assets/WhatsApp Image 2025-09-25 at 10.23.49.jpeg"
-                          alt="MINES DE MAURITANIE Logo"
-                          srcset=""
-                        />
-                      </div>
-
-                      <div>
-                        <h4
-                          class="text-2xl font-light text-executive-navy mb-2"
-                          data-i18n="subsidiaries.companies.ecocharge.name"
-                        ></h4>
-                        <div
-                          class="h-1 w-12 bg-executive-gold rounded-full mb-4"
-                        ></div>
-                      </div>
-
-                      <p
-                        class="text-lg text-gray-700 leading-relaxed"
-                        data-i18n="subsidiaries.companies.ecocharge.description"
-                      ></p>
-
-                      <div class="space-y-2">
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.ecocharge.services.0"
-                            ><strong>+1 000 km²</strong> de superficie
-                            d'exploration</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.ecocharge.services.1"
-                            ><strong>3 permis</strong> de recherche
-                            aurifère</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.ecocharge.services.2"
-                            >Technologies de pointe en géologie</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Images Section -->
-                    <div class="grid grid-cols-2 gap-4">
-                      <div class="space-y-4">
-                        <div
-                          class="relative overflow-hidden rounded-lg h-32 group"
-                        >
-                          <img
-                            src="./assets/eco 3.jpg"
-                            alt="Battery storage facility"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <div
-                          class="relative overflow-hidden rounded-lg h-24 group"
-                        >
-                          <img
-                            src="./assets/eco 2.jpg"
-                            alt="Grid infrastructure"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="relative overflow-hidden rounded-lg h-60 group"
-                      >
-                        <img
-                          src="./assets/Eco 1.jpg "
-                          alt="Smart grid technology"
-                          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Subsidiary : agro -->
-              <div class="carousel-slide min-w-full">
-                <div
-                  class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <!-- Content Section -->
-                    <div class="space-y-6">
-                      <!-- Logo -->
-                      <div class="w-50 h-32 flex items-center justify-center">
-                        <img
-                          class="w-full h-full object-contain"
-                          src="./assets/WhatsApp Image 2025-09-25 at 10.22.14.jpeg"
-                          alt="MINES DE MAURITANIE Logo"
-                          srcset=""
-                        />
-                      </div>
-
-                      <div>
-                        <h4
-                          class="text-2xl font-light text-executive-navy mb-2"
-                          data-i18n="subsidiaries.companies.agro.name"
-                        >
-                          MINES DE MAURITANIE
-                        </h4>
-                        <div
-                          class="h-1 w-12 bg-executive-gold rounded-full mb-4"
-                        ></div>
-                      </div>
-
-                      <p
-                        class="text-lg text-gray-700 leading-relaxed"
-                        data-i18n="subsidiaries.companies.agro.description"
-                      >
-                        MINES DE MAURITANIE est un acteur majeur du secteur
-                        minier, avec un focus particulier sur la recherche
-                        aurifère. L'entreprise mène des activités d'exploration
-                        intensive sur une vaste zone de plus de 1 000 km²,
-                        couverte par trois permis de recherche. Grâce à son
-                        expertise géologique et aux technologies de pointe, elle
-                        découvre de nouveaux gisements d'or, contribuant
-                        directement au développement économique du pays.
-                      </p>
-
-                      <div class="space-y-2">
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.agro.services.0"
-                            ><strong>+1 000 km²</strong> de superficie
-                            d'exploration</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.agro.services.1"
-                            ><strong>3 permis</strong> de recherche
-                            aurifère</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.agro.services.2"
-                            >Technologies de pointe en géologie</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.agro.services.3"
-                          ></span>
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Images Section -->
-                    <div class="grid grid-cols-2 gap-4">
-                      <div class="space-y-4">
-                        <div
-                          class="relative overflow-hidden rounded-lg h-32 group"
-                        >
-                          <img
-                            src="./assets/casa 3.jpg"
-                            alt="Battery storage facility"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <div
-                          class="relative overflow-hidden rounded-lg h-24 group"
-                        >
-                          <img
-                            src="./assets/casa 2.jpg"
-                            alt="Grid infrastructure"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="relative overflow-hidden rounded-lg h-60 group"
-                      >
-                        <img
-                          src=" ./assets/cactus_pear_germplasm_collection_in_jordan.jpeg"
-                          alt="Smart grid technology"
-                          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Subsidiary 4: ITB -->
-              <div class="carousel-slide min-w-full">
-                <div
-                  class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <!-- Content Section -->
-                    <div class="space-y-6">
-                      <!-- Logo -->
-                      <div class="w-50 h-32 flex items-center justify-center">
-                        <img
-                          class="w-full h-full object-contain"
-                          src="./assets/image copy 2.png"
-                          alt="ITB Logo"
-                          srcset=""
-                        />
-                      </div>
-
-                      <div>
-                        <h4
-                          class="text-2xl font-light text-executive-navy mb-2"
-                          data-i18n="subsidiaries.companies.itb.name"
-                        >
-                          ITB – International Trade Brokerage
-                        </h4>
-                        <div
-                          class="h-1 w-12 bg-executive-gold rounded-full mb-4"
-                        ></div>
-                      </div>
-
-                      <p
-                        class="text-lg text-gray-700 leading-relaxed"
-                        data-i18n="subsidiaries.companies.itb.description"
-                      >
-                        International Trade Brokerage (ITB) est une entreprise
-                        spécialisée dans les échanges commerciaux
-                        internationaux, agissant comme intermédiaire entre
-                        acheteurs et vendeurs. Expert en import-export, ITB
-                        facilite les transactions transfrontalières et assure la
-                        distribution ainsi que la représentation de marques
-                        internationales. L'entreprise aide les entreprises
-                        étrangères à s'implanter sur les marchés locaux grâce à
-                        son expertise en logistique et réglementation, se
-                        positionnant comme un partenaire stratégique pour
-                        l'expansion commerciale internationale.
-                      </p>
-                      <div class="space-y-2">
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.itb.services.0"
-                            >Courtage en échanges internationaux</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.itb.services.1"
-                            >Représentation de marques internationales</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.itb.services.2"
-                            >Expertise logistique et réglementaire</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Images Section -->
-                    <div class="grid grid-cols-2 gap-4">
-                      <div class="space-y-4">
-                        <div
-                          class="relative overflow-hidden rounded-lg h-32 group"
-                        >
-                          <img
-                            src="./assets/custom-brokerage.webp"
-                            alt="Battery storage facility"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <div
-                          class="relative overflow-hidden rounded-lg h-24 group"
-                        >
-                          <img
-                            src="./assets/customs-broker-vs-freight-forwarder-whats-the-difference.jpg"
-                            alt="Grid infrastructure"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="relative overflow-hidden rounded-lg h-60 group"
-                      >
-                        <img
-                          src="./assets/The-Importance-of-Customs-Brokerage-Services-in-International-Trade-1-scaled.jpg"
-                          alt="Smart grid technology"
-                          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Subsidiary 5: TBS Transport -->
-              <div class="carousel-slide min-w-full">
-                <div
-                  class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <!-- Content Section -->
-                    <div class="space-y-6">
-                      <!-- Logo -->
-                      <div class="w-50 h-32 flex items-center justify-center">
-                        <img
-                          class="w-full h-full object-contain"
-                          src="./assets/image copy 3.png"
-                          alt="TBS Logo"
-                          srcset=""
-                        />
-                      </div>
-
-                      <div>
-                        <h4
-                          class="text-2xl font-light text-executive-navy mb-2"
-                          data-i18n="subsidiaries.companies.tbs1.name"
-                        >
-                          TBS – Transport Business and Shipping
-                        </h4>
-                        <div
-                          class="h-1 w-12 bg-executive-gold rounded-full mb-4"
-                        ></div>
-                      </div>
-
-                      <p
-                        class="text-lg text-gray-700 leading-relaxed"
-                        data-i18n="subsidiaries.companies.tbs1.description"
-                      >
-                        Transport Business and Shipping (TBS) est une entreprise
-                        de transport et de logistique offrant des solutions
-                        complètes pour les besoins en transit et services
-                        logistiques internationaux. L'entreprise gère le
-                        déplacement de marchandises par voie terrestre, maritime
-                        et aérienne. En tant que transitaire, TBS s'occupe des
-                        formalités douanières et administratives complexes,
-                        simplifiant l'importation et l'exportation pour ses
-                        clients tout en garantissant des livraisons ponctuelles
-                        et sécurisées.
-                      </p>
-                      <div class="space-y-2">
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.tbs1.services.0"
-                            >Transport terrestre, maritime et aérien</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.tbs1.services.1"
-                            >Services de transit et formalités douanières</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.tbs1.services.2"
-                            >Solutions logistiques personnalisées</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Images Section -->
-                    <div class="grid grid-cols-2 gap-4">
-                      <div class="space-y-4">
-                        <div
-                          class="relative overflow-hidden rounded-lg h-32 group"
-                        >
-                          <img
-                            src="./assets/istockphoto-182231561-612x612.jpg"
-                            alt="Battery storage facility"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <div
-                          class="relative overflow-hidden rounded-lg h-24 group"
-                        >
-                          <img
-                            src="./assets/What-Is-Freight-1024x536.webp"
-                            alt="Grid infrastructure"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="relative overflow-hidden rounded-lg h-60 group"
-                      >
-                        <img
-                          src="./assets/freight_brokerage6.webp"
-                          alt="Smart grid technology"
-                          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Subsidiary 3: Energy Storage Solutions -->
-              <div class="carousel-slide min-w-full">
-                <div
-                  class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <!-- Content Section -->
-                    <div class="space-y-6">
-                      <!-- Logo -->
-                      <div class="w-50 h-32 flex items-center justify-center">
-                        <div class="w-50 h-32 flex items-center justify-center">
-                          <img
-                            class="w-full h-full object-contain"
-                            src="./assets/image copy 4.png"
-                            alt="TBS Logo"
-                            srcset=""
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4
-                          class="text-2xl font-light text-executive-navy mb-2"
-                          data-i18n="subsidiaries.companies.acg.name"
-                        >
-                          ACG – Établissement Arrachad pour le Commerce Général
-                        </h4>
-                        <div
-                          class="h-1 w-12 bg-executive-gold rounded-full mb-4"
-                        ></div>
-                      </div>
-
-                      <p
-                        class="text-lg text-gray-700 leading-relaxed"
-                        data-i18n="subsidiaries.companies.acg.description"
-                      >
-                        L'Établissement Arrachad pour le Commerce Général (ACG)
-                        est une entreprise de négoce multiforme opérant dans une
-                        variété de secteurs à l'échelle nationale et
-                        internationale. ACG se distingue par sa capacité
-                        d'adaptation aux demandes du marché, s'approvisionnant
-                        en produits divers des matières premières aux produits
-                        finis. Son modèle agile lui permet de répondre
-                        rapidement aux opportunités commerciales grâce à son
-                        vaste réseau de fournisseurs et d'acheteurs.
-                      </p>
-                      <div class="space-y-2">
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.acg.services.0"
-                            >Commerce national et international</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.acg.services.1"
-                            >Matières premières et produits finis</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.acg.services.2"
-                            >Solutions de négoce agiles et personnalisées</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.acg.services.3"
-                            >Vaste réseau de fournisseurs et d'acheteurs</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Images Section -->
-                    <div class="grid grid-cols-2 gap-4">
-                      <div class="space-y-4">
-                        <div
-                          class="relative overflow-hidden rounded-lg h-32 group"
-                        >
-                          <img
-                            src="./assets/groupe-skf-1709282315-1510056142.jpg"
-                            alt="Battery storage facility"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <div
-                          class="relative overflow-hidden rounded-lg h-24 group"
-                        >
-                          <img
-                            src="./assets/64a3eb0384a35-attachment.jpg.webp.jpeg"
-                            alt="Grid infrastructure"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="relative overflow-hidden rounded-lg h-60 group"
-                      >
-                        <img
-                          src="./assets/clodi83le5naef0ewokepwk4k-e-commerce-international-shipping-a-starter-s-guide-for-going-global.full_.webp"
-                          alt="Smart grid technology"
-                          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Subsidiary 2: Wind Power Systems -->
-              <div class="carousel-slide min-w-full">
-                <div
-                  class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <!-- Content Section -->
-                    <div class="space-y-6">
-                      <!-- Logo -->
-                      <div class="w-50 h-32 flex items-center justify-center">
-                        <img
-                          class="w-full h-full object-contain"
-                          src="./assets/image copy 5.png"
-                          alt=""
-                          srcset=""
-                        />
-                      </div>
-
-                      <div>
-                        <h4
-                          class="text-2xl font-light text-executive-navy mb-2"
-                          data-i18n="subsidiaries.companies.tbs2.name"
-                        >
-                          TBS – Trade Brokerage and Services
-                        </h4>
-                        <div
-                          class="h-1 w-12 bg-executive-gold rounded-full mb-4"
-                        ></div>
-                      </div>
-
-                      <p
-                        class="text-lg text-gray-700 leading-relaxed"
-                        data-i18n="subsidiaries.companies.tbs2.description"
-                      >
-                        Trade Brokerage and Services (TBS) est un acteur majeur
-                        dans l'intermédiation financière, facilitant les
-                        transactions en actions, obligations et autres
-                        instruments financiers. L'entreprise agit comme
-                        intermédiaire entre investisseurs et marchés financiers,
-                        permettant aux clients de placer leurs capitaux de
-                        manière stratégique. TBS fournit également des services
-                        de conseil financier et se distingue par sa connaissance
-                        approfondie des marchés ainsi que sa capacité à
-                        identifier des opportunités de croissance.
-                      </p>
-
-                      <div class="space-y-2">
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.tbs2.services.0"
-                            >Intermédiation en instruments financiers</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.tbs2.services.1"
-                            >Services de conseil en investissement</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.tbs2.services.2"
-                            >Expertise des marchés financiers</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Images Section -->
-                    <div class="grid grid-cols-2 gap-4">
-                      <div class="space-y-4">
-                        <div
-                          class="relative overflow-hidden rounded-lg h-32 group"
-                        >
-                          <img
-                            src="./assets/90.jpeg"
-                            alt="Wind turbines"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <div
-                          class="relative overflow-hidden rounded-lg h-24 group"
-                        >
-                          <img
-                            src="./assets/1742025163526-855317453-16.webp"
-                            alt="Offshore wind farm"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="relative overflow-hidden rounded-lg h-60 group"
-                      >
-                        <img
-                          src="./assets/Navigating-Legal-Representation-in-Mexico-A-Guide-for-Foreign-Companies.jpg.webp"
-                          alt="Wind farm landscape"
-                          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Subsidiary: Fishing Group -->
-              <div class="carousel-slide min-w-full">
-                <div
-                  class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <!-- Content Section -->
-                    <div class="space-y-6">
-                      <!-- Three Logos -->
-                      <div
-                        class="w-full h-32 flex items-center justify-center space-x-4"
-                      >
-                        <div class="w-24 h-24 flex items-center justify-center">
-                          <img
-                            class="w-full h-full object-contain"
-                            src="./assets/semak.png"
-                            alt="SEMAK Logo"
-                          />
-                        </div>
-                        <div class="w-24 h-24 flex items-center justify-center">
-                          <img
-                            class="w-full h-full object-contain"
-                            src="./assets/valorFish.jpg"
-                            alt="SMMCS Logo"
-                          />
-                        </div>
-                        <div class="w-24 h-24 flex items-center justify-center">
-                          <img
-                            class="w-full h-full object-contain"
-                            src="./assets/Picture1 copy.jpg"
-                            alt="VFF Logo"
-                          />
-                        </div>
-                      </div>
-
-                      <div>
-                        <h4
-                          class="text-2xl font-light text-executive-navy mb-2"
-                          data-i18n="subsidiaries.companies.fishing.name "
-                        >
-                          SEMAK s.a | SMMCS s.a | Valor Fish Frigo
-                        </h4>
-                        <div
-                          class="h-1 w-12 bg-executive-gold rounded-full mb-4"
-                        ></div>
-                      </div>
-
-                      <p
-                        class="text-lg text-gray-700 leading-relaxed"
-                        data-i18n="subsidiaries.companies.fishing.description"
-                      >
-                        SEMAK s.a, SMMCS s.a, et Valor Fish Frigo (VFF) sont des
-                        entreprises du secteur stratégique de la pêche opérant
-                        de manière intégrée pour optimiser la transformation et
-                        conservation des produits de la mer. SEMAK s.a possède
-                        une usine de pointe avec tunnel de congélation, SMMCS
-                        s.a assure la capture via sa flotte de chalutiers, et
-                        VFF se dédie à la conservation. Ensemble, elles forment
-                        une chaîne de valeur complète garantissant fraîcheur et
-                        qualité des produits halieutiques.
-                      </p>
-
-                      <div class="space-y-2">
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.fishing.services.0"
-                            >Chaîne de valeur intégrée
-                            capture-conservation</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.fishing.services.1"
-                            >Technologies de pointe de transformation</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.fishing.services.2"
-                            >Flotte moderne de chalutiers</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Images Section -->
-                    <div class="grid grid-cols-2 gap-4">
-                      <div class="space-y-4">
-                        <div
-                          class="relative overflow-hidden rounded-lg h-32 group"
-                        >
-                          <img
-                            src="./assets/WhatsApp Image 2025-09-25 at 00.27.45.jpeg"
-                            alt="Fishing vessels"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <div
-                          class="relative overflow-hidden rounded-lg h-24 group"
-                        >
-                          <img
-                            src="./assets/117ohoi108og.png"
-                            alt="Fish processing"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="relative overflow-hidden rounded-lg h-60 group"
-                      >
-                        <img
-                          src="./assets/13442741_web1_180810-UWN-UHS-front.jpg;w=960-2.jpeg"
-                          alt="Maritime port"
-                          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <!-- Subsidiary: MEDSERVICES -->
-              <div class="carousel-slide min-w-full">
-                <div
-                  class="bg-white rounded-2xl shadow-lg p-6 sm:p-8 md:p-10 lg:p-10 transition-all duration-500 ease-out transform hover:-translate-y-2 hover:shadow-2xl"
-                >
-                  <div class="grid lg:grid-cols-2 gap-8 items-center">
-                    <!-- Content Section -->
-                    <div class="space-y-5">
-                      <!-- Logo -->
-                      <div class="w-80 h-full flex items-center justify-center">
-                        <img
-                          class="w-full h-full object-contain"
-                          src="./assets/medservices_logo_final.png"
-                          alt="MEDSERVICES Logo"
-                        />
-                      </div>
-
-                      <div>
-                        <h4
-                          class="text-2xl font-light text-executive-navy mb-2"
-                          data-i18n="subsidiaries.companies.medservices.name"
-                        >
-                          MEDSERVICES
-                        </h4>
-                        <div
-                          class="h-1 w-12 bg-executive-gold rounded-full mb-4"
-                        ></div>
-                      </div>
-
-                      <p
-                        class="text-lg text-gray-700 leading-relaxed"
-                        data-i18n="subsidiaries.companies.medservices.description"
-                      >
-                        Fondée en 2022 à Nouakchott, MEDSERVICES est le pôle
-                        d'excellence médicale de Noor Holding, s'imposant comme
-                        un prestataire de premier plan en solutions de santé
-                        intégrées et de bout en bout à travers toute la
-                        Mauritanie. Dirigée par une ingénieure biomédicale
-                        certifiée, l'entreprise déploie une expertise unique
-                        allant de la construction hospitalière clé en main à la
-                        fourniture et la maintenance technique d'équipements de
-                        pointe (diagnostic, chirurgie, laboratoires et unités de
-                        dialyse), en passant par la distribution de gaz médicaux
-                        et l'intégration de technologies de santé numérique de
-                        dernière génération. Fort d'une présence nationale, d'un
-                        support après-vente rigoureux disponible 24h/7j et de
-                        partenariats exclusifs avec des marques internationales
-                        majeures, MEDSERVICES modernise durablement
-                        l'infrastructure sanitaire mauritanienne, alliant
-                        conformité rigoureuse et innovation technologique pour
-                        améliorer concrètement les résultats de santé au
-                        bénéfice des populations.
-                      </p>
-
-                      <div class="space-y-2">
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.medservices.services.0"
-                            >Construction hospitalière clé en main</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.medservices.services.1"
-                            >Équipements de pointe : diagnostic, chirurgie,
-                            laboratoires, dialyse</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.medservices.services.2"
-                            >Distribution de gaz médicaux et santé
-                            numérique</span
-                          >
-                        </div>
-                        <div class="flex items-center text-executive-muted">
-                          <span
-                            class="w-2 h-2 bg-executive-gold rounded-full mr-3"
-                          ></span>
-                          <span
-                            data-i18n="subsidiaries.companies.medservices.services.3"
-                            >Support après-vente 24h/7j et présence
-                            nationale</span
-                          >
-                        </div>
-                      </div>
-                    </div>
-
-                    <!-- Illustration Section -->
-                    <div class="grid grid-cols-2 gap-4">
-                      <div class="space-y-4">
-                        <div
-                          class="relative overflow-hidden rounded-lg h-32 group"
-                        >
-                          <img
-                            src="./assets/images.jpeg"
-                            alt="Fishing vessels"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                        <div
-                          class="relative overflow-hidden rounded-lg h-24 group"
-                        >
-                          <img
-                            src="./assets/advanced-surgical-room-featuring-modern-equipment-and-revolutionary-medical-technology-photo.jpg"
-                            alt="Fish processing"
-                            class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                          />
-                        </div>
-                      </div>
-                      <div
-                        class="relative overflow-hidden rounded-lg h-60 group"
-                      >
-                        <img
-                          src="./assets/gros-plan-main-afro-americaine-tenant-stethoscope_482257-19507.jpg.avif"
-                          alt="Maritime port"
-                          class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-300"
-                        />
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="afh">
+<article class="sub-card sub-card--split" data-accent="sun">
+  <div class="sub-card__text">
+    <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/afh/logo.webp" alt="Africaine Des Hydrocarbures S.A logo" /></div>
+    <h4 class="sub-name" data-i18n="subsidiaries.companies.afh.name">Africaine Des Hydrocarbures S.A</h4>
+    <p class="sub-desc" data-i18n="subsidiaries.companies.afh.description">Africaine des Hydrocarbures (AFH) est une entreprise spécialisée dans le secteur pétrolier, avec une solide réputation en matière de conformité et de fiabilité. L&#x27;entreprise détient des autorisations officielles qui lui permettent d&#x27;opérer dans l&#x27;ensemble de la chaîne de valeur des hydrocarbures raffinés, couvrant l&#x27;importation, le stockage et la distribution pour sécuriser l&#x27;approvisionnement énergétique du pays.</p>
+    <ul class="sub-services"><li data-i18n="subsidiaries.companies.afh.services.0">Importation d&#x27;hydrocarbures raffinés</li><li data-i18n="subsidiaries.companies.afh.services.1">Stockage et distribution sécurisés</li><li data-i18n="subsidiaries.companies.afh.services.2">Autorisations officielles complètes</li></ul>
+  </div>
+  <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/afh/photo-1.webp" alt="Africaine Des Hydrocarbures S.A — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/afh/photo-2.webp" alt="Africaine Des Hydrocarbures S.A — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/afh/photo-3.webp" alt="Africaine Des Hydrocarbures S.A — photo 3" /></div>
+</article>
+</div>
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="slmp">
+<article class="sub-card sub-card--split" data-accent="sun">
+  <div class="sub-card__text">
+    <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/slmp/logo.webp" alt="SLMP S.A logo" /></div>
+    <h4 class="sub-name" data-i18n="subsidiaries.companies.slmp.name">SLMP S.A</h4>
+    <p class="sub-desc" data-i18n="subsidiaries.companies.slmp.description">La Société de Logistique et de Manutention Portuaire (SLMP SA) est un acteur polyvalent se distinguant par son expertise dans les services de logistique et manutention portuaire. L&#x27;entreprise facilite le commerce international et étend ses activités dans l&#x27;énergie avec l&#x27;importation et la distribution des hydrocarbures, disposant de ses propres stations-service pour couvrir toute la chaîne de valeur.</p>
+    <ul class="sub-services"><li data-i18n="subsidiaries.companies.slmp.services.0">Services de logistique portuaire</li><li data-i18n="subsidiaries.companies.slmp.services.1">Stations-service intégrées</li><li data-i18n="subsidiaries.companies.slmp.services.2">Distribution d&#x27;hydrocarbures</li></ul>
+  </div>
+  <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/slmp/photo-1.webp" alt="SLMP S.A — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/slmp/photo-2.webp" alt="SLMP S.A — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/slmp/photo-3.webp" alt="SLMP S.A — photo 3" /></div>
+</article>
+</div>
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="ila">
+<article class="sub-card sub-card--split" data-accent="sea">
+  <div class="sub-card__text">
+    <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/ila/logo.webp" alt="ILA DISTRIBUTION SARL logo" /></div>
+    <h4 class="sub-name" data-i18n="subsidiaries.companies.ila.name">ILA DISTRIBUTION SARL</h4>
+    <p class="sub-desc" data-i18n="subsidiaries.companies.ila.description">ILA DISTRIBUTION SARL est une filiale stratégique de Noor Holding et le moteur commercial du groupe. À la croisée des échanges internationaux et de l’économie mauritanienne, l’entreprise crée de la valeur et renforce les chaînes d’approvisionnement grâce à quatre pôles intégrés : import-export, distribution avancée, représentation commerciale et valorisation des produits de la mer. Forte d’un sourcing mondial maîtrisé, d’une logistique fiable, d’un développement de marques performant et d’un engagement responsable dans le secteur halieutique, ILA DISTRIBUTION contribue au développement durable de l’économie nationale.</p>
+    <ul class="sub-services"><li data-i18n="subsidiaries.companies.ila.services.0">Sourcing stratégique et import-export</li><li data-i18n="subsidiaries.companies.ila.services.1">Distribution et logistique nationale</li><li data-i18n="subsidiaries.companies.ila.services.2">Représentation commerciale et développement de marques</li><li data-i18n="subsidiaries.companies.ila.services.3">Valorisation des produits de la mer et pêche responsable</li></ul>
+  </div>
+  <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ila/photo-1.webp" alt="ILA DISTRIBUTION SARL — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ila/photo-2.webp" alt="ILA DISTRIBUTION SARL — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ila/photo-3.webp" alt="ILA DISTRIBUTION SARL — photo 3" /></div>
+</article>
+</div>
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="mines">
+<article class="sub-card sub-card--split" data-accent="heritage">
+  <div class="sub-card__text">
+    <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/mines/logo.webp" alt="MINES DE MAURITANIE logo" /></div>
+    <h4 class="sub-name" data-i18n="subsidiaries.companies.mines.name">MINES DE MAURITANIE</h4>
+    <p class="sub-desc" data-i18n="subsidiaries.companies.mines.description">MINES DE MAURITANIE est un acteur majeur du secteur minier, avec un focus particulier sur la recherche aurifère. L&#x27;entreprise mène des activités d&#x27;exploration intensive sur une vaste zone de plus de 1 000 km², couverte par trois permis de recherche. Grâce à son expertise géologique et aux technologies de pointe, elle découvre de nouveaux gisements d&#x27;or, contribuant directement au développement économique du pays.</p>
+    <ul class="sub-services"><li data-i18n="subsidiaries.companies.mines.services.0">+1 000 km² de superficie d&#x27;exploration</li><li data-i18n="subsidiaries.companies.mines.services.1">3 permis de recherche aurifère</li><li data-i18n="subsidiaries.companies.mines.services.2">Technologies de pointe en géologie</li></ul>
+  </div>
+  <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/mines/photo-1.webp" alt="MINES DE MAURITANIE — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/mines/photo-2.webp" alt="MINES DE MAURITANIE — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/mines/photo-3.webp" alt="MINES DE MAURITANIE — photo 3" /></div>
+</article>
+</div>
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="ecocharge">
+<article class="sub-card sub-card--split" data-accent="olive">
+  <div class="sub-card__text">
+    <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/ecocharge/logo.webp" alt="EcoCharge Africa logo" /></div>
+    <h4 class="sub-name" data-i18n="subsidiaries.companies.ecocharge.name">EcoCharge Africa</h4>
+    <p class="sub-desc" data-i18n="subsidiaries.companies.ecocharge.description">EcoCharge Africa est une entreprise spécialisée dans les solutions de recharge électrique et les infrastructures énergétiques durables, dédiée à faire progresser la mobilité durable à travers l’Afrique. Ses activités couvrent la fourniture et l’installation de stations de recharge rapide dans des emplacements stratégiques tels que les parkings et les stations-service, l’utilisation de plateformes intelligentes pour surveiller et optimiser la consommation d’énergie, ainsi que la fourniture de services de maintenance et d’assistance technique. L’entreprise réalise également des études de faisabilité, des audits énergétiques et collabore avec les parties prenantes locales pour concevoir des réseaux de recharge modernes. En innovant continuellement à travers des applications mobiles, des systèmes de paiement et l’intégration des énergies renouvelables, EcoCharge Africa crée des stations de recharge autonomes et respectueuses de l’environnement.</p>
+    <ul class="sub-services"><li data-i18n="subsidiaries.companies.ecocharge.services.0">Stations de recharge rapide</li><li data-i18n="subsidiaries.companies.ecocharge.services.1">Gestion intelligente de l’énergie</li><li data-i18n="subsidiaries.companies.ecocharge.services.2">Maintenance et assistance</li><li data-i18n="subsidiaries.companies.ecocharge.services.3">Conseil et audits énergétiques</li><li data-i18n="subsidiaries.companies.ecocharge.services.4">Innovation et énergies renouvelables</li></ul>
+  </div>
+  <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ecocharge/photo-1.webp" alt="EcoCharge Africa — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ecocharge/photo-2.webp" alt="EcoCharge Africa — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ecocharge/photo-3.webp" alt="EcoCharge Africa — photo 3" /></div>
+</article>
+</div>
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="agro">
+<article class="sub-card sub-card--split" data-accent="olive">
+  <div class="sub-card__text">
+    <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/agro/logo.webp" alt="Compagnie Agricole du Sahel (CASA) logo" /></div>
+    <h4 class="sub-name" data-i18n="subsidiaries.companies.agro.name">Compagnie Agricole du Sahel (CASA)</h4>
+    <p class="sub-desc" data-i18n="subsidiaries.companies.agro.description">La Compagnie Agricole du Sahel (CASA) est une jeune entreprise mauritanienne innovante, dédiée au développement d’un secteur agricole moderne, durable et compétitif en valorisant les ressources locales. Ses principales activités incluent l’aménagement des terres et la culture de produits adaptés à la région du Sahel, la transformation agro-industrielle destinée aux marchés locaux et internationaux, la mise en œuvre de pratiques respectueuses de l’environnement comme l’irrigation efficiente et la valorisation des sous-produits, ainsi que la création d’emplois pour les jeunes et les femmes en partenariat avec les communautés rurales pour dynamiser l’économie locale.</p>
+    <ul class="sub-services"><li data-i18n="subsidiaries.companies.agro.services.0">Production agricole</li><li data-i18n="subsidiaries.companies.agro.services.1">Agro-industrie &amp; transformation</li><li data-i18n="subsidiaries.companies.agro.services.2">Durabilité &amp; pratiques éco</li><li data-i18n="subsidiaries.companies.agro.services.3">Développement local &amp; emplois</li></ul>
+  </div>
+  <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/agro/photo-1.webp" alt="Compagnie Agricole du Sahel (CASA) — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/agro/photo-2.webp" alt="Compagnie Agricole du Sahel (CASA) — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/agro/photo-3.webp" alt="Compagnie Agricole du Sahel (CASA) — photo 3" /></div>
+</article>
+</div>
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="itb">
+<article class="sub-card sub-card--split" data-accent="midnight">
+  <div class="sub-card__text">
+    <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/itb/logo.webp" alt="ITB – International Trade Brokerage logo" /></div>
+    <h4 class="sub-name" data-i18n="subsidiaries.companies.itb.name">ITB – International Trade Brokerage</h4>
+    <p class="sub-desc" data-i18n="subsidiaries.companies.itb.description">International Trade Brokerage (ITB) est une entreprise spécialisée dans les échanges commerciaux internationaux, agissant comme intermédiaire entre acheteurs et vendeurs. Expert en import-export, ITB facilite les transactions transfrontalières et assure la distribution ainsi que la représentation de marques internationales. L&#x27;entreprise aide les entreprises étrangères à s&#x27;implanter sur les marchés locaux grâce à son expertise en logistique et réglementation, se positionnant comme un partenaire stratégique pour l&#x27;expansion commerciale internationale.</p>
+    <ul class="sub-services"><li data-i18n="subsidiaries.companies.itb.services.0">Courtage en échanges internationaux</li><li data-i18n="subsidiaries.companies.itb.services.1">Représentation de marques internationales</li><li data-i18n="subsidiaries.companies.itb.services.2">Expertise logistique et réglementaire</li></ul>
+  </div>
+  <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/itb/photo-1.webp" alt="ITB – International Trade Brokerage — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/itb/photo-2.webp" alt="ITB – International Trade Brokerage — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/itb/photo-3.webp" alt="ITB – International Trade Brokerage — photo 3" /></div>
+</article>
+</div>
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="tbs1">
+<article class="sub-card sub-card--split" data-accent="midnight">
+  <div class="sub-card__text">
+    <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/tbs-transport/logo.webp" alt="TBS – Transport Business and Shipping logo" /></div>
+    <h4 class="sub-name" data-i18n="subsidiaries.companies.tbs1.name">TBS – Transport Business and Shipping</h4>
+    <p class="sub-desc" data-i18n="subsidiaries.companies.tbs1.description">Transport Business and Shipping (TBS) est une entreprise de transport et de logistique offrant des solutions complètes pour les besoins en transit et services logistiques internationaux. L&#x27;entreprise gère le déplacement de marchandises par voie terrestre, maritime et aérienne. En tant que transitaire, TBS s&#x27;occupe des formalités douanières et administratives complexes, simplifiant l&#x27;importation et l&#x27;exportation pour ses clients tout en garantissant des livraisons ponctuelles et sécurisées.</p>
+    <ul class="sub-services"><li data-i18n="subsidiaries.companies.tbs1.services.0">Transport terrestre, maritime et aérien</li><li data-i18n="subsidiaries.companies.tbs1.services.1">Services de transit et formalités douanières</li><li data-i18n="subsidiaries.companies.tbs1.services.2">Solutions logistiques personnalisées</li></ul>
+  </div>
+  <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-transport/photo-1.webp" alt="TBS – Transport Business and Shipping — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-transport/photo-2.webp" alt="TBS – Transport Business and Shipping — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-transport/photo-3.webp" alt="TBS – Transport Business and Shipping — photo 3" /></div>
+</article>
+</div>
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="acg">
+<article class="sub-card sub-card--split" data-accent="midnight">
+  <div class="sub-card__text">
+    <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/acg/logo.webp" alt="ACG – Établissement Arrachad pour le Commerce Général logo" /></div>
+    <h4 class="sub-name" data-i18n="subsidiaries.companies.acg.name">ACG – Établissement Arrachad pour le Commerce Général</h4>
+    <p class="sub-desc" data-i18n="subsidiaries.companies.acg.description">L&#x27;Établissement Arrachad pour le Commerce Général (ACG) est une entreprise de négoce multiforme opérant dans une variété de secteurs à l&#x27;échelle nationale et internationale. ACG se distingue par sa capacité d&#x27;adaptation aux demandes du marché, s&#x27;approvisionnant en produits divers des matières premières aux produits finis. Son modèle agile lui permet de répondre rapidement aux opportunités commerciales grâce à son vaste réseau de fournisseurs et d&#x27;acheteurs.</p>
+    <ul class="sub-services"><li data-i18n="subsidiaries.companies.acg.services.0">Commerce national et international</li><li data-i18n="subsidiaries.companies.acg.services.1">Matières premières et produits finis</li><li data-i18n="subsidiaries.companies.acg.services.2">Solutions de négoce agiles et personnalisées</li><li data-i18n="subsidiaries.companies.acg.services.3">Vaste réseau de fournisseurs et d&#x27;acheteurs</li></ul>
+  </div>
+  <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/acg/photo-1.webp" alt="ACG – Établissement Arrachad pour le Commerce Général — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/acg/photo-2.webp" alt="ACG – Établissement Arrachad pour le Commerce Général — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/acg/photo-3.webp" alt="ACG – Établissement Arrachad pour le Commerce Général — photo 3" /></div>
+</article>
+</div>
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="tbs2">
+<article class="sub-card sub-card--split" data-accent="midnight">
+  <div class="sub-card__text">
+    <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/tbs-brokerage/logo.webp" alt="TBS – Trade Brokerage and Services logo" /></div>
+    <h4 class="sub-name" data-i18n="subsidiaries.companies.tbs2.name">TBS – Trade Brokerage and Services</h4>
+    <p class="sub-desc" data-i18n="subsidiaries.companies.tbs2.description">Trade Brokerage and Services (TBS) est un acteur majeur de l’intermédiation financière, reliant les investisseurs aux marchés locaux et internationaux. L’entreprise facilite les transactions en actions, obligations et autres instruments financiers, et fournit des conseils pour aider les clients à prendre des décisions d’investissement éclairées. TBS se distingue par son expertise des marchés et sa capacité à identifier des opportunités de croissance, contribuant à l’efficacité et à la vitalité des marchés financiers.</p>
+    <ul class="sub-services"><li data-i18n="subsidiaries.companies.tbs2.services.0">Intermédiation en instruments financiers</li><li data-i18n="subsidiaries.companies.tbs2.services.1">Services de conseil en investissement</li><li data-i18n="subsidiaries.companies.tbs2.services.2">Expertise des marchés financiers</li></ul>
+  </div>
+  <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-brokerage/photo-1.webp" alt="TBS – Trade Brokerage and Services — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-brokerage/photo-2.webp" alt="TBS – Trade Brokerage and Services — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-brokerage/photo-3.webp" alt="TBS – Trade Brokerage and Services — photo 3" /></div>
+</article>
+</div>
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="fishing">
+<article class="sub-card sub-card--split" data-accent="sea">
+  <div class="sub-card__text">
+    <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fishing/logo-semak.webp" alt="SEMAK s.a logo" /><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fishing/logo-valor-fish.webp" alt="SMMCS s.a logo" /><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fishing/logo-smmcs.webp" alt="Valor Fish Frigo logo" /></div>
+    <h4 class="sub-name" data-i18n="subsidiaries.companies.fishing.name">SEMAK s.a | SMMCS s.a | Valor Fish Frigo</h4>
+    <p class="sub-desc" data-i18n="subsidiaries.companies.fishing.description">SEMAK s.a, SMMCS s.a, et Valor Fish Frigo sont des entreprises du secteur stratégique de la pêche opérant de manière intégrée pour optimiser la transformation et conservation des produits de la mer. SEMAK s.a possède une usine de pointe avec tunnel de congélation, SMMCS s.a assure la capture via sa flotte de chalutiers, et VFF se dédie à la conservation. Ensemble, elles forment une chaîne de valeur complète garantissant fraîcheur et qualité des produits halieutiques.</p>
+    <ul class="sub-services"><li data-i18n="subsidiaries.companies.fishing.services.0">Chaîne de valeur intégrée capture-conservation</li><li data-i18n="subsidiaries.companies.fishing.services.1">Technologies de pointe de transformation</li><li data-i18n="subsidiaries.companies.fishing.services.2">Flotte moderne de chalutiers</li></ul>
+  </div>
+  <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/fishing/photo-1.webp" alt="SEMAK s.a — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/fishing/photo-2.webp" alt="SEMAK s.a — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/fishing/photo-3.webp" alt="SEMAK s.a — photo 3" /></div>
+</article>
+</div>
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="medservices">
+<article class="sub-card sub-card--split" data-accent="gulf">
+  <div class="sub-card__text">
+    <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/medservices/logo.webp" alt="MEDSERVICES logo" /></div>
+    <h4 class="sub-name" data-i18n="subsidiaries.companies.medservices.name">MEDSERVICES</h4>
+    <p class="sub-desc" data-i18n="subsidiaries.companies.medservices.description">Fondée en 2022 à Nouakchott, MEDSERVICES est le pôle d&#x27;excellence médicale de Noor Holding, s&#x27;imposant comme un prestataire de premier plan en solutions de santé intégrées et de bout en bout à travers toute la Mauritanie. Dirigée par une ingénieure biomédicale certifiée, l&#x27;entreprise déploie une expertise unique allant de la construction hospitalière clé en main à la fourniture et la maintenance technique d&#x27;équipements de pointe (diagnostic, chirurgie, laboratoires et unités de dialyse), en passant par la distribution de gaz médicaux et l&#x27;intégration de technologies de santé numérique de dernière génération. Fort d&#x27;une présence nationale, d&#x27;un support après-vente rigoureux disponible 24h/7j et de partenariats exclusifs avec des marques internationales majeures, MEDSERVICES modernise durablement l&#x27;infrastructure sanitaire mauritanienne, alliant conformité rigoureuse et innovation technologique pour améliorer concrètement les résultats de santé au bénéfice des populations.</p>
+    <ul class="sub-services"><li data-i18n="subsidiaries.companies.medservices.services.0">Construction hospitalière clé en main</li><li data-i18n="subsidiaries.companies.medservices.services.1">Équipements de pointe : diagnostic, chirurgie, laboratoires, dialyse</li><li data-i18n="subsidiaries.companies.medservices.services.2">Distribution de gaz médicaux et santé numérique</li><li data-i18n="subsidiaries.companies.medservices.services.3">Support après-vente 24h/7j et présence nationale</li></ul>
+  </div>
+  <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/medservices/photo-1.webp" alt="MEDSERVICES — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/medservices/photo-2.webp" alt="MEDSERVICES — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/medservices/photo-3.webp" alt="MEDSERVICES — photo 3" /></div>
+</article>
+</div>
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="fairsoft">
+<article class="sub-card sub-card--split" data-accent="emerald">
+  <div class="sub-card__text">
+    <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fairsoft/logo.webp" alt="Fair-Soft logo" /></div>
+    <h4 class="sub-name" data-i18n="subsidiaries.companies.fairsoft.name">Fair-Soft</h4>
+    <p class="sub-desc" data-i18n="subsidiaries.companies.fairsoft.description">Présente en Mauritanie depuis 10 ans, Fair-Soft accompagne les PME, ETI, grands groupes, industriels, institutions publiques et organisations internationales dans leur transformation numérique. L&#x27;entreprise conçoit des architectures sécurisées et souveraines, modernise les services publics et répond aux marchés publics, avec un interlocuteur unique de bout en bout, un transfert de compétences et un support technique réactif.</p>
+    <ul class="sub-services"><li data-i18n="subsidiaries.companies.fairsoft.services.0">Développement sur mesure : applications web, mobiles et logiciels métiers</li><li data-i18n="subsidiaries.companies.fairsoft.services.1">Conseil informatique, intégration et conseil en ERP</li><li data-i18n="subsidiaries.companies.fairsoft.services.2">Intelligence artificielle et cybersécurité</li><li data-i18n="subsidiaries.companies.fairsoft.services.3">Modernisation des services publics et dématérialisation</li></ul>
+  </div>
+  <div class="sub-showcase"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fairsoft/logo.webp" alt="" /></div>
+</article>
+</div>
+          </div>
           </div>
 
           <!-- Navigation Arrows -->
           <button
-            class="flex absolute left-[-1rem] top-1/2 transform -translate-y-1/2 bg-white hover:bg-executive-navy text-executive-navy hover:text-white w-10 h-10 rounded-full shadow-lg items-center justify-center transition-all duration-300 z-10"
-            onclick="previousSubsidiarySlide()"
-            id="prevBtn"
+            class="flex absolute left-[-1rem] top-1/2 transform -translate-y-1/2 bg-white hover:bg-executive-navy text-executive-navy hover:text-white w-10 h-10 rounded-full shadow-lg items-center justify-center transition-all duration-300 z-10 press"
+            aria-label="Previous"
+            id="prevBtn" type="button"
           >
             <svg
               class="w-6 h-6"
@@ -2574,9 +897,9 @@
           </button>
 
           <button
-            class="flex absolute right-[-1rem] top-1/2 transform -translate-y-1/2 bg-white hover:bg-executive-navy text-executive-navy hover:text-white w-10 h-10 rounded-full shadow-lg items-center justify-center transition-all duration-300 z-10"
-            onclick="nextSubsidiarySlide()"
-            id="nextBtn"
+            class="flex absolute right-[-1rem] top-1/2 transform -translate-y-1/2 bg-white hover:bg-executive-navy text-executive-navy hover:text-white w-10 h-10 rounded-full shadow-lg items-center justify-center transition-all duration-300 z-10 press"
+            aria-label="Next"
+            id="nextBtn" type="button"
           >
             <svg
               class="w-6 h-6"
@@ -2594,110 +917,11 @@
           </button>
         </div>
 
-        <!-- Carousel Indicators -->
-        <div class="flex justify-center mt-8 space-x-3">
-          <button
-            class="w-3 h-3 rounded-full bg-executive-gold transition-all duration-300"
-            onclick="goToSubsidiarySlide(0)"
-            id="indicator-0"
-          ></button>
-          <button
-            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-executive-gold transition-all duration-300"
-            onclick="goToSubsidiarySlide(1)"
-            id="indicator-1"
-          ></button>
-          <button
-            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-executive-gold transition-all duration-300"
-            onclick="goToSubsidiarySlide(2)"
-            id="indicator-2"
-          ></button>
-          <button
-            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-executive-gold transition-all duration-300"
-            onclick="goToSubsidiarySlide(3)"
-            id="indicator-3"
-          ></button>
-          <button
-            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-executive-gold transition-all duration-300"
-            onclick="goToSubsidiarySlide(4)"
-            id="indicator-4"
-          ></button>
-          <button
-            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-executive-gold transition-all duration-300"
-            onclick="goToSubsidiarySlide(5)"
-            id="indicator-5"
-          ></button>
-          <button
-            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-executive-gold transition-all duration-300"
-            onclick="goToSubsidiarySlide(6)"
-            id="indicator-6"
-          ></button>
-          <button
-            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-executive-gold transition-all duration-300"
-            onclick="goToSubsidiarySlide(7)"
-            id="indicator-7"
-          ></button>
-          <button
-            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-executive-gold transition-all duration-300"
-            onclick="goToSubsidiarySlide(8)"
-            id="indicator-8"
-          ></button>
-          <button
-            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-executive-gold transition-all duration-300"
-            onclick="goToSubsidiarySlide(9)"
-            id="indicator-9"
-          ></button>
-          <button
-            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-executive-gold transition-all duration-300"
-            onclick="goToSubsidiarySlide(10)"
-            id="indicator-10"
-          ></button>
-          <button
-            class="w-3 h-3 rounded-full bg-gray-300 hover:bg-executive-gold transition-all duration-300"
-            onclick="goToSubsidiarySlide(11)"
-            id="indicator-11"
-          ></button>
+        <!-- Carousel indicators (one dot per slide, generated by home.js) -->
+        <div class="flex items-center justify-center gap-5 mt-8">
+          <div id="carouselDots" class="flex items-center gap-2"></div>
+          <span id="carouselCount" class="tabular text-sm text-executive-muted" aria-live="polite"></span>
         </div>
-      </div>
-    </section>
-    <hr class="my-8 border-t border-gray-300" />
-    <section id="news" class="py-16 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-      <!-- Title -->
-      <h2
-        class="text-4xl lg:text-5xl font-dm-serif text-sand mb-10 text-center"
-        data-i18n="news.title"
-      >
-        Latest News
-      </h2>
-
-      <!-- News Grid -->
-      <div
-        id="news-container"
-        class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
-      ></div>
-
-      <!-- Read More Button -->
-      <div class="flex justify-center">
-        <a
-          href="./Allnews.html"
-          class="inline-flex items-center px-8 py-4 bg-sand text-midnight font-semibold rounded-lg transition-all duration-300 hover:bg-skyline hover:text-white hover:shadow-lg"
-        >
-          <span class="flex items-center" data-i18n="news.viewall">
-            View All News
-            <svg
-              class="w-3 h-3 ml-2"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                stroke-width="2"
-                d="M13 7l5 5m0 0l-5 5m5-5H6"
-              ></path>
-            </svg>
-          </span>
-        </a>
       </div>
     </section>
     <hr class="my-8 border-t border-gray-300" />
@@ -2849,23 +1073,13 @@
             </div>
             <div class="ml-8">
               <a
-                href="mailto:info@dasholding.ae"
+                href="mailto:info@noorholding.mr"
                 class="text-gulf hover:text-midnight transition-colors font-medium"
               >
                 info@noorholding.mr
               </a>
             </div>
           </div>
-
-          <!-- MEDSERVICES Contact -->
-          <!-- <div class="pt-6 mt-6 ">
-                    <div class="flex items-center space-x-3 mb-5">
-                       <div class="h-px flex-1 bg-gray-200"></div>
-                        <h3 class="text-sm font-semibold uppercase tracking-wider text-executive-navy" data-i18n="contact.medservices.sectionTitle">MEDSERVICES</h3>
-                        <div class="h-px flex-1 bg-gray-200"></div>
-                    </div>
-
-                </div> -->
         </div>
 
         <!-- Map Section -->
@@ -2917,7 +1131,7 @@
               </div>
               <a
                 href="https://maps.app.goo.gl/7Zn6712bJKpUnNVs5"
-                target="_blank"
+                target="_blank" rel="noopener"
                 class="text-xs text-blue-600 hover:text-blue-800"
               >
                 Get Directions
@@ -3032,42 +1246,11 @@
             <div class="ml-8">
               <p
                 class="text-gray-400 italic leading-relaxed"
-                data-i18n="contact.medservices.location.address"
+                data-i18n="contact.medservices.email"
               >
                 Address coming soon
               </p>
             </div>
-          </div>
-        </div>
-
-        <!-- Map Container -->
-        <div
-          class="relative h-50 lg:h-[300px] rounded-lg overflow-hidden shadow-lg"
-        >
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1071.1846075442526!2d-16.005590914481164!3d18.104911160833932!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDA2JzE3LjkiTiAxNsKwMDAnMjAuMSJX!5e0!3m2!1sfr!2s!4v1756844148698!5m2!1sfr!2s"
-            width="100%"
-            height="100%"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-            class="w-full h-full"
-          >
-          </iframe>
-
-          <!-- Custom Overlay for "View larger map" link -->
-          <div
-            class="absolute top-4 left-4 bg-white px-3 py-2 rounded-md shadow-md"
-          >
-            <div class="text-sm font-semibold text-midnight">Noor Holding</div>
-            <a
-              href="https://maps.app.goo.gl/7Zn6712bJKpUnNVs5"
-              target="_blank"
-              class="text-xs text-blue-600 hover:text-blue-800"
-            >
-              Get Directions
-            </a>
           </div>
         </div>
       </div>
@@ -3081,23 +1264,24 @@
         <div class="text-center mb-12">
           <h2
             class="text-4xl lg:text-5xl font-dm-serif text-sand mb-4"
-            data-i18n="contact.touch.title"
+            data-i18n="contact.getInTouch"
           >
             Get In Touch
           </h2>
-          <p class="text-gray-600 text-lg" data-i18n="contact.touch.subtitle">
+          <p class="text-gray-600 text-lg" data-i18n="contact.getInTouchSubtitle">
             Send us a message and we'll get back to you as soon as possible.
           </p>
         </div>
 
-        <form name="contact" class="space-y-6" netlify>
+        <form name="contact" method="POST" data-netlify="true" class="space-y-6">
+          <input type="hidden" name="form-name" value="contact" />
           <div class="grid md:grid-cols-2 gap-6">
             <!-- Name Field -->
             <div>
               <label
                 for="name"
                 class="block text-sm font-medium text-skyline mb-2"
-                data-i18n="form.name"
+                data-i18n="contact.form.name"
               >
                 Full Name *
               </label>
@@ -3108,7 +1292,7 @@
                 required
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                 placeholder="Enter your full name"
-                data-i18n-placeholder="form.name"
+                data-i18n-placeholder="contact.form.placeholders.name"
               />
             </div>
 
@@ -3117,7 +1301,7 @@
               <label
                 for="email"
                 class="block text-sm font-medium text-skyline mb-2"
-                data-i18n="form.email"
+                data-i18n="contact.form.email"
               >
                 Email Address *
               </label>
@@ -3128,7 +1312,7 @@
                 required
                 class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                 placeholder="Enter your email address"
-                data-i18n-placeholder="form.email"
+                data-i18n-placeholder="contact.form.placeholders.email"
               />
             </div>
           </div>
@@ -3138,7 +1322,7 @@
             <label
               for="phone"
               class="block text-sm font-medium text-skyline mb-2"
-              data-i18n="form.phone"
+              data-i18n="contact.form.phone"
             >
               Phone Number
             </label>
@@ -3148,7 +1332,7 @@
               name="phone"
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
               placeholder="Enter your phone number"
-              data-i18n-placeholder="form.phone"
+              data-i18n-placeholder="contact.form.placeholders.phone"
             />
           </div>
 
@@ -3157,7 +1341,7 @@
             <label
               for="subject"
               class="block text-sm font-medium text-skyline mb-2"
-              data-i18n="form.subject"
+              data-i18n="contact.form.subject"
             >
               Subject *
             </label>
@@ -3168,7 +1352,7 @@
               required
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
               placeholder="Brief description of your inquiry"
-              data-i18n-placeholder="form.subject"
+              data-i18n-placeholder="contact.form.placeholders.subject"
             />
           </div>
 
@@ -3177,7 +1361,7 @@
             <label
               for="message"
               class="block text-sm font-medium text-skyline mb-2"
-              data-i18n="form.message"
+              data-i18n="contact.form.message"
             >
               Message *
             </label>
@@ -3188,7 +1372,7 @@
               rows="6"
               class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-vertical"
               placeholder="Tell us more about your inquiry..."
-              data-i18n-placeholder="form.message"
+              data-i18n-placeholder="contact.form.placeholders.message"
             ></textarea>
           </div>
 
@@ -3196,8 +1380,8 @@
           <div class="text-center">
             <button
               type="submit"
-              class="bg-sand hover:bg-sand/30 text-executive-navy px-8 py-3 rounded-lg font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
-              data-i18n="form.submit"
+              class="press bg-sand hover:bg-skyline hover:text-white text-executive-navy px-8 py-3 rounded-lg font-medium transition-colors duration-200 shadow-lg"
+              data-i18n="contact.form.submit"
             >
               Send Message
             </button>
@@ -3212,16 +1396,16 @@
         <div class="grid md:grid-cols-3 gap-8 mb-8">
           <!-- Company Info -->
           <div>
-            <img
+            <img loading="lazy" decoding="async"
               class="w-22 h-25 text-amber-50"
-              src="./assets/noor_holding_vector_whiteText.svg"
-              alt=""
+              src="./assets/images/brand/logo-white.svg"
+              alt="Noor Holding"
             />
 
             <div class="flex space-x-5 mt-4 md:mt-4">
               <a
                 href="https://www.linkedin.com/company/noor-holding"
-                target="_blank"
+                target="_blank" rel="noopener"
                 class="text-gray-400 hover:text-white transition-colors"
               >
                 <!-- LinkedIn Icon -->
@@ -3237,7 +1421,9 @@
                 </svg>
               </a>
               <a
-                target="_blank"
+                href="https://www.facebook.com/noorholding"
+                target="_blank" rel="noopener"
+                aria-label="Facebook"
                 class="text-gray-400 hover:text-white transition-colors"
               >
                 <!-- Facebook Icon -->
@@ -3259,7 +1445,7 @@
           <div>
             <h4
               class="font-medium text-sand text-lg mb-4"
-              data-i18n="footer.links"
+              data-i18n="footer.quickLinks"
             >
               Quick Links
             </h4>
@@ -3276,7 +1462,7 @@
                 <a
                   href="./Allnews.html"
                   class="hover:text-white transition-colors"
-                  data-i18n="nav.news"
+                  data-i18n="navigation.news"
                   >News</a
                 >
               </li>
@@ -3292,7 +1478,7 @@
                 <a
                   href="./index.html#contact"
                   class="hover:text-white transition-colors"
-                  data-i18n="nav.contact"
+                  data-i18n="navigation.contact"
                   >Contact</a
                 >
               </li>
@@ -3347,10 +1533,10 @@
 
                 <p>
                   <a
-                    href="mailto:info@nourholding.mr"
+                    href="mailto:info@noorholding.mr"
                     class="hover:text-white transition-colors"
                   >
-                    info@noorholding.com
+                    info@noorholding.mr
                   </a>
                 </p>
               </div>
@@ -3406,191 +1592,5 @@
         </div>
       </div>
     </footer>
-    <script>
-      let currentSlide = 0;
-      const totalSlides = 12;
-      const track = document.getElementById("carouselTrack");
-
-      function updateCarousel() {
-        track.style.transform = `translateX(-${currentSlide * 100}%)`;
-
-        // Update indicators
-        for (let i = 0; i < totalSlides; i++) {
-          const indicator = document.getElementById(`indicator-${i}`);
-          if (i === currentSlide) {
-            indicator.classList.remove("bg-gray-300");
-            indicator.classList.add("bg-executive-gold");
-          } else {
-            indicator.classList.remove("bg-executive-gold");
-            indicator.classList.add("bg-gray-300");
-          }
-        }
-      }
-
-      function nextSubsidiarySlide() {
-        currentSlide = (currentSlide + 1) % totalSlides;
-        updateCarousel();
-      }
-
-      function previousSubsidiarySlide() {
-        currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
-        updateCarousel();
-      }
-
-      function goToSubsidiarySlide(index) {
-        currentSlide = index;
-        updateCarousel();
-      }
-
-      // // Auto-play carousel (optional)
-      // setInterval(nextSubsidiarySlide, 7000);
-
-      // Touch/swipe support for mobile
-      let startX = null;
-      const carousel = document.querySelector(".carousel-container");
-
-      carousel.addEventListener("touchstart", (e) => {
-        startX = e.touches[0].clientX;
-      });
-
-      carousel.addEventListener("touchend", (e) => {
-        if (!startX) return;
-
-        const endX = e.changedTouches[0].clientX;
-        const diffX = startX - endX;
-
-        if (Math.abs(diffX) > 50) {
-          if (diffX > 0) {
-            nextSubsidiarySlide();
-          } else {
-            previousSubsidiarySlide();
-          }
-        }
-
-        startX = null;
-      });
-    </script>
-
-    <script>
-      const slides = document.querySelectorAll(".hero-slide");
-      const indicators = document.querySelectorAll(".indicators button");
-      let current = 0;
-
-      function showSlide(index) {
-        // Remove active class from all slides and indicators
-        slides.forEach((slide) => slide.classList.remove("active"));
-        indicators.forEach((indicator) => indicator.classList.remove("active"));
-
-        // Add active class to current slide and indicator
-        slides[index].classList.add("active");
-        indicators[index].classList.add("active");
-
-        current = index;
-      }
-
-      function nextHeroSlide() {
-        let next = (current + 1) % slides.length;
-        showSlide(next);
-      }
-
-      // Add click event to indicators
-      indicators.forEach((btn, i) => {
-        btn.addEventListener("click", () => showSlide(i));
-      });
-
-      // Auto-advance slides every 5 seconds
-      setInterval(nextHeroSlide, 5000);
-    </script>
-    <script>
-      window.addEventListener("load", () => {
-        const preloader = document.getElementById("preloader");
-        const spider = document.getElementById("spider-web");
-        const spiderMobile = document.getElementById("spider-web-mobile");
-        const texts = document.querySelectorAll("h1.fade-item, p.fade-item");
-        const stats = document.querySelectorAll(".grid.fade-item");
-        const buttons = document.querySelectorAll("button.fade-item");
-
-        // Collect all image URLs on the page
-        const imagesToPreload = Array.from(document.images)
-          .filter((img) => {
-            const rect = img.getBoundingClientRect();
-            return rect.top < window.innerHeight && rect.bottom > 0;
-          })
-          .map((img) => img.src);
-
-        let loadedCount = 0;
-        let animationsStarted = false;
-
-        function startAnimationsOnce() {
-          if (animationsStarted) return;
-          animationsStarted = true;
-
-          if (preloader) {
-            // Smooth fade-out of preloader
-            preloader.style.transition = "opacity 0.8s ease";
-            preloader.style.opacity = "0";
-            setTimeout(() => {
-              preloader.style.display = "none";
-            }, 800); // match the transition duration
-          }
-
-          // Step 1: Spider web image
-          if (spider) spider.classList.add("visible");
-          if (spiderMobile) spiderMobile.classList.add("visible");
-
-          // Step 2: Texts (faster)
-          setTimeout(() => {
-            texts.forEach((el, i) => {
-              setTimeout(() => el.classList.add("visible"), i * 150);
-            });
-          }, 500);
-
-          // Step 3: Stats
-          setTimeout(
-            () => {
-              stats.forEach((el, i) => {
-                setTimeout(() => el.classList.add("visible"), i * 200);
-              });
-            },
-            500 + texts.length * 150,
-          );
-
-          // Step 4: Buttons
-          setTimeout(
-            () => {
-              buttons.forEach((el, i) => {
-                setTimeout(() => el.classList.add("visible"), i * 200);
-              });
-            },
-            500 + texts.length * 150 + stats.length * 200 + 400,
-          );
-        }
-
-        // If there are no images, start immediately
-        if (!imagesToPreload.length) {
-          startAnimationsOnce();
-          return;
-        }
-
-        // Safety timeout: don't wait forever for slow or broken images
-        const MAX_PRELOAD_TIME = 1; // 3 seconds fallback
-        const timeoutId = setTimeout(startAnimationsOnce, MAX_PRELOAD_TIME);
-
-        imagesToPreload.forEach((src) => {
-          const img = new Image();
-          img.src = src;
-          img.onload = img.onerror = () => {
-            loadedCount++;
-            if (loadedCount === imagesToPreload.length) {
-              clearTimeout(timeoutId);
-              startAnimationsOnce();
-            }
-          };
-        });
-      });
-    </script>
-
-    <script type="module" src="./js/i18n.js"></script>
-    <script type="module" src="./js/news.js"></script>
   </body>
 </html>

@@ -5,38 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Admin - Noor Holding</title>
   <meta name="robots" content="noindex, nofollow">
-  <link rel="icon" href="assets/0ea8716a-725f-4072-8ee9-aed3df86b0a9.JPG" type="image/jpeg">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
-    .font-dm-serif { font-family: 'DM Serif Text', serif; }
-    .text-sand { color: #CAAB79; } .text-skyline { color: #323E48; }
-    .text-gulf { color: #074859; } .text-midnight { color: #1E2859; }
-    .bg-sand { background-color: #CAAB79; } .bg-skyline { background-color: #323E48; }
-    .bg-gulf { background-color: #074859; } .bg-midnight { background-color: #1E2859; }
-    .border-sand { border-color: #CAAB79; }
-    [dir="rtl"] textarea, [dir="rtl"] input { text-align: right; }
-
-    /* Article editor: renders content exactly like #article-body on news.html */
-    .article-editor b { font-weight: 700; color: #074859; }
-    .article-editor img { max-width: 100%; }
-    .article-editor:focus { outline: none; }
-    .article-editor.is-empty::before {
-      content: attr(data-placeholder);
-      color: #9ca3af;
-      pointer-events: none;
-      position: absolute;
-    }
-    .editor-btn {
-      padding: 0.25rem 0.6rem;
-      border-radius: 0.375rem;
-      font-size: 0.8rem;
-      color: #323E48;
-      background: white;
-      border: 1px solid #e5e7eb;
-    }
-    .editor-btn:hover { background: #074859; color: white; border-color: #074859; }
-  </style>
+  <link rel="icon" href="./assets/images/brand/favicon.png" type="image/png">
+  <link rel="preload" href="./assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="./assets/fonts/dm-serif-text-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
+  <link rel="stylesheet" href="./assets/css/site.css">
 </head>
 <body class="bg-gray-50 min-h-screen">
 
@@ -49,7 +21,7 @@
         <div>
           <label class="block text-sm text-gray-600 mb-1">Mot de passe</label>
           <input type="password" id="login-password" required
-            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gulf">
+            class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-hidden focus:ring-2 focus:ring-gulf">
         </div>
         <p id="login-error" class="text-red-600 text-sm hidden">Mot de passe incorrect.</p>
         <button type="submit"
@@ -95,13 +67,13 @@
         <form id="post-form" class="space-y-8">
 
           <!-- Shared / non-translatable fields -->
-          <div class="bg-white rounded-lg shadow p-5 space-y-4">
+          <div class="bg-white rounded-lg shadow-sm p-5 space-y-4">
             <h3 class="font-medium text-midnight">Informations générales</h3>
             <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <div>
                 <label class="block text-sm text-gray-600 mb-1">Date</label>
                 <input type="date" id="field-date" required
-                  class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-gulf">
+                  class="w-full border border-gray-300 rounded-md px-3 py-2 focus:outline-hidden focus:ring-2 focus:ring-gulf">
               </div>
               <div class="flex items-center gap-2 mt-6">
                 <input type="checkbox" id="field-featured" class="h-4 w-4">
@@ -122,7 +94,7 @@
           </div>
 
           <!-- Language tabs -->
-          <div class="bg-white rounded-lg shadow p-5">
+          <div class="bg-white rounded-lg shadow-sm p-5">
             <div class="flex gap-2 mb-5 border-b border-gray-200">
               <button type="button" data-lang-tab="fr"
                 class="lang-tab px-4 py-2 text-sm font-medium border-b-2 border-gulf text-gulf">Français</button>
@@ -150,6 +122,6 @@
     </main>
   </div>
 
-  <script src="js/admin.js"></script>
+  <script src="./assets/js/pages/admin.js" defer></script>
 </body>
 </html>

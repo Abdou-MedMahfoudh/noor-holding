@@ -1,0 +1,840 @@
+{
+  "en": {
+    "meta": {
+      "title": "Noor Holding",
+      "description": "Leading Mauritanian corporation across key sectors"
+    },
+    "navigation": {
+      "about": "About Us",
+      "news": "News",
+      "subsidiaries": "Subsidiaries",
+      "contact": "Contact Us"
+    },
+    "hero": {
+      "title": "NOOR HOLDING",
+      "subtitle": "Innovation, rigor and commitment",
+      "shortDescription": "Leading Mauritanian corporation across key sectors.",
+      "country": "Mauritania",
+      "buttons": {
+        "latestNews": "Latest News",
+        "ourSubsidiaries": "Our Subsidiaries"
+      },
+      "stats": {
+        "subsidiaries": "Subsidiaries",
+        "keysectors": "Key Sectors",
+        "marketLeader": "Market Leader",
+        "basedIn": "Based in"
+      }
+    },
+    "ceoMessage": {
+      "sectionTitle": "Message from the Chief Executive Officer",
+      "greeting": "Dear visitors,",
+      "intro": "It is with great honor and immense pleasure that I welcome you to the official website of NOOR HOLDING, a dynamic and ambitious Mauritanian group, committed to the economic development of Mauritania and the sub-region through strategic and complementary sectors.",
+      "ambition": "Since its creation, our ambition has always been clear: to build a solid, structured group resolutely focused on the future. Today, NOOR HOLDING brings together several subsidiaries specializing in key areas, ranging from energy and mining to logistics, including fishing, general trade, agriculture, transport, healthcare and services.",
+      "entitiesTitle": "Our flagship entities:",
+      "entities": {
+        "slmp": "SLMP SA: Port Logistics and Handling Company, equipped with service stations and active in the import and distribution of hydrocarbons.",
+        "afh": "AFH – Africaine des Hydrocarbures: Holder of official authorizations for the import, distribution and storage of refined hydrocarbons.",
+        "mines": "MINES DE MAURITANIE: Mining sector player, engaged in gold exploration with three permits covering an area of more than 1,000 km².",
+        "itb": "ITB – International Trade Brokerage: Specialized in import-export, distribution and commercial representation.",
+        "tbs1": "TBS – Transport Business and Shipping: Operates in transport, transit and international logistics services.",
+        "tbs2": "TBS – Trade Brokerage and Services: Major player in financial intermediation.",
+        "acg": "ACG – Arrachad Establishment for General Trade: Intervenes in multiform trading.",
+        "fishing": "SEMAK SA, SMMCS SA and Valor Fish Frigo – Three companies dedicated to the strategic sector of fishing, processing and conservation.",
+        "ecocharge": "EcoCharge Africa  – Specialized in electric charging solutions and sustainable energy infrastructure.",
+        "agro": "Compagnie Agricole du Sahel (CASA)– An innovative Mauritanian company committed to developing modern and sustainable agriculture.",
+        "ila": "ILA DISTRIBUTION SARL – Strategic commercial subsidiary specializing in import-export, distribution, commercial representation and seafood valorization.",
+        "medservices": "MEDSERVICES: The group's medical center of excellence, specialized in turnkey hospital construction, state-of-the-art medical equipment and integrated health solutions across Mauritania.",
+        "fairsoft": "FAIR-SOFT: The group's technology company, active in Mauritania for 10 years, supporting businesses and institutions in their digital transformation: custom development, ERP, artificial intelligence and cybersecurity."
+      },
+      "visionTitle": "Our vision and values:",
+      "vision": "Through all of these subsidiaries, NOOR HOLDING works to create value, anticipate market needs and actively contribute to the development of Mauritania and the sub-region. Our vision is based on three pillars: innovation, rigor and commitment to sustainability and social responsibility.",
+      "gratitude": "I want to express my deep gratitude to our partners, collaborators and clients for the trust they place in us. Together, we will continue to build a prosperous and sustainable future.",
+      "signature": {
+        "regards": "With all my consideration,",
+        "name": "Ahmed Salem ELY",
+        "title": "Chief Executive Officer",
+        "subtitle": "Noor Holding"
+      }
+    },
+    "about": {
+      "title": "Who We Are",
+      "description1": "NOOR HOLDING is a company based in Nouakchott with 14 subsidiaries specialized in hydrocarbons, mining, import-export, representation, fishing, seafood processing, agriculture, sustainable energy, and healthcare.",
+      "description2": "Noor Holding is a true model of a diversified company in Mauritania, with a significant presence in the market. We are a proudly Mauritanian company that invests in our country to build a better future."
+    },
+    "subsidiaries": {
+      "featuredTitle": "Featured Operating Companies",
+      "sectionTitle": "Discover Our Subsidiaries",
+      "companies": {
+        "afh": {
+          "name": "Africaine Des Hydrocarbures S.A",
+          "description": "Africaine des Hydrocarbures (AFH) is a company specialized in the oil sector, with a solid reputation for compliance and reliability. The company holds official authorizations that allow it to operate throughout the refined hydrocarbon value chain, covering import, storage and distribution to secure the country's energy supply.",
+          "services": [
+            "Import of refined hydrocarbons",
+            "Secure storage and distribution",
+            "the first private license issued by the Mauritanian State"
+          ]
+        },
+        "slmp": {
+          "name": "SLMP S.A",
+          "description": "The Port Logistics and Handling Company (SLMP SA) is a versatile player distinguished by its expertise in port logistics and handling services. The company facilitates international trade and extends its activities into energy with the import and distribution of hydrocarbons, having its own service stations to cover the entire value chain.",
+          "services": [
+            "Port logistics services",
+            "Integrated service stations",
+            "Hydrocarbon distribution"
+          ]
+        },
+        "mines": {
+          "name": "MINES DE MAURITANIE",
+          "description": "MINES DE MAURITANIE is a major player in the mining sector, with a particular focus on gold exploration. The company conducts intensive exploration activities over a vast area of more than 1,000 km², covered by three research permits. Thanks to its geological expertise and cutting-edge technologies, it discovers new gold deposits, directly contributing to the country's economic development.",
+          "services": [
+            "+1,000 km² exploration area",
+            "3 gold research permits",
+            "Cutting-edge geological technologies"
+          ]
+        },
+        "itb": {
+          "name": "ITB – International Trade Brokerage",
+          "description": "International Trade Brokerage (ITB) is a company specialized in international commercial exchanges, acting as an intermediary between buyers and sellers. Expert in import-export, ITB facilitates cross-border transactions and ensures distribution as well as representation of international brands. The company helps foreign companies establish themselves in local markets through its expertise in logistics and regulations, positioning itself as a strategic partner for international commercial expansion.",
+          "services": [
+            "International exchange brokerage",
+            "International brand representation",
+            "Logistics and regulatory expertise"
+          ]
+        },
+        "agro": {
+          "name": "Compagnie Agricole du Sahel (CASA)",
+          "description": "The Compagnie Agricole du Sahel (CASA) is an innovative young Mauritanian company dedicated to developing a modern, sustainable, and competitive agriculture sector by leveraging local resources. Its main activities include developing farmland and cultivating crops adapted to the Sahel region, processing agricultural products for local and international markets, implementing eco-friendly practices such as efficient irrigation and by-product recovery, and creating jobs for youth and women while partnering with rural communities to strengthen the local economy.",
+          "services": [
+            "Agricultural production",
+            "Agro-industry & processing",
+            "Sustainability & eco-practices",
+            "Local development & jobs"
+          ]
+        },
+        "tbs1": {
+          "name": "TBS – Transport Business and Shipping",
+          "description": "Transport Business and Shipping (TBS) is a transport and logistics company offering comprehensive solutions for international transit and logistics service needs. The company manages the movement of goods by land, sea and air. As a freight forwarder, TBS handles complex customs and administrative formalities, simplifying import and export for its clients while guaranteeing timely and secure deliveries.",
+          "services": [
+            "Land, sea and air transport",
+            "Transit services and customs formalities",
+            "Customized logistics solutions"
+          ]
+        },
+        "ecocharge": {
+          "name": "EcoCharge Africa",
+          "description": "EcoCharge Africa is a company specialized in electric charging solutions and sustainable energy infrastructure, dedicated to advancing sustainable mobility across Africa. Its work spans the supply and installation of fast charging stations in key locations such as parking lots and gas stations, the use of intelligent platforms to monitor and optimize energy consumption, and the provision of maintenance and technical support. The company also conducts feasibility studies, energy audits, and collaborates with local stakeholders to design modern charging networks. By continuously innovating through mobile applications, payment systems, and the integration of renewable energy, EcoCharge Africa builds autonomous and eco-friendly charging stations.",
+          "services": [
+            "Fast charging station installation",
+            "Smart energy monitoring",
+            "Maintenance & technical support",
+            "Consulting and energy audits",
+            "Renewable integration & innovation"
+          ]
+        },
+        "acg": {
+          "name": "ACG – Arrachad Establishment for General Trade",
+          "description": "The Arrachad Establishment for General Trade (ACG) is a multiform trading company operating in a variety of sectors on a national and international scale. ACG is distinguished by its ability to adapt to market demands, sourcing various products from raw materials to finished products. Its agile model allows it to respond quickly to commercial opportunities through its vast network of suppliers and buyers.",
+          "services": [
+            "National and international commerce",
+            "Raw materials and finished products",
+            "Agile and personalized trading solutions",
+            "Vast network of suppliers and buyers"
+          ]
+        },
+        "tbs2": {
+          "name": "TBS – Trade Brokerage and Services",
+          "description": "Trade Brokerage and Services (TBS) is a major player in financial intermediation, facilitating transactions in stocks, bonds and other financial instruments. The company acts as an intermediary between investors and financial markets, allowing clients to strategically place their capital. TBS also provides financial advisory services and is distinguished by its deep knowledge of markets and its ability to identify growth opportunities.",
+          "services": [
+            "Financial instrument intermediation",
+            "Investment advisory services",
+            "Financial market expertise"
+          ]
+        },
+        "fishing": {
+          "name": "SEMAK s.a | SMMCS s.a | Valor Fish Frigo ",
+          "description": "SEMAK s.a, SMMCS s.a, and Valor Fish Frigo  are companies in the strategic fishing sector operating in an integrated manner to optimize the transformation and conservation of seafood products. SEMAK s.a has a cutting-edge factory with a freezing tunnel, SMMCS s.a ensures capture through its trawler fleet, and VFF is dedicated to conservation. Together, they form a complete value chain guaranteeing freshness and quality of fishery products.",
+          "services": [
+            "Integrated capture-conservation value chain",
+            "Cutting-edge transformation technologies",
+            "Modern trawler fleet"
+          ]
+        },
+        "ila": {
+          "name": "ILA DISTRIBUTION SARL",
+          "description": "ILA DISTRIBUTION SARL is a strategic subsidiary of Noor Holding and the commercial engine of the group. Positioned between international markets and Mauritania’s local economy, the company creates value and strengthens supply chains through four integrated pillars: import-export, advanced distribution, commercial representation, and seafood valorization. With a blend of global sourcing expertise, reliable logistics, brand development capabilities, and responsible engagement in the fishing sector, ILA DISTRIBUTION supports sustainable growth and contributes to the country’s economic development.",
+          "services": [
+            "Strategic sourcing and import-export operations",
+            "Distribution and nationwide logistics",
+            "Commercial representation and brand development",
+            "Seafood valorization and responsible fishing"
+          ]
+        },
+        "medservices": {
+          "name": "MEDSERVICES",
+          "description": "Founded in 2022 in Nouakchott, MEDSERVICES is Noor Holding's medical center of excellence, established as a leading provider of integrated, end-to-end health solutions across Mauritania. Led by a certified biomedical engineer, the company deploys unique expertise ranging from turnkey hospital construction to the supply and technical maintenance of state-of-the-art equipment (diagnostics, surgery, laboratories and dialysis units), as well as medical gas distribution and the integration of next-generation digital health technologies. With a nationwide presence, rigorous after-sales support available 24/7, and exclusive partnerships with major international brands, MEDSERVICES is sustainably modernizing Mauritania's healthcare infrastructure, combining strict compliance with technological innovation to deliver tangible health improvements for the population.",
+          "services": [
+            "Turnkey hospital construction",
+            "State-of-the-art equipment: diagnostics, surgery, labs, dialysis",
+            "Medical gas distribution and digital health technologies",
+            "24/7 after-sales support and nationwide presence"
+          ]
+        },
+        "fairsoft": {
+          "name": "Fair-Soft",
+          "description": "Active in Mauritania for 10 years, Fair-Soft supports SMEs, mid-sized companies, large groups, manufacturers, public institutions and international organisations in their digital transformation. It designs secure, sovereign architectures, modernises public services and answers public tenders, with a single point of contact from start to finish, skills transfer and responsive technical support.",
+          "services": [
+            "Custom development: web and mobile apps, business software",
+            "IT consulting, ERP integration and consulting",
+            "Artificial intelligence and cybersecurity",
+            "Public service modernisation and paperless processes"
+          ]
+        }
+      }
+    },
+    "news": {
+      "hero": {
+        "main": "News & Insights",
+        "desc": "Discover the latest developments, strategic initiatives, and industry insights from Noor Holding.",
+        "uptitle": "Stay Updated"
+      },
+      "title": "Latest News",
+      "viewAll": "View All News",
+      "readMore": "Read More",
+      "backToNews": "Back to News",
+      "shareArticle": "Share this article",
+      "noArticles": "No articles found",
+      "loadingArticles": "Loading articles...",
+      "searchPlaceholder": "Search news articles...",
+      "showingResults": "Showing {count} articles",
+      "showingFiltered": "Showing {filtered} of {total} articles",
+      "articleNotFound": "Article not found",
+      "unableToLoad": "Unable to load news at the moment",
+      "article": "article",
+      "noResults": "No articles found"
+    },
+    "contact": {
+      "title": "Contact Us",
+      "getInTouch": "Get In Touch",
+      "getInTouchSubtitle": "Send us a message and we'll get back to you as soon as possible.",
+      "location": {
+        "title": "Our Location",
+        "address": "No. 384 Atoit - Tevragh Zeina, Nouakchott, Mauritania"
+      },
+      "hours": {
+        "title": "Office Hours",
+        "weekdays": "Monday - Thursday (8 AM - 5 PM)",
+        "friday": "Friday (8 AM - 12 PM)",
+        "weekend": "Saturday & Sunday - Closed"
+      },
+      "phone": {
+        "title": "Landline",
+        "number": "+222 22 00 95 00"
+      },
+      "email": {
+        "title": "Email",
+        "address": "info@noorholding.mr"
+      },
+      "map": {
+        "title": "Location Map",
+        "directions": "Get Directions"
+      },
+      "form": {
+        "name": "Full Name",
+        "email": "Email Address",
+        "phone": "Phone Number",
+        "subject": "Subject",
+        "message": "Message",
+        "placeholders": {
+          "name": "Enter your full name",
+          "email": "Enter your email address",
+          "phone": "Enter your phone number",
+          "subject": "Brief description of your inquiry",
+          "message": "Tell us more about your inquiry..."
+        },
+        "submit": "Send Message",
+        "required": "*"
+      },
+      "medservices": {
+        "sectionTitle": "MEDSERVICES",
+        "location": {
+          "title": "Our Location",
+          "address": "Address coming soon"
+        },
+        "phone": {
+          "title": "Landline",
+          "number": "Number coming soon"
+        },
+        "email": "Email coming soon"
+      }
+    },
+    "footer": {
+      "quickLinks": "Quick Links",
+      "home": "Home",
+      "subs": "Subsidiaries",
+      "contact": "Contact",
+      "copyright": "© 2025 Noor Holding. All rights reserved.",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    }
+  },
+  "fr": {
+    "meta": {
+      "title": "Noor Holding",
+      "description": "Groupe mauritanien leader dans les secteurs clés"
+    },
+    "navigation": {
+      "about": "Qui Sommes Nous",
+      "news": "Actualités",
+      "subsidiaries": "Filiales",
+      "contact": " Contacter Nous"
+    },
+    "hero": {
+      "title": "NOOR HOLDING",
+      "subtitle": "L'innovation, la rigueur et l'engagement",
+      "shortDescription": "Groupe mauritanien leader dans les secteurs clés.",
+      "country": "Mauritania",
+      "buttons": {
+        "latestNews": "Dernières Actualités",
+        "ourSubsidiaries": "Nos Filiales",
+        "country": "Mauritania"
+      },
+      "stats": {
+        "subsidiaries": "Filiales",
+        "keysectors": "Secteurs",
+        "marketLeader": "Lieu",
+        "basedIn": "Lieu"
+      }
+    },
+    "ceoMessage": {
+      "sectionTitle": "Mot du Président Directeur Général",
+      "greeting": "Chers visiteurs,",
+      "intro": "C'est avec un grand honneur et un immense plaisir que je vous souhaite la bienvenue sur le site officiel de NOOR HOLDING, un groupe mauritanien dynamique et ambitieux, engagé dans le développement économique de la Mauritanie et de la sous-région à travers des secteurs stratégiques et complémentaires.",
+      "ambition": "Depuis sa création, notre ambition a toujours été claire : bâtir un groupe solide, structuré et résolument tourné vers l'avenir. Aujourd'hui, NOOR HOLDING fédère plusieurs filiales spécialisées dans des domaines clés, allant de l'énergie et des mines à la logistique, en passant par la pêche, le commerce général, l'agriculture, le transport, la santé et les services.",
+      "entitiesTitle": "Nos entités phares :",
+      "entities": {
+        "slmp": "SLMP SA : Société de Logistique et de Manutention Portuaire, dotée de stations-service et active dans l'importation et la distribution des hydrocarbures.",
+        "afh": "AFH – Africaine des Hydrocarbures : Titulaire d'autorisations officielles pour l'importation, la distribution et le stockage des hydrocarbures raffinés.",
+        "mines": "MINES DE MAURITANIE : Acteur du secteur minier, engagé dans la recherche aurifère avec trois permis couvrant une superficie de plus de 1 000 km².",
+        "itb": "ITB – International Trade Brokerage : Spécialisée dans l'import-export, la distribution et la représentation commerciale.",
+        "tbs1": "TBS – Transport Business and Shipping : Opère dans le transport, le transit et les services logistiques internationaux.",
+        "tbs2": "TBS – Trade Brokerage and Services : Acteur majeur dans l'intermédiation financière.",
+        "acg": "ACG – Établissement Arrachad pour le Commerce Général : Intervient dans le négoce multiforme.",
+        "fishing": "SEMAK SA, SMMCS SA et Valor Fish Frigo - Trois sociétés dédiées au secteur stratégique de la pêche, de la transformation et de la conservation.",
+        "agro": "La Compagnie Agricole du Sahel (CASA) – entreprise mauritanienne innovante engagée dans le développement d'une agriculture moderne et durable.",
+        "ecocharge": "EcoCharge Africa - spécialisée dans les solutions de recharge électrique et d'infrastructures énergétiques durables.",
+        "ila": "ILA DISTRIBUTION SARL – Filiale commerciale stratégique spécialisée dans l'import-export, la distribution, la représentation commerciale et la valorisation des produits de la mer.",
+        "medservices": "MEDSERVICES : Pôle d'excellence médicale du groupe, spécialisé dans la construction hospitalière clé en main, les équipements médicaux de pointe et les solutions de santé intégrées à travers la Mauritanie.",
+        "fairsoft": "FAIR-SOFT : Acteur technologique du groupe, présent en Mauritanie depuis 10 ans, qui accompagne entreprises et institutions dans leur transformation numérique : développement sur mesure, ERP, intelligence artificielle et cybersécurité."
+      },
+      "visionTitle": "Notre vision et nos valeurs :",
+      "vision": "À travers l'ensemble de ces filiales, NOOR HOLDING œuvre à créer de la valeur, anticiper les besoins du marché et contribuer activement à l'essor de la Mauritanie et de la sous-région. Notre vision repose sur trois piliers : l'innovation, la rigueur et l'engagement en faveur de la durabilité et de la responsabilité sociale.",
+      "gratitude": "Je tiens à exprimer ma profonde gratitude à nos partenaires, collaborateurs et clients pour la confiance qu'ils nous accordent. Ensemble, nous continuerons à bâtir un avenir prospère et durable.",
+      "signature": {
+        "regards": "Avec toute ma considération,",
+        "name": "Ahmed Salem ELY",
+        "title": "Président Directeur Général",
+        "subtitle": "Noor Holding"
+      }
+    },
+    "about": {
+      "title": "Qui Sommes Nous",
+      "description1": "NOOR HOLDING est une entreprise basée à Nouakchott et qui compte 14 filiales spécialisées dans les hydrocarbures, les mines, l'import-export, la représentation, la pêche, le traitement des produits de la mer, l'agriculture, les énergies durables et la santé.",
+      "description2": "Noor Holding est un véritable modèle d'entreprise diversifiée en Mauritanie, avec une présence importante sur le marché. Nous sommes une entreprise fièrement mauritanienne, qui investit dans notre pays pour construire un avenir meilleur."
+    },
+    "subsidiaries": {
+      "featuredTitle": "Sociétés Opérationnelles ",
+      "sectionTitle": "Découvrez Nos Filiales",
+      "companies": {
+        "afh": {
+          "name": "Africaine Des Hydrocarbures S.A",
+          "description": "Africaine des Hydrocarbures (AFH) est une entreprise spécialisée dans le secteur pétrolier, avec une solide réputation en matière de conformité et de fiabilité. L'entreprise détient des autorisations officielles qui lui permettent d'opérer dans l'ensemble de la chaîne de valeur des hydrocarbures raffinés, couvrant l'importation, le stockage et la distribution pour sécuriser l'approvisionnement énergétique du pays.",
+          "services": [
+            "Importation d'hydrocarbures raffinés",
+            "Stockage et distribution sécurisés",
+            "Autorisations officielles complètes"
+          ]
+        },
+        "slmp": {
+          "name": "SLMP S.A",
+          "description": "La Société de Logistique et de Manutention Portuaire (SLMP SA) est un acteur polyvalent se distinguant par son expertise dans les services de logistique et manutention portuaire. L'entreprise facilite le commerce international et étend ses activités dans l'énergie avec l'importation et la distribution des hydrocarbures, disposant de ses propres stations-service pour couvrir toute la chaîne de valeur.",
+          "services": [
+            "Services de logistique portuaire",
+            "Stations-service intégrées",
+            "Distribution d'hydrocarbures"
+          ]
+        },
+        "agro": {
+          "name": "Compagnie Agricole du Sahel (CASA)",
+          "description": "La Compagnie Agricole du Sahel (CASA) est une jeune entreprise mauritanienne innovante, dédiée au développement d’un secteur agricole moderne, durable et compétitif en valorisant les ressources locales. Ses principales activités incluent l’aménagement des terres et la culture de produits adaptés à la région du Sahel, la transformation agro-industrielle destinée aux marchés locaux et internationaux, la mise en œuvre de pratiques respectueuses de l’environnement comme l’irrigation efficiente et la valorisation des sous-produits, ainsi que la création d’emplois pour les jeunes et les femmes en partenariat avec les communautés rurales pour dynamiser l’économie locale.",
+          "services": [
+            "Production agricole",
+            "Agro-industrie & transformation",
+            "Durabilité & pratiques éco",
+            "Développement local & emplois"
+          ]
+        },
+        "mines": {
+          "name": "MINES DE MAURITANIE",
+          "description": "MINES DE MAURITANIE est un acteur majeur du secteur minier, avec un focus particulier sur la recherche aurifère. L'entreprise mène des activités d'exploration intensive sur une vaste zone de plus de 1 000 km², couverte par trois permis de recherche. Grâce à son expertise géologique et aux technologies de pointe, elle découvre de nouveaux gisements d'or, contribuant directement au développement économique du pays.",
+          "services": [
+            "+1 000 km² de superficie d'exploration",
+            "3 permis de recherche aurifère",
+            "Technologies de pointe en géologie"
+          ]
+        },
+        "itb": {
+          "name": "ITB – International Trade Brokerage",
+          "description": "International Trade Brokerage (ITB) est une entreprise spécialisée dans les échanges commerciaux internationaux, agissant comme intermédiaire entre acheteurs et vendeurs. Expert en import-export, ITB facilite les transactions transfrontalières et assure la distribution ainsi que la représentation de marques internationales. L'entreprise aide les entreprises étrangères à s'implanter sur les marchés locaux grâce à son expertise en logistique et réglementation, se positionnant comme un partenaire stratégique pour l'expansion commerciale internationale.",
+          "services": [
+            "Courtage en échanges internationaux",
+            "Représentation de marques internationales",
+            "Expertise logistique et réglementaire"
+          ]
+        },
+        "ecocharge": {
+          "name": "EcoCharge Africa",
+          "description": "EcoCharge Africa est une entreprise spécialisée dans les solutions de recharge électrique et les infrastructures énergétiques durables, dédiée à faire progresser la mobilité durable à travers l’Afrique. Ses activités couvrent la fourniture et l’installation de stations de recharge rapide dans des emplacements stratégiques tels que les parkings et les stations-service, l’utilisation de plateformes intelligentes pour surveiller et optimiser la consommation d’énergie, ainsi que la fourniture de services de maintenance et d’assistance technique. L’entreprise réalise également des études de faisabilité, des audits énergétiques et collabore avec les parties prenantes locales pour concevoir des réseaux de recharge modernes. En innovant continuellement à travers des applications mobiles, des systèmes de paiement et l’intégration des énergies renouvelables, EcoCharge Africa crée des stations de recharge autonomes et respectueuses de l’environnement.",
+          "services": [
+            "Stations de recharge rapide",
+            "Gestion intelligente de l’énergie",
+            "Maintenance et assistance",
+            "Conseil et audits énergétiques",
+            "Innovation et énergies renouvelables"
+          ]
+        },
+        "tbs1": {
+          "name": "TBS – Transport Business and Shipping",
+          "description": "Transport Business and Shipping (TBS) est une entreprise de transport et de logistique offrant des solutions complètes pour les besoins en transit et services logistiques internationaux. L'entreprise gère le déplacement de marchandises par voie terrestre, maritime et aérienne. En tant que transitaire, TBS s'occupe des formalités douanières et administratives complexes, simplifiant l'importation et l'exportation pour ses clients tout en garantissant des livraisons ponctuelles et sécurisées.",
+          "services": [
+            "Transport terrestre, maritime et aérien",
+            "Services de transit et formalités douanières",
+            "Solutions logistiques personnalisées"
+          ]
+        },
+        "acg": {
+          "name": "ACG – Établissement Arrachad pour le Commerce Général",
+          "description": "L'Établissement Arrachad pour le Commerce Général (ACG) est une entreprise de négoce multiforme opérant dans une variété de secteurs à l'échelle nationale et internationale. ACG se distingue par sa capacité d'adaptation aux demandes du marché, s'approvisionnant en produits divers des matières premières aux produits finis. Son modèle agile lui permet de répondre rapidement aux opportunités commerciales grâce à son vaste réseau de fournisseurs et d'acheteurs.",
+          "services": [
+            "Commerce national et international",
+            "Matières premières et produits finis",
+            "Solutions de négoce agiles et personnalisées",
+            "Vaste réseau de fournisseurs et d'acheteurs"
+          ]
+        },
+        "tbs2": {
+          "name": "TBS – Trade Brokerage and Services",
+          "description": "Trade Brokerage and Services (TBS) est un acteur majeur de l’intermédiation financière, reliant les investisseurs aux marchés locaux et internationaux. L’entreprise facilite les transactions en actions, obligations et autres instruments financiers, et fournit des conseils pour aider les clients à prendre des décisions d’investissement éclairées. TBS se distingue par son expertise des marchés et sa capacité à identifier des opportunités de croissance, contribuant à l’efficacité et à la vitalité des marchés financiers.",
+          "services": [
+            "Intermédiation en instruments financiers",
+            "Services de conseil en investissement",
+            "Expertise des marchés financiers"
+          ]
+        },
+        "ila": {
+          "name": "ILA DISTRIBUTION SARL",
+          "description": "ILA DISTRIBUTION SARL est une filiale stratégique de Noor Holding et le moteur commercial du groupe. À la croisée des échanges internationaux et de l’économie mauritanienne, l’entreprise crée de la valeur et renforce les chaînes d’approvisionnement grâce à quatre pôles intégrés : import-export, distribution avancée, représentation commerciale et valorisation des produits de la mer. Forte d’un sourcing mondial maîtrisé, d’une logistique fiable, d’un développement de marques performant et d’un engagement responsable dans le secteur halieutique, ILA DISTRIBUTION contribue au développement durable de l’économie nationale.",
+          "services": [
+            "Sourcing stratégique et import-export",
+            "Distribution et logistique nationale",
+            "Représentation commerciale et développement de marques",
+            "Valorisation des produits de la mer et pêche responsable"
+          ]
+        },
+        "fishing": {
+          "name": "SEMAK s.a | SMMCS s.a | Valor Fish Frigo ",
+          "description": "SEMAK s.a, SMMCS s.a, et Valor Fish Frigo sont des entreprises du secteur stratégique de la pêche opérant de manière intégrée pour optimiser la transformation et conservation des produits de la mer. SEMAK s.a possède une usine de pointe avec tunnel de congélation, SMMCS s.a assure la capture via sa flotte de chalutiers, et VFF se dédie à la conservation. Ensemble, elles forment une chaîne de valeur complète garantissant fraîcheur et qualité des produits halieutiques.",
+          "services": [
+            "Chaîne de valeur intégrée capture-conservation",
+            "Technologies de pointe de transformation",
+            "Flotte moderne de chalutiers"
+          ]
+        },
+        "medservices": {
+          "name": "MEDSERVICES",
+          "description": "Fondée en 2022 à Nouakchott, MEDSERVICES est le pôle d'excellence médicale de Noor Holding, s'imposant comme un prestataire de premier plan en solutions de santé intégrées et de bout en bout à travers toute la Mauritanie. Dirigée par une ingénieure biomédicale certifiée, l'entreprise déploie une expertise unique allant de la construction hospitalière clé en main à la fourniture et la maintenance technique d'équipements de pointe (diagnostic, chirurgie, laboratoires et unités de dialyse), en passant par la distribution de gaz médicaux et l'intégration de technologies de santé numérique de dernière génération. Fort d'une présence nationale, d'un support après-vente rigoureux disponible 24h/7j et de partenariats exclusifs avec des marques internationales majeures, MEDSERVICES modernise durablement l'infrastructure sanitaire mauritanienne, alliant conformité rigoureuse et innovation technologique pour améliorer concrètement les résultats de santé au bénéfice des populations.",
+          "services": [
+            "Construction hospitalière clé en main",
+            "Équipements de pointe : diagnostic, chirurgie, laboratoires, dialyse",
+            "Distribution de gaz médicaux et santé numérique",
+            "Support après-vente 24h/7j et présence nationale"
+          ]
+        },
+        "fairsoft": {
+          "name": "Fair-Soft",
+          "description": "Présente en Mauritanie depuis 10 ans, Fair-Soft accompagne les PME, ETI, grands groupes, industriels, institutions publiques et organisations internationales dans leur transformation numérique. L'entreprise conçoit des architectures sécurisées et souveraines, modernise les services publics et répond aux marchés publics, avec un interlocuteur unique de bout en bout, un transfert de compétences et un support technique réactif.",
+          "services": [
+            "Développement sur mesure : applications web, mobiles et logiciels métiers",
+            "Conseil informatique, intégration et conseil en ERP",
+            "Intelligence artificielle et cybersécurité",
+            "Modernisation des services publics et dématérialisation"
+          ]
+        }
+      }
+    },
+    "news": {
+      "hero": {
+        "main": " Derniers Actualités ",
+        "desc": "Découvrez les derniers développements, initiatives stratégiques et analyses sectorielles de Noor Holding.",
+        "uptitle": "Restez Informés"
+      },
+      "title": "Dernières Actualités",
+      "viewAll": "Voir Toutes les Actualités",
+      "readMore": "Lire la suite",
+      "backToNews": "Retour aux Actualités",
+      "shareArticle": "Partager cet article",
+      "noArticles": "Aucun article trouvé",
+      "loadingArticles": "Chargement des articles...",
+      "searchPlaceholder": "Rechercher des articles...",
+      "showingResults": "Affichage de {count} articles",
+      "showingFiltered": "Affichage de {filtered} sur {total} articles",
+      "articleNotFound": "Article non trouvé",
+      "unableToLoad": "Impossible de charger les actualités pour le moment",
+      "article": "article",
+      "noResults": "Aucun article trouvé"
+    },
+    "contact": {
+      "title": " Contacter Nous",
+      "getInTouch": "Entrez en Contact",
+      "getInTouchSubtitle": "Envoyez-nous un message et nous vous répondrons dans les plus brefs délais.",
+      "location": {
+        "title": "Notre Localisation",
+        "address": " numéro 384 Atoit - Tevragh Zeina Nouakchott Mauritanie"
+      },
+      "hours": {
+        "title": "Heures d'Ouverture",
+        "weekdays": "Lundi - Jeudi (8h - 17h)",
+        "friday": "Vendredi (8h - 12h)",
+        "weekend": "Samedi et Dimanche - Fermé"
+      },
+      "phone": {
+        "title": "Téléphone Fixe",
+        "number": "+222 22 00 95 00"
+      },
+      "email": {
+        "title": "Email",
+        "address": "info@noorholding.mr"
+      },
+      "map": {
+        "title": "Plan de Localisation",
+        "directions": "Obtenir l'Itinéraire"
+      },
+      "form": {
+        "name": "Nom Complet",
+        "email": "Adresse Email",
+        "phone": "Numéro de Téléphone",
+        "subject": "Sujet",
+        "message": "Message",
+        "placeholders": {
+          "name": "Entrez votre nom complet",
+          "email": "Entrez votre adresse email",
+          "phone": "Entrez votre numéro de téléphone",
+          "subject": "Brève description de votre demande",
+          "message": "Parlez-nous davantage de votre demande..."
+        },
+        "submit": "Envoyer le Message",
+        "required": "*"
+      },
+      "medservices": {
+        "sectionTitle": "MEDSERVICES",
+        "location": {
+          "title": "Notre Localisation",
+          "address": "Adresse à venir"
+        },
+        "phone": {
+          "title": "Téléphone Fixe",
+          "number": "Numéro à venir"
+        },
+        "email": "Adresse e-mail à venir"
+      }
+    },
+    "footer": {
+      "quickLinks": "Liens Rapides",
+      "home": "Accueil",
+      "subs": "Filiales",
+      "contact": "Contact",
+      "copyright": "© 2025 Noor Holding. Tous droits réservés.",
+      "privacy": "Politique de Confidentialité",
+      "terms": "Conditions d'Utilisation"
+    }
+  },
+  "ar": {
+    "meta": {
+      "title": "نور القابضة",
+      "description": "الشركة الموريتانية الرائدة في القطاعات الأساسية"
+    },
+    "navigation": {
+      "about": "من نحن",
+      "news": "الأخبار",
+      "subsidiaries": "الشركات التابعة",
+      "contact": "اتصل بنا"
+    },
+    "hero": {
+      "title": "نور القابضة",
+      "subtitle": "الابتكار والدقة والالتزام",
+      "shortDescription": "الشركة الموريتانية الرائدة في القطاعات الأساسية.",
+      "country": "موريتانيا",
+      "buttons": {
+        "latestNews": "آخر الأخبار",
+        "ourSubsidiaries": "شركاتنا التابعة"
+      },
+      "stats": {
+        "subsidiaries": "شركة تابعة",
+        "keysectors": "قطاعات أساسية",
+        "marketLeader": "رائد السوق",
+        "basedIn": "مقرها في"
+      }
+    },
+    "ceoMessage": {
+      "sectionTitle": "كلمة الرئيس المدير العام",
+      "greeting": "الزوار الأعزاء،",
+      "intro": "بشرف عظيم وسرور بالغ أرحب بكم في الموقع الرسمي لنور القابضة، وهي مجموعة موريتانية ديناميكية وطموحة، ملتزمة بالتنمية الاقتصادية لموريتانيا والمنطقة الفرعية من خلال قطاعات استراتيجية ومتكاملة.",
+      "ambition": "منذ إنشائها، كان طموحنا واضحاً دائماً: بناء مجموعة قوية ومنظمة وموجهة بحزم نحو المستقبل. اليوم، تضم نور القابضة عدة شركات تابعة متخصصة في مجالات أساسية، تتراوح من الطاقة والمناجم إلى اللوجستيات، مروراً بالصيد والتجارة العامة والزراعة والنقل والصحة والخدمات.",
+      "entitiesTitle": "كياناتنا الرائدة:",
+      "entities": {
+        "slmp": "SLMP SA: شركة اللوجستيات والمناولة المينائية، المجهزة بمحطات الخدمة والنشطة في استيراد وتوزيع المحروقات.",
+        "afh": "AFH - الأفريقية للمحروقات: حاملة التراخيص الرسمية لاستيراد وتوزيع وتخزين المحروقات المكررة.",
+        "mines": "مناجم موريتانيا: فاعل في القطاع المنجمي، منخرط في البحث عن الذهب بثلاث تراخيص تغطي مساحة تزيد عن 1000 كم².",
+        "itb": "ITB - الوساطة التجارية الدولية: متخصصة في الاستيراد والتصدير والتوزيع والتمثيل التجاري.",
+        "tbs1": "TBS - أعمال النقل والشحن: تعمل في النقل والعبور وخدمات اللوجستيات الدولية.",
+        "tbs2": "TBS - الوساطة التجارية والخدمات: فاعل رئيسي في الوساطة المالية.",
+        "acg": "ACG - مؤسسة الرشاد للتجارة العامة: تتدخل في التجارة متعددة الأشكال.",
+        "fishing": "SEMAK SA وSMMCS SA وValor Fish Frigo : ثلاث شركات مخصصة للقطاع الاستراتيجي للصيد والتحويل والحفظ.",
+        "ecocharge": "EcoCharge Africa - إيكو تشارج أفريقيا متخصصة في حلول الشحن الكهربائي والبُنى التحتية للطاقة المستدامة.",
+        "agro": " CASA - شركة الساحل الزراعية  شركة موريتانية مبتكرة تعمل على تطوير زراعة حديثة ومستدامة.",
+        "ila": "ILA DISTRIBUTION SARL – فرع تجاري استراتيجي متخصص في الاستيراد والتصدير، التوزيع، التمثيل التجاري وتثمين المنتجات البحرية.",
+        "medservices": "ميدسرفيسز: قطب التميز الطبي للمجموعة، متخصص في بناء المستشفيات بنظام تسليم المفتاح والمعدات الطبية المتطورة والحلول الصحية المتكاملة في جميع أنحاء موريتانيا.",
+        "fairsoft": "فير سوفت: الذراع التكنولوجي للمجموعة، تنشط في موريتانيا منذ عشر سنوات وترافق المؤسسات والهيئات في تحولها الرقمي: التطوير حسب الطلب، وأنظمة تخطيط الموارد، والذكاء الاصطناعي، والأمن السيبراني."
+      },
+      "visionTitle": "رؤيتنا وقيمنا:",
+      "vision": "من خلال جميع هذه الشركات التابعة، تعمل نور القابضة على خلق القيمة وتوقع احتياجات السوق والمساهمة بفعالية في ازدهار موريتانيا والمنطقة الفرعية. تقوم رؤيتنا على ثلاث ركائز: الابتكار والدقة والالتزام بالاستدامة والمسؤولية الاجتماعية.",
+      "gratitude": "أود أن أعبر عن امتناني العميق لشركائنا ومتعاونينا وعملائنا للثقة التي يضعونها فينا. معاً، سنواصل بناء مستقبل مزدهر ومستدام.",
+      "signature": {
+        "regards": "مع كل الاعتبار،",
+        "name": "أحمد سالم علي",
+        "title": "الرئيس المدير العام ",
+        "subtitle": "نور القابضة"
+      }
+    },
+    "about": {
+      "title": "من نحن",
+      "description1": "نور القابضة هي شركة مقرها في نواكشوط تضم 14 شركة تابعة متخصصة في المحروقات والمناجم والاستيراد والتصدير والتمثيل والصيد ومعالجة المنتجات البحرية والزراعة والطاقة المستدامة والخدمات الصحية.",
+      "description2": "نور القابضة هي نموذج حقيقي لشركة متنوعة في موريتانيا، مع حضور مهم في السوق. نحن شركة موريتانية بفخر، تستثمر في بلدنا لبناء مستقبل أفضل."
+    },
+    "subsidiaries": {
+      "featuredTitle": "الشركات التشغيلية المميزة",
+      "sectionTitle": "اكتشف شركاتنا التابعة",
+      "companies": {
+        "afh": {
+          "name": "الأفريقية للمحروقات ش.م",
+          "description": "الأفريقية للمحروقات  هي شركة متخصصة في قطاع البترول، مع سمعة قوية في مجال الامتثال والموثوقية. تحمل الشركة تراخيص رسمية تسمح لها بالعمل في جميع أنحاء سلسلة القيمة للمحروقات المكررة، وتغطي الاستيراد والتخزين والتوزيع لضمان إمداد الطاقة للبلاد.",
+          "services": [
+            "استيراد المحروقات المكررة",
+            "التخزين والتوزيع الآمن",
+            "أول رخصة خاصة تصدرها الدولة الموريتانية"
+          ]
+        },
+        "slmp": {
+          "name": "SLMP ش.م",
+          "description": "شركة اللوجستيات والمناولة المينائية  هي فاعل متعدد الجوانب يتميز بخبرته في خدمات اللوجستيات والمناولة المينائية. تسهل الشركة التجارة الدولية وتوسع أنشطتها في مجال الطاقة مع استيراد وتوزيع المحروقات، مع امتلاك محطات الخدمة الخاصة بها لتغطية سلسلة القيمة بأكملها.",
+          "services": [
+            "خدمات اللوجستيات المينائية",
+            "محطات خدمة متكاملة",
+            "توزيع المحروقات"
+          ]
+        },
+        "mines": {
+          "name": "مناجم موريتانيا",
+          "description": "مناجم موريتانيا هي فاعل رئيسي في القطاع المنجمي، مع تركيز خاص على استكشاف الذهب. تقوم الشركة بأنشطة استكشاف مكثفة على منطقة واسعة تزيد عن 1000 كم²، مغطاة بثلاث تراخيص بحث. بفضل خبرتها الجيولوجية والتقنيات المتطورة، تكتشف رواسب ذهبية جديدة، مما يساهم مباشرة في التنمية الاقتصادية للبلاد.",
+          "services": [
+            "مساحة استكشاف تزيد عن 1000 كم²",
+            "ثلاثة تراخيص للبحث عن الذهب",
+            "تقنيات جيولوجية متطورة"
+          ]
+        },
+        "agro": {
+          "name": "الشركة الزراعية في الساحل (CASA)",
+          "description": "الشركة الزراعية في الساحل  هي شركة موريتانية شابة ومبتكرة، مكرسة لتطوير قطاع زراعي حديث، مستدام وتنافسي من خلال الاستفادة من الموارد المحلية. تشمل أنشطتها الرئيسية تطوير الأراضي الزراعية وزراعة محاصيل مناسبة لمنطقة الساحل باستخدام تقنيات حديثة، ومعالجة المنتجات الزراعية للأسواق المحلية والدولية، واعتماد ممارسات صديقة للبيئة مثل الري الفعّال وإعادة استخدام المنتجات الثانوية، بالإضافة إلى خلق فرص عمل للشباب والنساء وبناء شراكات مع المجتمعات الريفية لدعم الاقتصاد المحلي.",
+          "services": [
+            "الإنتاج الزراعي",
+            "الصناعات الزراعية والتحويل",
+            "الاستدامة والممارسات البيئية",
+            "التنمية المحلية وفرص العمل"
+          ]
+        },
+        "itb": {
+          "name": "ITB - الوساطة التجارية الدولية",
+          "description": "الوساطة التجارية الدولية  هي شركة متخصصة في التبادلات التجارية الدولية، تعمل كوسيط بين المشترين والبائعين. خبيرة في الاستيراد والتصدير،  تسهل المعاملات عبر الحدود وتضمن التوزيع وكذلك تمثيل العلامات التجارية الدولية. تساعد الشركة الشركات الأجنبية على الاستقرار في الأسواق المحلية من خلال خبرتها في اللوجستيات واللوائح، وتضع نفسها كشريك استراتيجي للتوسع التجاري الدولي.",
+          "services": [
+            "وساطة في التبادلات الدولية",
+            "تمثيل العلامات التجارية الدولية",
+            "خبرة لوجستية وتنظيمية"
+          ]
+        },
+        "ecocharge": {
+          "name": "إيكو تشارج أفريقيا",
+          "description": "إيكو تشارج أفريقيا هي شركة متخصصة في حلول الشحن الكهربائي والبُنى التحتية للطاقة المستدامة، مكرسة لتعزيز التنقل المستدام في جميع أنحاء أفريقيا. تشمل أنشطتها توريد وتركيب محطات الشحن السريع في مواقع استراتيجية مثل مواقف السيارات ومحطات الوقود، واستخدام منصات ذكية لمراقبة استهلاك الطاقة وتحسينه، بالإضافة إلى تقديم خدمات الصيانة والدعم الفني. كما تقوم الشركة بإجراء دراسات الجدوى والتدقيقات الطاقية، وتتعاون مع الجهات المحلية لتصميم شبكات شحن حديثة. ومن خلال الابتكار المستمر عبر التطبيقات المحمولة، وأنظمة الدفع، ودمج مصادر الطاقة المتجددة، تبني إيكو تشارج أفريقيا محطات شحن مستقلة وصديقة للبيئة.",
+          "services": [
+            "محطات شحن سريع",
+            "إدارة ذكية للطاقة",
+            "صيانة ودعم فني",
+            "استشارات وتدقيقات طاقية",
+            "ابتكار وطاقات متجددة"
+          ]
+        },
+        "tbs1": {
+          "name": "TBS - أعمال النقل والشحن",
+          "description": "  هي شركة نقل ولوجستيات تقدم حلولاً شاملة لاحتياجات العبور وخدمات اللوجستيات الدولية. تدير الشركة حركة البضائع براً وبحراً وجواً. كوكيل شحن،  تتولى الإجراءات الجمركية والإدارية المعقدة، مما يبسط الاستيراد والتصدير لعملائها مع ضمان التسليم في الوقت المحدد والآمن ",
+          "services": [
+            "النقل البري والبحري والجوي",
+            "خدمات العبور والإجراءات الجمركية",
+            "حلول لوجستية مخصصة"
+          ]
+        },
+        "acg": {
+          "name": "ACG - مؤسسة الرشاد للتجارة العامة",
+          "description": "مؤسسة الرشاد للتجارة العامة  هي شركة تجارة متعددة الأشكال تعمل في مجموعة متنوعة من القطاعات على المستوى الوطني والدولي. تتميز  بقدرتها على التكيف مع متطلبات السوق، وتحصل على منتجات متنوعة من المواد الخام إلى المنتجات النهائية. يسمح لها نموذجها الرشيق بالاستجابة بسرعة للفرص التجارية من خلال شبكتها الواسعة من الموردين والمشترين ",
+          "services": [
+            "التجارة الوطنية والدولية",
+            "المواد الخام والمنتجات النهائية",
+            "حلول تجارية رشيقة ومخصصة",
+            "شبكة واسعة من الموردين والمشترين"
+          ]
+        },
+        "ila": {
+          "name": "ILA DISTRIBUTION SARL",
+          "description": "تُعد ILA DISTRIBUTION SARL فرعاً استراتيجياً لنور القابضة ومحركها التجاري. تعمل عند تقاطع التجارة الدولية والاقتصاد الموريتاني، وتخلق قيمة من خلال أربعة محاور متكاملة: الاستيراد والتصدير، التوزيع، التمثيل التجاري، وتثمين المنتجات البحرية. وبفضل خبرتها في التوريد العالمي، واللوجستيات الوطنية، وتطوير العلامات التجارية، وممارساتها المسؤولة في القطاع البحري، تساهم الشركة في دعم النمو المستدام وتعزيز الاقتصاد الوطني.",
+          "services": [
+            "التوريد الاستراتيجي وعمليات الاستيراد والتصدير",
+            "التوزيع والخدمات اللوجستية الوطنية",
+            "التمثيل التجاري وتطوير العلامات التجارية",
+            "تثمين المنتجات البحرية والصيد المسؤول"
+          ]
+        },
+        "tbs2": {
+          "name": "TBS - الوساطة التجارية والخدمات",
+          "description": "الوساطة التجارية والخدمات  هي فاعل رئيسي في الوساطة المالية، تسهل المعاملات في الأسهم والسندات والأدوات المالية الأخرى. تعمل الشركة كوسيط بين المستثمرين والأسواق المالية، مما يسمح للعملاء بوضع رؤوس أموالهم بشكل استراتيجي. تقدم أيضاً خدمات الاستشارة المالية وتتميز بمعرفتها العميقة للأسواق وقدرتها على تحديد فرص النمو",
+          "services": [
+            "وساطة في الأدوات المالية",
+            "خدمات الاستشارة الاستثمارية",
+            "خبرة في الأسواق المالية"
+          ]
+        },
+        "fishing": {
+          "name": "SEMAK ش.م | SMMCS ش.م | Valor Fish Frigo ",
+          "description": " شركات في القطاع الاستراتيجي للصيد تعمل بطريقة متكاملة لتحسين تحويل وحفظ المنتجات البحرية. تمتلك  مصنعاً متطوراً بنفق تجميد ، تشكل سلسلة قيمة كاملة تضمن نضارة وجودة المنتجات السمكية   ",
+          "services": [
+            "سلسلة قيمة متكاملة للصيد والحفظ",
+            "تقنيات تحويل متطورة",
+            "أسطول حديث من سفن الجر"
+          ]
+        },
+        "medservices": {
+          "name": "MEDSERVICES",
+          "description": "تأسست ميدسرفيسز عام 2022 في نواكشوط، وهي قطب التميز الطبي لمجموعة نور القابضة، وتُعد من أبرز مزودي الحلول الصحية المتكاملة والشاملة في جميع أنحاء موريتانيا. بقيادة مهندسة طبية حيوية معتمدة، تمتلك الشركة خبرة فريدة تمتد من بناء المستشفيات بنظام تسليم المفتاح إلى توريد وصيانة المعدات المتطورة (التشخيص، الجراحة، المختبرات ووحدات غسيل الكلى)، مروراً بتوزيع الغازات الطبية ودمج أحدث تقنيات الصحة الرقمية. وبفضل حضورها الوطني الواسع، ودعمها الفني الصارم على مدار الساعة طوال أيام الأسبوع، وشراكاتها الحصرية مع علامات دولية كبرى، تعمل ميدسرفيسز على تحديث البنية التحتية الصحية الموريتانية بشكل مستدام، جامعة بين الامتثال الصارم والابتكار التكنولوجي لتحسين النتائج الصحية بشكل ملموس لفائدة السكان.",
+          "services": [
+            "بناء المستشفيات بنظام تسليم المفتاح",
+            "معدات متطورة: التشخيص، الجراحة، المختبرات، غسيل الكلى",
+            "توزيع الغازات الطبية وتقنيات الصحة الرقمية",
+            "دعم فني على مدار الساعة وحضور وطني واسع"
+          ]
+        },
+        "fairsoft": {
+          "name": "فير سوفت",
+          "description": "تنشط فير سوفت في موريتانيا منذ عشر سنوات، وترافق المؤسسات الصغيرة والمتوسطة والمجموعات الكبرى والصناعيين والمؤسسات العمومية والمنظمات الدولية في تحولها الرقمي. تصمم الشركة بنى تحتية آمنة وسيادية، وتحدّث الخدمات العمومية وتستجيب للصفقات العمومية، مع محاور واحد من البداية إلى النهاية ونقل للمهارات ودعم تقني سريع.",
+          "services": [
+            "تطوير حسب الطلب: تطبيقات الويب والهاتف وبرمجيات الأعمال",
+            "الاستشارات المعلوماتية ودمج أنظمة تخطيط الموارد (ERP)",
+            "الذكاء الاصطناعي والأمن السيبراني",
+            "تحديث الخدمات العمومية والرقمنة"
+          ]
+        }
+      }
+    },
+    "news": {
+      "hero": {
+        "main": "آخر الأخبار",
+        "desc": "اكتشف أحدث التطورات والمبادرات الاستراتيجية والرؤى القطاعية من نور القابضة.",
+        "uptitle": "ابقَ على اطلاع"
+      },
+      "title": "آخر الأخبار",
+      "viewAll": "عرض جميع الأخبار",
+      "readMore": "اقرأ المزيد",
+      "backToNews": "العودة إلى الأخبار",
+      "shareArticle": "شارك هذا المقال",
+      "noArticles": "لم يتم العثور على مقالات",
+      "loadingArticles": "جاري تحميل المقالات...",
+      "searchPlaceholder": "ابحث في المقالات...",
+      "showingResults": "عرض {count} مقالات",
+      "showingFiltered": "عرض {filtered} من أصل {total} مقالات",
+      "articleNotFound": "المقال غير موجود",
+      "unableToLoad": "تعذر تحميل الأخبار في الوقت الحالي",
+      "article": "المقال",
+      "noResults": "لم يتم العثور على أي مقال"
+    },
+    "contact": {
+      "title": "اتصل بنا",
+      "getInTouch": "تواصل معنا",
+      "getInTouchSubtitle": "أرسل لنا رسالة وسنرد عليك في أقرب وقت ممكن.",
+      "location": {
+        "title": "موقعنا",
+        "address": "384 Atoit - تفرغ زينة، نواكشوط، موريتانيا"
+      },
+      "hours": {
+        "title": "ساعات العمل",
+        "weekdays": "الاثنين - الخميس (8 صباحاً - 5 مساءً)",
+        "friday": "الجمعة (8 صباحاً - 12 ظهراً)",
+        "weekend": "السبت والأحد - مغلق"
+      },
+      "phone": {
+        "title": "الهاتف الأرضي",
+        "number": "00 95 00 22 222+ "
+      },
+      "email": {
+        "title": "البريد الإلكتروني",
+        "address": "info@noorholding.mr"
+      },
+      "map": {
+        "title": "خريطة الموقع",
+        "directions": "احصل على الاتجاهات"
+      },
+      "form": {
+        "name": "الاسم الكامل",
+        "email": "عنوان البريد الإلكتروني",
+        "phone": "رقم الهاتف",
+        "subject": "الموضوع",
+        "message": "الرسالة",
+        "placeholders": {
+          "name": "أدخل اسمك الكامل",
+          "email": "أدخل عنوان بريدك الإلكتروني",
+          "phone": "أدخل رقم هاتفك",
+          "subject": "وصف موجز لاستفسارك",
+          "message": "أخبرنا المزيد عن استفسارك..."
+        },
+        "submit": "إرسال الرسالة",
+        "required": "*"
+      },
+      "medservices": {
+        "sectionTitle": "ميدسرفيسز",
+        "location": {
+          "title": "موقعنا",
+          "address": "العنوان قريباً"
+        },
+        "phone": {
+          "title": "الهاتف الثابت",
+          "number": "الرقم قريباً"
+        },
+        "email": "البريد الإلكتروني قريبًا"
+      }
+    },
+    "footer": {
+      "home": "الرئيسية",
+      "subs": "الشركات التابعة",
+      "quickLinks": "روابط سريعة",
+      "contact": "اتصل بنا",
+      "copyright": "© 2025 نور القابضة. جميع الحقوق محفوظة.",
+      "privacy": "سياسة الخصوصية",
+      "terms": "شروط الخدمة"
+    }
+  }
+}

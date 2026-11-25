@@ -1,4 +1,4 @@
-// api/_auth.js
+// netlify/functions/_auth.js
 // Minimal password check + signed session token, no external dependencies.
 // The token is a signed, expiring blob — not a database session, but enough
 // to keep the admin endpoints from being wide open to the public internet.
@@ -6,7 +6,7 @@
 const crypto = require("crypto");
 
 const ADMIN_PASSWORD = process.env.ADMIN_PASSWORD;
-const SESSION_SECRET = process.env.SESSION_SECRET; // random long string, set in Vercel env vars
+const SESSION_SECRET = process.env.SESSION_SECRET; // random long string, set in Netlify env vars
 const SESSION_TTL_MS = 1000 * 60 * 60 * 8; // 8 hours
 
 function sign(payload) {
@@ -28,7 +28,8 @@ function verifySessionToken(token) {
     const [payload, sig] = decoded.split(".");
     if (!payload || !sig) return false;
     const expectedSig = sign(payload);
-    if (sig !== expectedSig) return false;
+    if (sig.length !== expectedSig.length) return false;
+    if (!crypto.timingSafeEqual(Buffer.from(sig), Buffer.from(expectedSig))) return false;
     const expires = Number(payload);
     if (Date.now() > expires) return false;
     return true;

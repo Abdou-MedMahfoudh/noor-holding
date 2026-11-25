@@ -1,4 +1,4 @@
-// api/_github.js
+// netlify/functions/_github.js
 // Shared helper for talking to the GitHub Contents API.
 // Used by every CRUD endpoint to read/write files in the repo.
 
