@@ -1,7 +1,7 @@
 // news-article.js — single article page (news.html?id=N).
 import { i18n } from "../lib/i18n.js";
 import { loadNews, articleText, formatDate } from "../lib/news.js";
-import { initSubpageNav } from "../lib/subpage-nav.js";
+import { initSiteNav } from "../lib/site-nav.js";
 
 const $ = (id) => document.getElementById(id);
 
@@ -36,7 +36,7 @@ function setupSharing() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  initSubpageNav();
+  initSiteNav();
   setupSharing();
 
   const id = Number(new URLSearchParams(location.search).get("id"));

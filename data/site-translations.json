@@ -44,7 +44,8 @@
         "ecocharge": "EcoCharge Africa  – Specialized in electric charging solutions and sustainable energy infrastructure.",
         "agro": "Compagnie Agricole du Sahel (CASA)– An innovative Mauritanian company committed to developing modern and sustainable agriculture.",
         "ila": "ILA DISTRIBUTION SARL – Strategic commercial subsidiary specializing in import-export, distribution, commercial representation and seafood valorization.",
-        "medservices": "MEDSERVICES: The group's medical center of excellence, specialized in turnkey hospital construction, state-of-the-art medical equipment and integrated health solutions across Mauritania."
+        "medservices": "MEDSERVICES: The group's medical center of excellence, specialized in turnkey hospital construction, state-of-the-art medical equipment and integrated health solutions across Mauritania.",
+        "fairsoft": "FAIR-SOFT: The group's technology company, active in Mauritania for 10 years, supporting businesses and institutions in their digital transformation: custom development, ERP, artificial intelligence and cybersecurity."
       },
       "visionTitle": "Our vision and values:",
       "vision": "Through all of these subsidiaries, NOOR HOLDING works to create value, anticipate market needs and actively contribute to the development of Mauritania and the sub-region. Our vision is based on three pillars: innovation, rigor and commitment to sustainability and social responsibility.",
@@ -177,6 +178,16 @@
             "State-of-the-art equipment: diagnostics, surgery, labs, dialysis",
             "Medical gas distribution and digital health technologies",
             "24/7 after-sales support and nationwide presence"
+          ]
+        },
+        "fairsoft": {
+          "name": "Fair-Soft",
+          "description": "Active in Mauritania for 10 years, Fair-Soft supports SMEs, mid-sized companies, large groups, manufacturers, public institutions and international organisations in their digital transformation. It designs secure, sovereign architectures, modernises public services and answers public tenders, with a single point of contact from start to finish, skills transfer and responsive technical support.",
+          "services": [
+            "Custom development: web and mobile apps, business software",
+            "IT consulting, ERP integration and consulting",
+            "Artificial intelligence and cybersecurity",
+            "Public service modernisation and paperless processes"
           ]
         }
       }
@@ -313,7 +324,8 @@
         "agro": "La Compagnie Agricole du Sahel (CASA) – entreprise mauritanienne innovante engagée dans le développement d'une agriculture moderne et durable.",
         "ecocharge": "EcoCharge Africa - spécialisée dans les solutions de recharge électrique et d'infrastructures énergétiques durables.",
         "ila": "ILA DISTRIBUTION SARL – Filiale commerciale stratégique spécialisée dans l'import-export, la distribution, la représentation commerciale et la valorisation des produits de la mer.",
-        "medservices": "MEDSERVICES : Pôle d'excellence médicale du groupe, spécialisé dans la construction hospitalière clé en main, les équipements médicaux de pointe et les solutions de santé intégrées à travers la Mauritanie."
+        "medservices": "MEDSERVICES : Pôle d'excellence médicale du groupe, spécialisé dans la construction hospitalière clé en main, les équipements médicaux de pointe et les solutions de santé intégrées à travers la Mauritanie.",
+        "fairsoft": "FAIR-SOFT : Acteur technologique du groupe, présent en Mauritanie depuis 10 ans, qui accompagne entreprises et institutions dans leur transformation numérique : développement sur mesure, ERP, intelligence artificielle et cybersécurité."
       },
       "visionTitle": "Notre vision et nos valeurs :",
       "vision": "À travers l'ensemble de ces filiales, NOOR HOLDING œuvre à créer de la valeur, anticiper les besoins du marché et contribuer activement à l'essor de la Mauritanie et de la sous-région. Notre vision repose sur trois piliers : l'innovation, la rigueur et l'engagement en faveur de la durabilité et de la responsabilité sociale.",
@@ -446,6 +458,16 @@
             "Équipements de pointe : diagnostic, chirurgie, laboratoires, dialyse",
             "Distribution de gaz médicaux et santé numérique",
             "Support après-vente 24h/7j et présence nationale"
+          ]
+        },
+        "fairsoft": {
+          "name": "Fair-Soft",
+          "description": "Présente en Mauritanie depuis 10 ans, Fair-Soft accompagne les PME, ETI, grands groupes, industriels, institutions publiques et organisations internationales dans leur transformation numérique. L'entreprise conçoit des architectures sécurisées et souveraines, modernise les services publics et répond aux marchés publics, avec un interlocuteur unique de bout en bout, un transfert de compétences et un support technique réactif.",
+          "services": [
+            "Développement sur mesure : applications web, mobiles et logiciels métiers",
+            "Conseil informatique, intégration et conseil en ERP",
+            "Intelligence artificielle et cybersécurité",
+            "Modernisation des services publics et dématérialisation"
           ]
         }
       }
@@ -581,7 +603,8 @@
         "ecocharge": "EcoCharge Africa - إيكو تشارج أفريقيا متخصصة في حلول الشحن الكهربائي والبُنى التحتية للطاقة المستدامة.",
         "agro": " CASA - شركة الساحل الزراعية  شركة موريتانية مبتكرة تعمل على تطوير زراعة حديثة ومستدامة.",
         "ila": "ILA DISTRIBUTION SARL – فرع تجاري استراتيجي متخصص في الاستيراد والتصدير، التوزيع، التمثيل التجاري وتثمين المنتجات البحرية.",
-        "medservices": "ميدسرفيسز: قطب التميز الطبي للمجموعة، متخصص في بناء المستشفيات بنظام تسليم المفتاح والمعدات الطبية المتطورة والحلول الصحية المتكاملة في جميع أنحاء موريتانيا."
+        "medservices": "ميدسرفيسز: قطب التميز الطبي للمجموعة، متخصص في بناء المستشفيات بنظام تسليم المفتاح والمعدات الطبية المتطورة والحلول الصحية المتكاملة في جميع أنحاء موريتانيا.",
+        "fairsoft": "فير سوفت: الذراع التكنولوجي للمجموعة، تنشط في موريتانيا منذ عشر سنوات وترافق المؤسسات والهيئات في تحولها الرقمي: التطوير حسب الطلب، وأنظمة تخطيط الموارد، والذكاء الاصطناعي، والأمن السيبراني."
       },
       "visionTitle": "رؤيتنا وقيمنا:",
       "vision": "من خلال جميع هذه الشركات التابعة، تعمل نور القابضة على خلق القيمة وتوقع احتياجات السوق والمساهمة بفعالية في ازدهار موريتانيا والمنطقة الفرعية. تقوم رؤيتنا على ثلاث ركائز: الابتكار والدقة والالتزام بالاستدامة والمسؤولية الاجتماعية.",
@@ -714,6 +737,16 @@
             "معدات متطورة: التشخيص، الجراحة، المختبرات، غسيل الكلى",
             "توزيع الغازات الطبية وتقنيات الصحة الرقمية",
             "دعم فني على مدار الساعة وحضور وطني واسع"
+          ]
+        },
+        "fairsoft": {
+          "name": "فير سوفت",
+          "description": "تنشط فير سوفت في موريتانيا منذ عشر سنوات، وترافق المؤسسات الصغيرة والمتوسطة والمجموعات الكبرى والصناعيين والمؤسسات العمومية والمنظمات الدولية في تحولها الرقمي. تصمم الشركة بنى تحتية آمنة وسيادية، وتحدّث الخدمات العمومية وتستجيب للصفقات العمومية، مع محاور واحد من البداية إلى النهاية ونقل للمهارات ودعم تقني سريع.",
+          "services": [
+            "تطوير حسب الطلب: تطبيقات الويب والهاتف وبرمجيات الأعمال",
+            "الاستشارات المعلوماتية ودمج أنظمة تخطيط الموارد (ERP)",
+            "الذكاء الاصطناعي والأمن السيبراني",
+            "تحديث الخدمات العمومية والرقمنة"
           ]
         }
       }

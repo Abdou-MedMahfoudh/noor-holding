@@ -1,7 +1,7 @@
 // news-list.js — "All news" page (Allnews.html): search + pagination.
 import { i18n } from "../lib/i18n.js";
 import { loadNews, articleText, newsListCardHtml } from "../lib/news.js";
-import { initSubpageNav } from "../lib/subpage-nav.js";
+import { initSiteNav } from "../lib/site-nav.js";
 
 const PER_PAGE = 9;
 const state = { all: [], filtered: [], page: 1, search: "" };
@@ -81,7 +81,7 @@ function updateCounter() {
 }
 
 document.addEventListener("DOMContentLoaded", async () => {
-  initSubpageNav();
+  initSiteNav();
 
   $("search-input").addEventListener("input", (e) => {
     state.search = e.target.value;

@@ -17,11 +17,12 @@ A plain static site (HTML, Tailwind CSS, vanilla JS modules) hosted on **Netlify
 │
 ├── assets/
 │   ├── css/site.css         Built stylesheet (generated — do not edit by hand)
+│   ├── fonts/               Self-hosted fonts (Plus Jakarta Sans, DM Serif Text, IBM Plex Sans Arabic)
 │   ├── js/
 │   │   ├── lib/
 │   │   │   ├── i18n.js          Translations + language switcher
 │   │   │   ├── news.js          Loading news, date formatting, news card templates
-│   │   │   └── subpage-nav.js   Mobile menu + hide-on-scroll navbar (inner pages)
+│   │   │   └── site-nav.js      Navbar: mobile menu, hide on scroll, solid after the hero
 │   │   └── pages/
 │   │       ├── home.js          index.html
 │   │       ├── news-list.js     Allnews.html
@@ -67,10 +68,28 @@ Use the admin panel: `https://noorholding.mr/admin.html`. Every save is a commit
 (By hand: add an entry to `data/news.json` and the same id under `fr`, `en` and `ar` in `data/news-translations.json`.)
 
 ### Add a subsidiary to the homepage carousel
-1. Copy one `<div class="carousel-slide …">` block in `index.html` (section `#subsidiaries`).
-2. Put its images in `assets/images/subsidiaries/<company>/` (`logo.webp`, `photo-1.webp` …).
-3. Add its texts under `subsidiaries.companies.<company>` in `data/site-translations.json` (3 languages).
-   The carousel dots are generated automatically.
+1. In `index.html` (section `#subsidiaries`), copy the `<div class="carousel-slide …">` block of a card whose layout you want.
+   Each card is an `<article class="sub-card sub-card--LAYOUT" data-accent="COLOUR">`:
+
+   | Layout | Looks like | Needs |
+   |---|---|---|
+   | `sub-card--split` | Text on the left, mosaic of 3 photos on the right | logo + 3 photos |
+   | `sub-card--immersive` | One full-bleed photo, text on a white panel, 2 thumbnails | logo + 3 photos (photo-3 is the background) |
+   | `sub-card--ledger` | Sector-coloured column with the name, details on the right, photo strip | logo (+ 3 photos, or a `sub-showcase` block with the logo) |
+
+   Sector colours (`data-accent`): `sun` (energy), `heritage` (mining), `sea` (fishing / sea products), `olive` (agriculture, green energy),
+   `midnight` (trade, logistics, finance), `gulf` (health), `emerald` (technology). They are defined in `src/input.css` › "Subsidiary cards".
+   Alternate layouts so two neighbouring cards don't look the same.
+2. Put its images in `assets/images/subsidiaries/<company>/` (`logo.webp`, `photo-1.webp` … `photo-3.webp`).
+3. Add its texts under `subsidiaries.companies.<company>` in `data/site-translations.json` (fr, en, ar): `name`, `description`, `services` (list).
+   The `<li>` items in the card use `data-i18n="subsidiaries.companies.<company>.services.0"`, `.1`, …
+   The carousel dots are generated automatically. Rebuild the CSS (`npm run build`).
+
+### Typography
+- **Plus Jakarta Sans** — all text (Latin). **DM Serif Text** — headings and company names (`font-dm-serif`).
+  **IBM Plex Sans Arabic** — everything when the page is in Arabic.
+- The fonts are self-hosted in `assets/fonts/` (no Google Fonts request) and declared at the top of `src/input.css`.
+  Licences: SIL Open Font License (files next to the fonts).
 
 ### Images
 Use **WebP**, resized to the size they are displayed at (≈ 1600–1920 px wide for full-width backgrounds,
