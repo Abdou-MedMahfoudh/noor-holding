@@ -152,7 +152,16 @@ class I18n {
           short: true,
         })
       );
-      nav.querySelector("img")?.insertAdjacentElement("afterend", wrapper);
+      const menuButton = nav.querySelector("#mobile-menu-btn");
+      if (menuButton) {
+        // Language + menu button grouped on the right
+        const group = document.createElement("div");
+        group.className = "flex items-center gap-1 md:hidden";
+        menuButton.replaceWith(group);
+        group.append(wrapper, menuButton);
+      } else {
+        nav.firstElementChild?.insertAdjacentElement("afterend", wrapper);
+      }
     }
   }
 

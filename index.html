@@ -10,7 +10,6 @@
 
     <!-- Above-the-fold images: fetched immediately -->
     <link rel="preload" as="image" href="./assets/images/hero/hero-mining.webp" fetchpriority="high" />
-    <link rel="preload" as="image" href="./assets/images/brand/noor-network-wheel.webp" />
     <link rel="preload" href="./assets/fonts/plus-jakarta-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin />
     <link rel="preload" href="./assets/fonts/dm-serif-text-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin />
 
@@ -87,29 +86,19 @@
         >
           <!-- Spider Web Image - Mobile Only -->
           <div class="flex justify-center">
-            <img
-              id="spider-web-mobile"
-              src="./assets/images/brand/noor-network-wheel.webp"
-              alt="Noor Holding Network"
-              class="max-w-[380px] max-h-500 opacity-80 fade-item"
-            />
+            <div id="spider-web-mobile" class="fade-item network-box network-box--mobile" data-network data-network-mobile role="group" aria-label="Noor Holding — filiales"></div>
           </div>
 
           <div class="mb-0 text-sand">
-            <h1
-              data-i18n="hero.title"
-              class="text-3xl font-dm-serif font-extrabold text-kandura mb-0 tracking-tight fade-item"
-            >
-              NOOR HOLDING
-            </h1>
+            <h1 class="sr-only">Noor Holding</h1>
           </div>
 
-          <!-- Short description for mobile -->
+          <!-- Tagline (mobile) -->
           <p
-            class="text-md text-kandura font-dm-serif pb-5 leading-relaxed fade-item"
-            data-i18n="hero.shortDescription"
+            class="text-lg text-kandura font-medium pb-5 leading-relaxed fade-item"
+            data-i18n="hero.subtitle"
           >
-            Leading Mauritanian corporation across key sectors.
+            L'innovation, la rigueur et l'engagement
           </p>
 
           <!-- Key Stats - Mobile -->
@@ -117,7 +106,7 @@
             class="grid grid-cols-3 gap-4 max-w-xs mx-auto fade-item mb-5"
           >
             <div class="text-center">
-              <div class="text-lg font-bold text-sand tabular">14</div>
+              <div class="text-lg font-bold text-sand tabular" data-count="companies">15</div>
               <div
                 class="text-xs text-kandura/80 uppercase tracking-wide"
                 data-i18n="hero.stats.subsidiaries"
@@ -126,7 +115,7 @@
               </div>
             </div>
             <div class="text-center">
-              <div class="text-lg font-bold text-sand tabular">8</div>
+              <div class="text-lg font-bold text-sand tabular" data-count="sectors">9</div>
               <div
                 class="text-xs text-kandura/80 uppercase tracking-wide"
                 data-i18n="hero.stats.keysectors"
@@ -157,12 +146,8 @@
           >
             <!-- Title -->
             <div class="mb-8 text-kandura">
-              <h1
-                id="hero-title"
-                class="text-5xl md:text-7xl font-dm-serif text-executive leading-tight mb-4 tracking-tight fade-item"
-                data-i18n="hero.title"
-              >
-                NOOR HOLDING
+              <h1 id="hero-title" class="hero-wordmark mb-6 fade-item">
+                <img src="./assets/images/brand/wordmark.svg" alt="Noor Holding" width="1522" height="524" fetchpriority="high" />
               </h1>
             </div>
 
@@ -185,7 +170,7 @@
               class="grid grid-cols-3 gap-8 mt-12 max-w-lg mx-auto fade-item"
             >
               <div class="text-center">
-                <div class="text-3xl font-bold text-sand tabular">14</div>
+                <div class="text-3xl font-bold text-sand tabular" data-count="companies">15</div>
                 <div
                   class="text-sm text-kandura/80 uppercase tracking-wide"
                   data-i18n="hero.stats.subsidiaries"
@@ -194,7 +179,7 @@
                 </div>
               </div>
               <div class="text-center">
-                <div class="text-3xl font-bold text-sand tabular">8</div>
+                <div class="text-3xl font-bold text-sand tabular" data-count="sectors">9</div>
                 <div
                   class="text-sm text-kandura/80 uppercase tracking-wide"
                   data-i18n="hero.stats.keysectors"
@@ -222,13 +207,9 @@
           <!-- Spiders Web Image - Desktop Only -->
           <div
             id="spider-web"
-            class="w-full md:w-1/2 flex justify-center mb-3 mt-5 fade-item"
+            class="w-full md:w-1/2 flex justify-center items-center fade-item"
           >
-            <img
-              src="./assets/images/brand/noor-network-wheel.webp"
-              alt="Noor Holding Network"
-              class="mt-10 max-w-[80%] h-auto object-contain"
-            />
+            <div class="network-box" data-network role="group" aria-label="Noor Holding — filiales"></div>
           </div>
         </div>
       </div>
@@ -760,7 +741,7 @@
               class="carousel-track flex"
               id="carouselTrack"
             >
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide">
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="afh">
 <article class="sub-card sub-card--split" data-accent="sun">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/afh/logo.webp" alt="Africaine Des Hydrocarbures S.A logo" /></div>
@@ -771,7 +752,7 @@
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/afh/photo-1.webp" alt="Africaine Des Hydrocarbures S.A — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/afh/photo-2.webp" alt="Africaine Des Hydrocarbures S.A — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/afh/photo-3.webp" alt="Africaine Des Hydrocarbures S.A — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide">
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="slmp">
 <article class="sub-card sub-card--split" data-accent="sun">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/slmp/logo.webp" alt="SLMP S.A logo" /></div>
@@ -782,7 +763,7 @@
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/slmp/photo-1.webp" alt="SLMP S.A — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/slmp/photo-2.webp" alt="SLMP S.A — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/slmp/photo-3.webp" alt="SLMP S.A — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide">
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="ila">
 <article class="sub-card sub-card--split" data-accent="sea">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/ila/logo.webp" alt="ILA DISTRIBUTION SARL logo" /></div>
@@ -793,7 +774,7 @@
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ila/photo-1.webp" alt="ILA DISTRIBUTION SARL — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ila/photo-2.webp" alt="ILA DISTRIBUTION SARL — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ila/photo-3.webp" alt="ILA DISTRIBUTION SARL — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide">
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="mines">
 <article class="sub-card sub-card--split" data-accent="heritage">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/mines/logo.webp" alt="MINES DE MAURITANIE logo" /></div>
@@ -804,7 +785,7 @@
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/mines/photo-1.webp" alt="MINES DE MAURITANIE — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/mines/photo-2.webp" alt="MINES DE MAURITANIE — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/mines/photo-3.webp" alt="MINES DE MAURITANIE — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide">
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="ecocharge">
 <article class="sub-card sub-card--split" data-accent="olive">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/ecocharge/logo.webp" alt="EcoCharge Africa logo" /></div>
@@ -815,7 +796,7 @@
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ecocharge/photo-1.webp" alt="EcoCharge Africa — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ecocharge/photo-2.webp" alt="EcoCharge Africa — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ecocharge/photo-3.webp" alt="EcoCharge Africa — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide">
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="agro">
 <article class="sub-card sub-card--split" data-accent="olive">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/agro/logo.webp" alt="Compagnie Agricole du Sahel (CASA) logo" /></div>
@@ -826,7 +807,7 @@
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/agro/photo-1.webp" alt="Compagnie Agricole du Sahel (CASA) — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/agro/photo-2.webp" alt="Compagnie Agricole du Sahel (CASA) — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/agro/photo-3.webp" alt="Compagnie Agricole du Sahel (CASA) — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide">
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="itb">
 <article class="sub-card sub-card--split" data-accent="midnight">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/itb/logo.webp" alt="ITB – International Trade Brokerage logo" /></div>
@@ -837,7 +818,7 @@
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/itb/photo-1.webp" alt="ITB – International Trade Brokerage — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/itb/photo-2.webp" alt="ITB – International Trade Brokerage — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/itb/photo-3.webp" alt="ITB – International Trade Brokerage — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide">
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="tbs1">
 <article class="sub-card sub-card--split" data-accent="midnight">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/tbs-transport/logo.webp" alt="TBS – Transport Business and Shipping logo" /></div>
@@ -848,7 +829,7 @@
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-transport/photo-1.webp" alt="TBS – Transport Business and Shipping — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-transport/photo-2.webp" alt="TBS – Transport Business and Shipping — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-transport/photo-3.webp" alt="TBS – Transport Business and Shipping — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide">
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="acg">
 <article class="sub-card sub-card--split" data-accent="midnight">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/acg/logo.webp" alt="ACG – Établissement Arrachad pour le Commerce Général logo" /></div>
@@ -859,7 +840,7 @@
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/acg/photo-1.webp" alt="ACG – Établissement Arrachad pour le Commerce Général — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/acg/photo-2.webp" alt="ACG – Établissement Arrachad pour le Commerce Général — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/acg/photo-3.webp" alt="ACG – Établissement Arrachad pour le Commerce Général — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide">
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="tbs2">
 <article class="sub-card sub-card--split" data-accent="midnight">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/tbs-brokerage/logo.webp" alt="TBS – Trade Brokerage and Services logo" /></div>
@@ -870,7 +851,7 @@
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-brokerage/photo-1.webp" alt="TBS – Trade Brokerage and Services — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-brokerage/photo-2.webp" alt="TBS – Trade Brokerage and Services — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-brokerage/photo-3.webp" alt="TBS – Trade Brokerage and Services — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide">
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="fishing">
 <article class="sub-card sub-card--split" data-accent="sea">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fishing/logo-semak.webp" alt="SEMAK s.a logo" /><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fishing/logo-valor-fish.webp" alt="SMMCS s.a logo" /><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fishing/logo-smmcs.webp" alt="Valor Fish Frigo logo" /></div>
@@ -881,7 +862,7 @@
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/fishing/photo-1.webp" alt="SEMAK s.a — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/fishing/photo-2.webp" alt="SEMAK s.a — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/fishing/photo-3.webp" alt="SEMAK s.a — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide">
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="medservices">
 <article class="sub-card sub-card--split" data-accent="gulf">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/medservices/logo.webp" alt="MEDSERVICES logo" /></div>
@@ -892,7 +873,7 @@
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/medservices/photo-1.webp" alt="MEDSERVICES — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/medservices/photo-2.webp" alt="MEDSERVICES — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/medservices/photo-3.webp" alt="MEDSERVICES — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide">
+<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="fairsoft">
 <article class="sub-card sub-card--split" data-accent="emerald">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fairsoft/logo.webp" alt="Fair-Soft logo" /></div>

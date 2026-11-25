@@ -21,6 +21,7 @@ A plain static site (HTML, Tailwind CSS, vanilla JS modules) hosted on **Netlify
 │   ├── js/
 │   │   ├── lib/
 │   │   │   ├── i18n.js          Translations + language switcher
+│   │   │   ├── network.js       Hero network graphic (from data/subsidiaries.json)
 │   │   │   ├── news.js          Loading news, date formatting, news card templates
 │   │   │   └── site-nav.js      Navbar: mobile menu, hide on scroll, solid after the hero
 │   │   └── pages/
@@ -38,6 +39,7 @@ A plain static site (HTML, Tailwind CSS, vanilla JS modules) hosted on **Netlify
 │
 ├── data/
 │   ├── site-translations.json   Every text of the site, per language (fr / en / ar)
+│   ├── subsidiaries.json        The list of companies (network graphic + hero figures)
 │   ├── news.json                Article list: id, date, picture, featured
 │   └── news-translations.json   Article texts per language: title, description, author, category, content (HTML)
 │
@@ -79,6 +81,16 @@ Use the admin panel: `https://noorholding.mr/admin.html`. Every save is a commit
 3. Add its texts under `subsidiaries.companies.<company>` in `data/site-translations.json` (fr, en, ar): `name`, `description`, `services` (list).
    The `<li>` items in the card use `data-i18n="subsidiaries.companies.<company>.services.0"`, `.1`, …
    The carousel dots and counter update automatically. Rebuild the CSS (`npm run build`).
+
+### The network graphic in the hero
+The Noor Holding logo with every company in a circle around it, drawn by `assets/js/lib/network.js` from
+**`data/subsidiaries.json`**. Nothing is drawn by hand: spacing and logo sizes recalculate for any number of companies,
+and past ~20 companies a second, inner circle opens. The "subsidiaries" and "sectors" figures in the hero follow the file.
+
+- **Add a company:** one entry in `companies`: `name`, `logo` (path inside `assets/images/subsidiaries/`), `sector`,
+  and `slide` = the key of its carousel card (leave it out if it has no card). Clicking the logo opens that card.
+- Motion: the circle turns slowly (one turn every 3 minutes) and pauses on hover; small lights travel from the centre
+  to each company. Both are off for visitors who ask for reduced motion.
 
 ### Typography
 - **Plus Jakarta Sans** — all text (Latin). **DM Serif Text** — headings and company names (`font-dm-serif`).

@@ -2,6 +2,8 @@
 import { i18n } from "../lib/i18n.js";
 import { loadNews, newsCardHtml } from "../lib/news.js";
 import { initSiteNav } from "../lib/site-nav.js";
+import { mountNetwork } from "../lib/network.js";
+
 
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -147,6 +149,14 @@ function initSubsidiariesCarousel() {
   // A drag should not count as a click on a link inside the card.
   viewport.addEventListener("click", (e) => track.classList.contains("was-dragged") && e.preventDefault(), true);
 
+  // Clicking a logo in the hero network opens that company's card.
+  document.addEventListener("subsidiary:show", (e) => {
+    const index = slides.findIndex((slide) => slide.dataset.key === e.detail.slide);
+    if (index < 0) return;
+    goTo(index);
+    document.getElementById("subsidiaries")?.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth" });
+  });
+
   goTo(0);
 }
 
@@ -183,16 +193,11 @@ document.addEventListener("DOMContentLoaded", () => {
   initHeroSlideshow();
   initSubsidiariesCarousel();
 
-  // Start the intro as soon as the wheel image is ready (1.2 s at most).
-  const wheel = document.querySelector("#spider-web img");
+  // Draw the network graphic, then play the intro (1.2 s at most).
   let started = false;
   const start = () => !started && (started = true) && playIntro();
-  if (!wheel || wheel.complete) start();
-  else {
-    wheel.addEventListener("load", start, { once: true });
-    wheel.addEventListener("error", start, { once: true });
-    setTimeout(start, 1200);
-  }
+  mountNetwork().then(start, start);
+  setTimeout(start, 1200);
 });
 
 i18n.onChange(renderLatestNews);

@@ -1,0 +1,157 @@
+{
+  "_readme": "The list of companies drawn in the hero circle (and counted in the hero figures). Add a company: one entry in 'companies' with its name, logo (path inside assets/images/subsidiaries/) and sector. 'slide' = the key of its card in the carousel (subsidiaries.companies.<slide> in site-translations.json); clicking the logo opens that card. 'sectors' lists the sector keys used for the 'key sectors' figure.",
+  "sectors": {
+    "energy": {
+      "fr": "Énergie",
+      "en": "Energy",
+      "ar": "الطاقة"
+    },
+    "mining": {
+      "fr": "Mines",
+      "en": "Mining",
+      "ar": "المناجم"
+    },
+    "fishing": {
+      "fr": "Pêche",
+      "en": "Fishing",
+      "ar": "الصيد"
+    },
+    "trade": {
+      "fr": "Commerce",
+      "en": "Trade",
+      "ar": "التجارة"
+    },
+    "transport": {
+      "fr": "Transport",
+      "en": "Transport",
+      "ar": "النقل"
+    },
+    "finance": {
+      "fr": "Finance",
+      "en": "Finance",
+      "ar": "المالية"
+    },
+    "agri": {
+      "fr": "Agriculture",
+      "en": "Agriculture",
+      "ar": "الزراعة"
+    },
+    "health": {
+      "fr": "Santé",
+      "en": "Health",
+      "ar": "الصحة"
+    },
+    "tech": {
+      "fr": "Technologie",
+      "en": "Technology",
+      "ar": "التكنولوجيا"
+    }
+  },
+  "companies": [
+    {
+      "id": "afh",
+      "name": "AFH – Africaine des Hydrocarbures",
+      "logo": "afh/logo.webp",
+      "sector": "energy",
+      "slide": "afh"
+    },
+    {
+      "id": "slmp",
+      "name": "SLMP S.A",
+      "logo": "slmp/logo.webp",
+      "sector": "energy",
+      "slide": "slmp"
+    },
+    {
+      "id": "ecocharge",
+      "name": "EcoCharge Africa",
+      "logo": "ecocharge/logo.webp",
+      "sector": "energy",
+      "slide": "ecocharge"
+    },
+    {
+      "id": "mines",
+      "name": "Mines de Mauritanie",
+      "logo": "mines/logo.webp",
+      "sector": "mining",
+      "slide": "mines"
+    },
+    {
+      "id": "semak",
+      "name": "SEMAK S.A",
+      "logo": "fishing/logo-semak.webp",
+      "sector": "fishing",
+      "slide": "fishing"
+    },
+    {
+      "id": "smmcs",
+      "name": "SMMCS S.A",
+      "logo": "fishing/logo-smmcs.webp",
+      "sector": "fishing",
+      "slide": "fishing"
+    },
+    {
+      "id": "vff",
+      "name": "Valor Fish Frigo",
+      "logo": "fishing/logo-valor-fish.webp",
+      "sector": "fishing",
+      "slide": "fishing"
+    },
+    {
+      "id": "ila",
+      "name": "ILA Distribution",
+      "logo": "ila/logo.webp",
+      "sector": "trade",
+      "slide": "ila"
+    },
+    {
+      "id": "itb",
+      "name": "ITB – International Trade Brokerage",
+      "logo": "itb/logo.webp",
+      "sector": "trade",
+      "slide": "itb"
+    },
+    {
+      "id": "acg",
+      "name": "ACG – Arrachad Commerce Général",
+      "logo": "acg/logo.webp",
+      "sector": "trade",
+      "slide": "acg"
+    },
+    {
+      "id": "tbs1",
+      "name": "TBS – Transport Business and Shipping",
+      "logo": "tbs-transport/logo.webp",
+      "sector": "transport",
+      "slide": "tbs1"
+    },
+    {
+      "id": "tbs2",
+      "name": "TBS – Trade Brokerage and Services",
+      "logo": "tbs-brokerage/logo.webp",
+      "sector": "finance",
+      "slide": "tbs2"
+    },
+    {
+      "id": "casa",
+      "name": "CASA – Compagnie Agricole du Sahel",
+      "logo": "agro/logo.webp",
+      "sector": "agri",
+      "slide": "agro"
+    },
+    {
+      "id": "medservices",
+      "name": "MEDSERVICES",
+      "logo": "medservices/logo.webp",
+      "sector": "health",
+      "slide": "medservices"
+    },
+    {
+      "id": "fairsoft",
+      "name": "Fair-Soft",
+      "logo": "fairsoft/logo.webp",
+      "sector": "tech",
+      "slide": "fairsoft"
+    }
+  ]
+}
