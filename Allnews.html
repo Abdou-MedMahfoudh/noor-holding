@@ -1,93 +1,29 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News - Nour Holdings</title>
-      <link rel="icon" href="assets/0ea8716a-725f-4072-8ee9-aed3df86b0a9.JPG" type="image/jpeg">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
-        
-        .font-dm-serif {
-            font-family: 'DM Serif Text', serif;
-        }
-        
-        /* Nour Holdings Design System Colors */
-        .text-sand { color: #CAAB79; }
-        .text-skyline { color: #323E48; }
-        .text-gulf { color: #074859; }
-        .text-midnight { color: #1E2859; }
-        .text-heritage { color: #7F3E2D; }
-        .text-sun { color: #E38632; }
-        .text-sea { color: #92B7BB; }
-        .text-executive-navy { color: #1f2937; }
-        .text-executive-gold { color: #f59e0b; }
-        .text-executive-light { color: #f3f4f6; }
-        .text-executive-muted { color: #6b7280; }
-        .bg-sand { background-color: #CAAB79; }
-        .bg-skyline { background-color: #323E48; }
-        .bg-gulf { background-color: #074859; }
-        .bg-midnight { background-color: #1E2859; }
-        .bg-executive-navy { background-color: #1f2937; }
-        .bg-executive-gold { background-color: #f59e0b; }
-        .bg-executive-light { background-color: #f3f4f6; }
-        .bg-executive-muted { background-color: #6b7280; }
-        .from-midnight { --tw-gradient-from: #1E2859; }
-        .from-sand { --tw-gradient-from: #CAAB79; }
-        .to-skyline { --tw-gradient-to: #323E48; }
-        .to-sand { --tw-gradient-to: #CAAB79; }
-        .hover\:text-midnight:hover { color: #1E2859; }
-        .hover\:bg-gulf:hover { background-color: #074859; }
-        
-        /* Hero gradient overlay */
-        .hero-overlay {
-            background: linear-gradient(
-                to bottom,
-                rgba(30, 40, 89, 0.7) 0%,
-                rgba(30, 40, 89, 0.5) 50%,
-                rgba(202, 171, 121, 0.3) 100%
-            );
-        }
-
-        /* Loading animation */
-        .loading-card {
-            background: linear-gradient(-90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
-            background-size: 400% 400%;
-            animation: shimmer 1.5s ease-in-out infinite;
-        }
-
-        @keyframes shimmer {
-            0% { background-position: -400% 0%; }
-            100% { background-position: 400% 0%; }
-        }
-
-        /* Smooth transitions */
-        .news-card {
-            transform: translateY(0);
-            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-
-        .news-card:hover {
-            transform: translateY(-8px);
-        }
-    </style>
+    <title>News - Noor Holding</title>
+    <link rel="icon" href="./assets/images/brand/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Tajawal:wght@400;700&display=swap">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <script type="module" src="./assets/js/pages/news-list.js"></script>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
     <!-- Navigation -->
     <nav class="fixed top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-0 bg-executive-navy z-30 shadow-lg mt-0 transition-transform duration-300">
         <!-- Logo -->
-        <a href="/">
-            <img class="w-20 h-20 md:w-22 md:h-25 text-amber-50transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110" src="./assets/noor_holding_vector_whiteText.svg" alt="Nour Holding Logo">
+        <a href="./index.html">
+            <img class="w-20 h-20 md:w-22 md:h-25 text-amber-50 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110" src="./assets/images/brand/logo-white.svg" alt="Noor Holding">
         </a>
         <!-- Links - Hidden on mobile, shown on desktop -->
-        <!-- Links - Hidden on mobile, shown on desktop -->
             <ul class="hidden md:flex space-x-6 text-md font-medium text-white/80">
-                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 px-4"><a href="./Allnews.html" data-i18n="nav.news"  class="text-sand">News</a></li>
-                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="./index.html#subsidiaries" data-i18n="nav.subsidiaries">Subsidiaries</a></li>
-                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="./index.html#contact" data-i18n="nav.contact">Contact us</a></li>
-                <!-- Language switcher will be inserted here automatically -->
+                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 px-4"><a href="./Allnews.html" data-i18n="navigation.news">News</a></li>
+                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="./index.html#subsidiaries" data-i18n="navigation.subsidiaries">Subsidiaries</a></li>
+                <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110"><a href="./index.html#contact" data-i18n="navigation.contact">Contact us</a></li>
             </ul>
         
         <!-- Mobile menu button -->
@@ -106,30 +42,23 @@
     <!-- Mobile menu overlay -->
     <div id="mobile-menu" class="fixed top-0 left-0 h-full w-80 bg-executive-navy z-40 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
        <div class="flex flex-col pt-24 px-6 space-y-6 text-white text-lg">
-            <a href="./index.html#subsidiaries" class="hover:text-sand transition-colors border-b border-gray-700 pb-4" data-i18n="nav.subsidiaries" >Subsidiaries</a>
-            <a href="./Allnews.html" class="text-sand border-b border-gray-700 pb-4" data-i18n="nav.news">News</a>
-            <a href="./index.html#contact" class="hover:text-sand transition-colors" data-i18n="nav.contact" >Contact us</a>
+            <a href="./index.html#subsidiaries" class="hover:text-sand transition-colors border-b border-gray-700 pb-4" data-i18n="navigation.subsidiaries" >Subsidiaries</a>
+            <a href="./Allnews.html" class="text-sand border-b border-gray-700 pb-4" data-i18n="navigation.news">News</a>
+            <a href="./index.html#contact" class="hover:text-sand transition-colors" data-i18n="navigation.contact" >Contact us</a>
         </div>
     </div>
 
     <!-- Mobile menu backdrop -->
-    <div id="mobile-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden"></div>
+    <div id="mobile-backdrop" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
 
     <!-- Header Section -->
     <section class="pt-32 pb-16 px-4 sm:px-6 lg:px-8 bg-executive-navy from-executive-navy via-midnight to-skyline">
         <div class="max-w-7xl mx-auto text-center">
-            <!-- <div class="inline-flex items-center px-4 py-2 rounded-full bg-sand/20 text-sand text-md font-medium mb-8" >
-                <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3v6m0 0v6m0-6h6m-6 0H9"></path>
-                </svg>
-                 
-               <h4 data-i18n="news.hero.uptitle"> Stay Updated</h4> 
-            </div> -->
             <h1 class="text-4xl md:text-5xl lg:text-6xl font-dm-serif text-white mb-6 leading-tight" data-i18n="news.hero.main" >
                 News & Insights
             </h1>
             <p class="text-lg md:text-xl text-white/80 max-w-3xl mx-auto leading-relaxed" data-i18n="news.hero.desc">
-                Discover the latest developments, strategic initiatives, and industry insights from Nour Holdings .
+                Discover the latest developments, strategic initiatives, and industry insights from Noor Holding.
             </p>
         </div>
     </section>
@@ -139,9 +68,9 @@
         <div class="max-w-7xl mx-auto">
             <nav>
                 <ol class="flex items-center space-x-2 text-gray-500 text-sm">
-                    <li><a href="/" class="hover:text-midnight transition-colors" data-i18n="footer.home">Home</a></li>
+                    <li><a href="./index.html" class="hover:text-midnight transition-colors" data-i18n="footer.home">Home</a></li>
                     <li><span class="mx-2">/</span></li>
-                    <li class="text-sand font-medium" data-i18n="nav.news">News</li>
+                    <li class="text-sand font-medium" data-i18n="navigation.news">News</li>
                 </ol>
             </nav>
         </div>
@@ -158,7 +87,7 @@
                         id="search-input"
                         placeholder="Search news articles..." 
                         data-i18n-placeholder="news.searchPlaceholder"
-                        class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand focus:border-transparent outline-none transition-all"
+                        class="w-full pl-10 pr-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-sand focus:border-transparent outline-hidden transition-all"
                     >
                     <svg class="absolute left-3 top-3.5 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
@@ -184,31 +113,31 @@
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                     <div class="loading-card h-48 w-full"></div>
                     <div class="p-6">
-                        <div class="loading-card h-4 w-24 rounded mb-3"></div>
-                        <div class="loading-card h-6 w-full rounded mb-3"></div>
-                        <div class="loading-card h-4 w-full rounded mb-2"></div>
-                        <div class="loading-card h-4 w-3/4 rounded mb-4"></div>
-                        <div class="loading-card h-4 w-20 rounded"></div>
+                        <div class="loading-card h-4 w-24 rounded-sm mb-3"></div>
+                        <div class="loading-card h-6 w-full rounded-sm mb-3"></div>
+                        <div class="loading-card h-4 w-full rounded-sm mb-2"></div>
+                        <div class="loading-card h-4 w-3/4 rounded-sm mb-4"></div>
+                        <div class="loading-card h-4 w-20 rounded-sm"></div>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                     <div class="loading-card h-48 w-full"></div>
                     <div class="p-6">
-                        <div class="loading-card h-4 w-24 rounded mb-3"></div>
-                        <div class="loading-card h-6 w-full rounded mb-3"></div>
-                        <div class="loading-card h-4 w-full rounded mb-2"></div>
-                        <div class="loading-card h-4 w-3/4 rounded mb-4"></div>
-                        <div class="loading-card h-4 w-20 rounded"></div>
+                        <div class="loading-card h-4 w-24 rounded-sm mb-3"></div>
+                        <div class="loading-card h-6 w-full rounded-sm mb-3"></div>
+                        <div class="loading-card h-4 w-full rounded-sm mb-2"></div>
+                        <div class="loading-card h-4 w-3/4 rounded-sm mb-4"></div>
+                        <div class="loading-card h-4 w-20 rounded-sm"></div>
                     </div>
                 </div>
                 <div class="bg-white rounded-lg shadow-lg overflow-hidden">
                     <div class="loading-card h-48 w-full"></div>
                     <div class="p-6">
-                        <div class="loading-card h-4 w-24 rounded mb-3"></div>
-                        <div class="loading-card h-6 w-full rounded mb-3"></div>
-                        <div class="loading-card h-4 w-full rounded mb-2"></div>
-                        <div class="loading-card h-4 w-3/4 rounded mb-4"></div>
-                        <div class="loading-card h-4 w-20 rounded"></div>
+                        <div class="loading-card h-4 w-24 rounded-sm mb-3"></div>
+                        <div class="loading-card h-6 w-full rounded-sm mb-3"></div>
+                        <div class="loading-card h-4 w-full rounded-sm mb-2"></div>
+                        <div class="loading-card h-4 w-3/4 rounded-sm mb-4"></div>
+                        <div class="loading-card h-4 w-20 rounded-sm"></div>
                     </div>
                 </div>
             </div>
@@ -224,7 +153,7 @@
                     <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"></path>
                     </svg>
-                    <h3 class="text-xl font-medium text-gray-600 mb-2" data-i18n="news.loadingArticles">No articles found</h3>
+                    <h3 class="text-xl font-medium text-gray-600 mb-2" data-i18n="news.noResults">No articles found</h3>
                     <p class="text-gray-500" data-i18n="news.unableToLoad">Try adjusting your search terms or check back later for new updates.</p>
                 </div>
             </div>
@@ -244,15 +173,15 @@
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <!-- Company Info -->
                  <div>
-                     <img class="w-20 h-30 text-amber-50" src="./assets/noor_holding_vector_whiteText.svg" alt="">
-                       <div class="flex space-x-5 mt-4  md:mt-4 ">
-    <a href="https://www.linkedin.com/company/noorholding" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                     <img class="w-20 h-30 text-amber-50" src="./assets/images/brand/logo-white.svg" alt="Noor Holding" loading="lazy">
+                       <div class="flex space-x-5 mt-4 md:mt-4">
+    <a href="https://www.linkedin.com/company/noor-holding" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">
         <!-- LinkedIn Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 " fill="currentColor" viewBox="0 0 24 24">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v16H.22V8zm7.44 0h4.38v2.16h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.48 3.04 5.48 6.98V24h-4.56v-7.5c0-1.79-.03-4.1-2.5-4.1-2.5 0-2.88 1.94-2.88 3.96V24H7.66V8z"/>
         </svg>
     </a>
-    <a href="https://www.facebook.com/noorholding" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+    <a href="https://www.facebook.com/noorholding" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">
         <!-- Facebook Icon -->
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82V14.708h-3.46v-3.61h3.46V8.413c0-3.423 2.09-5.285 5.145-5.285 1.462 0 2.717.109 3.082.157v3.574l-2.116.001c-1.659 0-1.981.788-1.981 1.945v2.548h3.959l-.516 3.61h-3.443V24h6.748c.732 0 1.325-.593 1.325-1.326V1.326C24 .593 23.407 0 22.675 0z"/>
@@ -261,15 +190,14 @@
 </div>
                 </div>
 
-
                 <!-- Quick Links -->
                  <div>
-                    <h4 class="font-medium text-sand text-lg mb-4" data-i18n="footer.links">Quick Links </h4>
+                    <h4 class="font-medium text-sand text-lg mb-4" data-i18n="footer.quickLinks">Quick Links </h4>
                     <ul class="space-y-2 text-gray-300">
-                      <li><a href="/" class="hover:text-white transition-colors" data-i18n="footer.home">Home</a></li>
-                        <li><a href="./Allnews.html" class="hover:text-white transition-colors" data-i18n="nav.news"  class="text-sand">News</a></li>
+                      <li><a href="./index.html" class="hover:text-white transition-colors" data-i18n="footer.home">Home</a></li>
+                        <li><a href="./Allnews.html" class="hover:text-white transition-colors" data-i18n="navigation.news">News</a></li>
                         <li><a href="./index.html#subsidiaries" class="hover:text-white transition-colors" data-i18n="footer.subs"  >Subsidiaries </a> </li>
-                        <li><a href="./index.html#contact" class="hover:text-white transition-colors" data-i18n="nav.contact">Contact</a></li>
+                        <li><a href="./index.html#contact" class="hover:text-white transition-colors" data-i18n="navigation.contact">Contact</a></li>
                     </ul>
                 </div>
 
@@ -285,13 +213,13 @@
                         <p class="ml-0.5">Nouakchott, Mauritania</p>
                       </div>
                       <div class="flex items-center space-x-2">
-                        <svg class="w-5 h-5 text-sand mt-0  flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 text-sand mt-0 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
                        
                         <p>
-                            <a href="mailto:info@nourholding.mr" class="hover:text-white transition-colors">
-                                info@noorholding.com
+                            <a href="mailto:info@noorholding.mr" class="hover:text-white transition-colors">
+                                info@noorholding.mr
                             </a>
                         </p>
                       </div>
@@ -317,7 +245,7 @@
                         &copy; 2025 Noor Holding. All rights reserved.
                     </p>
                     <div class="flex space-x-6 mt-4 md:mt-0">
-                        <a  class="text-gray-400 hover:text-white transition-colors text-sm mx-3 " data-i18n="footer.privacy" >Privacy Policy</a>
+                        <a  class="text-gray-400 hover:text-white transition-colors text-sm mx-3" data-i18n="footer.privacy" >Privacy Policy</a>
                         <a  class="text-gray-400 hover:text-white transition-colors text-sm" data-i18n="footer.terms">Terms of Service</a>
                     </div>
                 </div>
@@ -325,56 +253,5 @@
         </div>
     </footer>
 
-
-   <script type="module" src="./js/i18n.js"></script>
-<script type="module" src="./js/Allnews.js"></script>
-
-
-    <!-- Additional styles for better visual effects -->
-    <style>
-        /* Text truncation utilities */
-        .line-clamp-2 {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        
-        .line-clamp-3 {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        /* Smooth image hover effect */
-        .group:hover .group-hover\:scale-105 {
-            transform: scale(1.05);
-        }
-
-        /* Enhanced focus states for accessibility */
-        input:focus {
-            box-shadow: 0 0 0 3px rgba(202, 171, 121, 0.1);
-        }
-
-        button:focus {
-            box-shadow: 0 0 0 3px rgba(202, 171, 121, 0.1);
-            outline: none;
-        }
-
-        /* Pagination button styling refinements */
-        .pagination button:first-child {
-            border-top-left-radius: 0.5rem;
-            border-bottom-left-radius: 0.5rem;
-        }
-
-        .pagination button:last-child {
-            border-top-right-radius: 0.5rem;
-            border-bottom-right-radius: 0.5rem;
-        }
-    </style>
-
-    
-
-    
 </body>
+</html>

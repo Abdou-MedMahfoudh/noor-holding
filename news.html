@@ -1,135 +1,36 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News - Nour Holdings</title>
-    <link rel="icon" href="assets/0ea8716a-725f-4072-8ee9-aed3df86b0a9.JPG" type="image/jpeg">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&display=swap');
-        
-        .font-dm-serif {
-            font-family: 'DM Serif Text', serif;
-        }
-        
-        /* Nour Holdings Design System Colors */
-        .text-sand { color: #CAAB79; }
-        .text-skyline { color: #323E48; }
-        .text-gulf { color: #074859; }
-        .text-midnight { color: #1E2859; }
-        .text-heritage { color: #7F3E2D; }
-        .text-sun { color: #E38632; }
-        .text-sea { color: #92B7BB; }
-        .text-executive-navy { color: #1f2937; }
-        .text-executive-gold { color: #f59e0b; }
-        .text-executive-light { color: #f3f4f6; }
-        .text-executive-muted { color: #6b7280; }
-        .bg-sand { background-color: #CAAB79; }
-        .border-sand { border-color: #CAAB79; }
-        .bg-skyline { background-color: #323E48; }
-        .bg-gulf { background-color: #074859; }
-        .bg-midnight { background-color: #1E2859; }
-        .bg-executive-navy { background-color: #1f2937; }
-        .bg-executive-gold { background-color: #f59e0b; }
-        .bg-executive-light { background-color: #f3f4f6; }
-        .bg-executive-muted { background-color: #6b7280; }
-        .from-midnight { --tw-gradient-from: #1E2859; }
-        .from-sand { --tw-gradient-from: #CAAB79; }
-        .to-skyline { --tw-gradient-to: #323E48; }
-        .to-sand { --tw-gradient-to: #CAAB79; }
-        .hover\:text-midnight:hover { color: #1E2859; }
-        .hover\:bg-gulf:hover { background-color: #074859; }
-        
-        /* Hero gradient overlay */
-        .hero-overlay {
-            background: linear-gradient(
-                to bottom,
-                rgba(30, 40, 89, 0.7) 0%,
-                rgba(30, 40, 89, 0.5) 50%,
-                rgba(202, 171, 121, 0.3) 100%
-            );
-        }
-
-        /* Loading animation */
-        .loading-card {
-            background: linear-gradient(-90deg, #f0f0f0 0%, #e0e0e0 50%, #f0f0f0 100%);
-            background-size: 400% 400%;
-            animation: shimmer 1.5s ease-in-out infinite;
-        }
-
-        @keyframes shimmer {
-            0% { background-position: -400% 0%; }
-            100% { background-position: 400% 0%; }
-        }
-
-        /* Text truncation utilities */
-        .line-clamp-2 {
-            display: -webkit-box;
-            -webkit-line-clamp: 2;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-        
-        .line-clamp-3 {
-            display: -webkit-box;
-            -webkit-line-clamp: 3;
-            -webkit-box-orient: vertical;
-            overflow: hidden;
-        }
-
-        /* Enhanced focus states for accessibility */
-        input:focus {
-            box-shadow: 0 0 0 3px rgba(202, 171, 121, 0.1);
-        }
-
-        button:focus {
-            box-shadow: 0 0 0 3px rgba(202, 171, 121, 0.1);
-            outline: none;
-        }
-
-        /* Loading state for single article */
-        .article-loading {
-            background: linear-gradient(-90deg, #f9f9f9 0%, #f0f0f0 50%, #f9f9f9 100%);
-            background-size: 400% 400%;
-            animation: shimmer 1.5s ease-in-out infinite;
-            border-radius: 0.5rem;
-        }
-
-        /* Error state styling */
-        .error-state {
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-
-      
-        
-    </style>
+    <title>News - Noor Holding</title>
+    <link rel="icon" href="./assets/images/brand/favicon.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=DM+Serif+Text:ital@0;1&family=Tajawal:wght@400;700&display=swap">
+    <link rel="stylesheet" href="./assets/css/site.css">
+    <script type="module" src="./assets/js/pages/news-article.js"></script>
 </head>
 <body class="bg-white text-gray-900">
 
     <!-- Navigation -->
-     <!-- Navigation -->
 <nav class="fixed top-0 left-0 w-full flex justify-between items-center px-4 md:px-6 py-0 bg-executive-navy z-30 shadow-lg mt-0 transition-transform duration-300 translate-y-0">
     <!-- Logo -->
-    <a href="/">
-        <img class="w-20 h-20 md:w-22 md:h-25 text-amber-50 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110" src="./assets/noor_holding_vector_whiteText.svg" alt="Nour Holding Logo">
+    <a href="./index.html">
+        <img class="w-20 h-20 md:w-22 md:h-25 text-amber-50 transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110" src="./assets/images/brand/logo-white.svg" alt="Noor Holding">
     </a>
     
     <!-- Links - Hidden on mobile, shown on desktop -->
     <ul class="hidden md:flex space-x-6 text-md font-medium text-white/80">
         <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110 px-4">
-            <a href="./Allnews.html" data-i18n="nav.news" class="text-sand">News</a>
+            <a href="./Allnews.html" data-i18n="navigation.news" class="text-sand">News</a>
         </li>
         <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-            <a href="./index.html#subsidiaries" data-i18n="nav.subsidiaries">Subsidiaries</a>
+            <a href="./index.html#subsidiaries" data-i18n="navigation.subsidiaries">Subsidiaries</a>
         </li>
         <li class="transition delay-100 duration-300 ease-in-out hover:-translate-y-1 hover:scale-110">
-            <a href="./index.html#contact" data-i18n="nav.contact">Contact us</a>
+            <a href="./index.html#contact" data-i18n="navigation.contact">Contact us</a>
         </li>
-        <!-- Language switcher will be inserted here automatically -->
     </ul>
 
     <!-- Mobile menu button -->
@@ -149,14 +50,14 @@
     <div id="mobile-menu" class="fixed top-0 left-0 h-full w-80 bg-executive-navy z-40 transform -translate-x-full transition-transform duration-300 ease-in-out md:hidden">
         <div class="flex flex-col pt-24 px-6 space-y-6 text-white text-lg">
            
-            <a href="./index.html#subsidiaries" class="hover:text-sand transition-colors border-b border-gray-700 pb-4"  data-i18n="nav.subsidiaries">Subsidiaries</a>
-            <a href="./Allnews.html" class="text-sand border-b border-gray-700 pb-4" data-i18n="nav.news" >News</a>
-            <a href="./index.html#contact" class="hover:text-sand transition-colors" data-i18n="nav.contact">Contact us</a>
+            <a href="./index.html#subsidiaries" class="hover:text-sand transition-colors border-b border-gray-700 pb-4"  data-i18n="navigation.subsidiaries">Subsidiaries</a>
+            <a href="./Allnews.html" class="text-sand border-b border-gray-700 pb-4" data-i18n="navigation.news" >News</a>
+            <a href="./index.html#contact" class="hover:text-sand transition-colors" data-i18n="navigation.contact">Contact us</a>
         </div>
     </div>
 
     <!-- Mobile menu backdrop -->
-    <div id="mobile-backdrop" class="fixed inset-0 bg-black bg-opacity-50 z-30 hidden md:hidden"></div>
+    <div id="mobile-backdrop" class="fixed inset-0 bg-black/50 z-30 hidden md:hidden"></div>
 
     <!-- Loading State (Initially visible) -->
     <div id="loading-state" class="mt-20">
@@ -203,7 +104,7 @@
                 <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                 </svg>
-                Back to News
+                <span data-i18n="news.backToNews">Back to News</span>
             </a>
         </div>
     </div>
@@ -213,15 +114,12 @@
         <!-- Hero Section with Article Image -->
         <section class="relative h-auto min-h-0 md:h-[60vh] overflow-hidden mt-20 bg-white md:bg-transparent">
             <!-- Background Image -->
-            <img 
+            <img
                 id="hero-image"
-                src="./assets/13442741_web1_180810-UWN-UHS-front.jpg;w=960.jpeg" 
-                alt="News Article" 
+                alt=""
+                fetchpriority="high" 
                 class="relative block w-full h-auto max-h-none object-contain md:absolute md:inset-0 md:h-full md:object-cover bg-white md:bg-transparent"
             />
-            
-            <!-- Overlay for better text readability on desktop only -->
-            <!-- <div class="hidden md:block absolute inset-0 bg-black/20"></div> -->
         </section>
 
         <!-- Article Meta Information -->
@@ -230,9 +128,9 @@
                 <!-- Breadcrumb -->
                 <nav class="mb-6">
                     <ol class="flex items-center space-x-2 text-gray-500 text-sm">
-                        <li><a href="/" class="hover:text-midnight transition-colors" data-i18n="footer.home">Home</a></li>
+                        <li><a href="./index.html" class="hover:text-midnight transition-colors" data-i18n="footer.home">Home</a></li>
                         <li><span class="mx-2">/</span></li>
-                        <li><a href="./Allnews.html" class="hover:text-midnight transition-colors" data-i18n="nav.news" >News</a></li>
+                        <li><a href="./Allnews.html" class="hover:text-midnight transition-colors" data-i18n="navigation.news" >News</a></li>
                         <li><span class="mx-2">/</span></li>
                         <li class="text-sand" data-i18n="news.article" >Article</li>
                     </ol>
@@ -263,12 +161,6 @@
         <!-- Article Content -->
         <main class="py-10 sm:py-16 px-4 sm:px-6 lg:px-8">
             <div class="max-w-4xl mx-auto">
-                <!-- Article Description/Lead -->
-                <!-- <div class="mb-12">
-                    <p id="article-description" class="text-xl md:text-2xl text-skyline leading-relaxed font-light">
-                        Loading article description...
-                    </p>
-                </div> -->
 
                 <!-- Article Content -->
                 <div class="prose prose-lg max-w-none">
@@ -282,8 +174,8 @@
                     <div class="flex flex-col md:flex-row justify-between items-start md:items-center space-y-6 md:space-y-0">
                         <!-- Share -->
                         <div>
-                            <h3 class="text-lg font-medium text-midnight mb-4 " data-i18n="news.shareArticle" >Share this article</h3>
-                            <div class="flex space-x-4 ">
+                            <h3 class="text-lg font-medium text-midnight mb-4" data-i18n="news.shareArticle" >Share this article</h3>
+                            <div class="flex space-x-4">
                                 <button id="share-twitter" class="flex items-center px-4 py-2 bg-skyline text-white rounded-lg hover:bg-gulf transition-colors">
                                     <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 24 24">
                                         <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
@@ -300,11 +192,11 @@
                         </div>
                         
                         <!-- Back to News -->
-                        <a href="./Allnews.html" class="inline-flex items-center px-6 py-3 bg-sand text-midnight font-medium rounded-lg hover:bg-skyline hover:text-white transition-all duration-300" data-i18n="news.backToNews">
+                        <a href="./Allnews.html" class="inline-flex items-center px-6 py-3 bg-sand text-midnight font-medium rounded-lg hover:bg-skyline hover:text-white transition-all duration-300">
                             <svg class="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
                             </svg>
-                            Back to News
+                <span data-i18n="news.backToNews">Back to News</span>
                         </a>
                     </div>
                 </div>
@@ -313,22 +205,20 @@
     </div>
 
     <!-- Footer -->
-    
-    <!-- Footer -->
      <footer class="bg-executive-navy text-white py-12 px-4 sm:px-6 lg:px-8">
         <div class="max-w-7xl mx-auto">
             <div class="grid md:grid-cols-3 gap-8 mb-8">
                 <!-- Company Info -->
                  <div>
-                     <img class="w-20 h-30 text-amber-50" src="./assets/noor_holding_vector_whiteText.svg" alt="">
-                       <div class="flex space-x-5 mt-4  md:mt-4 ">
-    <a href="https://www.linkedin.com/company/noor-holding" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                     <img class="w-20 h-30 text-amber-50" src="./assets/images/brand/logo-white.svg" alt="Noor Holding" loading="lazy">
+                       <div class="flex space-x-5 mt-4 md:mt-4">
+    <a href="https://www.linkedin.com/company/noor-holding" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">
         <!-- LinkedIn Icon -->
-        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 " fill="currentColor" viewBox="0 0 24 24">
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM.22 8h4.56v16H.22V8zm7.44 0h4.38v2.16h.06c.61-1.16 2.1-2.38 4.32-2.38 4.62 0 5.48 3.04 5.48 6.98V24h-4.56v-7.5c0-1.79-.03-4.1-2.5-4.1-2.5 0-2.88 1.94-2.88 3.96V24H7.66V8z"/>
         </svg>
     </a>
-    <a href="https://www.facebook.com/noorholding" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+    <a href="https://www.facebook.com/noorholding" target="_blank" rel="noopener" class="text-gray-400 hover:text-white transition-colors">
         <!-- Facebook Icon -->
         <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
             <path d="M22.675 0H1.325C.593 0 0 .593 0 1.326v21.348C0 23.407.593 24 1.325 24H12.82V14.708h-3.46v-3.61h3.46V8.413c0-3.423 2.09-5.285 5.145-5.285 1.462 0 2.717.109 3.082.157v3.574l-2.116.001c-1.659 0-1.981.788-1.981 1.945v2.548h3.959l-.516 3.61h-3.443V24h6.748c.732 0 1.325-.593 1.325-1.326V1.326C24 .593 23.407 0 22.675 0z"/>
@@ -337,15 +227,14 @@
 </div>
                 </div>
 
-
                 <!-- Quick Links -->
                  <div>
-                    <h4 class="font-medium text-sand text-lg mb-4" data-i18n="footer.links">Quick Links </h4>
+                    <h4 class="font-medium text-sand text-lg mb-4" data-i18n="footer.quickLinks">Quick Links </h4>
                     <ul class="space-y-2 text-gray-300">
-                      <li><a href="/" class="hover:text-white transition-colors" data-i18n="footer.home">Home</a></li>
-                        <li><a href="./Allnews.html" class="hover:text-white transition-colors" data-i18n="nav.news"  class="text-sand">News</a></li>
+                      <li><a href="./index.html" class="hover:text-white transition-colors" data-i18n="footer.home">Home</a></li>
+                        <li><a href="./Allnews.html" class="hover:text-white transition-colors" data-i18n="navigation.news">News</a></li>
                         <li><a href="./index.html#subsidiaries" class="hover:text-white transition-colors" data-i18n="footer.subs"  >Subsidiaries </a> </li>
-                        <li><a href="./index.html#contact" class="hover:text-white transition-colors" data-i18n="nav.contact">Contact</a></li>
+                        <li><a href="./index.html#contact" class="hover:text-white transition-colors" data-i18n="navigation.contact">Contact</a></li>
                     </ul>
                 </div>
 
@@ -361,13 +250,13 @@
                         <p class="ml-0.5">Nouakchott, Mauritania</p>
                       </div>
                       <div class="flex items-center space-x-2">
-                        <svg class="w-5 h-5 text-sand mt-0  flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <svg class="w-5 h-5 text-sand mt-0 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
                         </svg>
                        
                         <p>
-                            <a href="mailto:info@nourholding.mr" class="hover:text-white transition-colors">
-                                info@noorholding.com
+                            <a href="mailto:info@noorholding.mr" class="hover:text-white transition-colors">
+                                info@noorholding.mr
                             </a>
                         </p>
                       </div>
@@ -401,255 +290,5 @@
         </div>
     </footer>
 
-   <script type="module" src="./js/i18n.js"></script>
-<script type="module" src="./js/single-news.js"></script>
-
-    
-    <!-- Page-specific JavaScript -->
-    <script>
-      // Enhanced navbar scroll behavior with additional features
-
-document.addEventListener('DOMContentLoaded', function() {
-    const nav = document.querySelector('nav');
-    const mobileMenu = document.getElementById('mobile-menu');
-    let lastScrollY = window.scrollY;
-    let isScrolling = false;
-    let scrollTimeout;
-
-    // Configuration
-    const config = {
-       hideThreshold: 50,     // Show navbar when within this distance from top
-        showThreshold: 150,    // Minimum scroll before hiding
-        scrollDelta: 5,        // Minimum scroll distance to trigger change
-        debounceTime: 10       // Debounce scroll events (ms)
-    };
-
-    function handleNavbarScroll() {
-        const currentScrollY = window.scrollY;
-        const scrollDifference = Math.abs(currentScrollY - lastScrollY);
-        
-        // Don't process small scroll movements
-        if (scrollDifference < config.scrollDelta) {
-            isScrolling = false;
-            return;
-        }
-        
-        // Don't hide nav if mobile menu is open
-        const isMobileMenuOpen = !mobileMenu.classList.contains('-translate-x-full');
-        if (isMobileMenuOpen) {
-            isScrolling = false;
-            return;
-        }
-        
-        // Always show nav when at top of page
-        if (currentScrollY <= config.hideThreshold) {
-            showNavbar();
-        }
-        // Hide nav when scrolling down significantly
-        else if (currentScrollY > lastScrollY && 
-                 currentScrollY > config.showThreshold && 
-                 scrollDifference > config.scrollDelta) {
-            hideNavbar();
-        }
-        // Show nav when scrolling up
-        else if (currentScrollY < 150) {
-            showNavbar();
-        }
-        
-        lastScrollY = currentScrollY;
-        isScrolling = false;
-    }
-
-    function showNavbar() {
-        nav.classList.remove('-translate-y-full');
-        nav.classList.add('translate-y-0');
-        nav.style.pointerEvents = 'auto';
-    }
-
-    function hideNavbar() {
-        nav.classList.add('-translate-y-full');
-        nav.classList.remove('translate-y-0');
-        nav.style.pointerEvents = 'none';
-    }
-
-    // Throttled scroll handler
-    function throttleScroll() {
-        if (!isScrolling) {
-            window.requestAnimationFrame(handleNavbarScroll);
-            isScrolling = true;
-        }
-    }
-
-    // Debounced scroll handler for additional smoothness
-    function debouncedScroll() {
-        clearTimeout(scrollTimeout);
-        scrollTimeout = setTimeout(throttleScroll, config.debounceTime);
-    }
-
-    // Add scroll event listener
-    window.addEventListener('scroll', debouncedScroll, { passive: true });
-
-    // Show navbar on mouse movement near top of screen
-    document.addEventListener('mousemove', function(e) {
-        if (e.clientY <= 100 && window.scrollY > config.showThreshold) {
-            showNavbar();
-        }
-    });
-
-    // Show navbar on focus (for keyboard navigation)
-    nav.addEventListener('focusin', showNavbar);
-
-    // Rest of your mobile menu code...
-    const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-    const mobileBackdrop = document.getElementById('mobile-backdrop');
-    const hamburgerIcon = document.getElementById('hamburger-icon');
-    const closeIcon = document.getElementById('close-icon');
-
-    mobileMenuBtn.addEventListener('click', () => {
-        const isOpen = !mobileMenu.classList.contains('-translate-x-full');
-        
-        if (isOpen) {
-            // Close menu
-            mobileMenu.classList.add('-translate-x-full');
-            mobileBackdrop.classList.add('hidden');
-            hamburgerIcon.classList.remove('hidden');
-            hamburgerIcon.classList.add('block');
-            closeIcon.classList.add('hidden');
-            closeIcon.classList.remove('block');
-            document.body.classList.remove('overflow-hidden');
-        } else {
-            // Open menu - ensure nav is visible
-            showNavbar();
-            mobileMenu.classList.remove('-translate-x-full');
-            mobileBackdrop.classList.remove('hidden');
-            hamburgerIcon.classList.add('hidden');
-            hamburgerIcon.classList.remove('block');
-            closeIcon.classList.remove('hidden');
-            closeIcon.classList.add('block');
-            document.body.classList.add('overflow-hidden');
-        }
-    });
-
-    // Close menu when clicking backdrop
-    mobileBackdrop.addEventListener('click', () => {
-        mobileMenu.classList.add('-translate-x-full');
-        mobileBackdrop.classList.add('hidden');
-        hamburgerIcon.classList.remove('hidden');
-        hamburgerIcon.classList.add('block');
-        closeIcon.classList.add('hidden');
-        closeIcon.classList.remove('block');
-        document.body.classList.remove('overflow-hidden');
-    });
-
-    // Initialize navbar position
-    if (window.scrollY <= config.hideThreshold) {
-        showNavbar();
-    }
-
-    // Your existing loadSingleArticle function
-    loadSingleArticle();
-});
-
-        async function loadSingleArticle() {
-            const urlParams = new URLSearchParams(window.location.search);
-            const newsId = urlParams.get('id');
-            
-            if (!newsId) {
-                showErrorState();
-                return;
-            }
-
-            try {
-                // Wait for the news system to be ready
-                if (typeof newsSystem === 'undefined') {
-                    setTimeout(loadSingleArticle, 100);
-                    return;
-                }
-
-                const newsItem = await newsSystem.getNewsById(newsId);
-                
-                if (!newsItem) {
-                    showErrorState();
-                    return;
-                }
-
-                // Update page title and meta information
-                document.title = `${newsItem.title} - Nour Holdings`;
-                
-                // Update all the elements with the article data
-                updateArticleContent(newsItem);
-                
-                // Show the article content and hide loading
-                showArticleContent();
-                
-            } catch (error) {
-                console.error('Error loading article:', error);
-                showErrorState();
-            }
-        }
-
-        function updateArticleContent(newsItem) {
-            // Update hero image
-            const heroImage = document.getElementById('hero-image');
-            if (newsItem.picture) {
-                heroImage.src = newsItem.picture;
-                heroImage.alt = newsItem.title;
-            }
-          
-
-            // Update article meta data
-            document.getElementById('article-date').textContent = newsSystem.formatDate(newsItem.date);
-            document.getElementById('article-author').textContent = newsItem.author || 'Nour Holdings Team';
-            document.getElementById('article-title').textContent = newsItem.title;
-            document.getElementById('article-description').textContent = newsItem.description;
-
-            // Update article content
-            const articleBody = document.getElementById('article-body');
-            if (newsItem.content) {
-                // Convert newlines to paragraphs for better formatting
-                const formattedContent = newsItem.content
-                    .split('\n\n')
-                    .filter(paragraph => paragraph.trim() !== '')
-                    .map(paragraph => `<p>${paragraph.trim()}</p>`)
-                    .join('');
-                articleBody.innerHTML = formattedContent;
-            } else {
-                articleBody.innerHTML = '<p>Content not available.</p>';
-            }
-
-            // Update share buttons
-            setupShareButtons(newsItem);
-        }
-
-        function setupShareButtons(newsItem) {
-            const currentUrl = window.location.href;
-            const twitterBtn = document.getElementById('share-twitter');
-            const facebookBtn = document.getElementById('share-facebook');
-
-            twitterBtn.addEventListener('click', () => {
-                const twitterUrl = `https://twitter.com/intent/tweet?text=${encodeURIComponent(newsItem.title)}&url=${encodeURIComponent(currentUrl)}`;
-                window.open(twitterUrl, '_blank', 'width=600,height=400');
-            });
-
-            facebookBtn.addEventListener('click', () => {
-                const facebookUrl = `https://www.facebook.com/sharer/sharer.php?u=${encodeURIComponent(currentUrl)}`;
-                window.open(facebookUrl, '_blank', 'width=600,height=400');
-            });
-        }
-
-        function showArticleContent() {
-            document.getElementById('loading-state').classList.add('hidden');
-            document.getElementById('error-state').classList.add('hidden');
-            document.getElementById('article-content').classList.remove('hidden');
-        }
-
-        function showErrorState() {
-            document.getElementById('loading-state').classList.add('hidden');
-            document.getElementById('article-content').classList.add('hidden');
-            document.getElementById('error-state').classList.remove('hidden');
-        }
-    </script>
-
-    
 </body>
 </html>

@@ -1,10 +1,13 @@
 {
-  "dependencies": {
-    "@tailwindcss/cli": "^4.1.12",
-    "swiper": "^11.2.10",
-    "tailwindcss": "^4.1.12"
-  },
+  "name": "noor-holding",
+  "private": true,
+  "description": "Noor Holding website (noorholding.mr) — static site + Netlify Functions admin",
   "scripts": {
-    "tailwind": "npx @tailwindcss/cli -i ./src/styles.css -o ./src/output.css --watch"
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/site.css --minify",
+    "dev": "tailwindcss -i ./src/input.css -o ./assets/css/site.css --watch"
+  },
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.1.12",
+    "tailwindcss": "^4.1.12"
   }
 }

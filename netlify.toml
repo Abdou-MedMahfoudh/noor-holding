@@ -1,9 +1,10 @@
+# Netlify configuration — static site (no build step) + serverless functions for the admin panel.
+
 [build]
   publish = "."
   functions = "netlify/functions"
 
-# Map /api/posts, /api/login, /api/upload-image to the matching functions
-# so the existing frontend code (js/admin.js) doesn't need to change at all.
+# Admin panel API: /api/* → Netlify Functions (used by assets/js/pages/admin.js)
 [[redirects]]
   from = "/api/posts"
   to = "/.netlify/functions/posts"
@@ -21,3 +22,32 @@
   to = "/.netlify/functions/upload-image"
   status = 200
   force = true
+
+# Caching: images rarely change (new uploads get new file names) → cache for 30 days.
+[[headers]]
+  for = "/assets/images/*"
+  [headers.values]
+    Cache-Control = "public, max-age=2592000"
+
+# CSS / JS / data: browsers re-check on each visit (cheap 304s) so updates show immediately.
+[[headers]]
+  for = "/assets/css/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/assets/js/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+[[headers]]
+  for = "/data/*"
+  [headers.values]
+    Cache-Control = "public, max-age=0, must-revalidate"
+
+# Keep the admin page out of search engines and out of iframes.
+[[headers]]
+  for = "/admin.html"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    X-Frame-Options = "DENY"

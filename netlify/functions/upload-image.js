@@ -1,12 +1,13 @@
 // netlify/functions/upload-image.js
-// Uploads an image into assets/news/ via the GitHub Contents API.
+// Uploads an image into assets/images/news/ via the GitHub Contents API.
 // Expects JSON body: { filename: "my-photo.jpg", base64: "<raw base64, no data: prefix>" }
-// Returns the path to use as the "picture" field, e.g. "./assets/news/my-photo.jpg"
+// Returns the path to use as the "picture" field, e.g. "./assets/images/news/my-photo.jpg"
 
 const { isAuthenticated } = require("./_auth");
 const { putBinaryFile } = require("./_github");
 
 const MAX_BYTES = 8 * 1024 * 1024; // 8MB safety cap
+const ALLOWED_EXTENSIONS = ["jpg", "jpeg", "png", "webp", "gif", "avif"];
 
 function json(statusCode, payload) {
   return {
@@ -52,12 +53,16 @@ exports.handler = async function (event) {
     }
 
     const safeName = sanitizeFilename(filename);
+    const extension = safeName.split(".").pop().toLowerCase();
+    if (!ALLOWED_EXTENSIONS.includes(extension)) {
+      return json(400, { error: "Only image files are allowed (jpg, png, webp, gif, avif)" });
+    }
     const uniqueName = `${Date.now()}-${safeName}`;
-    const repoPath = `assets/news/${uniqueName}`;
+    const repoPath = `assets/images/news/${uniqueName}`;
 
     await putBinaryFile(repoPath, base64, `Upload image ${uniqueName} via admin panel`);
 
-    return json(201, { path: `./assets/news/${uniqueName}` });
+    return json(201, { path: `./assets/images/news/${uniqueName}` });
   } catch (err) {
     console.error(err);
     return json(500, { error: err.message || "Server error" });
