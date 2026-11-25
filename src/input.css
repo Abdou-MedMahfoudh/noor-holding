@@ -324,26 +324,19 @@
     -webkit-user-drag: none;
   }
   /* The card that slides in brings its content in, slightly staggered */
-  .carousel-slide :is(.sub-logo, .sub-name, .sub-desc, .sub-services, .sub-mosaic, .sub-strip, .sub-showcase, .sub-card__thumbs) {
+  .carousel-slide :is(.sub-logo, .sub-name, .sub-desc, .sub-services, .sub-mosaic, .sub-showcase) {
     opacity: 0.35;
     transform: translateY(10px);
     transition: opacity 500ms var(--ease-out-strong), transform 600ms var(--ease-out-strong);
   }
-  .carousel-slide.is-active :is(.sub-logo, .sub-name, .sub-desc, .sub-services, .sub-mosaic, .sub-strip, .sub-showcase, .sub-card__thumbs) {
+  .carousel-slide.is-active :is(.sub-logo, .sub-name, .sub-desc, .sub-services, .sub-mosaic, .sub-showcase) {
     opacity: 1;
     transform: none;
   }
   .carousel-slide.is-active .sub-name { transition-delay: 60ms; }
   .carousel-slide.is-active .sub-desc { transition-delay: 120ms; }
   .carousel-slide.is-active .sub-services { transition-delay: 180ms; }
-  .carousel-slide.is-active :is(.sub-mosaic, .sub-strip, .sub-showcase, .sub-card__thumbs) { transition-delay: 220ms; }
-  .carousel-slide .sub-card__bg {
-    transform: scale(1.06);
-    transition: transform 1200ms var(--ease-out-strong);
-  }
-  .carousel-slide.is-active .sub-card__bg {
-    transform: none;
-  }
+  .carousel-slide.is-active :is(.sub-mosaic, .sub-showcase) { transition-delay: 220ms; }
   .carousel-dot {
     width: 0.5rem;
     height: 0.5rem;
@@ -363,8 +356,7 @@
 
   @media (prefers-reduced-motion: reduce) {
     .fade-item,
-    .carousel-slide :is(.sub-logo, .sub-name, .sub-desc, .sub-services, .sub-mosaic, .sub-strip, .sub-showcase, .sub-card__thumbs),
-    .carousel-slide .sub-card__bg {
+    .carousel-slide :is(.sub-logo, .sub-name, .sub-desc, .sub-services, .sub-mosaic, .sub-showcase) {
       transform: none !important;
       transition: opacity 200ms ease;
     }
@@ -385,7 +377,7 @@
   }
 
 
-  /* ---- Subsidiary cards (index.html #subsidiaries) — 3 layouts, colour per sector ---- */
+  /* ---- Subsidiary cards (index.html #subsidiaries) — text + photo mosaic, colour per sector ---- */
   .sub-card {
     --accent: var(--color-midnight);
     position: relative;
@@ -479,7 +471,7 @@
     object-fit: cover;
   }
 
-  /* Layout 1 — split: text | photo mosaic */
+  /* Layout: text | photo mosaic */
   .sub-card--split {
     display: grid;
     gap: 2rem;
@@ -508,84 +500,6 @@
     grid-row: 2;
   }
 
-  /* Layout 2 — immersive: a full-bleed photo with the text on a panel */
-  .sub-card--immersive {
-    display: flex;
-    flex-direction: column;
-  }
-  .sub-card--immersive .sub-card__bg {
-    height: 14rem;
-  }
-  .sub-card__panel {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    gap: 1.125rem;
-    padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
-    background: #fff;
-    border-top: 4px solid var(--accent);
-  }
-  .sub-card__thumbs {
-    display: none;
-  }
-
-  /* Layout 3 — ledger: a sector-coloured column with the name, details on the right */
-  .sub-card--ledger {
-    display: grid;
-  }
-  .sub-card__side {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    gap: 2rem;
-    padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
-    background: var(--accent);
-  }
-  .sub-card--ledger .sub-name--large {
-    font-size: clamp(1.875rem, 1.4rem + 1.5vw, 2.75rem);
-    color: #fff;
-  }
-  .sub-card--ledger .sub-name--large::after {
-    background: var(--color-sand);
-  }
-  .sub-card__main {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-    padding: clamp(1.5rem, 1rem + 2vw, 2.5rem);
-  }
-  .sub-services--grid {
-    gap: 0.75rem 2rem;
-  }
-  .sub-strip {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 0.75rem;
-    height: 8.5rem;
-    margin-top: auto;
-  }
-  .sub-showcase {
-    display: grid;
-    place-items: center;
-    margin-top: auto;
-    padding: 1.5rem;
-    border-radius: 0.75rem;
-    background: #fff;
-    border: 1px solid #e8ebef;
-  }
-  .sub-showcase img {
-    max-height: 11rem;
-    width: auto;
-  }
-  .sub-strip img {
-    border-radius: 0.75rem;
-  }
-
-  @media (min-width: 640px) {
-    .sub-services--grid {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
   @media (min-width: 1024px) {
     .sub-card {
       min-height: 32rem;
@@ -597,48 +511,6 @@
     }
     .sub-mosaic {
       grid-template-rows: 12rem 12rem;
-    }
-    .sub-card--immersive {
-      display: block;
-    }
-    .sub-card--immersive .sub-card__bg {
-      position: absolute;
-      inset: 0;
-      height: 100%;
-    }
-    .sub-card--immersive::after {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: linear-gradient(90deg, rgb(16 22 40 / 0.55) 0%, rgb(16 22 40 / 0.1) 60%, transparent);
-      pointer-events: none;
-    }
-    .sub-card__panel {
-      z-index: 1;
-      width: min(34rem, 52%);
-      margin: 2.5rem;
-      border-radius: 1rem;
-      border-top: 0;
-      border-inline-start: 4px solid var(--accent);
-      box-shadow: 0 20px 40px -20px rgb(0 0 0 / 0.45);
-    }
-    .sub-card__thumbs {
-      position: absolute;
-      z-index: 1;
-      inset-inline-end: 2.5rem;
-      bottom: 2.5rem;
-      display: flex;
-      gap: 0.75rem;
-    }
-    .sub-card__thumbs img {
-      width: 9rem;
-      height: 6.5rem;
-      border-radius: 0.75rem;
-      border: 3px solid #fff;
-      box-shadow: 0 8px 20px -8px rgb(0 0 0 / 0.5);
-    }
-    .sub-card--ledger {
-      grid-template-columns: minmax(16rem, 0.8fr) 2fr;
     }
   }
 
