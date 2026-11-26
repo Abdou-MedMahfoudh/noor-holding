@@ -957,6 +957,10 @@ html[dir="rtl"] [class*="tracking-"] {
 html[dir="rtl"] .hero-name {
   font-family: var(--font-arabic); /* Marcellus has no Arabic letters */
 }
+html[dir="rtl"] .font-dm-serif {
+  font-family: var(--font-arabic); /* DM Serif Text has no Arabic letters */
+  font-weight: 600;
+}
 @media (max-width: 767px) {
   #prevBtn,
   #nextBtn {
@@ -986,6 +990,7 @@ html[dir="rtl"] .hero-name {
   .ceo-portrait img { height: auto; aspect-ratio: 4 / 5; }
   .ceo-id { display: block; margin-top: 1rem; }
   .ceo-id .h-px { display: none; }
+  .ceo-id div:has(> [data-i18n="ceoMessage.signature.title"]) { display: none; } /* title is already in the signature */
   .ceo-id h4 { font-size: 1.125rem; }
 
   .ceo-body {
