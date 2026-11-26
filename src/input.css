@@ -972,7 +972,7 @@ html[dir="rtl"] .hero-name {
 /* ===== Homepage on phones & tablets ===== */
 .ceo-more { display: none; }
 
-@media (max-width: 1023px) {
+@media (max-width: 767px) {
   /* CEO message: heading → portrait + name → message (collapsed, "read more") */
   .ceo-section .grid { gap: 1.25rem; }
   .ceo-text { display: contents; }
@@ -984,6 +984,7 @@ html[dir="rtl"] .hero-name {
 
   .ceo-portrait { max-width: 13rem; margin-inline: auto; }
   .ceo-portrait img { height: auto; aspect-ratio: 4 / 5; }
+  .ceo-id { display: block; margin-top: 1rem; }
   .ceo-id .h-px { display: none; }
   .ceo-id h4 { font-size: 1.125rem; }
 

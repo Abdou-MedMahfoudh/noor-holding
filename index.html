@@ -487,10 +487,12 @@
                 </div>
               </div>
             </div>
-            <button type="button" class="ceo-more" aria-controls="ceo-body" aria-expanded="false">
-              <span data-i18n="subsidiaries.readMore">Lire la suite</span><span data-i18n="subsidiaries.readLess">Réduire</span>
-            </button>
           </div>
+
+          <!-- "Read more" for the CEO message (phones only) -->
+          <button type="button" class="ceo-more" aria-controls="ceo-body" aria-expanded="false">
+            <span data-i18n="subsidiaries.readMore">Lire la suite</span><span data-i18n="subsidiaries.readLess">Réduire</span>
+          </button>
 
           <!-- Portrait + name (1/3 of the width) -->
           <div class="ceo-side relative">
@@ -503,7 +505,7 @@
               />
             </figure>
             <!-- Leader Info -->
-            <div class="ceo-id mt-4 md:mt-8 text-center">
+            <div class="ceo-id mt-6 md:mt-8 text-center hidden lg:block">
               <div class="space-y-2 md:space-y-3">
                 <h4
                   class="text-xl md:text-2xl font-sans font-bold tracking-tight text-executive-navy"
