@@ -45,7 +45,8 @@
         "agro": "Compagnie Agricole du Sahel (CASA)– An innovative Mauritanian company committed to developing modern and sustainable agriculture.",
         "ila": "ILA DISTRIBUTION SARL – Strategic commercial subsidiary specializing in import-export, distribution, commercial representation and seafood valorization.",
         "medservices": "MEDSERVICES: The group's medical center of excellence, specialized in turnkey hospital construction, state-of-the-art medical equipment and integrated health solutions across Mauritania.",
-        "fairsoft": "FAIR-SOFT: The group's technology company, active in Mauritania for 10 years, supporting businesses and institutions in their digital transformation: custom development, ERP, artificial intelligence and cybersecurity."
+        "fairsoft": "FAIR-SOFT: The group's technology company, active in Mauritania for 10 years, supporting businesses and institutions in their digital transformation: custom development, ERP, artificial intelligence and cybersecurity.",
+        "tameer": "TAMEER SA: The group's building and public works company, from technical studies to turnkey delivery: housing, retail, warehouses, mills and silos."
       },
       "visionTitle": "Our vision and values:",
       "vision": "Through all of these subsidiaries, NOOR HOLDING works to create value, anticipate market needs and actively contribute to the development of Mauritania and the sub-region. Our vision is based on three pillars: innovation, rigor and commitment to sustainability and social responsibility.",
@@ -189,8 +190,20 @@
             "Artificial intelligence and cybersecurity",
             "Public service modernisation and paperless processes"
           ]
+        },
+        "tameer": {
+          "name": "TAMEER SA",
+          "description": "Based in Nouakchott, TAMEER SA specialises in building and public works, from design to quality control: technical studies, project management and supervision, reinforced-concrete and steel-frame structures. From the supply of materials and technical equipment to turnkey delivery, it builds high-end housing, renovations, retail spaces, flour mills and grain silos, with a multidisciplinary team and a single point of contact from study to handover.",
+          "services": [
+            "Technical studies, project management and supervision",
+            "Structural and finishing works, reinforced concrete and steel frames",
+            "Turnkey projects: housing, retail, warehouses and cladding",
+            "Flour mills, grain silos and renovations"
+          ]
         }
-      }
+      },
+      "readMore": "Read more",
+      "readLess": "Show less"
     },
     "news": {
       "hero": {
@@ -325,7 +338,8 @@
         "ecocharge": "EcoCharge Africa - spécialisée dans les solutions de recharge électrique et d'infrastructures énergétiques durables.",
         "ila": "ILA DISTRIBUTION SARL – Filiale commerciale stratégique spécialisée dans l'import-export, la distribution, la représentation commerciale et la valorisation des produits de la mer.",
         "medservices": "MEDSERVICES : Pôle d'excellence médicale du groupe, spécialisé dans la construction hospitalière clé en main, les équipements médicaux de pointe et les solutions de santé intégrées à travers la Mauritanie.",
-        "fairsoft": "FAIR-SOFT : Acteur technologique du groupe, présent en Mauritanie depuis 10 ans, qui accompagne entreprises et institutions dans leur transformation numérique : développement sur mesure, ERP, intelligence artificielle et cybersécurité."
+        "fairsoft": "FAIR-SOFT : Acteur technologique du groupe, présent en Mauritanie depuis 10 ans, qui accompagne entreprises et institutions dans leur transformation numérique : développement sur mesure, ERP, intelligence artificielle et cybersécurité.",
+        "tameer": "TAMEER SA : Société du groupe spécialisée dans le Bâtiment et les Travaux Publics (BTP), de l'étude technique à la livraison de projets clé en main : logements, commerces, hangars, usines et silos."
       },
       "visionTitle": "Notre vision et nos valeurs :",
       "vision": "À travers l'ensemble de ces filiales, NOOR HOLDING œuvre à créer de la valeur, anticiper les besoins du marché et contribuer activement à l'essor de la Mauritanie et de la sous-région. Notre vision repose sur trois piliers : l'innovation, la rigueur et l'engagement en faveur de la durabilité et de la responsabilité sociale.",
@@ -469,8 +483,20 @@
             "Intelligence artificielle et cybersécurité",
             "Modernisation des services publics et dématérialisation"
           ]
+        },
+        "tameer": {
+          "name": "TAMEER SA",
+          "description": "Basée à Nouakchott, TAMEER SA est spécialisée dans le Bâtiment et les Travaux Publics (BTP), de la conception au contrôle qualité : études techniques, pilotage et suivi de projets, ouvrages en béton armé et charpente métallique. De la fourniture de matériaux et d'équipements techniques jusqu'à la livraison de projets clé en main, elle réalise logements de haut standing, réhabilitations, commerces, usines de farine et silos à grains, avec une équipe pluridisciplinaire et un interlocuteur unique de l'étude à la livraison.",
+          "services": [
+            "Études techniques, pilotage et suivi de projets",
+            "Gros œuvre, second œuvre, béton armé et charpente métallique",
+            "Projets clé en main : logements, commerces, hangars et bardages",
+            "Usines de farine, silos à grains et réhabilitations"
+          ]
         }
-      }
+      },
+      "readMore": "Lire la suite",
+      "readLess": "Réduire"
     },
     "news": {
       "hero": {
@@ -604,7 +630,8 @@
         "agro": " CASA - شركة الساحل الزراعية  شركة موريتانية مبتكرة تعمل على تطوير زراعة حديثة ومستدامة.",
         "ila": "ILA DISTRIBUTION SARL – فرع تجاري استراتيجي متخصص في الاستيراد والتصدير، التوزيع، التمثيل التجاري وتثمين المنتجات البحرية.",
         "medservices": "ميدسرفيسز: قطب التميز الطبي للمجموعة، متخصص في بناء المستشفيات بنظام تسليم المفتاح والمعدات الطبية المتطورة والحلول الصحية المتكاملة في جميع أنحاء موريتانيا.",
-        "fairsoft": "فير سوفت: الذراع التكنولوجي للمجموعة، تنشط في موريتانيا منذ عشر سنوات وترافق المؤسسات والهيئات في تحولها الرقمي: التطوير حسب الطلب، وأنظمة تخطيط الموارد، والذكاء الاصطناعي، والأمن السيبراني."
+        "fairsoft": "فير سوفت: الذراع التكنولوجي للمجموعة، تنشط في موريتانيا منذ عشر سنوات وترافق المؤسسات والهيئات في تحولها الرقمي: التطوير حسب الطلب، وأنظمة تخطيط الموارد، والذكاء الاصطناعي، والأمن السيبراني.",
+        "tameer": "تعمير: شركة المجموعة المتخصصة في البناء والأشغال العامة، من الدراسات الفنية إلى تسليم المشاريع جاهزة: مساكن ومحلات تجارية ومستودعات ومطاحن وصوامع."
       },
       "visionTitle": "رؤيتنا وقيمنا:",
       "vision": "من خلال جميع هذه الشركات التابعة، تعمل نور القابضة على خلق القيمة وتوقع احتياجات السوق والمساهمة بفعالية في ازدهار موريتانيا والمنطقة الفرعية. تقوم رؤيتنا على ثلاث ركائز: الابتكار والدقة والالتزام بالاستدامة والمسؤولية الاجتماعية.",
@@ -748,8 +775,20 @@
             "الذكاء الاصطناعي والأمن السيبراني",
             "تحديث الخدمات العمومية والرقمنة"
           ]
+        },
+        "tameer": {
+          "name": "تعمير",
+          "description": "تتخذ شركة تعمير من نواكشوط مقرًا لها، وهي متخصصة في البناء والأشغال العامة، من التصميم إلى مراقبة الجودة: الدراسات الفنية، وإدارة المشاريع ومتابعتها، وإنجاز المنشآت بالخرسانة المسلحة والهياكل المعدنية. ومن توريد المواد والمعدات الفنية إلى تسليم المشاريع جاهزة، تنجز الشركة مساكن راقية وأعمال ترميم ومحلات تجارية ومطاحن دقيق وصوامع حبوب، بفريق متعدد التخصصات ومحاور واحد من الدراسة إلى التسليم.",
+          "services": [
+            "الدراسات الفنية وإدارة المشاريع ومتابعتها",
+            "الأشغال الكبرى والتشطيبات والخرسانة المسلحة والهياكل المعدنية",
+            "مشاريع جاهزة: مساكن ومحلات تجارية ومستودعات وتكسية",
+            "مطاحن الدقيق وصوامع الحبوب وأعمال الترميم"
+          ]
         }
-      }
+      },
+      "readMore": "اقرأ المزيد",
+      "readLess": "عرض أقل"
     },
     "news": {
       "hero": {

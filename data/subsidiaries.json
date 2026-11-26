@@ -45,6 +45,11 @@
       "fr": "Technologie",
       "en": "Technology",
       "ar": "التكنولوجيا"
+    },
+    "construction": {
+      "fr": "BTP",
+      "en": "Construction",
+      "ar": "البناء والأشغال العامة"
     }
   },
   "companies": [
@@ -152,6 +157,13 @@
       "logo": "fairsoft/logo.webp",
       "sector": "tech",
       "slide": "fairsoft"
+    },
+    {
+      "id": "tameer",
+      "name": "TAMEER SA",
+      "logo": "tameer/logo-wheel.svg",
+      "sector": "construction",
+      "slide": "tameer"
     }
   ]
 }

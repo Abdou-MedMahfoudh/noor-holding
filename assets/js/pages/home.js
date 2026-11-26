@@ -18,7 +18,13 @@ function playIntro() {
   items.forEach((el, i) => {
     setTimeout(() => el.classList.add("visible"), reduceMotion ? 0 : i * 70);
     // Once in place, drop the intro classes so hover/press states work normally.
-    el.addEventListener("transitionend", () => el.classList.remove("fade-item", "visible"), { once: true });
+    // (only its own fade: transitions of the logos inside also bubble up here and would end it early)
+    const done = (e) => {
+      if (e.target !== el || e.propertyName !== "opacity") return;
+      el.removeEventListener("transitionend", done);
+      el.classList.remove("fade-item", "visible");
+    };
+    el.addEventListener("transitionend", done);
   });
   // Elements hidden at this screen size never fire transitionend.
   setTimeout(() => items.forEach((el) => el.classList.remove("fade-item", "visible")), 2500);
@@ -70,6 +76,7 @@ function initSubsidiariesCarousel() {
   const counter = document.getElementById("carouselCount");
   if (!track) return;
   const slides = [...track.children];
+  const phone = window.matchMedia("(max-width: 767px)");
   const total = slides.length;
   let current = 0;
 
@@ -83,18 +90,56 @@ function initSubsidiariesCarousel() {
     return dot;
   });
 
+  // Position by the card's own offset, so it works with full-width cards (desktop) and peeking cards (phones).
   function setPosition(offsetPx = 0) {
-    track.style.transform = `translate3d(calc(${-current * 100}% + ${offsetPx}px), 0, 0)`;
+    track.style.transform = `translate3d(${-slides[current].offsetLeft + offsetPx}px, 0, 0)`;
   }
+
+  // The viewport takes the height of the card on show (cards have different lengths).
+  function fitHeight() {
+    viewport.style.height = `${slides[current].offsetHeight}px`;
+  }
+  const resizeWatcher = new ResizeObserver(() => {
+    fitHeight();
+    setPosition();
+  });
+  slides.forEach((slide) => resizeWatcher.observe(slide));
+
+  // "Read more": shown only where the description is actually cut (phones and tablets).
+  function updateReadMore() {
+    slides.forEach((slide) => {
+      const card = slide.querySelector(".sub-card");
+      const desc = slide.querySelector(".sub-desc");
+      const button = slide.querySelector(".sub-more");
+      if (!desc || !button || card.classList.contains("is-open")) return;
+      button.hidden = desc.scrollHeight <= desc.clientHeight + 2;
+    });
+  }
+  track.addEventListener("click", (e) => {
+    const button = e.target.closest(".sub-more");
+    if (!button) return;
+    const open = button.closest(".sub-card").classList.toggle("is-open");
+    button.setAttribute("aria-expanded", String(open));
+  });
+  // Tapping the card that peeks in (phones) brings it forward.
+  track.addEventListener("click", (e) => {
+    const slide = e.target.closest(".carousel-slide");
+    if (slide && !slide.classList.contains("is-active") && !track.classList.contains("was-dragged")) goTo(slides.indexOf(slide));
+  });
+  window.addEventListener("resize", updateReadMore, { passive: true });
+  document.fonts?.ready.then(updateReadMore);
+  i18n.onChange(() => requestAnimationFrame(updateReadMore));
 
   function goTo(index) {
     current = (index + total) % total;
     setPosition();
+    fitHeight();
     slides.forEach((slide, i) => {
       const active = i === current;
       slide.classList.toggle("is-active", active);
       slide.setAttribute("aria-hidden", String(!active));
-      slide.inert = !active;
+      // Off-screen cards are skipped by keyboard and screen readers; on phones the peeking card stays tappable.
+      slide.inert = !active && !phone.matches;
     });
     dots.forEach((dot, i) => dot.setAttribute("aria-current", String(i === current)));
     if (counter) counter.textContent = `${current + 1} / ${total}`;
@@ -113,6 +158,7 @@ function initSubsidiariesCarousel() {
   let start = null;
   viewport.addEventListener("pointerdown", (e) => {
     if (e.button !== 0 || start) return; // ignore extra fingers mid-drag
+    if (e.pointerType === "mouse" && !e.target.closest("button, a")) e.preventDefault(); // no text selection while dragging
     start = { x: e.clientX, y: e.clientY, t: performance.now(), id: e.pointerId, dragging: false };
   });
   viewport.addEventListener("pointermove", (e) => {
@@ -160,6 +206,33 @@ function initSubsidiariesCarousel() {
   goTo(0);
 }
 
+/* ---------- CEO message: "read more" on phones & tablets ---------- */
+function initCeoMessage() {
+  const body = document.getElementById("ceo-body");
+  const button = document.querySelector(".ceo-more");
+  if (!body || !button) return;
+  const collapsed = () => getComputedStyle(body).maxHeight;
+  let closedHeight = null;
+  button.addEventListener("click", () => {
+    const open = button.getAttribute("aria-expanded") !== "true";
+    if (open) {
+      closedHeight = collapsed();
+      body.style.maxHeight = `${body.scrollHeight}px`;
+      body.classList.add("is-open");
+      body.addEventListener("transitionend", () => {
+        if (body.classList.contains("is-open")) body.style.maxHeight = "none";
+      }, { once: true });
+    } else {
+      body.style.maxHeight = `${body.scrollHeight}px`;
+      body.offsetHeight; // start the closing animation from the full height
+      body.style.maxHeight = "";
+      body.classList.remove("is-open");
+      body.closest("section").scrollIntoView({ behavior: "smooth", block: "start" });
+    }
+    button.setAttribute("aria-expanded", String(open));
+  });
+}
+
 /* ---------- Latest news (3 cards) ---------- */
 async function renderLatestNews() {
   const container = document.getElementById("news-container");
@@ -192,6 +265,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initSiteNav();
   initHeroSlideshow();
   initSubsidiariesCarousel();
+  initCeoMessage();
 
   // Draw the network graphic, then play the intro (1.2 s at most).
   let started = false;
