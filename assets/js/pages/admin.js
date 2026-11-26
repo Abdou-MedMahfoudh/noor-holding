@@ -220,7 +220,7 @@ function buildLangPanels() {
             <div class="bg-white px-5 sm:px-8 py-6 max-h-[70vh] overflow-y-auto">
               <div data-editor="${lang.code}" contenteditable="true"
                 data-placeholder="Commencez à écrire l'article…"
-                class="article-editor relative min-h-[20rem] text-lg sm:text-xl md:text-xl text-skyline leading-relaxed font-light break-words"></div>
+                class="article-editor relative min-h-[20rem] text-lg sm:text-xl md:text-xl text-skyline leading-relaxed font-sans font-normal break-words"></div>
             </div>
             <textarea data-field="content" data-lang="${lang.code}" rows="18" dir="ltr"
               class="hidden w-full px-3 py-2 font-mono text-sm focus:outline-hidden"></textarea>

@@ -79,7 +79,7 @@ export function newsListCardHtml(item) {
         ${CALENDAR_ICON}
         <span class="text-sm text-gray-500">${formatDate(item.date)}</span>
       </div>
-      <h3 class="text-xl font-dm-serif text-midnight mb-3 group-hover:text-gulf transition-colors duration-300 line-clamp-2">${title}</h3>
+      <h3 class="text-xl font-sans font-medium text-midnight mb-3 group-hover:text-gulf transition-colors duration-300 line-clamp-2">${title}</h3>
       <p class="text-gray-600 leading-relaxed mb-4 line-clamp-3">${escapeHtml(articleText(item.id, "description"))}</p>
       <div class="flex items-center space-x-2 text-gulf group-hover:text-midnight transition-colors duration-300">
         <span class="text-sm font-medium">${i18n.t("news.readMore") || "Voir plus"}</span>
