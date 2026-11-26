@@ -190,7 +190,9 @@
             "Public service modernisation and paperless processes"
           ]
         }
-      }
+      },
+      "readMore": "Read more",
+      "readLess": "Show less"
     },
     "news": {
       "hero": {
@@ -470,7 +472,9 @@
             "Modernisation des services publics et dématérialisation"
           ]
         }
-      }
+      },
+      "readMore": "Lire la suite",
+      "readLess": "Réduire"
     },
     "news": {
       "hero": {
@@ -749,7 +753,9 @@
             "تحديث الخدمات العمومية والرقمنة"
           ]
         }
-      }
+      },
+      "readMore": "اقرأ المزيد",
+      "readLess": "عرض أقل"
     },
     "news": {
       "hero": {

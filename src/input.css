@@ -255,8 +255,8 @@
   }
   #spider-web.fade-item,
   #spider-web-mobile.fade-item {
-    transform: scale(0.94) rotate(-6deg);
-    transition-duration: 900ms, 1400ms;
+    transform: scale(0.96);
+    transition-duration: 900ms, 1200ms;
   }
   .fade-item.visible {
     opacity: 1;
@@ -338,12 +338,17 @@
 
   /* ---- Hero network graphic (assets/js/lib/network.js) ---- */
   /* As big as the hero allows: up to 46rem wide, never taller than the space between the navbar and the dots */
+  .network-box {
+    aspect-ratio: 1;
+  }
   .network.network-box {
     width: min(100%, 46rem, calc(85vh - 8.5rem)); /* leaves room for the navbar and the slide dots */
     margin-inline: auto;
   }
+  .network-box--mobile,
   .network.network-box--mobile {
     width: min(100%, 30rem);
+    margin-inline: auto;
   }
   .network {
     position: relative;
@@ -358,8 +363,8 @@
     height: 100%;
     overflow: visible;
     opacity: 0;
-    transform: scale(0.94) rotate(-8deg);
-    transition: opacity 900ms ease, transform 1400ms var(--ease-out-strong);
+    transform: scale(0.96);
+    transition: opacity 900ms ease, transform 1200ms var(--ease-out-strong);
   }
   .net-lines line,
   .net-lines circle {
@@ -377,20 +382,15 @@
     filter: drop-shadow(0 0 1.2px #f5d77a);
   }
 
-  /* Slow rotation once the entrance is done; logos counter-rotate so they stay upright.
-     Pauses while the visitor hovers or tabs through it. */
+  /* Slow rotation, driven by network.js: it speeds up gently from rest, and slows to a stop while the
+     visitor hovers or tabs through it. Logos counter-rotate so they stay upright. */
   .net-orbit {
     position: absolute;
     inset: 0;
+    rotate: var(--spin, 0deg);
   }
-  .network.is-settled .net-orbit {
-    animation: net-spin 180s linear infinite;
-  }
-  .network.is-settled .net-orbit > .net-node {
-    animation: net-spin-counter 180s linear infinite;
-  }
-  .network:is(:hover, :focus-within) :is(.net-orbit, .net-orbit > .net-node) {
-    animation-play-state: paused;
+  .net-orbit > .net-node {
+    rotate: calc(-1 * var(--spin, 0deg));
   }
   .network.is-in .net-lines {
     opacity: 1;
@@ -495,17 +495,114 @@
       scale: 1 !important;
       transition: opacity 300ms ease;
     }
-    .net-orbit,
-    .net-orbit > .net-node {
-      animation: none !important;
-    }
   }
 
   /* ---- Subsidiaries carousel ---- */
   .carousel-track {
+    align-items: flex-start; /* each card keeps its own height; the viewport follows the active one */
     transition: transform 650ms var(--ease-in-out-strong);
     touch-action: pan-y;
     will-change: transform;
+  }
+  .carousel-slide {
+    flex: 0 0 100%;
+    min-width: 0;
+  }
+  .carousel-container {
+    transition: height 450ms var(--ease-in-out-strong);
+  }
+
+  /* "Read more" under long descriptions (shown by home.js only when the text is cut) */
+  .sub-more {
+    align-self: flex-start;
+    margin-top: -0.5rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .sub-more__close,
+  .sub-card.is-open .sub-more__open {
+    display: none;
+  }
+  .sub-card.is-open .sub-more__close {
+    display: inline;
+  }
+
+  /* ---- Carousel on phones & tablets: photos first, shorter text, next card peeking in ---- */
+  @media (max-width: 1023px) {
+    .sub-card--split {
+      display: flex;
+      flex-direction: column;
+      gap: 1.25rem;
+      padding: 0.875rem 0.875rem 1.5rem;
+      border: 1px solid #e8ebef;
+    }
+    .sub-card--split .sub-card__text {
+      padding-inline: 0.5rem;
+      gap: 1rem;
+    }
+    .sub-mosaic,
+    .sub-showcase {
+      order: -1;
+    }
+    .sub-mosaic {
+      grid-template-columns: 1.6fr 1fr;
+      grid-template-rows: 6.5rem 6.5rem;
+      gap: 0.5rem;
+    }
+    .sub-mosaic img {
+      border-radius: 0.875rem;
+    }
+    .sub-card .sub-mosaic img:nth-child(3) {
+      grid-column: 1;
+      grid-row: 1 / span 2;
+    }
+    .sub-card .sub-mosaic img:nth-child(1) {
+      grid-column: 2;
+      grid-row: 1;
+    }
+    .sub-card .sub-mosaic img:nth-child(2) {
+      grid-column: 2;
+      grid-row: 2;
+    }
+    .sub-showcase {
+      min-height: 13.5rem;
+    }
+    .sub-logo {
+      height: 3.5rem;
+    }
+    .sub-logo img {
+      max-width: 9rem;
+    }
+    .sub-name {
+      font-size: 1.5rem;
+    }
+    .sub-name::after {
+      margin-top: 0.625rem;
+    }
+    .sub-desc {
+      font-size: 0.9375rem;
+      line-height: 1.65;
+    }
+    .sub-card:not(.is-open) .sub-desc {
+      display: -webkit-box;
+      -webkit-line-clamp: 5;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+  }
+  @media (max-width: 767px) {
+    .carousel-track {
+      gap: 0.75rem;
+    }
+    .carousel-slide {
+      flex-basis: 88%; /* the next card peeks in: it's clear you can swipe */
+    }
+    .carousel-slide:not(.is-active) {
+      cursor: pointer;
+    }
   }
   .carousel-track.is-dragging {
     transition: none;
@@ -581,7 +678,6 @@
   .sub-card {
     --accent: var(--color-midnight);
     position: relative;
-    height: 100%;
     overflow: hidden;
     border-radius: 1.25rem;
     background: #fff;
@@ -730,6 +826,12 @@
   .article-loading {
     border-radius: 0.5rem;
   }
+  @media (max-width: 767px) {
+    #hero-image {
+      aspect-ratio: 4 / 3;
+      object-fit: contain;
+    }
+  }
   .error-state {
     min-height: 60vh;
     display: flex;
@@ -781,16 +883,6 @@
   }
 }
 
-@keyframes net-spin {
-  to {
-    rotate: 360deg;
-  }
-}
-@keyframes net-spin-counter {
-  to {
-    rotate: -360deg;
-  }
-}
 
 @keyframes shimmer {
   0% {
@@ -864,4 +956,120 @@ html[dir="rtl"] [class*="tracking-"] {
 }
 html[dir="rtl"] .hero-name {
   font-family: var(--font-arabic); /* Marcellus has no Arabic letters */
+}
+@media (max-width: 767px) {
+  #prevBtn,
+  #nextBtn {
+    display: none; /* phones: swipe + dots; the side arrows covered the text */
+  }
+}
+@media (max-width: 1023px) {
+  .sub-card:has(.sub-showcase) .sub-logo {
+    display: none; /* the logo is already shown large in place of the photos */
+  }
+}
+
+/* ===== Homepage on phones & tablets ===== */
+.ceo-more { display: none; }
+
+@media (max-width: 1023px) {
+  /* CEO message: heading → portrait + name → message (collapsed, "read more") */
+  .ceo-section .grid { gap: 1.25rem; }
+  .ceo-text { display: contents; }
+  .ceo-text > * { margin: 0; }
+  .ceo-text > :first-child { order: 0; }
+  .ceo-side { order: 1; }
+  .ceo-body { order: 2; }
+  .ceo-more { order: 3; }
+
+  .ceo-portrait { max-width: 13rem; margin-inline: auto; }
+  .ceo-portrait img { height: auto; aspect-ratio: 4 / 5; }
+  .ceo-id .h-px { display: none; }
+  .ceo-id h4 { font-size: 1.125rem; }
+
+  .ceo-body {
+    max-height: 19rem;
+    overflow: hidden;
+    mask-image: linear-gradient(to bottom, #000 55%, transparent);
+    transition: max-height 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+  }
+  .ceo-body.is-open { mask-image: none; }
+  .ceo-body > p:first-child { font-size: 1.25rem; }
+
+  .ceo-more {
+    display: inline-flex;
+    justify-self: center;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.7rem 1.4rem;
+    border: 1px solid rgb(0 0 0 / 0.12);
+    border-radius: 999px;
+    background: #fff;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: var(--color-executive-navy, #1e2a3a);
+    transition: transform 160ms ease-out;
+  }
+  .ceo-more:active { transform: scale(0.97); }
+  .ceo-more > :last-child,
+  .ceo-more[aria-expanded="true"] > :first-child { display: none; }
+  .ceo-more[aria-expanded="true"] > :last-child { display: inline; }
+}
+
+@media (max-width: 767px) {
+  /* Latest news: a swipeable row with the next card peeking in */
+  .news-rail {
+    display: flex;
+    gap: 0.875rem;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    overscroll-behavior-x: contain;
+    margin-inline: -1rem;
+    padding: 0.25rem 1rem 1.25rem;
+    scroll-padding-inline: 1rem;
+    scrollbar-width: none;
+  }
+  .news-rail::-webkit-scrollbar { display: none; }
+  .news-rail > article { flex: 0 0 84%; scroll-snap-align: start; }
+  .news-rail > article > div:first-child { height: 10.5rem; }
+  .news-rail > article > .p-6 { padding: 1.1rem 1.1rem 1.25rem; }
+  .news-rail h3 { font-size: 1.05rem; line-height: 1.35; }
+  .news-rail p { -webkit-line-clamp: 2; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .ceo-body { transition: none; }
+}
+
+/* Floating decorative shapes: desktop only (on phones they sit on top of the text) */
+@media (max-width: 767px) { .decor { display: none; } }
+
+/* Subsidiary cards on phones: one wide photo + the company logo on a white badge
+   (three photos were too small to read at this width) */
+@media (max-width: 767px) {
+  .sub-card .sub-mosaic {
+    display: block;
+    height: 12rem;
+    border-radius: 0.875rem;
+    overflow: hidden;
+  }
+  .sub-card .sub-mosaic img { display: none; border-radius: 0; }
+  .sub-card .sub-mosaic img:nth-child(3) { display: block; }
+  .sub-card .sub-mosaic img:only-child,
+  .sub-card .sub-mosaic img:first-child:nth-last-child(2) { display: block; }
+
+  .sub-card--split { gap: 0; }
+  .sub-card:has(.sub-mosaic) .sub-logo {
+    position: relative;
+    z-index: 1;
+    align-self: flex-start;
+    height: 4.75rem;
+    margin-top: -2.75rem;
+    padding: 0.6rem 0.9rem;
+    border-radius: 0.875rem;
+    background: #fff;
+    box-shadow: 0 6px 18px rgb(15 23 42 / 0.12), 0 1px 2px rgb(15 23 42 / 0.06);
+  }
+  .sub-card:has(.sub-mosaic) .sub-logo img { max-width: 8.5rem; }
+  .sub-card--split .sub-card__text { gap: 0.9rem; padding-top: 0; }
 }

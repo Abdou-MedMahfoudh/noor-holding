@@ -87,7 +87,7 @@
         >
           <!-- Spider Web Image - Mobile Only -->
           <div class="flex justify-center">
-            <div id="spider-web-mobile" class="fade-item network-box network-box--mobile" data-network data-network-mobile role="group" aria-label="Noor Holding — filiales"></div>
+            <div id="spider-web-mobile" class="fade-item network network-box network-box--mobile" data-network data-network-mobile role="group" aria-label="Noor Holding — filiales"></div>
           </div>
 
           <div class="mb-0 text-sand">
@@ -214,7 +214,7 @@
             id="spider-web"
             class="w-full md:w-1/2 flex justify-center items-center fade-item"
           >
-            <div class="network-box" data-network role="group" aria-label="Noor Holding — filiales"></div>
+            <div class="network network-box" data-network role="group" aria-label="Noor Holding — filiales"></div>
           </div>
         </div>
       </div>
@@ -227,45 +227,38 @@
       </div>
     </section>
 
-    <section class="relative py-20 px-4 bg-executive-light overflow-hidden">
+    <section class="ceo-section relative py-14 md:py-20 px-4 bg-executive-light overflow-hidden">
       <!-- Decorative background -->
       <img src="./assets/images/decor/desert-energy.svg" alt="" aria-hidden="true" loading="lazy" class="absolute inset-0 w-full h-full opacity-[0.15] pointer-events-none" />
 
       <!-- Floating Geometric Elements -->
       <div
-        class="absolute top-20 right-20 w-20 h-20 border-2 border-executive-gold opacity-20 rotate-45"
+        class="decor absolute top-20 right-20 w-20 h-20 border-2 border-executive-gold opacity-20 rotate-45"
       ></div>
       <div
-        class="absolute bottom-20 left-20 w-16 h-16 bg-executive-gold opacity-10 rounded-full"
+        class="decor absolute bottom-20 left-20 w-16 h-16 bg-executive-gold opacity-10 rounded-full"
       ></div>
       <div
-        class="absolute top-1/2 right-40 w-12 h-12 border border-navy opacity-15 transform rotate-12"
+        class="decor absolute top-1/2 right-40 w-12 h-12 border border-navy opacity-15 transform rotate-12"
       ></div>
 
       <div class="container mx-auto max-w-6xl relative z-10">
         <div
           class="grid grid-cols-1 lg:grid-cols-3 gap-8 md:gap-12 lg:gap-16 items-start"
         >
-          <div class="lg:col-span-2 space-y-6 md:space-y-8 font--serif">
+          <div class="ceo-text lg:col-span-2 space-y-6 md:space-y-8">
             <div class="space-y-4">
-              <div class="flex items-center justify-center space-x-3 w-full">
-                <div
-                  class="h-1 w-16 md:w-24 lg:w-35 bg-gradient-to-r from-executive-navy to-executive-navy rounded-full"
-                ></div>
-                <h2
-                  class="text-sm sm:text-sm md:text-lg font-dm-serif text-executive leading-tight tracking-wider uppercase whitespace-nowrap text-center"
-                  data-i18n="ceoMessage.sectionTitle"
-                >
-                  Mot du Président Directeur Général
-                </h2>
-                <div
-                  class="h-1 w-16 md:w-20 lg:w-30 bg-gradient-to-r from-executive-navy to-executive-navy rounded-full"
-                ></div>
-              </div>
+              <h2
+                class="text-sm md:text-base font-sans font-normal text-executive-navy leading-tight tracking-[0.14em] uppercase text-center"
+                data-i18n="ceoMessage.sectionTitle"
+              >
+                Mot du Président Directeur Général
+              </h2>
             </div>
 
             <div
-              class="space-y-4 md:space-y-6 text-base md:text-lg text-gray-700 leading-relaxed"
+              id="ceo-body"
+              class="ceo-body space-y-4 md:space-y-6 text-base md:text-lg text-gray-700 leading-relaxed"
             >
               <p
                 class="text-xl md:text-2xl text-skyline leading-relaxed"
@@ -494,10 +487,13 @@
                 </div>
               </div>
             </div>
+            <button type="button" class="ceo-more" aria-controls="ceo-body" aria-expanded="false">
+              <span data-i18n="subsidiaries.readMore">Lire la suite</span><span data-i18n="subsidiaries.readLess">Réduire</span>
+            </button>
           </div>
 
           <!-- Portrait + name (1/3 of the width) -->
-          <div class="relative order-last lg:order-last">
+          <div class="ceo-side relative">
             <!-- Portrait: one frame, no hover effect -->
             <figure class="ceo-portrait">
               <img loading="lazy" decoding="async"
@@ -507,7 +503,7 @@
               />
             </figure>
             <!-- Leader Info -->
-            <div class="mt-6 md:mt-8 text-center hidden lg:block">
+            <div class="ceo-id mt-4 md:mt-8 text-center">
               <div class="space-y-2 md:space-y-3">
                 <h4
                   class="text-xl md:text-2xl font-sans font-bold tracking-tight text-executive-navy"
@@ -556,7 +552,7 @@
       <!-- News Grid -->
       <div
         id="news-container"
-        class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12"
+        class="news-rail grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-10 md:mb-12"
       ></div>
 
       <!-- Read More Button -->
@@ -586,14 +582,14 @@
     </section>
 
     <hr class="border-t border-gray-300" />
-    <section id="about" class="relative py-20 px-4 overflow-hidden">
+    <section id="about" class="relative py-14 md:py-20 px-4 overflow-hidden">
       <!-- Floating Geometric Elements -->
       <div
-        class="absolute top-16 right-16 w-16 h-16 border border-executive-gold opacity-15 rotate-45"
+        class="decor absolute top-16 right-16 w-16 h-16 border border-executive-gold opacity-15 rotate-45"
       ></div>
 
       <div
-        class="absolute top-1/3 right-32 w-10 h-10 border-2 border-executive-navy opacity-30 transform rotate-12"
+        class="decor absolute top-1/3 right-32 w-10 h-10 border-2 border-executive-navy opacity-30 transform rotate-12"
       ></div>
 
       <div class="container mx-auto max-w-6xl relative z-10">
@@ -671,7 +667,7 @@
 
             <div class="space-y-6">
               <p
-                class="text-xl md:text-xl text-skyline leading-relaxed"
+                class="text-lg md:text-xl text-skyline leading-relaxed"
                 data-i18n="about.description1"
               >
                 NOOR HOLDING est une entreprise basée à Nouakchott et qui compte
@@ -681,7 +677,7 @@
                 santé
               </p>
               <p
-                class="text-xl md:text-xl text-skyline leading-relaxed"
+                class="text-lg md:text-xl text-skyline leading-relaxed"
                 data-i18n="about.description2"
               >
                 Noor Holding est un véritable modèle d'entreprise diversifiée en
@@ -697,7 +693,7 @@
 
     <section
       id="subsidiaries"
-      class="relative py-20 px-5 bg from-white to-executive-light overflow-hidden"
+      class="relative py-14 md:py-20 px-5 bg from-white to-executive-light overflow-hidden"
     >
       <div class="container mx-auto max-w-7xl">
         <!-- Section Header -->
@@ -729,144 +725,196 @@
               class="carousel-track flex"
               id="carouselTrack"
             >
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="afh">
+<div class="carousel-slide" role="group" aria-roledescription="slide" data-key="afh">
 <article class="sub-card sub-card--split" data-accent="sun">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/afh/logo.webp" alt="Africaine Des Hydrocarbures S.A logo" /></div>
     <h4 class="sub-name" data-i18n="subsidiaries.companies.afh.name">Africaine Des Hydrocarbures S.A</h4>
     <p class="sub-desc" data-i18n="subsidiaries.companies.afh.description">Africaine des Hydrocarbures (AFH) est une entreprise spécialisée dans le secteur pétrolier, avec une solide réputation en matière de conformité et de fiabilité. L&#x27;entreprise détient des autorisations officielles qui lui permettent d&#x27;opérer dans l&#x27;ensemble de la chaîne de valeur des hydrocarbures raffinés, couvrant l&#x27;importation, le stockage et la distribution pour sécuriser l&#x27;approvisionnement énergétique du pays.</p>
+    <button type="button" class="sub-more" hidden aria-expanded="false">
+      <span class="sub-more__open" data-i18n="subsidiaries.readMore">Lire la suite</span>
+      <span class="sub-more__close" data-i18n="subsidiaries.readLess">Réduire</span>
+    </button>
     <ul class="sub-services"><li data-i18n="subsidiaries.companies.afh.services.0">Importation d&#x27;hydrocarbures raffinés</li><li data-i18n="subsidiaries.companies.afh.services.1">Stockage et distribution sécurisés</li><li data-i18n="subsidiaries.companies.afh.services.2">Autorisations officielles complètes</li></ul>
   </div>
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/afh/photo-1.webp" alt="Africaine Des Hydrocarbures S.A — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/afh/photo-2.webp" alt="Africaine Des Hydrocarbures S.A — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/afh/photo-3.webp" alt="Africaine Des Hydrocarbures S.A — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="slmp">
+<div class="carousel-slide" role="group" aria-roledescription="slide" data-key="slmp">
 <article class="sub-card sub-card--split" data-accent="sun">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/slmp/logo.webp" alt="SLMP S.A logo" /></div>
     <h4 class="sub-name" data-i18n="subsidiaries.companies.slmp.name">SLMP S.A</h4>
     <p class="sub-desc" data-i18n="subsidiaries.companies.slmp.description">La Société de Logistique et de Manutention Portuaire (SLMP SA) est un acteur polyvalent se distinguant par son expertise dans les services de logistique et manutention portuaire. L&#x27;entreprise facilite le commerce international et étend ses activités dans l&#x27;énergie avec l&#x27;importation et la distribution des hydrocarbures, disposant de ses propres stations-service pour couvrir toute la chaîne de valeur.</p>
+    <button type="button" class="sub-more" hidden aria-expanded="false">
+      <span class="sub-more__open" data-i18n="subsidiaries.readMore">Lire la suite</span>
+      <span class="sub-more__close" data-i18n="subsidiaries.readLess">Réduire</span>
+    </button>
     <ul class="sub-services"><li data-i18n="subsidiaries.companies.slmp.services.0">Services de logistique portuaire</li><li data-i18n="subsidiaries.companies.slmp.services.1">Stations-service intégrées</li><li data-i18n="subsidiaries.companies.slmp.services.2">Distribution d&#x27;hydrocarbures</li></ul>
   </div>
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/slmp/photo-1.webp" alt="SLMP S.A — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/slmp/photo-2.webp" alt="SLMP S.A — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/slmp/photo-3.webp" alt="SLMP S.A — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="ila">
+<div class="carousel-slide" role="group" aria-roledescription="slide" data-key="ila">
 <article class="sub-card sub-card--split" data-accent="sea">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/ila/logo.webp" alt="ILA DISTRIBUTION SARL logo" /></div>
     <h4 class="sub-name" data-i18n="subsidiaries.companies.ila.name">ILA DISTRIBUTION SARL</h4>
     <p class="sub-desc" data-i18n="subsidiaries.companies.ila.description">ILA DISTRIBUTION SARL est une filiale stratégique de Noor Holding et le moteur commercial du groupe. À la croisée des échanges internationaux et de l’économie mauritanienne, l’entreprise crée de la valeur et renforce les chaînes d’approvisionnement grâce à quatre pôles intégrés : import-export, distribution avancée, représentation commerciale et valorisation des produits de la mer. Forte d’un sourcing mondial maîtrisé, d’une logistique fiable, d’un développement de marques performant et d’un engagement responsable dans le secteur halieutique, ILA DISTRIBUTION contribue au développement durable de l’économie nationale.</p>
+    <button type="button" class="sub-more" hidden aria-expanded="false">
+      <span class="sub-more__open" data-i18n="subsidiaries.readMore">Lire la suite</span>
+      <span class="sub-more__close" data-i18n="subsidiaries.readLess">Réduire</span>
+    </button>
     <ul class="sub-services"><li data-i18n="subsidiaries.companies.ila.services.0">Sourcing stratégique et import-export</li><li data-i18n="subsidiaries.companies.ila.services.1">Distribution et logistique nationale</li><li data-i18n="subsidiaries.companies.ila.services.2">Représentation commerciale et développement de marques</li><li data-i18n="subsidiaries.companies.ila.services.3">Valorisation des produits de la mer et pêche responsable</li></ul>
   </div>
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ila/photo-1.webp" alt="ILA DISTRIBUTION SARL — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ila/photo-2.webp" alt="ILA DISTRIBUTION SARL — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ila/photo-3.webp" alt="ILA DISTRIBUTION SARL — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="mines">
+<div class="carousel-slide" role="group" aria-roledescription="slide" data-key="mines">
 <article class="sub-card sub-card--split" data-accent="heritage">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/mines/logo.webp" alt="MINES DE MAURITANIE logo" /></div>
     <h4 class="sub-name" data-i18n="subsidiaries.companies.mines.name">MINES DE MAURITANIE</h4>
     <p class="sub-desc" data-i18n="subsidiaries.companies.mines.description">MINES DE MAURITANIE est un acteur majeur du secteur minier, avec un focus particulier sur la recherche aurifère. L&#x27;entreprise mène des activités d&#x27;exploration intensive sur une vaste zone de plus de 1 000 km², couverte par trois permis de recherche. Grâce à son expertise géologique et aux technologies de pointe, elle découvre de nouveaux gisements d&#x27;or, contribuant directement au développement économique du pays.</p>
+    <button type="button" class="sub-more" hidden aria-expanded="false">
+      <span class="sub-more__open" data-i18n="subsidiaries.readMore">Lire la suite</span>
+      <span class="sub-more__close" data-i18n="subsidiaries.readLess">Réduire</span>
+    </button>
     <ul class="sub-services"><li data-i18n="subsidiaries.companies.mines.services.0">+1 000 km² de superficie d&#x27;exploration</li><li data-i18n="subsidiaries.companies.mines.services.1">3 permis de recherche aurifère</li><li data-i18n="subsidiaries.companies.mines.services.2">Technologies de pointe en géologie</li></ul>
   </div>
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/mines/photo-1.webp" alt="MINES DE MAURITANIE — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/mines/photo-2.webp" alt="MINES DE MAURITANIE — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/mines/photo-3.webp" alt="MINES DE MAURITANIE — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="ecocharge">
+<div class="carousel-slide" role="group" aria-roledescription="slide" data-key="ecocharge">
 <article class="sub-card sub-card--split" data-accent="olive">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/ecocharge/logo.webp" alt="EcoCharge Africa logo" /></div>
     <h4 class="sub-name" data-i18n="subsidiaries.companies.ecocharge.name">EcoCharge Africa</h4>
     <p class="sub-desc" data-i18n="subsidiaries.companies.ecocharge.description">EcoCharge Africa est une entreprise spécialisée dans les solutions de recharge électrique et les infrastructures énergétiques durables, dédiée à faire progresser la mobilité durable à travers l’Afrique. Ses activités couvrent la fourniture et l’installation de stations de recharge rapide dans des emplacements stratégiques tels que les parkings et les stations-service, l’utilisation de plateformes intelligentes pour surveiller et optimiser la consommation d’énergie, ainsi que la fourniture de services de maintenance et d’assistance technique. L’entreprise réalise également des études de faisabilité, des audits énergétiques et collabore avec les parties prenantes locales pour concevoir des réseaux de recharge modernes. En innovant continuellement à travers des applications mobiles, des systèmes de paiement et l’intégration des énergies renouvelables, EcoCharge Africa crée des stations de recharge autonomes et respectueuses de l’environnement.</p>
+    <button type="button" class="sub-more" hidden aria-expanded="false">
+      <span class="sub-more__open" data-i18n="subsidiaries.readMore">Lire la suite</span>
+      <span class="sub-more__close" data-i18n="subsidiaries.readLess">Réduire</span>
+    </button>
     <ul class="sub-services"><li data-i18n="subsidiaries.companies.ecocharge.services.0">Stations de recharge rapide</li><li data-i18n="subsidiaries.companies.ecocharge.services.1">Gestion intelligente de l’énergie</li><li data-i18n="subsidiaries.companies.ecocharge.services.2">Maintenance et assistance</li><li data-i18n="subsidiaries.companies.ecocharge.services.3">Conseil et audits énergétiques</li><li data-i18n="subsidiaries.companies.ecocharge.services.4">Innovation et énergies renouvelables</li></ul>
   </div>
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ecocharge/photo-1.webp" alt="EcoCharge Africa — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ecocharge/photo-2.webp" alt="EcoCharge Africa — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/ecocharge/photo-3.webp" alt="EcoCharge Africa — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="agro">
+<div class="carousel-slide" role="group" aria-roledescription="slide" data-key="agro">
 <article class="sub-card sub-card--split" data-accent="olive">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/agro/logo.webp" alt="Compagnie Agricole du Sahel (CASA) logo" /></div>
     <h4 class="sub-name" data-i18n="subsidiaries.companies.agro.name">Compagnie Agricole du Sahel (CASA)</h4>
     <p class="sub-desc" data-i18n="subsidiaries.companies.agro.description">La Compagnie Agricole du Sahel (CASA) est une jeune entreprise mauritanienne innovante, dédiée au développement d’un secteur agricole moderne, durable et compétitif en valorisant les ressources locales. Ses principales activités incluent l’aménagement des terres et la culture de produits adaptés à la région du Sahel, la transformation agro-industrielle destinée aux marchés locaux et internationaux, la mise en œuvre de pratiques respectueuses de l’environnement comme l’irrigation efficiente et la valorisation des sous-produits, ainsi que la création d’emplois pour les jeunes et les femmes en partenariat avec les communautés rurales pour dynamiser l’économie locale.</p>
+    <button type="button" class="sub-more" hidden aria-expanded="false">
+      <span class="sub-more__open" data-i18n="subsidiaries.readMore">Lire la suite</span>
+      <span class="sub-more__close" data-i18n="subsidiaries.readLess">Réduire</span>
+    </button>
     <ul class="sub-services"><li data-i18n="subsidiaries.companies.agro.services.0">Production agricole</li><li data-i18n="subsidiaries.companies.agro.services.1">Agro-industrie &amp; transformation</li><li data-i18n="subsidiaries.companies.agro.services.2">Durabilité &amp; pratiques éco</li><li data-i18n="subsidiaries.companies.agro.services.3">Développement local &amp; emplois</li></ul>
   </div>
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/agro/photo-1.webp" alt="Compagnie Agricole du Sahel (CASA) — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/agro/photo-2.webp" alt="Compagnie Agricole du Sahel (CASA) — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/agro/photo-3.webp" alt="Compagnie Agricole du Sahel (CASA) — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="itb">
+<div class="carousel-slide" role="group" aria-roledescription="slide" data-key="itb">
 <article class="sub-card sub-card--split" data-accent="midnight">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/itb/logo.webp" alt="ITB – International Trade Brokerage logo" /></div>
     <h4 class="sub-name" data-i18n="subsidiaries.companies.itb.name">ITB – International Trade Brokerage</h4>
     <p class="sub-desc" data-i18n="subsidiaries.companies.itb.description">International Trade Brokerage (ITB) est une entreprise spécialisée dans les échanges commerciaux internationaux, agissant comme intermédiaire entre acheteurs et vendeurs. Expert en import-export, ITB facilite les transactions transfrontalières et assure la distribution ainsi que la représentation de marques internationales. L&#x27;entreprise aide les entreprises étrangères à s&#x27;implanter sur les marchés locaux grâce à son expertise en logistique et réglementation, se positionnant comme un partenaire stratégique pour l&#x27;expansion commerciale internationale.</p>
+    <button type="button" class="sub-more" hidden aria-expanded="false">
+      <span class="sub-more__open" data-i18n="subsidiaries.readMore">Lire la suite</span>
+      <span class="sub-more__close" data-i18n="subsidiaries.readLess">Réduire</span>
+    </button>
     <ul class="sub-services"><li data-i18n="subsidiaries.companies.itb.services.0">Courtage en échanges internationaux</li><li data-i18n="subsidiaries.companies.itb.services.1">Représentation de marques internationales</li><li data-i18n="subsidiaries.companies.itb.services.2">Expertise logistique et réglementaire</li></ul>
   </div>
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/itb/photo-1.webp" alt="ITB – International Trade Brokerage — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/itb/photo-2.webp" alt="ITB – International Trade Brokerage — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/itb/photo-3.webp" alt="ITB – International Trade Brokerage — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="tbs1">
+<div class="carousel-slide" role="group" aria-roledescription="slide" data-key="tbs1">
 <article class="sub-card sub-card--split" data-accent="midnight">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/tbs-transport/logo.webp" alt="TBS – Transport Business and Shipping logo" /></div>
     <h4 class="sub-name" data-i18n="subsidiaries.companies.tbs1.name">TBS – Transport Business and Shipping</h4>
     <p class="sub-desc" data-i18n="subsidiaries.companies.tbs1.description">Transport Business and Shipping (TBS) est une entreprise de transport et de logistique offrant des solutions complètes pour les besoins en transit et services logistiques internationaux. L&#x27;entreprise gère le déplacement de marchandises par voie terrestre, maritime et aérienne. En tant que transitaire, TBS s&#x27;occupe des formalités douanières et administratives complexes, simplifiant l&#x27;importation et l&#x27;exportation pour ses clients tout en garantissant des livraisons ponctuelles et sécurisées.</p>
+    <button type="button" class="sub-more" hidden aria-expanded="false">
+      <span class="sub-more__open" data-i18n="subsidiaries.readMore">Lire la suite</span>
+      <span class="sub-more__close" data-i18n="subsidiaries.readLess">Réduire</span>
+    </button>
     <ul class="sub-services"><li data-i18n="subsidiaries.companies.tbs1.services.0">Transport terrestre, maritime et aérien</li><li data-i18n="subsidiaries.companies.tbs1.services.1">Services de transit et formalités douanières</li><li data-i18n="subsidiaries.companies.tbs1.services.2">Solutions logistiques personnalisées</li></ul>
   </div>
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-transport/photo-1.webp" alt="TBS – Transport Business and Shipping — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-transport/photo-2.webp" alt="TBS – Transport Business and Shipping — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-transport/photo-3.webp" alt="TBS – Transport Business and Shipping — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="acg">
+<div class="carousel-slide" role="group" aria-roledescription="slide" data-key="acg">
 <article class="sub-card sub-card--split" data-accent="midnight">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/acg/logo.webp" alt="ACG – Établissement Arrachad pour le Commerce Général logo" /></div>
     <h4 class="sub-name" data-i18n="subsidiaries.companies.acg.name">ACG – Établissement Arrachad pour le Commerce Général</h4>
     <p class="sub-desc" data-i18n="subsidiaries.companies.acg.description">L&#x27;Établissement Arrachad pour le Commerce Général (ACG) est une entreprise de négoce multiforme opérant dans une variété de secteurs à l&#x27;échelle nationale et internationale. ACG se distingue par sa capacité d&#x27;adaptation aux demandes du marché, s&#x27;approvisionnant en produits divers des matières premières aux produits finis. Son modèle agile lui permet de répondre rapidement aux opportunités commerciales grâce à son vaste réseau de fournisseurs et d&#x27;acheteurs.</p>
+    <button type="button" class="sub-more" hidden aria-expanded="false">
+      <span class="sub-more__open" data-i18n="subsidiaries.readMore">Lire la suite</span>
+      <span class="sub-more__close" data-i18n="subsidiaries.readLess">Réduire</span>
+    </button>
     <ul class="sub-services"><li data-i18n="subsidiaries.companies.acg.services.0">Commerce national et international</li><li data-i18n="subsidiaries.companies.acg.services.1">Matières premières et produits finis</li><li data-i18n="subsidiaries.companies.acg.services.2">Solutions de négoce agiles et personnalisées</li><li data-i18n="subsidiaries.companies.acg.services.3">Vaste réseau de fournisseurs et d&#x27;acheteurs</li></ul>
   </div>
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/acg/photo-1.webp" alt="ACG – Établissement Arrachad pour le Commerce Général — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/acg/photo-2.webp" alt="ACG – Établissement Arrachad pour le Commerce Général — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/acg/photo-3.webp" alt="ACG – Établissement Arrachad pour le Commerce Général — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="tbs2">
+<div class="carousel-slide" role="group" aria-roledescription="slide" data-key="tbs2">
 <article class="sub-card sub-card--split" data-accent="midnight">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/tbs-brokerage/logo.webp" alt="TBS – Trade Brokerage and Services logo" /></div>
     <h4 class="sub-name" data-i18n="subsidiaries.companies.tbs2.name">TBS – Trade Brokerage and Services</h4>
     <p class="sub-desc" data-i18n="subsidiaries.companies.tbs2.description">Trade Brokerage and Services (TBS) est un acteur majeur de l’intermédiation financière, reliant les investisseurs aux marchés locaux et internationaux. L’entreprise facilite les transactions en actions, obligations et autres instruments financiers, et fournit des conseils pour aider les clients à prendre des décisions d’investissement éclairées. TBS se distingue par son expertise des marchés et sa capacité à identifier des opportunités de croissance, contribuant à l’efficacité et à la vitalité des marchés financiers.</p>
+    <button type="button" class="sub-more" hidden aria-expanded="false">
+      <span class="sub-more__open" data-i18n="subsidiaries.readMore">Lire la suite</span>
+      <span class="sub-more__close" data-i18n="subsidiaries.readLess">Réduire</span>
+    </button>
     <ul class="sub-services"><li data-i18n="subsidiaries.companies.tbs2.services.0">Intermédiation en instruments financiers</li><li data-i18n="subsidiaries.companies.tbs2.services.1">Services de conseil en investissement</li><li data-i18n="subsidiaries.companies.tbs2.services.2">Expertise des marchés financiers</li></ul>
   </div>
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-brokerage/photo-1.webp" alt="TBS – Trade Brokerage and Services — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-brokerage/photo-2.webp" alt="TBS – Trade Brokerage and Services — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/tbs-brokerage/photo-3.webp" alt="TBS – Trade Brokerage and Services — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="fishing">
+<div class="carousel-slide" role="group" aria-roledescription="slide" data-key="fishing">
 <article class="sub-card sub-card--split" data-accent="sea">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fishing/logo-semak.webp" alt="SEMAK s.a logo" /><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fishing/logo-valor-fish.webp" alt="SMMCS s.a logo" /><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fishing/logo-smmcs.webp" alt="Valor Fish Frigo logo" /></div>
     <h4 class="sub-name" data-i18n="subsidiaries.companies.fishing.name">SEMAK s.a | SMMCS s.a | Valor Fish Frigo</h4>
     <p class="sub-desc" data-i18n="subsidiaries.companies.fishing.description">SEMAK s.a, SMMCS s.a, et Valor Fish Frigo sont des entreprises du secteur stratégique de la pêche opérant de manière intégrée pour optimiser la transformation et conservation des produits de la mer. SEMAK s.a possède une usine de pointe avec tunnel de congélation, SMMCS s.a assure la capture via sa flotte de chalutiers, et VFF se dédie à la conservation. Ensemble, elles forment une chaîne de valeur complète garantissant fraîcheur et qualité des produits halieutiques.</p>
+    <button type="button" class="sub-more" hidden aria-expanded="false">
+      <span class="sub-more__open" data-i18n="subsidiaries.readMore">Lire la suite</span>
+      <span class="sub-more__close" data-i18n="subsidiaries.readLess">Réduire</span>
+    </button>
     <ul class="sub-services"><li data-i18n="subsidiaries.companies.fishing.services.0">Chaîne de valeur intégrée capture-conservation</li><li data-i18n="subsidiaries.companies.fishing.services.1">Technologies de pointe de transformation</li><li data-i18n="subsidiaries.companies.fishing.services.2">Flotte moderne de chalutiers</li></ul>
   </div>
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/fishing/photo-1.webp" alt="SEMAK s.a — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/fishing/photo-2.webp" alt="SEMAK s.a — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/fishing/photo-3.webp" alt="SEMAK s.a — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="medservices">
+<div class="carousel-slide" role="group" aria-roledescription="slide" data-key="medservices">
 <article class="sub-card sub-card--split" data-accent="gulf">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/medservices/logo.webp" alt="MEDSERVICES logo" /></div>
     <h4 class="sub-name" data-i18n="subsidiaries.companies.medservices.name">MEDSERVICES</h4>
     <p class="sub-desc" data-i18n="subsidiaries.companies.medservices.description">Fondée en 2022 à Nouakchott, MEDSERVICES est le pôle d&#x27;excellence médicale de Noor Holding, s&#x27;imposant comme un prestataire de premier plan en solutions de santé intégrées et de bout en bout à travers toute la Mauritanie. Dirigée par une ingénieure biomédicale certifiée, l&#x27;entreprise déploie une expertise unique allant de la construction hospitalière clé en main à la fourniture et la maintenance technique d&#x27;équipements de pointe (diagnostic, chirurgie, laboratoires et unités de dialyse), en passant par la distribution de gaz médicaux et l&#x27;intégration de technologies de santé numérique de dernière génération. Fort d&#x27;une présence nationale, d&#x27;un support après-vente rigoureux disponible 24h/7j et de partenariats exclusifs avec des marques internationales majeures, MEDSERVICES modernise durablement l&#x27;infrastructure sanitaire mauritanienne, alliant conformité rigoureuse et innovation technologique pour améliorer concrètement les résultats de santé au bénéfice des populations.</p>
+    <button type="button" class="sub-more" hidden aria-expanded="false">
+      <span class="sub-more__open" data-i18n="subsidiaries.readMore">Lire la suite</span>
+      <span class="sub-more__close" data-i18n="subsidiaries.readLess">Réduire</span>
+    </button>
     <ul class="sub-services"><li data-i18n="subsidiaries.companies.medservices.services.0">Construction hospitalière clé en main</li><li data-i18n="subsidiaries.companies.medservices.services.1">Équipements de pointe : diagnostic, chirurgie, laboratoires, dialyse</li><li data-i18n="subsidiaries.companies.medservices.services.2">Distribution de gaz médicaux et santé numérique</li><li data-i18n="subsidiaries.companies.medservices.services.3">Support après-vente 24h/7j et présence nationale</li></ul>
   </div>
   <div class="sub-mosaic"><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/medservices/photo-1.webp" alt="MEDSERVICES — photo 1" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/medservices/photo-2.webp" alt="MEDSERVICES — photo 2" /><img loading="lazy" decoding="async" class="sub-photo" src="./assets/images/subsidiaries/medservices/photo-3.webp" alt="MEDSERVICES — photo 3" /></div>
 </article>
 </div>
-<div class="carousel-slide min-w-full" role="group" aria-roledescription="slide" data-key="fairsoft">
+<div class="carousel-slide" role="group" aria-roledescription="slide" data-key="fairsoft">
 <article class="sub-card sub-card--split" data-accent="emerald">
   <div class="sub-card__text">
     <div class="sub-logo"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fairsoft/logo.webp" alt="Fair-Soft logo" /></div>
     <h4 class="sub-name" data-i18n="subsidiaries.companies.fairsoft.name">Fair-Soft</h4>
     <p class="sub-desc" data-i18n="subsidiaries.companies.fairsoft.description">Présente en Mauritanie depuis 10 ans, Fair-Soft accompagne les PME, ETI, grands groupes, industriels, institutions publiques et organisations internationales dans leur transformation numérique. L&#x27;entreprise conçoit des architectures sécurisées et souveraines, modernise les services publics et répond aux marchés publics, avec un interlocuteur unique de bout en bout, un transfert de compétences et un support technique réactif.</p>
+    <button type="button" class="sub-more" hidden aria-expanded="false">
+      <span class="sub-more__open" data-i18n="subsidiaries.readMore">Lire la suite</span>
+      <span class="sub-more__close" data-i18n="subsidiaries.readLess">Réduire</span>
+    </button>
     <ul class="sub-services"><li data-i18n="subsidiaries.companies.fairsoft.services.0">Développement sur mesure : applications web, mobiles et logiciels métiers</li><li data-i18n="subsidiaries.companies.fairsoft.services.1">Conseil informatique, intégration et conseil en ERP</li><li data-i18n="subsidiaries.companies.fairsoft.services.2">Intelligence artificielle et cybersécurité</li><li data-i18n="subsidiaries.companies.fairsoft.services.3">Modernisation des services publics et dématérialisation</li></ul>
   </div>
   <div class="sub-showcase"><img loading="lazy" decoding="async" src="./assets/images/subsidiaries/fairsoft/logo.webp" alt="" /></div>
@@ -920,7 +968,7 @@
         <!-- Carousel indicators (one dot per slide, generated by home.js) -->
         <div class="flex items-center justify-center gap-5 mt-8">
           <div id="carouselDots" class="flex items-center gap-2"></div>
-          <span id="carouselCount" class="tabular text-sm text-executive-muted" aria-live="polite"></span>
+          <span id="carouselCount" dir="ltr" class="tabular text-sm text-executive-muted" aria-live="polite"></span>
         </div>
       </div>
     </section>
@@ -1108,7 +1156,7 @@
 
           <!-- Map Container -->
           <div
-            class="relative h-96 lg:h-[400px] rounded-lg overflow-hidden shadow-lg"
+            class="relative h-64 sm:h-96 lg:h-[400px] rounded-lg overflow-hidden shadow-lg"
           >
             <iframe
               src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1071.1846075442526!2d-16.005590914481164!3d18.104911160833932!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTjCsDA2JzE3LjkiTiAxNsKwMDAnMjAuMSJX!5e0!3m2!1sfr!2s!4v1756844148698!5m2!1sfr!2s"

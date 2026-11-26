@@ -101,6 +101,38 @@ export async function mountNetwork() {
   document.querySelectorAll("[data-count='sectors']").forEach((n) => (n.textContent = new Set(data.companies.map((c) => c.sector)).size));
 
   requestAnimationFrame(() => containers.forEach((el) => el.classList.add("is-in")));
-  // After the entrance: hover/press respond without the stagger delay, and the slow rotation starts.
+  // After the entrance: hover/press respond without the stagger delay.
   setTimeout(() => containers.forEach((el) => el.classList.add("is-settled")), 1600);
+  if (!reduceMotion) containers.forEach(spin);
+}
+
+/* ---------- Rotation ----------
+   One turn every 3 minutes. The speed eases in from rest (so the entrance flows into the turning without
+   a stop-and-go), and eases down to a stop while the pointer or keyboard focus is on the circle. */
+const TURN_SECONDS = 180;
+function spin(el) {
+  const orbit = el.querySelector(".net-orbit");
+  if (!orbit) return;
+  const maxSpeed = 360 / TURN_SECONDS; // degrees per second
+  let angle = 0;
+  let speed = 0;
+  let target = maxSpeed;
+  let last = performance.now();
+  const hold = () => (target = 0);
+  const release = () => (target = maxSpeed);
+  el.addEventListener("pointerenter", hold);
+  el.addEventListener("pointerleave", release);
+  el.addEventListener("focusin", hold);
+  el.addEventListener("focusout", release);
+
+  const frame = (now) => {
+    const dt = Math.min((now - last) / 1000, 0.1); // seconds; capped after a hidden tab
+    last = now;
+    // Critically-damped approach to the target speed (~1.2 s from rest to full speed)
+    speed += (target - speed) * (1 - Math.exp(-dt * 3));
+    angle = (angle + speed * dt) % 360;
+    orbit.style.setProperty("--spin", `${angle.toFixed(3)}deg`);
+    requestAnimationFrame(frame);
+  };
+  requestAnimationFrame(frame);
 }
