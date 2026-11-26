@@ -18,7 +18,13 @@ function playIntro() {
   items.forEach((el, i) => {
     setTimeout(() => el.classList.add("visible"), reduceMotion ? 0 : i * 70);
     // Once in place, drop the intro classes so hover/press states work normally.
-    el.addEventListener("transitionend", () => el.classList.remove("fade-item", "visible"), { once: true });
+    // (only its own fade: transitions of the logos inside also bubble up here and would end it early)
+    const done = (e) => {
+      if (e.target !== el || e.propertyName !== "opacity") return;
+      el.removeEventListener("transitionend", done);
+      el.classList.remove("fade-item", "visible");
+    };
+    el.addEventListener("transitionend", done);
   });
   // Elements hidden at this screen size never fire transitionend.
   setTimeout(() => items.forEach((el) => el.classList.remove("fade-item", "visible")), 2500);

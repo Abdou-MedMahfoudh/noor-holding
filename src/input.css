@@ -253,10 +253,11 @@
     transform: translateY(14px);
     transition: opacity 700ms var(--ease-out-strong), transform 900ms var(--ease-out-strong);
   }
+  /* The wheel only fades in: no scaling of the whole graphic */
   #spider-web.fade-item,
   #spider-web-mobile.fade-item {
-    transform: scale(0.96);
-    transition-duration: 900ms, 1200ms;
+    transform: none;
+    transition: opacity 900ms var(--ease-out-strong);
   }
   .fade-item.visible {
     opacity: 1;
@@ -363,8 +364,7 @@
     height: 100%;
     overflow: visible;
     opacity: 0;
-    transform: scale(0.96);
-    transition: opacity 900ms ease, transform 1200ms var(--ease-out-strong);
+    transition: opacity 900ms ease;
   }
   .net-lines line,
   .net-lines circle {
@@ -394,7 +394,6 @@
   }
   .network.is-in .net-lines {
     opacity: 1;
-    transform: none;
   }
   .net-node {
     position: absolute;
@@ -691,6 +690,7 @@
   .sub-card[data-accent="midnight"] { --accent: var(--color-midnight); }
   .sub-card[data-accent="gulf"] { --accent: var(--color-gulf); }
   .sub-card[data-accent="emerald"] { --accent: #17805d; }
+  .sub-card[data-accent="steel"] { --accent: #3f5068; }
 
   .sub-name {
     font-family: var(--font-dm-serif);
@@ -1074,3 +1074,8 @@ html[dir="rtl"] .hero-name {
   .sub-card:has(.sub-mosaic) .sub-logo img { max-width: 8.5rem; }
   .sub-card--split .sub-card__text { gap: 0.9rem; padding-top: 0; }
 }
+
+/* ===== One background for the whole page below the hero ===== */
+:root { --page-bg: #f3f4f6; }
+body:has(#hero) { background-color: var(--page-bg); } /* homepage only */
+

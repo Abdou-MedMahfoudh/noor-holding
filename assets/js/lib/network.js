@@ -9,7 +9,7 @@ const IMG = "./assets/images/subsidiaries/";
 const CENTER_LOGO = "./assets/images/brand/logo-dark.svg";
 
 let dataPromise;
-const loadData = () => (dataPromise ??= fetch("./data/subsidiaries.json").then((r) => r.json()));
+const loadData = () => (dataPromise ??= fetch("./data/subsidiaries.json", { cache: "no-cache" }).then((r) => r.json()));
 const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
 const polar = (radius, angleDeg) => {
