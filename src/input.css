@@ -974,7 +974,43 @@ html[dir="rtl"] .font-dm-serif {
 }
 
 /* ===== Homepage on phones & tablets ===== */
-.ceo-more { display: none; }
+/* CEO message: collapsed with a soft fade and a "read more" button, on every screen size */
+.ceo-body {
+  max-height: 22rem;
+  overflow: hidden;
+  mask-image: linear-gradient(to bottom, #000 55%, transparent);
+  transition: max-height 0.6s cubic-bezier(0.23, 1, 0.32, 1);
+}
+.ceo-body.is-open { mask-image: none; }
+.ceo-more {
+  display: inline-flex;
+  justify-self: center;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.7rem 1.4rem;
+  border: 1px solid rgb(0 0 0 / 0.12);
+  border-radius: 999px;
+  background: #fff;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--color-executive-navy, #1e2a3a);
+  transition: transform 160ms ease-out;
+}
+.ceo-more:active { transform: scale(0.97); }
+.ceo-more > :last-child,
+.ceo-more[aria-expanded="true"] > :first-child { display: none; }
+.ceo-more[aria-expanded="true"] > :last-child { display: inline; }
+@media (min-width: 1024px) {
+  .ceo-more { grid-column: 1 / span 2; grid-row: 2; justify-self: start; margin-top: -0.5rem; }
+  .ceo-side { grid-column: 3; grid-row: 1 / span 2; }
+}
+@media (max-width: 767px) {
+  .ceo-body { max-height: 19rem; }
+}
+@media (min-width: 768px) and (max-width: 1023px) {
+  .ceo-more { order: 1; justify-self: center; }
+  .ceo-side { order: 2; }
+}
 
 @media (max-width: 767px) {
   /* CEO message: heading → portrait + name → message (collapsed, "read more") */
@@ -993,33 +1029,8 @@ html[dir="rtl"] .font-dm-serif {
   .ceo-id div:has(> [data-i18n="ceoMessage.signature.title"]) { display: none; } /* title is already in the signature */
   .ceo-id h4 { font-size: 1.125rem; }
 
-  .ceo-body {
-    max-height: 19rem;
-    overflow: hidden;
-    mask-image: linear-gradient(to bottom, #000 55%, transparent);
-    transition: max-height 0.6s cubic-bezier(0.23, 1, 0.32, 1);
-  }
-  .ceo-body.is-open { mask-image: none; }
   .ceo-body > p:first-child { font-size: 1.25rem; }
 
-  .ceo-more {
-    display: inline-flex;
-    justify-self: center;
-    align-items: center;
-    gap: 0.4rem;
-    padding: 0.7rem 1.4rem;
-    border: 1px solid rgb(0 0 0 / 0.12);
-    border-radius: 999px;
-    background: #fff;
-    font-size: 0.875rem;
-    font-weight: 600;
-    color: var(--color-executive-navy, #1e2a3a);
-    transition: transform 160ms ease-out;
-  }
-  .ceo-more:active { transform: scale(0.97); }
-  .ceo-more > :last-child,
-  .ceo-more[aria-expanded="true"] > :first-child { display: none; }
-  .ceo-more[aria-expanded="true"] > :last-child { display: inline; }
 }
 
 @media (max-width: 767px) {
